@@ -1,0 +1,7 @@
+.some_margin{
+  
+}
+p{
+  text-align: justify; /* For Edge */
+  text-align-last: left;
+}
