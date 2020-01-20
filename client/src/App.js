@@ -1,14 +1,20 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
-import './App.css';
 import Header from './components/header';
+import Intro from './components/intro';
+import { Button } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Container>
+          < Header />
+          < Intro />
+        </Container>
 
-        < Header / >
-        
       </div>
     );
   }
