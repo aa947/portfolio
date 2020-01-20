@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
-import './intro.css';
+import './css/intro.css';
 
 class Intro extends Component {
     constructor() {
