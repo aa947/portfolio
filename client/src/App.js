@@ -9,13 +9,13 @@ import Container from 'react-bootstrap/Container';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
+      < Header />
         <Container>
-          < Header />
+          
           < Intro />
         </Container>
-
-      </div>
+</div>
     );
   }
 }

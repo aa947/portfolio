@@ -139,3 +139,6 @@ body {
     }
   }
   
+  .inline{
+    display:inline !important;
+  }
