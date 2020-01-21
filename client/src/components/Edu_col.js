@@ -60,39 +60,19 @@ class Edu_col extends Component {
                         <h6 className="m-0 font-weight-bold text-primary">Main Skills</h6>
                     </div>
                     <div className="card-body">
-                        <h4 className="small font-weight-bold">MongoDB <span className="float-right">60%</span></h4>
-                        <div className="progress mb-4">
-                            <div className="progress-bar bg-danger" role="progressbar" style={{width: "60%"}} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <h4 className="small font-weight-bold">Express JS <span className="float-right">70%</span></h4>
-                        <div className="progress mb-4">
-                            <div className="progress-bar bg-warning" role="progressbar" style={{width: "70%"}} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <h4 className="small font-weight-bold">React JS <span className="float-right">30%</span></h4>
-                        <div className="progress mb-4">
-                            <div className="progress-bar" role="progressbar" style={{width: "30%"}} aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <h4 className="small font-weight-bold">Node JS <span className="float-right">80%</span></h4>
-                        <div className="progress mb-4">
-                            <div className="progress-bar bg-info" role="progressbar" style={{width: "80%"}} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <h4 className="small font-weight-bold">PHP <span className="float-right">50%</span></h4>
-                        <div className="progress">
-                            <div className="progress-bar bg-success" role="progressbar" style={{width: "50%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                        
 
-<br />
                         <div className="row">
            {/* empty Devs for the design purpose */}
-           <div className="col-lg-6 mb-4">
+           <div className="col-lg-4 mb-3">
                                 <div className="card border-left-info shadow h-100 py-2">
                                     <div className="card-body">
                                         <div className="row no-gutters align-items-center">
                                             <div className="col mr-2">
-                                                <div className="text-xs font-weight-bold text-info text-uppercase mb-1">Express-Mongo</div>
+                                                <div className="text-xs font-weight-bold text-info text-uppercase mb-1">Express</div>
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col-auto">
-                                                        <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">Issue Tracker</div>
+                                                        <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">80%</div>
                                                     </div>
                                                 
                                                 </div>
@@ -106,7 +86,7 @@ class Edu_col extends Component {
                             </div>
 
 
-                            <div className="col-lg-6 mb-4">
+                            <div className="col-lg-4 mb-3">
                                 <div className="card border-left-info shadow h-100 py-2">
                                     <div className="card-body">
                                         <div className="row no-gutters align-items-center">
@@ -114,7 +94,7 @@ class Edu_col extends Component {
                                                 <div className="text-xs font-weight-bold text-info text-uppercase mb-1">CSS</div>
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col-auto">
-                                                        <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">Benzen Ring</div>
+                                                        <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">30%</div>
                                                     </div>
                                                 
                                                 </div>
