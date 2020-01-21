@@ -1,0 +1,18 @@
+{
+ "p1":
+  {
+    "name": "",
+    "lang": "",
+    "photo": "",
+    "date" : "",
+    "github_url": "",
+    "live_demo": "",
+    "intro": "",
+    "tasks": "",
+    "features" : "",
+    "inspired_by": "",
+    "likes":0,
+    "likes_ops": [],
+    "comments": []
+ }
+}
