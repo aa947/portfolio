@@ -20,16 +20,16 @@ class Intro extends Component {
 
     render() {
         return (
-            <div>
+            <div display="table">
             {/* added dev up */}
              {/* <!-- Page Heading --> */}
           <div className="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 className="h3 mb-0 text-gray-800">Welcome ...</h1>
-          <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-download fa-sm text-white-50"></i> Drop A message </a>
+          <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-envelope fa-sm text-white-50"></i> Drop A message </a>
         </div>
 
         {/* <!-- Content Row --> */}
-        <div className="row">
+        <div className="row" >
 
           {/* <!-- Earnings (Monthly) Card Example --> */}
           <div className="col-xl-3 col-md-6 mb-4">
@@ -41,7 +41,7 @@ class Intro extends Component {
                     <div className="h5 mb-0 font-weight-bold text-gray-800">+20,000</div>
                   </div>
                   <div className="col-auto">
-                    <i className="fas fa-calendar fa-2x text-gray-300"></i>
+                    <i className="fas fa-code fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
@@ -58,7 +58,7 @@ class Intro extends Component {
                     <div className="h5 mb-0 font-weight-bold text-gray-800">+40</div>
                   </div>
                   <div className="col-auto">
-                    <i className="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    <i className="fas fa-certificate fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
@@ -84,7 +84,7 @@ class Intro extends Component {
                     </div>
                   </div>
                   <div className="col-auto">
-                    <i className="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    <i className="fas fa-bullseye fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ class Intro extends Component {
                     <div className="h5 mb-0 font-weight-bold text-gray-800">+50</div>
                   </div>
                   <div className="col-auto">
-                    <i className="fas fa-comments fa-2x text-gray-300"></i>
+                    <i className="fas fa-tasks fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@ class Intro extends Component {
 
         {/* <!-- Content Row --> */}
 
-        <div className="row">
+        <div className="row" display= "table-row">
 
           {/* <!-- Area Chart --> */}
           <div className="col-xl-8 col-lg-7">
@@ -119,7 +119,7 @@ class Intro extends Component {
               {/* <!-- Card Header - Dropdown --> */}
              
               {/* <!-- Card Body --> */}
-              <div className="card-body"  >
+              <div className="card-body"  display = "table-cell"   >
                   <p> I'm Ahmad Ali</p>
                   <p>  Junior MERN Developer </p>
                   <p text-align="justify"> I am living in london Now using code pen to test my Front End Portfolio App, I have been studying Computer since form a year now and it is going Good, I activvelly looking for Job. </p>
@@ -142,8 +142,8 @@ class Intro extends Component {
               {/* <!-- Card Header - Dropdown --> */}
            
               {/* <!-- Card Body --> */}
-              <div className="card-body">
-                <img src="https://dl.dropbox.com/s/rxxlqyc82hve8w2/main.jpg?dl=0" width="100%" height="100%" />
+              <div className="card-body" display ="table-cell" boxSizing = "content-box" >
+                <img src="https://dl.dropbox.com/s/rxxlqyc82hve8w2/main.jpg?dl=0" width="97%"  />
               </div>
             </div>
           </div>
