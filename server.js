@@ -6,6 +6,7 @@ require('dotenv').config();
 var ViewsUp = require('./src/viewsUp');
 var AddVisitorIp = require('./src/addVisitorIp');
 const requestIp = require('request-ip');
+var path = require('path');
 
 
 const app = express();
@@ -80,6 +81,14 @@ app.get( '/api/footer', (req, res)=>{
   })
 });
 
-const port = 5000;
+
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+  app.get('*', (req, res)=>{
+    res.sendFile( path.join(__dirname, 'client', 'build', 'index.html' ));
+  })
+}
+
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => `Server running on port ${port}`);
