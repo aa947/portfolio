@@ -3,24 +3,26 @@ import React, { Component } from 'react';
 //import Row from 'react-bootstrap/Row';
 //import Col from 'react-bootstrap/Col';
 //import Jumbotron from 'react-bootstrap/Jumbotron';
-
+import Main_skills from './Main_skills';
 import './css/intro.css';
 
 class Edu_col extends Component {
     constructor() {
         super();
         this.state = {
-
+            certs: []
         };
     }
 
     componentDidMount() {
+        fetch('/api/certs').then(res => res.json())
+            .then(certs => this.setState({ certs }, () => console.log('Customers fetched...', certs)));
 
     }
 
     render() {
         return (
-                <div className="col-lg-6 mb-4">
+            <div className="col-lg-6 mb-4">
 
                 {/* <!-- Illustrations --> */}
                 <div className="card shadow mb-4">
@@ -41,74 +43,31 @@ class Edu_col extends Component {
                         <h6 className="m-0 font-weight-bold text-primary"> Certificates </h6>
                     </div>
                     <div className="card-body">
-                        <ul type="none">
-                            <p><li><i class="fas fa-chevron-right"></i> Full Stack - FreeCodeCamp </li></p>
-                            <li><i class="fas fa-chevron-right"></i> Express - HongKong Univercity (coursera) </li>
-                            <li><i class="fas fa-chevron-right"></i> PHP stack - Univercity of Mitchigan (coursera) </li>
-                            <li><i class="fas fa-chevron-right"></i> CS50 - Harvard Univercity (EDX) </li>
-                            <li><i class="fas fa-chevron-right"></i> Front End Specilaization - Univercity of Mitchigan (coursera </li>
-                            <li><i class="fas fa-chevron-right"></i> Mathematical thinking in comuter science </li>
-                            <li><i class="fas fa-chevron-right"></i> Computer Science 101 - Stranford Univercity (online)</li>
-                            <li><i class="fas fa-chevron-right"></i> HTML, CSS, and Javascript for Web Developers - Johns Hopkins University (coursera)</li>
-                        </ul>
+                       
+                            {this.state.certs.map((cert) => {
+                                return (
+                                    <p><i class="fas fa-chevron-right"></i> {cert.cert_name} - { cert.provider } ( { cert.course_host } ) </p>
+                                );
+
+
+                            })}
+                       
                     </div>
                 </div>
 
                 {/* <!-- Project Card Example --> */}
-    <div className="card shadow mb-4">
+                <div className="card shadow mb-4">
                     <div className="card-header py-3">
                         <h6 className="m-0 font-weight-bold text-primary">Main Skills</h6>
                     </div>
                     <div className="card-body">
-                        
+
 
                         <div className="row">
-           {/* empty Devs for the design purpose */}
-           <div className="col-lg-4 mb-3">
-                                <div className="card border-left-info shadow h-100 py-2">
-                                    <div className="card-body">
-                                        <div className="row no-gutters align-items-center">
-                                            <div className="col mr-2">
-                                                <div className="text-xs font-weight-bold text-info text-uppercase mb-1">Express</div>
-                                                <div className="row no-gutters align-items-center">
-                                                    <div className="col-auto">
-                                                        <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">80%</div>
-                                                    </div>
-                                                
-                                                </div>
-                                            </div>
-                                            <div className="col-auto">
-                                                <i className="fab fa-node-js fa-2x text-green-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {/*Skills Cards */}
+                           <Main_skills />
 
-
-                            <div className="col-lg-4 mb-3">
-                                <div className="card border-left-info shadow h-100 py-2">
-                                    <div className="card-body">
-                                        <div className="row no-gutters align-items-center">
-                                            <div className="col mr-2">
-                                                <div className="text-xs font-weight-bold text-info text-uppercase mb-1">CSS</div>
-                                                <div className="row no-gutters align-items-center">
-                                                    <div className="col-auto">
-                                                        <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">30%</div>
-                                                    </div>
-                                                
-                                                </div>
-                                            </div>
-                                            <div className="col-auto">
-                                                <i className="fab fa-node-js fa-2x text-green-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                    </div>
+                        </div>
                     </div>
                 </div>
 
@@ -126,7 +85,7 @@ class Edu_col extends Component {
                 {/* <!-- end column --> */}
             </div>
 
-      );
+        );
     }
 }
 

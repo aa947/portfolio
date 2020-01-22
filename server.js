@@ -48,8 +48,18 @@ app.get( '/api/projects', (req, res)=>{
       db.collection('projects').find({}).toArray((err, data)=> { res.json(data) });
 
   })
+});
 
+app.get( '/api/certs', (req, res)=>{
 
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if(err) console.log('Database error: ' + err);
+      let db = dbo.db('portfolio');
+      let coll = db.collection('projects');
+
+      db.collection('certificates').find({}).toArray((err, data)=> { res.json(data) });
+
+  })
 });
 
 const port = 5000;

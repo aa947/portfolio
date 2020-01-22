@@ -13,7 +13,8 @@
     "inspired_by": "FreeCodeCamp",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p2":
   {
@@ -30,7 +31,7 @@
     "likes":0,
     "likes_ips": [],
     "comments": [],
-    "fontAwesome":""
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p3":
   {
@@ -46,7 +47,8 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p4":
   {
@@ -62,7 +64,8 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p5":
   {
@@ -78,7 +81,8 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p6":
   {
@@ -94,7 +98,8 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p7":
   {
@@ -110,7 +115,8 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p8":
   {
@@ -126,7 +132,8 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p9":
   {
@@ -142,7 +149,8 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p10":
   {
@@ -158,7 +166,8 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  },
  "p11":
   {
@@ -174,6 +183,7 @@
     "inspired_by": "",
     "likes":0,
     "likes_ips": [],
-    "comments": []
+    "comments": [],
+    "fontAwesome":"fab fa-node-js fa-2x text-green-300"
  }
 }
