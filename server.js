@@ -62,6 +62,24 @@ app.get( '/api/certs', (req, res)=>{
   })
 });
 
+
+app.get( '/api/footer', (req, res)=>{
+
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if(err) console.log('Database error: ' + err);
+      let db = dbo.db('portfolio');
+      let coll = db.collection('visitors');
+
+      db.collection('visitors').findOne({_id: ObjectId('5e28474c19b28f31d6657545')})
+      .then((data)=> {
+        let count = data.counter;
+        let unique = data.unique_visitors; 
+        res.json({ count: count , unique: unique  })
+       });
+
+  })
+});
+
 const port = 5000;
 
 app.listen(port, () => `Server running on port ${port}`);
