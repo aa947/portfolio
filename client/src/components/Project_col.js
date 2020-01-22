@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 //import Col from 'react-bootstrap/Col';
 //import Jumbotron from 'react-bootstrap/Jumbotron';
 
+
 import './css/intro.css';
+import { Link } from 'react-router-dom';
 
 class Project_col extends Component {
     constructor() {
@@ -19,6 +21,39 @@ class Project_col extends Component {
     }
 
     render() {
+     const projects = [{
+    "name": "Issue Tracker",
+    "lang": "Express, MongoDb",
+    "photo": "https://i.imgur.com/RDsgV6y.png",
+    "date" : "jan 2020",
+    "github_url": "https://github.com/aa947/issueTracker",
+    "live_demo": "https://ahmad-ali-issuetracker.ahmadali5.repl.co/",
+    "intro": " Tracking Projects with Issues From the users of the Platform. ",
+    "tasks": " Creat Update Delete Open and Close Issues. ",
+    "features" : " REST API ",
+    "inspired_by": "FreeCodeCamp",
+    "likes":0,
+    "likes_ops": [],
+    "comments": [],
+    "fontAwesome": "fab fa-node-js fa-2x text-green-300"
+ },
+ {
+    "name": "Exer_Tracker",
+    "lang": "Node, MongoDB",
+    "photo": "https://i.imgur.com/HrdeznZ.png",
+    "date" : "jan 2020",
+    "github_url": "https://github.com/aa947/Exercise-Tracker",
+    "live_demo": "https://ahmad-ali-exercise-tracker-1.ahmadali5.repl.co/",
+    "intro": "Track the time you spend it in burning calories, for Each User ",
+    "tasks": " signUp, insert exercices and time, get report of your past exercises ",
+    "features" : "REST API",
+    "inspired_by": "FreeCodeCamp",
+    "likes":0,
+    "likes_ops": [],
+    "comments": [],
+    "fontAwesome": "fab fa-node-js fa-2x text-green-300"
+ }]
+
         return (
             <div className="col-lg-6 mb-4">
 
@@ -31,78 +66,38 @@ class Project_col extends Component {
                         <div className="row">
 
                             {/* <!-- start project row --> */}
-                            <div className="col-lg-6 mb-4">
-                                <div className="card bg-secondary text-white shadow">
-                                    <div className="card-body">
-                                        Issue Tracker
-                      <div className="text-white-50 small">Express-Mongo</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                                <div className="card bg-secondary text-white shadow">
-                                    <div className="card-body">
-                                        Personal Libraray
-                      <div className="text-white-50 small">Express-Mongo</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                                <div className="card bg-info text-white shadow">
-                                    <div className="card-body">
-                                        Roye Interiors
-                      <div className="text-white-50 small">PHP</div>
-                                    </div>
-                                </div>
-                            </div>
+                        
 
+{ projects.map((p1)=> {   
 
-
-
-                            {/* empty Devs for the design purpose */}
-                            <div className="col-lg-6 mb-4">
+return(
+    <div className="col-lg-6 mb-4">
                                 <div className="card border-left-info shadow h-100 py-2">
                                     <div className="card-body">
                                         <div className="row no-gutters align-items-center">
                                             <div className="col mr-2">
-                                                <div className="text-xs font-weight-bold text-info text-uppercase mb-1">Express-Mongo</div>
+                                                <div className="text-xs font-weight-bold text-info text-uppercase mb-1">{p1.date}</div>
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col-auto">
-                                                        <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">Issue Tracker</div>
+                                                      <Link to="/p1">  <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">{p1.name}</div> </Link>
                                                     </div>
 
                                                 </div>
                                             </div>
                                             <div className="col-auto">
-                                                <i className="fab fa-node-js fa-2x text-green-300"></i>
+                                                <i className={p1.fontAwesome}></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+);
 
 
-                            <div className="col-lg-6 mb-4">
-                                <div className="card border-left-info shadow h-100 py-2">
-                                    <div className="card-body">
-                                        <div className="row no-gutters align-items-center">
-                                            <div className="col mr-2">
-                                                <div className="text-xs font-weight-bold text-info text-uppercase mb-1">CSS</div>
-                                                <div className="row no-gutters align-items-center">
-                                                    <div className="col-auto">
-                                                        <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">Benzen Ring</div>
-                                                    </div>
+}) }
 
-                                                </div>
-                                            </div>
-                                            <div className="col-auto">
-                                                <i className="fab fa-node-js fa-2x text-green-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
+                           
 
                             {/* hey */}
                             <div className="col-lg-6 mb-4">

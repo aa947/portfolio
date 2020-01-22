@@ -47,6 +47,17 @@ class App extends Component {
         </React.Fragment>
       );
     }
+
+    function P1() {
+      return(
+        <React.Fragment>
+        <h2>Project 1</h2>
+        <Footer />
+        </React.Fragment>
+      )
+    }
+
+
     return (
 
 
@@ -92,6 +103,9 @@ class App extends Component {
             </Route>
             <Route path="/">
               <Home />
+            </Route>
+            <Route path="/p1">
+              <P1 />
             </Route>
           </Switch>
         </div>
