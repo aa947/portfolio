@@ -12,7 +12,7 @@
     "features" : " REST API ",
     "inspired_by": "FreeCodeCamp",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p2":
@@ -28,7 +28,7 @@
     "features" : "REST API",
     "inspired_by": "FreeCodeCamp",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": [],
     "fontAwesome":""
  },
@@ -45,7 +45,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p4":
@@ -61,7 +61,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p5":
@@ -77,7 +77,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p6":
@@ -93,7 +93,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p7":
@@ -109,7 +109,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p8":
@@ -125,7 +125,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p9":
@@ -141,7 +141,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p10":
@@ -157,7 +157,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  },
  "p11":
@@ -173,7 +173,7 @@
     "features" : "",
     "inspired_by": "",
     "likes":0,
-    "likes_ops": [],
+    "likes_ips": [],
     "comments": []
  }
 }

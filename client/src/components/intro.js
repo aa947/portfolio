@@ -18,6 +18,9 @@ class Intro extends Component {
 
     componentDidMount() {
 
+      fetch('/api/views')
+      .then(res => res.json())
+      .then(data => console.log(data) );
     }
 
     render() {

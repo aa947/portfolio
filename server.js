@@ -1,4 +1,12 @@
 const express = require('express');
+var mongo = require('mongodb');
+var ObjectId = require('mongodb').ObjectID;
+require('dotenv').config();
+
+var ViewsUp = require('./src/viewsUp');
+var AddVisitorIp = require('./src/addVisitorIp');
+const requestIp = require('request-ip');
+
 
 const app = express();
 
@@ -10,6 +18,24 @@ app.get('/api/customers', (req, res) => {
   ];
 
   res.json(customers);
+});
+
+app.get('/api/views', (req, res) =>{
+  const clientIp = requestIp.getClientIp(req);
+
+ 
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if(err) console.log('Database error: ' + err);
+      let db = dbo.db('portfolio');
+      let coll = db.collection('visitors');
+
+      ViewsUp.ViewsUp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'));
+      AddVisitorIp.addVisitorIp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'), clientIp);
+
+      res.json({ done: "a visitor Added" });
+
+
+    });
 });
 
 const port = 5000;
