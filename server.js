@@ -66,7 +66,7 @@ app.get( '/api/certs', (req, res)=>{
 
 app.get( '/api/footer', (req, res)=>{
 
-  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+  mongo.connect(process.env.CONNECTION_STRING || ENV['CONNECTION_STRING'], (err, dbo) => {
     if(err) console.log('Database error: ' + err);
       let db = dbo.db('portfolio');
       let coll = db.collection('visitors');
