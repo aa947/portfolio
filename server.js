@@ -38,6 +38,20 @@ app.get('/api/views', (req, res) =>{
     });
 });
 
+app.get( '/api/projects', (req, res)=>{
+
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if(err) console.log('Database error: ' + err);
+      let db = dbo.db('portfolio');
+      let coll = db.collection('projects');
+
+      db.collection('projects').find({}).toArray((err, data)=> { res.json(data) });
+
+  })
+
+
+});
+
 const port = 5000;
 
 app.listen(port, () => `Server running on port ${port}`);
