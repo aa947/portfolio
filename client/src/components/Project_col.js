@@ -50,7 +50,7 @@ return(
                                                 <div className="text-xs font-weight-bold text-info text-uppercase mb-1">{p.date}</div>
                                                 <div className="row no-gutters align-items-center">
                                                     <div className="col-auto">
-                                                      <Link to="/p1">  <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">{p.name}</div> </Link>
+                                                      <Link to={ { pathname:"/api/p/"+ p._id , project_id : p._id  }}>  <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">{p.name}</div> </Link>
                                                     </div>
 
                                                 </div>

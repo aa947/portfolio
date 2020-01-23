@@ -13,6 +13,7 @@ import {
   Link
 } from "react-router-dom";
 import Footer from './components/Footer';
+import Project_details from './components/project_details';
 
 class App extends Component {
   render() {
@@ -48,11 +49,11 @@ class App extends Component {
       );
     }
 
-    function P1() {
-      return(
+    function Pee1() {
+      return (
         <React.Fragment>
-        <h2>Project 1</h2>
-        <Footer />
+          <h2>Project 1</h2>
+          <Footer />
         </React.Fragment>
       )
     }
@@ -101,11 +102,11 @@ class App extends Component {
             <Route path="/users">
               <Users />
             </Route>
+            <Route path="/api/p/:project_id" render={ (props) => <Project_details {...props} {...this.props}  />  } / >
+              {/* <Project_details /> */}
+            {/* </Route> */}
             <Route path="/">
               <Home />
-            </Route>
-            <Route path="/p1">
-              <P1 />
             </Route>
           </Switch>
         </div>

@@ -81,6 +81,23 @@ app.get( '/api/footer', (req, res)=>{
   })
 });
 
+app.get( '/api/p/:project_id', (req, res)=>{
+
+  mongo.connect(process.env.CONNECTION_STRING , (err, dbo) => {
+    if(err) console.log('Database error: ' + err);
+      let db = dbo.db('portfolio');
+      let coll = db.collection('projects');
+      let pproject_id = req.params.project_id;
+
+      db.collection('projects').findOne({_id: ObjectId(pproject_id)})
+      .then((data)=> {
+        
+        res.json(data);
+       });
+
+  })
+});
+
 //uncomment this to deploy to heroku
 
 // if (process.env.NODE_ENV === 'production'){
