@@ -15,6 +15,9 @@ import {
 import Footer from './components/Footer';
 import Project_details from './components/project_details';
 import Cert_details from './components/Cert_details';
+import Project_row from './components/projects_row';
+import Contact_row from './components/Contact_row';
+import Education_row from './components/Education_row';
 
 class App extends Component {
   render() {
@@ -31,29 +34,29 @@ class App extends Component {
         </React.Fragment>);
     }
 
-    function About() {
+    function Projects() {
       return (
         <React.Fragment>
-          <h2>Resume</h2>
+          <Project_row />
           <Footer />
         </React.Fragment>
 
       );
     }
 
-    function Users() {
+    function Contact() {
       return (
         <React.Fragment>
-          <h2>Contact</h2>
+         <Contact_row  />
           <Footer />
         </React.Fragment>
       );
     }
 
-    function Pee1() {
+    function Education() {
       return (
         <React.Fragment>
-          <h2>Project 1</h2>
+          <Education_row />
           <Footer />
         </React.Fragment>
       )
@@ -73,20 +76,22 @@ class App extends Component {
               <i className="fa fa-bars"></i>
             </button>
 
-            <img src="https://dl.dropbox.com/s/2du08hmcfnaqv4p/logo.png?dl=0" />
+            <img src="https://dl.dropbox.com/s/2du08hmcfnaqv4p/logo.png?dl=0" width ="25%"   />
 
             <ul className="navbar-nav ml-auto">
 
               <li className="nav-item dropdown no-arrow d-sm-none"></li>
 
-              <li className="nav-item dropdown no-arrow mx-1"> <Link to="/" className="nav-link dropdown-toggle">Home</Link></li>
+              <li className="nav-item dropdown no-arrow mx-1" > <Link to="/" className="nav-link dropdown-toggle" style={{color: "black"}} >Home</Link></li>
 
-              <li className="nav-item dropdown no-arrow mx-1"> <Link to="/about" className="nav-link dropdown-toggle">Projects </Link> </li>
+              <li className="nav-item dropdown no-arrow mx-1"> <Link to="/projects" className="nav-link dropdown-toggle" style= {{color: "black"}}>Projects </Link> </li>
 
-              <li className="nav-item dropdown no-arrow mx-1"><Link to="/users" className="nav-link dropdown-toggle" > Contact </Link> </li>
+              <li className="nav-item dropdown no-arrow mx-1"><Link to="/contact" className="nav-link dropdown-toggle" style={{color: "black"}} > Contact </Link> </li>
+
+              <li className="nav-item dropdown no-arrow mx-1"><Link to="/education" className="nav-link dropdown-toggle" style={{color: "black"}} > Education </Link> </li>
 
               <li className="nav-item dropdown no-arrow">
-                <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a className="nav-link dropdown-toggle" href="tel:+447383164194">
                   <span className="mr-2 d-none d-lg-inline text-gray-600 small">Call us ></span>
                   <img className="img-profile rounded-circle" src="https://dl.dropbox.com/s/jq67lusuwgpwbme/phone.png?dl=0" /></a> </li>
 
@@ -97,11 +102,14 @@ class App extends Component {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/about">
-              <About />
+            <Route path="/contact">
+              <Contact />
             </Route>
-            <Route path="/users">
-              <Users />
+            <Route path="/projects">
+              <Projects />
+              </Route>
+              <Route path="/education">
+              <Education />
             </Route>
             <Route path="/api/p/:project_id" render={ (props) => <Project_details {...props} {...this.props}  />  } / >
             <Route path="/api/c/:cert_id" render={ (props) => <Cert_details {...props} {...this.props}  />  } / >

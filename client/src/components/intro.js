@@ -30,7 +30,7 @@ class Intro extends Component {
              {/* <!-- Page Heading --> */}
           <div className="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 className="h3 mb-0 text-gray-800">Welcome ... How can I help ??</h1>
-          <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-envelope fa-sm text-white-50"></i> Drop A message </a>
+          <a href="mailto:aallii300300@gmail.com" target="_blank" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-envelope fa-sm text-white-50"></i> Drop A message </a>
         </div>
 
         {/* <!-- Content Row for Numbers --> */}
@@ -64,13 +64,12 @@ class Intro extends Component {
                   <pre> Know Me More..
                   
                   </pre>
-                  <p> 
-                  <SocialIcon url="http://linkedin.com/in/jaketrent" />
-                  <SocialIcon network="twitter" bgColor="#ff5a01" />
-                  <SocialIcon url="https://www.example.com" label="Our portfolio" />
-                  <SocialIcon url="aallii300300@gmail.com" label="send me Email" />
+                  
+                  <SocialIcon url="https://www.linkedin.com/in/ahmad-ali-07383164194/" /> {'\u00A0'}
+                  <SocialIcon url="https://twitter.com/AhmadAl43872454" /> {'\u00A0'}
+                  <SocialIcon url="https://github.com/aa947" /> {'\u00A0'}
 
-                  </p>
+                  
                  
                 
                 </div>
@@ -83,7 +82,7 @@ class Intro extends Component {
               {/* <!-- Card Header - Dropdown --> */}
            
               {/* <!-- Card Body --> */}
-              <div className="card-body" display ="table-cell" boxSizing = "content-box" >
+              <div className="card-body" display ="table-cell"  >
                 <img src="https://dl.dropbox.com/s/rxxlqyc82hve8w2/main.jpg?dl=0" width="97%"  />
               </div>
             </div>

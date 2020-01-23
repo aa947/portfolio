@@ -27,7 +27,7 @@ class Numbers extends Component {
                 <div className="row no-gutters align-items-center">
                   <div className="col mr-2">
                     <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Lines Coded</div>
-                    <div className="h5 mb-0 font-weight-bold text-gray-800">+20,000</div>
+                    <div className="h5 mb-0 font-weight-bold text-gray-800">+50,000</div>
                   </div>
                   <div className="col-auto">
                     <i className="fas fa-code fa-2x text-gray-300"></i>
