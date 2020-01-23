@@ -52,13 +52,26 @@ class Cert_details extends Component {
                         <div className="card-body">
                             <div> <p><span className="m-0 font-weight-bold text-primary"> Provider: </span>  {this.state.cert.provider} </p> </div>
 
-                            <div> <p> <span className="m-0 font-weight-bold text-primary"> Visit Provider: </span>  {this.state.cert.provider_url} </p> </div>
-                            <div> <p><span className="m-0 font-weight-bold text-primary">course_Url: </span>  {this.state.cert.course_url} </p> </div>
-                            <div> <p> <span className="m-0 font-weight-bold text-primary">Course_host: </span> {this.state.cert.course_host} </p> </div>
-                            <div> <p> <span className="m-0 font-weight-bold text-primary">Course_host_url: </span>  {this.state.cert.course_host_url} </p> </div>
+                            
+                            <div> <p> <span className="m-0 font-weight-bold text-primary">Course Host: </span> {this.state.cert.course_host} </p> </div>
+                        
+
+                            <div className="row">
+                                
+                                    <div><a href={this.state.cert.provider_url} target='_blank'><button className="btn btn-primary" title="visit course provider" >visit course provider {'\u00A0'} {'\u00A0'} {'\u00A0'} </button> </a>
+                                    {'\u00A0'}
+                                        <a href={this.state.cert.course_host_url} target='_blank' >  <button className="btn btn-success"> Visit course host {'\u00A0'} </button> </a> 
+                                        {'\u00A0'}
+                                        <a href={this.state.cert.course_url} target='_blank' > <button className="btn btn-info"> visit course page {'\u00A0'} </button></a>
+                                        
+                                    </div>
+                                </div>
+                              
+                            </div>
+
                         </div>
                     </div>
-                </div>
+                
 
                 <div className="col-lg-12 mb-12">
                     <div className="card shadow mb-12">

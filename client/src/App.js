@@ -79,9 +79,9 @@ class App extends Component {
 
               <li className="nav-item dropdown no-arrow d-sm-none"></li>
 
-              <li className="nav-item dropdown no-arrow mx-1"> <Link to="/" className="nav-link dropdown-toggle">Projects</Link></li>
+              <li className="nav-item dropdown no-arrow mx-1"> <Link to="/" className="nav-link dropdown-toggle">Home</Link></li>
 
-              <li className="nav-item dropdown no-arrow mx-1"> <Link to="/about" className="nav-link dropdown-toggle">Resume </Link> </li>
+              <li className="nav-item dropdown no-arrow mx-1"> <Link to="/about" className="nav-link dropdown-toggle">Projects </Link> </li>
 
               <li className="nav-item dropdown no-arrow mx-1"><Link to="/users" className="nav-link dropdown-toggle" > Contact </Link> </li>
 

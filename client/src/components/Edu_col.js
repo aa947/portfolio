@@ -44,27 +44,27 @@ class Edu_col extends Component {
                         <h6 className="m-0 font-weight-bold text-primary"> Certificates </h6>
                     </div>
                     <div className="card-body">
-                       
-                            {this.state.certs.map((cert) => {
-                                return (
-                                    <p><i class="fas fa-chevron-right"></i> {cert.cert_name} - { cert.provider } ( { cert.course_host } )
+
+                        {this.state.certs.map((cert) => {
+                            return (
+                                <p><i class="fas fa-chevron-right"></i> {cert.cert_name} - {cert.provider} ( {cert.course_host} )
                                     {'\u00A0'}
                                     <a href={cert.course_url} title="visit course page" target="_blank">
-                                    <i class="fas fa-hand-pointer"></i>
+                                        <i class="fas fa-hand-pointer"></i>
                                     </a>
 
 
                                     {'\u00A0'}
-                                    <Link to={{ pathname:"/api/c/"+ cert._id , cert_id : cert._id  }} title="view certificate">
-                                    <i class="fas fa-graduation-cap"></i>
+                                    <Link to={{ pathname: "/api/c/" + cert._id, cert_id: cert._id }} title="view certificate">
+                                        <i class="fas fa-graduation-cap"></i>
                                     </Link>
-                                    
-                                     </p>
-                                );
+
+                                </p>
+                            );
 
 
-                            })}
-                       
+                        })}
+
                     </div>
                 </div>
 
@@ -78,7 +78,7 @@ class Edu_col extends Component {
 
                         <div className="row">
                             {/*Skills Cards */}
-                           <Main_skills />
+                            <Main_skills />
 
                         </div>
                     </div>
@@ -86,20 +86,34 @@ class Edu_col extends Component {
 
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
-                        <h6 className="m-0 font-weight-bold text-primary">Publications</h6>
+                        <h6 className="m-0 font-weight-bold text-primary">News letter</h6>
                     </div>
                     <div className="card-body">
-                        <p> Site Views Counter Toturial - Medium</p>
-                        <p> Promises or Callbacks - Dev </p>
-                        <p> connect to Your MongoDb Atlas - Dev </p>
+                        <p> Subscribe to My News Update </p>
+                        <p> Interesting updates once a month </p>
+                        <p> Promise: No more than 1 mail/month. </p>
+                        <form>
+                            <div className="form-group row">
+                                <label for="inputEmail3" className="col-sm-2 col-md-2 col-form-label" >Email *</label>
+                                <div className="col-sm-10 col-md-8">
+                                    <input type="email" className="form-control" id="inputEmail3" placeholder="Email" />
+                                </div>
+                    </div>
+                    <div className="form-group row">
+  <div className="col col-md-6" ></div>
+    <div className="col-sm-10 col-md-6 ">
+      <button type="submit" className="btn btn-primary">Subscribe</button>
+    </div>
+  </div>
+                    </form>
 
                     </div>
+                    {/* <!-- end column --> */}
                 </div>
-                {/* <!-- end column --> */}
-            </div>
+                </div>
 
-        );
-    }
-}
-
+                );
+            }
+        }
+        
 export default Edu_col;
