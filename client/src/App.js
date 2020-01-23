@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import Footer from './components/Footer';
 import Project_details from './components/project_details';
+import Cert_details from './components/Cert_details';
 
 class App extends Component {
   render() {
@@ -103,6 +104,7 @@ class App extends Component {
               <Users />
             </Route>
             <Route path="/api/p/:project_id" render={ (props) => <Project_details {...props} {...this.props}  />  } / >
+            <Route path="/api/c/:cert_id" render={ (props) => <Cert_details {...props} {...this.props}  />  } / >
               {/* <Project_details /> */}
             {/* </Route> */}
             <Route path="/">

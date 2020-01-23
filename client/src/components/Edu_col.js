@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 //import Jumbotron from 'react-bootstrap/Jumbotron';
 import Main_skills from './Main_skills';
 import './css/intro.css';
+import { Link } from 'react-router-dom';
 
 class Edu_col extends Component {
     constructor() {
@@ -46,7 +47,19 @@ class Edu_col extends Component {
                        
                             {this.state.certs.map((cert) => {
                                 return (
-                                    <p><i class="fas fa-chevron-right"></i> {cert.cert_name} - { cert.provider } ( { cert.course_host } ) </p>
+                                    <p><i class="fas fa-chevron-right"></i> {cert.cert_name} - { cert.provider } ( { cert.course_host } )
+                                    {'\u00A0'}
+                                    <a href={cert.course_url} title="visit course page" target="_blank">
+                                    <i class="fas fa-hand-pointer"></i>
+                                    </a>
+
+
+                                    {'\u00A0'}
+                                    <Link to={{ pathname:"/api/c/"+ cert._id , cert_id : cert._id  }} title="view certificate">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    </Link>
+                                    
+                                     </p>
                                 );
 
 

@@ -14,9 +14,9 @@ class Project_details extends Component {
         super(props);
         this.state = {
             project: {
-                comments:[]
+                comments: []
             },
-           
+
         };
         this.thumsUp = this.thumsUp.bind(this);
 
@@ -27,7 +27,13 @@ class Project_details extends Component {
 
     thumsUp() {
         fetch('http://localhost:5000/api/like/' + this.state.project._id)
-            .then(this.state.project.likes++);
+            .then(res => res.json())
+            .then((ress) => {
+                console.log(ress)
+                if (ress.code == 1) { return this.state.project.likes++;}
+                else if (ress.code == 0) { return; }
+                
+            });
 
     }
 
@@ -63,7 +69,7 @@ class Project_details extends Component {
                             <div className="row">
                                 <div className="col md-8" > <br /> <p> project: {this.state.project.name} </p>
                                     <p> Languages used: {this.state.project.lang} </p>
-                                    <div><a href="#" onClick={this.thumsUp}  ><button className="btn btn-primary">Like {'\u00A0'}<i class="fas fa-thumbs-up "></i> {'\u00A0'}<span>({this.state.project.likes}) </span> {'\u00A0'} </button> </a>{'\u00A0'}
+                                    <div><a href="#" onClick={this.thumsUp}  ><button className="btn btn-primary" title="view on Github" >Like {'\u00A0'}<i class="fas fa-thumbs-up "></i> {'\u00A0'}<span>({this.state.project.likes}) </span> {'\u00A0'} </button> </a>{'\u00A0'}
                                         <a href={this.state.project.github_url} target='_blank' >  <button className="btn btn-success"> View on Github {'\u00A0'}<i class="fab fa-github"></i> </button> </a> {'\u00A0'}
                                         <a href={this.state.project.live_demo} target='_blank' > <button className="btn btn-info"> live demo {'\u00A0'} <i class="fas fa-desktop"></i> </button></a></div>
                                 </div>
@@ -91,16 +97,16 @@ class Project_details extends Component {
                         <div className="card-body">
 
 
-                                {(this.state.project.comments || []).map((cc) => {
-            return (
-               <div > <p> <i class="fas fa-chevron-right"></i> {cc} </p> </div>
+                            {(this.state.project.comments || []).map((cc) => {
+                                return (
+                                    <div > <p> <i class="fas fa-chevron-right"></i> {cc} </p> </div>
                                 );
-                    
-                    
-        })};                        
 
+
+                            })};
+                    
                             <div className="row">
-                                <input className="form-control form-control-lg col-md-9  lg-8" type="text" placeholder="add acomment or leave inspiration" /> {'\u00A0'}    <button className="btn btn-primary col-md-2 lg-2" > Add comment </button>
+                                <input className="form-control form-control-lg col-md-9  lg-8" type="text" placeholder="add acomment or leave inspiration" /> {'\u00A0'}    <button onClick={this.addComment} className="btn btn-primary col-md-2 lg-2" > Add comment </button>
                             </div>
                         </div>
                     </div>

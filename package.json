@@ -2,7 +2,6 @@
   "name": "reactexpress",
   "version": "1.0.0",
   "description": "Starter kit for creating React and Express apps",
- 
   "main": "server.js",
   "scripts": {
     "client-install": "cd client && npm install",
@@ -10,7 +9,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild" : "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Brad Traversy",
   "license": "MIT",
@@ -19,6 +18,7 @@
   },
   "dependencies": {
     "concurrently": "^3.5.1",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.16.2",
     "mongodb": "^3.5.2",

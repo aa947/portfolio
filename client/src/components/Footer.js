@@ -29,7 +29,7 @@ class Footer extends Component {
 <footer className="sticky-footer bg-white">
         <div className="container my-auto">
           <div className="copyright text-center my-auto">
-            <span>Copyright &copy; Ahmad Ali 2020 </span> {'\u00A0'}
+            <span>Copyright &copy; Ahmad Ali </span> {'\u00A0'}
             <span><i class="fas fa-eye"></i>  { this.state.count } </span> {'\u00A0'}
             <span><i class="fas fa-fingerprint"></i>  { this.state.unique } </span>{'\u00A0'}
           </div>

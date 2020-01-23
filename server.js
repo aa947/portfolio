@@ -7,10 +7,11 @@ var ViewsUp = require('./src/viewsUp');
 var AddVisitorIp = require('./src/addVisitorIp');
 const requestIp = require('request-ip');
 var path = require('path');
+var cors = require('cors');
 
 
 const app = express();
-
+app.use(cors());
 app.get('/api/customers', (req, res) => {
   const customers = [
     {id: 1, firstName: 'John', lastName: 'Doe'},
@@ -101,14 +102,42 @@ app.get( '/api/p/:project_id', (req, res)=>{
 app.get( '/api/like/:project_id', (req, res)=>{
 
   const clientIp = requestIp.getClientIp(req);
+  let pproject_id = req.params.project_id;
+
 
   mongo.connect(process.env.CONNECTION_STRING , (err, dbo) => {
     if(err) console.log('Database error: ' + err);
       let db = dbo.db('portfolio');
       let coll = db.collection('projects');
-      let pproject_id = req.params.project_id;
 
-      db.collection('projects').findOneAndUpdate({_id: ObjectId(pproject_id)},  { $push: { likes_ips: clientIp }, $inc: { likes: 1 } })
+      db.collection('projects').findOne({ _id: ObjectId(pproject_id) }, (err, doc) => {
+        if (doc.likes_ips.includes(clientIp)) { return res.json({ result: "You have likes this project before, You can't like Twice!!", code: 0 } ); }
+
+        else {
+
+          db.collection('projects').findOneAndUpdate({_id: ObjectId(pproject_id)},  { $push: { likes_ips: clientIp }, $inc: { likes: 1 } })
+          .then((data)=> {
+            
+            res.json({ code:1 });
+           });
+        }
+    })
+
+     
+
+  })
+});
+
+
+app.get( "/api/c/:cert_id", (req, res)=>{
+
+  mongo.connect(process.env.CONNECTION_STRING , (err, dbo) => {
+    if(err) console.log('Database error: ' + err);
+      let db = dbo.db('portfolio');
+      let coll = db.collection('certificates');
+      let cert_id = req.params.cert_id;
+
+      db.collection('certificates').findOne({_id: ObjectId(cert_id)})
       .then((data)=> {
         
         res.json(data);
@@ -116,6 +145,7 @@ app.get( '/api/like/:project_id', (req, res)=>{
 
   })
 });
+
 
 //uncomment this to deploy to heroku
 
