@@ -18,6 +18,7 @@ import Cert_details from './components/Cert_details';
 import Project_row from './components/projects_row';
 import Contact_row from './components/Contact_row';
 import Education_row from './components/Education_row';
+import Contact_form from './components/Contact_form';
 
 class App extends Component {
   render() {

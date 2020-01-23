@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 //import Row from 'react-bootstrap/Row';
 //import Col from 'react-bootstrap/Col';
 //import Jumbotron from 'react-bootstrap/Jumbotron';
+import axios from 'axios';
 
 
 import './css/intro.css';
@@ -30,6 +31,9 @@ class Contact_form extends Component {
     sendMessage(event){
         event.preventDefault();
         console.log(this.state);
+        axios.post('http://localhost:5000/api/sendMessage', this.state)
+        .then(res => console.log(res))
+        .catch( err => console.log(err) )
 
 
     }
