@@ -98,6 +98,25 @@ app.get( '/api/p/:project_id', (req, res)=>{
   })
 });
 
+app.get( '/api/like/:project_id', (req, res)=>{
+
+  const clientIp = requestIp.getClientIp(req);
+
+  mongo.connect(process.env.CONNECTION_STRING , (err, dbo) => {
+    if(err) console.log('Database error: ' + err);
+      let db = dbo.db('portfolio');
+      let coll = db.collection('projects');
+      let pproject_id = req.params.project_id;
+
+      db.collection('projects').findOneAndUpdate({_id: ObjectId(pproject_id)},  { $push: { likes_ips: clientIp }, $inc: { likes: 1 } })
+      .then((data)=> {
+        
+        res.json(data);
+       });
+
+  })
+});
+
 //uncomment this to deploy to heroku
 
 // if (process.env.NODE_ENV === 'production'){
