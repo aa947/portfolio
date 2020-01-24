@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 //import Col from 'react-bootstrap/Col';
 //import Jumbotron from 'react-bootstrap/Jumbotron';
 import Main_skills from './Main_skills';
+import NewsLetter_form from './NewsLetter_form';
 
 
 import './css/intro.css';
@@ -88,32 +89,7 @@ class Education_row extends Component {
                     </div>
                 </div>
 
-                <div className="card shadow mb-4">
-                    <div className="card-header py-3">
-                        <h6 className="m-0 font-weight-bold text-primary">News letter</h6>
-                    </div>
-                    <div className="card-body">
-                        <p> Subscribe to My News Update </p>
-                        <p> Interesting updates once a month </p>
-                        <p> Promise: No more than 1 mail/month. </p>
-                        <form>
-                            <div className="form-group row">
-                                <label for="inputEmail3" className="col-sm-2 col-md-2 col-form-label" >Email *</label>
-                                <div className="col-sm-10 col-md-8">
-                                    <input type="email" className="form-control" id="inputEmail3" placeholder="Email" />
-                                </div>
-                            </div>
-                            <div className="form-group row">
-                                <div className="col col-md-6" ></div>
-                                <div className="col-sm-10 col-md-6 ">
-                                    <button type="submit" className="btn btn-primary">Subscribe</button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                    {/* <!-- end column --> */}
-                </div>
+<NewsLetter_form />
 
 
             </div>

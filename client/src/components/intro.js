@@ -68,6 +68,7 @@ class Intro extends Component {
                   <SocialIcon url="https://www.linkedin.com/in/ahmad-ali-07383164194/" /> {'\u00A0'}
                   <SocialIcon url="https://twitter.com/AhmadAl43872454" /> {'\u00A0'}
                   <SocialIcon url="https://github.com/aa947" /> {'\u00A0'}
+                  <SocialIcon url="https://www.facebook.com/ahmad623" /> {'\u00A0'}
 
                   
                  

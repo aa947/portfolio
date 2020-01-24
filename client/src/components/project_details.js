@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import footer from './Footer';
 import Footer from './Footer';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 
 class Project_details extends Component {
@@ -16,10 +17,12 @@ class Project_details extends Component {
             project: {
                 comments: []
             },
+            inputComment: ''
 
         };
         this.thumsUp = this.thumsUp.bind(this);
-
+        this.handleChangeComment = this.handleChangeComment.bind(this);
+        this.addComment = this.addComment.bind(this);
 
 
 
@@ -29,12 +32,36 @@ class Project_details extends Component {
         fetch('http://localhost:5000/api/like/' + this.state.project._id)
             .then(res => res.json())
             .then((ress) => {
-                console.log(ress)
-                if (ress.code == 1) { return this.state.project.likes++;}
-                else if (ress.code == 0) { return; }
-                
-            });
 
+                fetch('/api/p/' + this.state.project._id).then(res => res.json())
+                    .then((project) => {
+                        console.log(project)
+                        this.setState({ project })
+                    }
+                    )
+            });
+    }
+
+    addComment(event) {
+         event.preventDefault();
+        console.log(this.state);
+        axios.post('/api/comment/' + this.state.project._id ,{inputComment: this.state.inputComment})
+            .then(
+                fetch('/api/p/' + this.state.project._id).then(res => res.json())
+                    .then((project) => {
+                        console.log(project)
+                        this.setState({ project })
+                        this.setState({ inputComment: '' })
+                    }
+                    )
+            )
+            .catch(err => console.log(err))
+
+
+    }
+
+    handleChangeComment(event) {
+        this.setState({ inputComment: event.target.value })
     }
 
     componentDidMount() {
@@ -104,10 +131,14 @@ class Project_details extends Component {
 
 
                             })};
-                    
+                            
+                            <form onSubmit={this.addComment}>
                             <div className="row">
-                                <input className="form-control form-control-lg col-md-9  lg-8" type="text" placeholder="add acomment or leave inspiration" /> {'\u00A0'}    <button onClick={this.addComment} className="btn btn-primary col-md-2 lg-2" > Add comment </button>
+                         
+                                <input className="form-control form-control-lg col-md-9  lg-8" type="text" name="inputComment" value={this.state.inputComment} onChange={this.handleChangeComment} placeholder="add acomment or leave inspiration" /> {'\u00A0'}    <button type="submit"  onSubmit={this.addComment} className="btn btn-primary col-md-2 lg-2" > Add comment </button>
                             </div>
+                            </form>
+
                         </div>
                     </div>
                 </div>
