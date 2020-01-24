@@ -46,15 +46,15 @@ class Project_details extends Component {
          event.preventDefault();
         console.log(this.state);
         axios.post('/api/comment/' + this.state.project._id ,{inputComment: this.state.inputComment})
-            .then(
-                fetch('/api/p/' + this.state.project._id).then(res => res.json())
+            .then((data) => {
+                                fetch('/api/p/' + this.state.project._id).then(res => res.json())
                     .then((project) => {
                         console.log(project)
                         this.setState({ project })
                         this.setState({ inputComment: '' })
                     }
-                    )
-            )
+                   )
+                 } )
             .catch(err => console.log(err))
 
 
