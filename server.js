@@ -248,6 +248,37 @@ app.post('/api/comment/:project_id', (req, res)=>{
 })
 });
 
+///////////////data Route\\\\\\\\\\\\\\
+
+
+
+
+app.get('/api/data', (req, res)=>{
+
+  const data = require('./data/certificates');
+ 
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if (err) console.log('Database error: ' + err);
+    let db = dbo.db('portfolio');
+    let coll = db.collection('certificates');
+
+     
+  let data_to_enter = Object.values(data); //get array of docs to inter
+  
+data_to_enter.map( (elem) => {  
+    db.collection('certificates').insert(elem);
+    //       .then((data) => {
+
+        //res.json({ code: 1 });
+    //       });
+});
+
+})
+});
+
+
+
+/////////End of data Route\\\\\\\\\\\\\
 
 //uncomment this to deploy to heroku
 
