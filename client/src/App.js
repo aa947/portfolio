@@ -21,7 +21,23 @@ import Education_row from './components/Education_row';
 import Contact_form from './components/Contact_form';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      menu: false
+    };
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  toggleMenu(){
+    this.setState({ menu: !this.state.menu })
+  }
+
   render() {
+
+    const show = (this.state.menu) ? "show" : "" ;
+
     function Home() {
       return (
 
@@ -70,17 +86,28 @@ class App extends Component {
 
       <Router>
         <div>
+        {/* nav rapper */}
+          
 
-          <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          {/* button nav rapper */}
+        
+    {/* lower part nav rapper */}        
+          <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow ">
 
-            <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
+            {/* <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
               <i className="fa fa-bars"></i>
-            </button>
+            </button>  */}
+
+            <button className="navbar-toggler" type="button" onClick={ this.toggleMenu }>
+        <span className="navbar-toggler-icon"></span>
+      </button>
 
             <img src="https://dl.dropbox.com/s/2du08hmcfnaqv4p/logo.png?dl=0" width ="25%"   />
 
-            <ul className="navbar-nav ml-auto">
 
+            <ul className="navbar-nav ml-auto">
+            <div className={"collapse navbar-collapse " + show}>
+        <div className="navbar-nav">
               <li className="nav-item dropdown no-arrow d-sm-none"></li>
 
               <li className="nav-item dropdown no-arrow mx-1" > <Link to="/" className="nav-link dropdown-toggle" style={{color: "black"}} >Home</Link></li>
@@ -95,11 +122,16 @@ class App extends Component {
                 <a className="nav-link dropdown-toggle" href="tel:+447383164194">
                   <span className="mr-2 d-none d-lg-inline text-gray-600 small">Call us ></span>
                   <img className="img-profile rounded-circle" src="https://dl.dropbox.com/s/jq67lusuwgpwbme/phone.png?dl=0" /></a> </li>
+                  </div>
+            </div>
 
             </ul>
-
+           
           </nav>
-
+          {/* end of loer nav rapper */}
+        
+                  {/* end nav rapper */}
+        
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>

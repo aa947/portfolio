@@ -57,7 +57,6 @@ class Contact_form extends Component {
                 </div>
                 <div className="card-body">
                     <p> Subscribe to My News Update </p>
-                    <p> Interesting updates once a month </p>
                     <p> Promise: No more than 1 mail/month. </p>
                     <form onSubmit={this.subscribe}>
 

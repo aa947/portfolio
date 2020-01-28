@@ -51,13 +51,13 @@ class Intro extends Component {
              
               {/* <!-- Card Body --> */}
               <div className="card-body"  display = "table-cell"   >
-                  <h1 className="text_1"> I'm Ahmad Ali, 26yrs</h1>
-                  <h2> a Junior MERN Developer </h2>
+                  <h1 className="text_1"> I'm Ahmad Ali</h1>
+                  <h2> Junior MERN Developer </h2>
                   <pre>
                     
                   </pre>
                   <p text-align="justify"> From a medical background I came, through a dozen of countries, proffissions, cousres I benetrated, Ended up Here In front of You. All of those life Experiences make me a good choice for your next Role. </p>
-                                  <p>Remember: the we think is always different from What we've teached to think in.</p>
+                                  <p>Remember: the way we think is always different from What we've teached to think in.</p>
                   <pre> Location: London, UK   
                   
                    </pre>
@@ -88,6 +88,7 @@ class Intro extends Component {
               </div>
             </div>
           </div>
+          {/* end photo */}
         </div>
         {/* added Div */}
         </div>

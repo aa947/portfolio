@@ -52,19 +52,20 @@ class Education_row extends Component {
 
                         {this.state.certs.map((cert) => {
                             return (
-                                <p><i class="fas fa-chevron-right"></i> {cert.cert_name} - {cert.provider} ( {cert.course_host} )
+                                <div>
+                                <p style={{ marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> {cert.cert_name} - {cert.provider} ( {cert.course_host} )
                                     {'\u00A0'}
                                     <a href={cert.course_url} title="visit course page" target="_blank">
-                                        <i class="fas fa-hand-pointer"></i>
+                                       <button className="btn btn-link"> visit <i className="fas fa-hand-pointer"></i> </button>
                                     </a>
 
 
                                     {'\u00A0'}
                                     <Link to={{ pathname: "/api/c/" + cert._id, cert_id: cert._id }} title="view certificate">
-                                        <i class="fas fa-graduation-cap"></i>
+                                       <button className="btn btn-link" > details <i className="fas fa-graduation-cap"></i> </button>
                                     </Link>
-
                                 </p>
+                                </div>
                             );
 
 

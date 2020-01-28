@@ -25,7 +25,7 @@ class Edu_col extends Component {
             <React.Fragment>
 
                 {/* skill Card */}
-                <div className="col-lg-4 mb-3">
+                <div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -47,7 +47,7 @@ class Edu_col extends Component {
                 </div>
 
                 {/* skill Card */}
-                <div className="col-lg-4 mb-3">
+                <div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -70,7 +70,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -93,7 +93,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -116,7 +116,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -139,7 +139,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -162,7 +162,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -185,7 +185,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -208,7 +208,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -231,7 +231,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">
@@ -255,7 +255,7 @@ class Edu_col extends Component {
 
 
 {/* skill Card */}
-<div className="col-lg-4 mb-3">
+<div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
                             <div className="row no-gutters align-items-center">

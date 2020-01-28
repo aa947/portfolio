@@ -45,27 +45,27 @@ class Edu_col extends Component {
                         <h6 className="m-0 font-weight-bold text-primary"> Certificates </h6>
                     </div>
                     <div className="card-body">
-
                         {this.state.certs.map((cert) => {
                             return (
-                                <p><i className="fas fa-chevron-right"></i> {cert.cert_name} - {cert.provider} ( {cert.course_host} )
+                                <div>
+                                <p style={{ marginBottom: "5%" }}><i className="fas fa-chevron-right"></i> {cert.cert_name} - {cert.provider} ( {cert.course_host} )
                                     {'\u00A0'}
                                     <a href={cert.course_url} title="visit course page" target="_blank">
-                                        <i className="fas fa-hand-pointer"></i>
+                                       <button className="btn btn-link"> visit <i className="fas fa-hand-pointer"></i> </button>
                                     </a>
 
 
                                     {'\u00A0'}
                                     <Link to={{ pathname: "/api/c/" + cert._id, cert_id: cert._id }} title="view certificate">
-                                        <i className="fas fa-graduation-cap"></i>
+                                       <button className="btn btn-link" > details <i className="fas fa-graduation-cap"></i> </button>
                                     </Link>
-
                                 </p>
+                                </div>
                             );
+                        
 
 
                         })}
-
                     </div>
                 </div>
 

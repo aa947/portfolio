@@ -62,30 +62,29 @@ class Contact_form extends Component {
 
 <div className="card shadow mb-4">
 <div className="card-header py-3">
-    <h6 className="m-0 font-weight-bold text-primary">Contct Us</h6>
+    <h6 className="m-0 font-weight-bold text-primary">Contact Me</h6>
 </div>
 <div className="card-body">
     <div className="row">
         <h6> How can I help? </h6><h6> tell me about your project and I will give you a tooght. OR Just say Hi ! </h6>
     </div>
     <br />
-    <div className="row">
     <form onSubmit={ this.sendMessage }>
 <div className="form-group row">
-<label htmlFor="inputEmail" className="col-sm-2 col-md-4 col-form-label" >Email *</label>
+<label htmlFor="inputEmail" className="col-sm-2 col-md-2 col-form-label" >Email *</label>
 <div className="col-sm-10 col-md-8">
 <input type="email" className="form-control" id="inputEmail" placeholder="Email" value={this.state.inputEmail} onChange={this.handleChangeEmail} />
 </div>
 </div>
 <div className="form-group row">
-<label htmlFor="inputName" className="col-sm-2 col-md-4 col-form-label">Name *</label>
+<label htmlFor="inputName" className="col-sm-2 col-md-2 col-form-label">Name *</label>
 <div className="col-sm-10 col-md-8">
 <input type="text" className="form-control" id="inputName" placeholder="Name" value={this.state.inputName} onChange={this.handleChangeName} />
 </div>
 </div>
 
 <div className="form-group row">
-<label htmlFor="inputMessage" className="col-sm-2 col-md-4 col-form-label">Message *</label>
+<label htmlFor="inputMessage" className="col-sm-2 col-md-2 col-form-label">Message *</label>
 <div className="col-sm-10 col-md-8">
 <textarea type="text" className="form-control" id="inputMessage" value={this.state.inputMessage}  placeholder="Message"  onChange={this.handleChangeMessage}  ></textarea>
 </div>
@@ -97,7 +96,6 @@ class Contact_form extends Component {
 </div>
 </div>
 </form>
-    </div>
     </div>
 </div>
         );
