@@ -96,11 +96,12 @@ class Project_details extends Component {
                             <div className="row">
                                 <div className="col md-8" > <br /> <p> project: {this.state.project.name} </p>
                                     <p> Languages used: {this.state.project.lang} </p>
-                                    <div><a href="#" onClick={this.thumsUp}  ><button className="btn btn-primary" title="view on Github" >Like {'\u00A0'}<i class="fas fa-thumbs-up "></i> {'\u00A0'}<span>({this.state.project.likes}) </span> {'\u00A0'} </button> </a>{'\u00A0'}
-                                        <a href={this.state.project.github_url} target='_blank' >  <button className="btn btn-success"> View on Github {'\u00A0'}<i class="fab fa-github"></i> </button> </a> {'\u00A0'}
-                                        <a href={this.state.project.live_demo} target='_blank' > <button className="btn btn-info"> live demo {'\u00A0'} <i class="fas fa-desktop"></i> </button></a></div>
+                                    <div className="row"><a href="#" onClick={this.thumsUp}  ><button className="btn btn-primary" style={{marginBottom:"5px"}} title="view on Github" >Like {'\u00A0'}<i class="fas fa-thumbs-up "></i> {'\u00A0'}<span>({this.state.project.likes}) </span> {'\u00A0'} </button> </a>{'\u00A0'}
+                                        <a href={this.state.project.github_url} target='_blank' >  <button className="btn btn-success" style={{marginBottom:"5px"}}> View on Github {'\u00A0'}<i class="fab fa-github"></i> </button> </a> {'\u00A0'}
+                                        <a href={this.state.project.live_demo} target='_blank' > <button className="btn btn-info" style={{marginBottom:"5px"}}> live demo {'\u00A0'} <i class="fas fa-desktop"></i> </button></a>
+                                    </div>
                                 </div>
-                                <div className="col md-4" >  <img src={this.state.project.photo} width="100%" height="100%" /></div>
+                               
                             </div>
                         </div>
 
@@ -111,6 +112,23 @@ class Project_details extends Component {
                             <div> <p><span className="m-0 font-weight-bold text-primary">features: </span>  {this.state.project.features} </p> </div>
                             <div> <p> <span className="m-0 font-weight-bold text-primary">inspired_by: </span> {this.state.project.inspired_by} </p> </div>
                             <div> <p> <span className="m-0 font-weight-bold text-primary">date: </span>  {this.state.project.date} </p> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div className="col-lg-12 mb-12">
+                    <div className="card shadow mb-12">
+                        <div className="card-header py-3">
+                            <h5 className="m-0 font-weight-bold text-primary">sample photo:</h5>
+                        </div>
+                        <div className="card-body">
+
+                      <img src={this.state.project.photo} width="100%" height="100%" />
+                         
+                    
+                           
                         </div>
                     </div>
                 </div>

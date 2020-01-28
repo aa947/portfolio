@@ -58,11 +58,11 @@ class Cert_details extends Component {
 
                             <div className="row">
                                 
-                                    <div><a href={this.state.cert.provider_url} target='_blank'><button className="btn btn-primary" title="visit course provider" >visit course provider {'\u00A0'} {'\u00A0'} {'\u00A0'} </button> </a>
+                                    <div><a href={this.state.cert.provider_url} target='_blank'><button className="btn btn-primary" title="visit course provider" style={{marginBottom:"5px"}} >visit course provider {'\u00A0'} {'\u00A0'} {'\u00A0'} </button> </a>
                                     {'\u00A0'}
-                                        <a href={this.state.cert.course_host_url} target='_blank' >  <button className="btn btn-success"> Visit course host {'\u00A0'} </button> </a> 
+                                        <a href={this.state.cert.course_host_url} target='_blank' >  <button className="btn btn-success" style={{marginBottom:"5px"}}> Visit course host {'\u00A0'} </button> </a> 
                                         {'\u00A0'}
-                                        <a href={this.state.cert.course_url} target='_blank' > <button className="btn btn-info"> visit course page {'\u00A0'} </button></a>
+                                        <a href={this.state.cert.course_url} target='_blank' > <button className="btn btn-info" style={{marginBottom:"5px"}}>visit course page {'\u00A0'} </button></a>
                                         
                                     </div>
                                 </div>
