@@ -53,7 +53,7 @@ class Intro extends Component {
               {/* <!-- Card Header - Dropdown --> */}
               <div className="row">
                 {/* <!-- Card Body --> */}
-                <div className="card-body col col-xl-7 col-lg-7" style={{paddingLeft: "10%"}}   >
+                <div className="card-body col col-xl-7 col-lg-7" style={{paddingLeft: "10%", paddingRight:"10%"}}   >
                   <h1 className="text_1"> I'm Ahmad Ali</h1>
                   <h2> Junior MERN Developer </h2>
                   <pre>

@@ -32,16 +32,16 @@ p{
   display: inline-block;
   position: relative;
   animation-duration: 10s;
-  animation-timing-function: steps(20, end);
-  animation-iteration-count: infinite;
+  animation-timing-function: steps(12, end);
+  animation-iteration-count: 1;
 }
 
 
-.text_1::after {
+/* .text_1::after {
   content: "";
   position: absolute;
   right: 0;
   animation: caret infinite;
   animation-duration: 1s;
   animation-timing-function: steps(20, end);
-}
+} */
