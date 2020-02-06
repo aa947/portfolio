@@ -5,3 +5,5 @@
 ### live Version
 You can explore live version [here](http://ahmad-ali.co.uk) 
 
+### or follow http://www.ahmad-ali.co.uk/
+
