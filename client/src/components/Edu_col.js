@@ -46,7 +46,7 @@ class Edu_col extends Component {
                     </div>
                     <div className="card-body">
                         {this.state.certs.map((cert) => {
-                            return (
+                            {/* return (
                                 <div>
                                 <p style={{ marginBottom: "5%" }}><i className="fas fa-chevron-right"></i> {cert.cert_name} - {cert.provider} ( {cert.course_host} )
                                     {'\u00A0'}
@@ -62,7 +62,28 @@ class Edu_col extends Component {
                                 </p>
                                 </div>
                             );
-                        
+                         */}
+
+                         return (
+                                <div>
+                                <p style={{ marginBottom: "5%", marginLeft:"2%" }}><i className="fas fa-chevron-right"></i> {p.name} - { p.date}<i className={p.fontAwesome}></i>
+                                    
+                                    <a href={p.live_demo} title="View live demo" target="_blank">
+                                       <button className="btn btn-link"> visit live <i className="fas fa-hand-pointer"></i> </button>
+                                    </a>
+
+
+                                    {/* {'\u00A0'} */}
+                                    {/* <Link to={{ pathname: "/api/c/" + cert._id, cert_id: cert._id }} title="view certificate">
+                                    <div className="col-auto"> */}
+
+                                    <Link title="View more Details" to={{ pathname: "/api/p/" + p._id, project_id: p._id }}>  
+
+                                       <button className="btn btn-link" > details <i className="fas fa-info-circle"></i> </button>
+                                    </Link>
+                                </p>
+                                </div>
+                            );
 
 
                         })}
