@@ -20,6 +20,7 @@ import Contact_row from './components/Contact_row';
 import Education_row from './components/Education_row';
 import Contact_form from './components/Contact_form';
 import Nav from './components/Nav';
+import projectsToEdit from './components/chooseProjecTtoEdit'
 
 class App extends Component {
 
@@ -37,6 +38,7 @@ class App extends Component {
             <Project_col />
             <Edu_col />
           </div>
+          <projectsToEdit />
           <Footer />
         </React.Fragment>);
     }
@@ -99,6 +101,7 @@ class App extends Component {
               <Education />
             </Route>
             <Route path="/api/p/:project_id" render={(props) => <Project_details {...props} {...this.props} />} />
+            {/* <Route path="/api/edit_project/:project_id" render={(props) => <Project_details {...props} {...this.props} />} /> */}
             <Route path="/api/c/:cert_id" render={(props) => <Cert_details {...props} {...this.props} />} />
             {/* <Project_details /> */}
             {/* </Route> */}

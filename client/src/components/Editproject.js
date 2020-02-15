@@ -1,8 +1,8 @@
+
 import React, { Component } from 'react';
 import axios from 'axios';
 
 
-import './css/intro.css';
 import { Link } from 'react-router-dom';
 
 class Contact_form extends Component {
@@ -47,7 +47,8 @@ class Contact_form extends Component {
      }
 
     componentDidMount() {
-       
+        fetch('/api/projects').then(res => res.json())
+            .then(projects => this.setState({ projects }, () => console.log('fetched...', projects)));
     }
 
     render() {

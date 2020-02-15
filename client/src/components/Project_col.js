@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import Contact_form from './Contact_form';
 
 
-import './css/intro.css';
+// import './css/intro.css';
 import { Link } from 'react-router-dom';
 
 class Project_col extends Component {
@@ -35,14 +35,14 @@ class Project_col extends Component {
                         <h6 className="m-0 font-weight-bold text-primary">Projects</h6>
                     </div>
                     <div className="card-body">
-                        <div className="row">
+                      
 
                             {/* <!-- start project row --> */}
 
 
                             {this.state.projects.map((p) => {
 
-                                return (
+                                {/* return (
                                     <div className="col-lg-6 mb-4">
                                         <div className="card border-left-info shadow h-100 py-2">
                                             <div className="card-body">
@@ -63,34 +63,52 @@ class Project_col extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                );
+                                ); */}
 
+                                
+                         {/* return (
+                                <div>
+                                <p style={{  }}>  <i className="fas fa-chevron-right"></i> {p.name}     <i className={p.fontAwesome}></i>   { p.date}
+                                    
+                                    <a href={p.live_demo} title="View live demo" target="_blank">
+                                       <button className="btn btn-link"> visit live <i className="fas fa-hand-pointer"></i> </button>
+                                    </a>
+
+                                    <Link title="View more Details" to={{ pathname: "/api/p/" + p._id, project_id: p._id }}>  
+
+                                       <button className="btn btn-link" > details <i className="fas fa-info-circle"></i> </button>
+                                    </Link>
+                                </p>
+                                </div>
+                            );
+ */}
+
+                            return(<div>
+                                <p style={{ marginBottom: "5%" }}><i className="fas fa-chevron-right"></i> {p.name} - {p.date}  {'\u00A0'}  <i className={p.fontAwesome}></i> 
+                                    {'\u00A0'}
+                                    <a  href={p.live_demo} title="visit Live Demo" target="_blank">
+                                       <button className="btn btn-link"> visit <i className="fas fa-hand-pointer"></i> </button>
+                                    </a>
+
+
+                                    {'\u00A0'}
+                                    <Link title="View more Details" to={{ pathname: "/api/p/" + p._id, project_id: p._id }}>  
+                                       <button className="btn btn-link" > details <i className="fas fa-graduation-cap"></i> </button>
+                                    </Link>
+                                </p>
+                                </div>);
 
                             })}
 
 
 
 
-                            {/* hey */}
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
+                          
 
 
 
                             {/* <!-- end project row --> */}
-                        </div>
+                
 
                     </div>
                 </div>

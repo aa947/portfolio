@@ -56,6 +56,7 @@ app.get('/api/projects', (req, res) => {
   })
 });
 
+
 app.get('/api/certs', (req, res) => {
 
   mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
