@@ -42,7 +42,7 @@ class Project_row extends Component {
 
 
                             {this.state.projects.map((p) => {
-
+{/* 
                                 return (
                                     <div className="col-lg-4 mb-3">
                                         <div className="card border-left-info shadow h-100 py-2">
@@ -64,7 +64,25 @@ class Project_row extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                );
+                                ); */}
+
+
+
+                                return(<div className="col col-lg-6 col-sm-12 col-xs-12" >
+                                
+                                <p style={{ marginBottom: "2%", display: "inline-block" }}><i className="fas fa-chevron-right"></i> {p.name} - {p.date}  {'\u00A0'}  <i className={p.fontAwesome}></i> 
+                                    {'\u00A0'}
+                                    <a  href={p.live_demo} title="visit Live Demo" target="_blank">
+                                       <button className="btn btn-link text-muted"> visit <i className="fas fa-external-link-alt"></i> </button>
+                                    </a>
+
+
+                                    {/* {'\u00A0'} */}
+                                    <Link title="View more Details" to={{ pathname: "/api/p/" + p._id, project_id: p._id }}>  
+                                       <button className="btn btn-link text-muted" > details <i className="fas fa-info-circle"></i> </button>
+                                    </Link>
+                                </p>
+                                </div>);
 
 
                             })}
@@ -72,21 +90,7 @@ class Project_row extends Component {
 
 
 
-                            {/* hey */}
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                            </div>
+                          
 
 
 
