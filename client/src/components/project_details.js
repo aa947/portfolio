@@ -8,6 +8,9 @@ import footer from './Footer';
 import Footer from './Footer';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Parser from 'html-react-parser';
+
+
 
 
 class Project_details extends Component {
@@ -106,10 +109,21 @@ class Project_details extends Component {
                         </div>
 
                         <div className="card-body">
-                            <div> <p><span className="m-0 font-weight-bold text-primary"> details: </span>  {this.state.project.intro} </p> </div>
+                            <div> <p><span className="m-0 font-weight-bold text-primary"> details: </span> 
+                             {/* {this.state.project.intro} */}
+                            <div dangerouslySetInnerHTML={{ __html: this.state.project.intro }} /> </p> </div>
 
-                            <div> <p> <span className="m-0 font-weight-bold text-primary">tasks: </span>  {this.state.project.tasks} </p> </div>
-                            <div> <p><span className="m-0 font-weight-bold text-primary">features: </span>  {this.state.project.features} </p> </div>
+                            <div> <p> <span className="m-0 font-weight-bold text-primary">tasks: </span>
+                              {/* {this.state.project.tasks}  */}
+                              <div dangerouslySetInnerHTML={{ __html: this.state.project.tasks }} />
+                              {/* {Parser(this.state.project.)} */}
+                              </p> </div>
+                            <div> <p><span className="m-0 font-weight-bold text-primary">features: </span> 
+                             {/* {this.state.project.features} */}
+                            <div dangerouslySetInnerHTML={{ __html: this.state.project.features }} />
+                            {/* {Parser(this.state.project.features)} */}
+                            
+                             </p> </div>
                             <div> <p> <span className="m-0 font-weight-bold text-primary">inspired_by: </span> {this.state.project.inspired_by} </p> </div>
                             <div> <p> <span className="m-0 font-weight-bold text-primary">date: </span>  {this.state.project.date} </p> </div>
                         </div>
