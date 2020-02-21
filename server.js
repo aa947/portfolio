@@ -51,7 +51,7 @@ app.get('/api/projects', (req, res) => {
     let db = dbo.db('portfolio');
     let coll = db.collection('projects');
 
-    db.collection('projects').find({}).toArray((err, data) => { res.json(data) });
+    db.collection('projects').find({}).sort({sorting: 1}).toArray((err, data) => { res.json(data) });
 
   })
 });
