@@ -9,6 +9,7 @@ import Footer from './Footer';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Parser from 'html-react-parser';
+import './css/project_details_css.css';
 
 
 
@@ -135,11 +136,12 @@ class Project_details extends Component {
                 <div className="col-lg-12 mb-12">
                     <div className="card shadow mb-12">
                         <div className="card-header py-3">
-                            <h5 className="m-0 font-weight-bold text-primary">sample photo:</h5>
+                            <h5 className="m-0 font-weight-bold text-primary">sample:</h5>
                         </div>
                         <div className="card-body">
+                        { this.state.project.photo && ( <img src={this.state.project.photo} width="100%" height="100%" /> )  }
 
-                      <img src={this.state.project.photo} width="100%" height="100%" />
+                        { this.state.project.video && (<div className="container" style={{width:"100%"}} dangerouslySetInnerHTML={{ __html: this.state.project.video }} />)}
                          
                     
                            
