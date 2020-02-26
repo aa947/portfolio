@@ -70,7 +70,9 @@ class Project_row extends Component {
 
                                 return(<div className="col col-lg-6 col-sm-12 col-xs-12" >
                                 
-                                <p style={{ marginBottom: "2%", display: "inline-block" }}><i className="fas fa-chevron-right"></i> {p.name} - {p.date}  {'\u00A0'}  <i className={p.fontAwesome}></i> 
+                                {/* <p style={{ marginBottom: "2%", display: "inline-block" }}> */}
+                                <div tyle={{ marginBottom: "2%", display: "inline-block" }}>
+                                 <i className="fas fa-chevron-right"></i> {p.name} - {p.date}  {'\u00A0'}  <i className={p.fontAwesome}></i> 
                                     {'\u00A0'}
                                     <a  href={p.live_demo} title="visit Live Demo" target="_blank">
                                        <button className="btn btn-link text-muted"> visit <i className="fas fa-external-link-alt"></i> </button>
@@ -81,7 +83,12 @@ class Project_row extends Component {
                                     <Link title="View more Details" to={{ pathname: "/api/p/" + p._id, project_id: p._id }}>  
                                        <button className="btn btn-link text-muted" > details <i className="fas fa-info-circle"></i> </button>
                                     </Link>
-                                </p>
+
+                                    <Link title="View more Details" to={{ pathname: "/api/e/" + p._id, project_id: p._id }}>  
+                                       <button className="btn btn-link text-muted" > Edit <i class="fas fa-edit"></i> </button>
+                                    </Link>
+                                {/* </p> */}
+                                </div>
                                 </div>);
 
 

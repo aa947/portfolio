@@ -51,7 +51,7 @@ app.get('/api/projects', (req, res) => {
     let db = dbo.db('portfolio');
     let coll = db.collection('projects');
 
-    db.collection('projects').find({}).sort({sorting: 1}).toArray((err, data) => { res.json(data) });
+    db.collection('projects').find({}).sort({ sorting: 1 }).toArray((err, data) => { res.json(data) });
 
   })
 });
@@ -99,6 +99,60 @@ app.get('/api/p/:project_id', (req, res) => {
       .then((data) => {
 
         res.json(data);
+      });
+
+  })
+});
+
+app.get('/api/e/:project_id', (req, res) => {
+
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if (err) console.log('Database error: ' + err);
+    let db = dbo.db('portfolio');
+    let coll = db.collection('projects');
+    let pproject_id = req.params.project_id;
+
+    db.collection('projects').findOne({ _id: ObjectId(pproject_id) })
+      .then((data) => {
+
+        res.json(data);
+      });
+
+  })
+});
+app.post('/api/e/:project_id', (req, res) => {
+
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if (err) console.log('Database error: ' + err);
+    let db = dbo.db('portfolio');
+    let coll = db.collection('projects');
+    let pproject_idd = req.params.project_id;
+    let newDoc = req.body.submittedData;
+    console.log(req.params)
+    console.log('pr id',pproject_idd);
+    console.log('id' , newDoc)
+
+
+    db.collection('projects').findOneAndUpdate({ _id: ObjectId(pproject_idd) }, {
+      $set: {
+        name: newDoc.name,
+        lang: newDoc.lang,
+        photo: newDoc.photo,
+        video: newDoc.video,
+        date: newDoc.date,
+        github_url: newDoc.github_url,
+        live_demo: newDoc.live_demo,
+        intro: newDoc.intro,
+        tasks: newDoc.tasks,
+        features: newDoc.features,
+        inspired_by: newDoc.inspired_by,
+        fontAwesome: newDoc.fontAwesome,
+        sorting: newDoc.sorting
+      }
+    })
+      .then((data) => {
+
+        res.json({data: data, message: 'OK'});
       });
 
   })
@@ -212,27 +266,27 @@ app.post("/api/sendMessage", (req, res) => {
 });
 
 
-app.post("/api/sub", (req, res)=>{
-  
+app.post("/api/sub", (req, res) => {
+
   mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
     if (err) console.log('Database error: ' + err);
     let db = dbo.db('portfolio');
     let coll = db.collection('newsLetter');
 
     let email = req.body.inputEmail;
-    db.collection('newsLetter').insertOne({email: email })
+    db.collection('newsLetter').insertOne({ email: email })
       .then((data) => {
         res.json(data);
       });
 
-})
+  })
 });
 
 
 
-app.post('/api/comment/:project_id', (req, res)=>{
+app.post('/api/comment/:project_id', (req, res) => {
   console.log(req.body)
-  
+
   mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
     if (err) console.log('Database error: ' + err);
     let db = dbo.db('portfolio');
@@ -240,13 +294,13 @@ app.post('/api/comment/:project_id', (req, res)=>{
     let project_id = req.params.project_id;
 
     let comment = req.body.inputComment;
-    db.collection('projects').findOneAndUpdate({ _id: ObjectId(project_id) }, { $push: { comments: comment }  })
-          .then((data) => {
+    db.collection('projects').findOneAndUpdate({ _id: ObjectId(project_id) }, { $push: { comments: comment } })
+      .then((data) => {
 
-            res.json({ code: 1 });
-          });
+        res.json({ code: 1 });
+      });
 
-})
+  })
 });
 
 ///////////////data Route\\\\\\\\\\\\\\
@@ -254,27 +308,27 @@ app.post('/api/comment/:project_id', (req, res)=>{
 
 
 
-app.get('/api/data', (req, res)=>{
+app.get('/api/data', (req, res) => {
 
   const data = require('./data/certificates');
- 
+
   mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
     if (err) console.log('Database error: ' + err);
     let db = dbo.db('portfolio');
     let coll = db.collection('certificates');
 
-     
-  let data_to_enter = Object.values(data); //get array of docs to inter
-  
-data_to_enter.map( (elem) => {  
-    db.collection('certificates').insert(elem);
-    //       .then((data) => {
 
-        //res.json({ code: 1 });
-    //       });
-});
+    let data_to_enter = Object.values(data); //get array of docs to inter
 
-})
+    data_to_enter.map((elem) => {
+      db.collection('certificates').insert(elem);
+      //       .then((data) => {
+
+      //res.json({ code: 1 });
+      //       });
+    });
+
+  })
 });
 
 
