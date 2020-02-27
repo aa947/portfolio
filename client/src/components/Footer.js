@@ -27,7 +27,7 @@ class Footer extends Component {
             <React.Fragment>
 
 <footer className="sticky-footer bg-white">
-        <div className="container my-auto">
+        <div >
           <div className="copyright text-center my-auto">
             <span>Copyright &copy; Ahmad Ali </span> {'\u00A0'}
             <span><i className="fas fa-eye"></i>  { this.state.count } </span> {'\u00A0'}

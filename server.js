@@ -56,6 +56,21 @@ app.get('/api/projects', (req, res) => {
   })
 });
 
+app.get('/api/newsLetter', (req, res) => {
+
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if (err) console.log('Database error: ' + err);
+    let db = dbo.db('portfolio');
+    let coll = db.collection('newsLetter');
+
+    db.collection('newsLetter').find({}).toArray((err, data) => {
+      console.log(data);
+      res.json({data : data.length}) 
+      });
+
+  })
+});
+
 
 app.get('/api/certs', (req, res) => {
 

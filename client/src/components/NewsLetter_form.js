@@ -14,7 +14,9 @@ class Contact_form extends Component {
         super(props);
         this.state = {
 
-            inputEmail: ''
+            inputEmail: '', 
+            subscribers: ''
+
             
 
 
@@ -42,7 +44,10 @@ class Contact_form extends Component {
     }
 
    
+   
     componentDidMount() {
+        fetch('/api/newsLetter').then(res => res.json())
+            .then(num => this.setState({ subscribers: num.data }, () => console.log('subscribers fetched...', num)));
 
     }
 
@@ -56,7 +61,7 @@ class Contact_form extends Component {
                     <h6 className="m-0 font-weight-bold text-primary">News letter</h6>
                 </div>
                 <div className="card-body">
-                    <p> Subscribe to My News Update </p>
+                <p>Join {this.state.subscribers} Subscribers to My News Update </p>
                     <p> Promise: No more than 1 mail/month. </p>
                     <form onSubmit={this.subscribe}>
 
