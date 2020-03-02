@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import { SocialIcon } from 'react-social-icons';
 import Numbers from './numbers';
 
+
 import './css/intro.css';
 
 class Intro extends Component {
@@ -30,7 +31,11 @@ class Intro extends Component {
         {/* <!-- Page Heading --> */}
         <div className="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 className="h3 mb-0 text-gray-800">Welcome ... How can I help ??</h1>
-          <a href="mailto:aallii300300@gmail.com" target="_blank" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-envelope fa-sm text-white-50"></i> Drop A message </a>
+       
+                  <a href="mailto:aallii300300@gmail.com" target="_blank" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-envelope fa-sm text-white-50"></i> Drop A message </a>
+
+       
+        
         </div>
 
         {/* <!-- Content Row for Numbers --> */}
@@ -62,8 +67,8 @@ class Intro extends Component {
                   <p text-align="justify"> From a medical background I came, through a dozen of countries, proffissions, cousres I benetrated, Ended up Here In front of You. All of those life Experiences make me a good choice for your next Role. </p>
                   <p>Remember: the way we think is always different from What we've teached to think in.</p>
                   <pre> Location: London, UK
-
-                   </pre>
+</pre>
+                   
                   <pre> Know Me More..
 
                   </pre>
