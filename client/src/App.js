@@ -22,7 +22,7 @@ import Contact_form from './components/Contact_form';
 import Nav from './components/Nav';
 import projectsToEdit from './components/chooseProjecTtoEdit';
 import Edit_project from './components/Edit_project';
-
+import './App.css';
 class App extends Component {
 
  
