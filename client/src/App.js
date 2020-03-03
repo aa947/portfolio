@@ -20,7 +20,7 @@ import Contact_row from './components/Contact_row';
 import Education_row from './components/Education_row';
 import Contact_form from './components/Contact_form';
 import Nav from './components/Nav';
-import projectsToEdit from './components/chooseProjecTtoEdit';
+import Reviews from './components/Reviews';
 import Edit_project from './components/Edit_project';
 import './App.css';
 class App extends Component {
@@ -38,8 +38,12 @@ class App extends Component {
           <div className="row">
             <Project_col />
             <Edu_col />
+            <br />
+           
+
           </div>
-          <projectsToEdit />
+          <Reviews />
+          <br />
           <Footer />
         </React.Fragment>);
     }
