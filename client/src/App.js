@@ -22,6 +22,9 @@ import Contact_form from './components/Contact_form';
 import Nav from './components/Nav';
 import Reviews from './components/Reviews';
 import Edit_project from './components/Edit_project';
+import Services from './components/Services';
+import FirstAPI from './components/services/firstAPI';
+import Forecast from './components/services/Forecast';
 import './App.css';
 class App extends Component {
 
@@ -35,6 +38,9 @@ class App extends Component {
 
         <React.Fragment>
           <Intro />
+          <br />
+          <Services />
+          <br />
           <div className="row">
             <Project_col />
             <Edu_col />
@@ -106,6 +112,8 @@ class App extends Component {
               <Education />
             </Route>
             <Route path="/api/p/:project_id" render={(props) => <Project_details {...props} {...this.props} />} />
+            <Route exact path="/api/s/firstAPI" render={(props) => <FirstAPI {...props} {...this.props} />} />
+            <Route exact path="/api/s/forecast" render={(props) => <Forecast {...props} {...this.props} />} />
             <Route path="/api/e/:project_id" render={(props) => <Edit_project {...props} {...this.props} />} />
             {/* <Route path="/api/edit_project/:project_id" render={(props) => <Project_details {...props} {...this.props} />} /> */}
             <Route path="/api/c/:cert_id" render={(props) => <Cert_details {...props} {...this.props} />} />

@@ -39,4 +39,41 @@
     flex: 0 0 370px;
     position: relative;
     border: 1px solid #bfbfbf;
+    width: 340px;
+    height: 190px;
+    max-width: 341px;
+    max-height: 191px;
+}
+
+.tweetForm{
+    margin-left: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    flex: 0 0 370px;
+    position: relative;
+    border: 1px solid #bfbfbf;
+}
+
+.reviewText{
+    font-size: large;
+}
+.reviewAuthor{
+font-size: x-large;    margin-bottom: 0%;
+
+}
+.relation{
+font-size: smaller;
+padding: 0%;
+}
+.header_cnter{
+    text-align: center !important;
+}
+.add_review{
+position: relative;
+top:+180%;
+left:-40%;
+background-color: #706f6c;
 }

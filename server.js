@@ -220,6 +220,53 @@ app.get("/api/c/:cert_id", (req, res) => {
   })
 });
 
+
+/*
+*
+* fetch reviews 
+*
+*/
+
+app.get('/api/reviews', (req, res) => {
+
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if (err) console.log('Database error: ' + err);
+    let db = dbo.db('portfolio');
+
+    db.collection('reviews').find({}).toArray((err, data) => { res.json(data) });
+
+  })
+});
+
+/*
+*
+* Add review
+*
+*/
+
+app.post("/api/addReview", (req, res) => {
+
+  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+    if (err) console.log('Database error: ' + err);
+    let db = dbo.db('portfolio');
+    let coll = db.collection('reviews');
+
+    let name = req.body.inputName;
+    let rel = req.body.rel;
+    let message = req.body.inputMessage;
+    db.collection('reviews').insertOne({ name: name, rel: rel, message: message })
+      .then((data) => { 
+          res.json(data);
+      });
+    })
+  });
+
+/*
+*
+* Send Message
+*
+*/
+
 app.post("/api/sendMessage", (req, res) => {
 
   mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
@@ -346,6 +393,10 @@ app.get('/api/data', (req, res) => {
   })
 });
 
+
+/////////servecies Route\\\\\\\\\\\\\
+let ServicesRoute = require('./routes/servicesRoute');
+app.use('/api/s', ServicesRoute);
 
 
 /////////End of data Route\\\\\\\\\\\\\
