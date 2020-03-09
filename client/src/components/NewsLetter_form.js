@@ -63,6 +63,7 @@ class Contact_form extends Component {
                 <div className="card-body">
                 <p>Join {this.state.subscribers} Subscribers to My News Update </p>
                     <p> Promise: No more than 1 mail/month. </p>
+                    
                     <form onSubmit={this.subscribe}>
 
 

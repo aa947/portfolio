@@ -6,7 +6,8 @@ import '../css/forecast.css';
 import Dotenv from 'dot-env';
 // import Geocode from "react-geocode";
 // import  convert from 'xml-js';
- 
+import Footer from '../Footer';
+
 
 
 export default class Forecast extends Component {
@@ -20,11 +21,15 @@ export default class Forecast extends Component {
                 lat: '',
                 long: ''
             },
-            loading: true
+            loading: true,
+            city: ''
 
         }
 
         this.getGeo = this.getGeo.bind(this);
+        this.handleChangeCity = this.handleChangeCity.bind(this);
+        this.changeCity = this.changeCity.bind(this);
+
     }
 
 
@@ -73,6 +78,26 @@ export default class Forecast extends Component {
     // }
 
 
+
+    handleChangeCity(event){
+        this.setState({ city: event.target.value })
+    }
+
+    changeCity(event) {
+        event.preventDefault();
+        axios.post('/api/s/forecast_change', { city: this.state.city})
+            .then(res =>{ console.log(res.data[0].locations[0].displayLatLng); return res.data[0].locations[0].displayLatLng})
+            .then( (data) => {
+                console.log('city data', data)
+                axios.post('/api/s/forecast', { geo: { lat: data.lat, long: data.lng } })
+                .then((res) => { this.setState({ forecast: res.data }) })
+                .then(this.setState({ loading: false }))
+             })
+            .catch(err => console.log(err))
+
+    }
+
+
     getGeo = (a) => {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(async function (position) {
@@ -116,7 +141,10 @@ export default class Forecast extends Component {
 
       
 
-        return (
+        return ( <>
+
+            <div className="col-lg-12 mb-12">
+
             <div className="forecast">
 
 <div className="card shadow mb-4">
@@ -124,6 +152,29 @@ export default class Forecast extends Component {
                         <h6 className="m-0 font-weight-bold text-primary">Forecast</h6>
                     </div>
                     <div className="card-body">
+
+
+
+
+
+                    <div id="currentDetailsWrapper">
+
+<div id="currentDetails">
+
+
+<form style={{ marginLeft: "20%" }} className="form-inline" onSubmit={this.changeCity}>
+ 
+  <div className="form-group mx-sm-3 mb-2">
+    <label for="city" style={{ marginRight: "10px" }}>Change city:</label> 
+    <input type="text" className="form-control" name="city" id="city" placeholder="city name" value={this.state.city} onChange={this.handleChangeCity} />
+  </div>
+  <button type="submit" className="btn btn-secondary mb-2">Change</button>
+</form>
+
+</div></div>
+
+<br />
+
                     <div id="currentDetailsWrapper">
 
                     <div id="currentDetails">
@@ -397,10 +448,12 @@ export default class Forecast extends Component {
 
 
 
-
+</div>
 
          
             </div>
+<Footer />
+            </>
         )
     }
 }

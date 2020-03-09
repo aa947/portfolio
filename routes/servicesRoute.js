@@ -71,4 +71,17 @@ fetch(`https://api.darksky.net/forecast/32a9ba97f5b4e020604d55e29b3056e2/${lat},
 });
 
 
+router.post('/forecast_change', (req, res)=>{
+  console.log(req.body);
+  let city = req.body.city;
+
+
+// fetch("https://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1RkyxVLjO41PT3D&inFormat=kvp&outFormat=json&location=london&thumbMaps=false")
+fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1RkyxVLjO41PT3D&location=${city}`)
+  .then(rees => { return rees.json()} )
+   .then(data => { return res.json(data.results);});
+  
+});
+
+
 module.exports = router;
