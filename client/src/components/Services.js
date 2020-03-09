@@ -19,9 +19,13 @@ export default class Services extends Component {
                     </div>
                     <div className="card-body">
                         
- <p> <Link to={{pathname: '/api/s/firstAPI' }}> First APi </Link> </p>
- <p> <Link to={{pathname: '/api/s/forecast' }}> Forecast </Link> </p>
+                    {/* <p style={{fontSize: "20px",  marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{pathname: '/api/s/firstAPI' }}> First APi </Link> </p> */}
+                    <p style={{fontSize: "20px",  marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{pathname: '/api/s/forecast' }}>Weather Forecast </Link> </p>
 
+                   
+                    </div>
+                    <div className="card-header py-3">
+                        <p style={{ fontSize:"0.8rem" }} className="m-0 font-weight-bold text-primary"> ** Active Pages from this site that use APIs to Give you some valuable Data. </p>
                     </div>
                 </div>
             </div>
