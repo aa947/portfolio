@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-// import Container from 'react-bootstrap/Container';
-//import Row from 'react-bootstrap/Row';
-//import Col from 'react-bootstrap/Col';
-//import Jumbotron from 'react-bootstrap/Jumbotron';
+import {  toast } from 'react-toastify';
+//import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 
 import './css/intro.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Contact_form extends Component {
     constructor(props) {
@@ -27,11 +25,26 @@ class Contact_form extends Component {
 
     }
 
+    
     subscribe(event) {
         event.preventDefault();
-        console.log(this.state);
+       // console.log(this.state);
         axios.post('http://localhost:5000/api/sub', this.state)
-            .then(res => console.log(res))
+            .then((res) =>{
+             //console.log(res)
+             if(this.state.inputEmail == ''){
+                  toast.error('please inter an email to subscribe',{
+                     position: toast.POSITION.TOP_CENTER,
+                     autoClose: false
+                 })
+                 return false;
+             }
+             this.setState({ inputEmail: '' });
+             toast.success('Thank You for subscribing to my Newsletter!', {
+                 position: toast.POSITION.TOP_CENTER,
+                 autoClose: false
+             });
+            })
             .catch(err => console.log(err))
 
 
@@ -47,7 +60,7 @@ class Contact_form extends Component {
    
     componentDidMount() {
         fetch('/api/newsLetter').then(res => res.json())
-            .then(num => this.setState({ subscribers: num.data }, () => console.log('subscribers fetched...', num)));
+            .then(num => this.setState({ subscribers: num.data }));
 
     }
 
@@ -83,6 +96,11 @@ class Contact_form extends Component {
                             </div>
                         </div>
                     </form>
+
+                   
+        
+          {/* <ToastContainer /> */}
+      
 
                 </div>
                 {/* <!-- end column --> */}
