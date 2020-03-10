@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './css/header.css';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import footer from './Footer';
-import Footer from './Footer';
-import { useParams } from 'react-router-dom';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import footer from './Footer';
+// import Footer from './Footer';
+// import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import Parser from 'html-react-parser';
+// import Parser from 'html-react-parser';
 import './css/project_details_css.css';
 
 

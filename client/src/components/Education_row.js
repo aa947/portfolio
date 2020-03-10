@@ -20,7 +20,7 @@ class Education_row extends Component {
 
     componentDidMount() {
         fetch('/api/certs').then(res => res.json())
-            .then(certs => this.setState({ certs }, () => console.log('Customers fetched...', certs)));
+            .then(certs => this.setState({ certs }));
 
     }
 

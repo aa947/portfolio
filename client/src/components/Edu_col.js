@@ -18,7 +18,7 @@ class Edu_col extends Component {
 
     componentDidMount() {
         fetch('/api/certs').then(res => res.json())
-            .then(certs => this.setState({ certs }, () => console.log('Customers fetched...', certs)));
+            .then(certs => this.setState({ certs }));
 
     }
 
@@ -47,8 +47,8 @@ class Edu_col extends Component {
                     <div className="card-body">
                         {this.state.certs.map((cert) => {
                             return (
-                                <div>
-                                <p style={{ marginBottom: "5%" }}><i className="fas fa-chevron-right"></i> {cert.cert_name} - {cert.provider} ( {cert.course_host} )
+                                <div key={ cert._id }>
+                                <p key={ cert._id } style={{ marginBottom: "5%" }}><i className="fas fa-chevron-right"></i> {cert.cert_name} - {cert.provider} ( {cert.course_host} )
                                     {'\u00A0'}
                                     <a href={cert.course_url} title="visit course page" target="_blank">
                                        <button className="btn btn-link"> visit <i className="fas fa-hand-pointer"></i> </button>
