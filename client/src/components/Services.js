@@ -15,7 +15,11 @@ export default class Services extends Component {
             <div>
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
-                        <h6 className="m-0 font-weight-bold text-primary">Services</h6>
+                        <h6 className="m-0 font-weight-bold text-primary">
+                        Featured Projects, 
+                        <span style={{ fontSize: "0.8rem" }}>
+                        All are internal pages in this site </span>
+                        </h6>
                     </div>
                     <div className="card-body">
 
@@ -27,9 +31,9 @@ export default class Services extends Component {
 
                     </div>
 
-                    <div className="card-header py-3">
+                    {/* <div className="card-header py-3">
                         <p style={{ fontSize: "0.8rem" }} className="m-0 font-weight-bold text-primary"> ** Active Pages from this site that use APIs to Give you some valuable Data. </p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         )
