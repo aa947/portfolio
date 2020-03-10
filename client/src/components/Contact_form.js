@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import {  toast } from 'react-toastify';
 
 import './css/intro.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Contact_form extends Component {
     constructor(props) {
@@ -26,9 +26,23 @@ class Contact_form extends Component {
 
     sendMessage(event){
         event.preventDefault();
-        console.log(this.state);
+        //console.log(this.state);
+        let {inputEmail, inputName, inputMessage} = this.state;
+        if( inputEmail == "" || inputName == "" || inputMessage == "" ){
+            toast.error("Please fill in All form fields to send a message", {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: false
+            })
+            return false;
+        }
         axios.post('/api/sendMessage', this.state)
-        .then(res => console.log(res))
+        .then(res => {
+            //console.log(res)
+            toast.success("Thank You for contacting me, I will responde soon!", {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: false
+            })
+        })
         .catch( err => console.log(err) )
 
 

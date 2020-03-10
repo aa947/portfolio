@@ -10,7 +10,7 @@ import NewsLetter_form from './NewsLetter_form';
 
 
 import './css/intro.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class Contact_row extends Component {
     constructor() {
