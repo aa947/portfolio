@@ -20,9 +20,8 @@ class Project_row extends Component {
 
     componentDidMount() {
         fetch('/api/projects').then(res => res.json())
-            .then(projects => this.setState({ projects }, () => console.log('Customers fetched...', projects)));
-
-    }
+            .then(projects => this.setState({ projects })
+            )}
 
     render() {
 
@@ -41,33 +40,7 @@ class Project_row extends Component {
                             {/* <!-- start project row --> */}
 
 
-                            {this.state.projects.map((p) => {
-{/* 
-                                return (
-                                    <div className="col-lg-4 mb-3">
-                                        <div className="card border-left-info shadow h-100 py-2">
-                                            <div className="card-body">
-                                                <div className="row no-gutters align-items-center">
-                                                    <div className="col mr-2">
-                                                        <div className="text-xs font-weight-bold text-info text-uppercase mb-1">{p.date}</div>
-                                                        <div className="row no-gutters align-items-center">
-                                                            <div className="col-auto">
-                                                                <Link title="View more Details" to={{ pathname: "/api/p/" + p._id, project_id: p._id }}>  <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">{p.name}</div> </Link>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-auto">
-                                                        <i className={p.fontAwesome}></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ); */}
-
-
-
+                            {this.state.projects.map((p) => { 
                                 return(<div className="col col-lg-6 col-sm-12 col-xs-12" >
                                 
                                 {/* <p style={{ marginBottom: "2%", display: "inline-block" }}> */}
