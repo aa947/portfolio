@@ -3,7 +3,7 @@ import axios from 'axios'
 import Skycons from 'react-skycons'
 import '../css/forecast.css';
 // import '../css/forecast_template.css';
-import Dotenv from 'dot-env';
+//import Dotenv from 'dot-env';
 // import Geocode from "react-geocode";
 // import  convert from 'xml-js';
 import Footer from '../Footer';

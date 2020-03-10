@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
+   // BrowserRouter as Router,
+   // Switch,
+  //  Route,
     Link
   } from "react-router-dom";
   import Sidebar from "react-sidebar";
@@ -31,6 +31,7 @@ class Intro extends Component {
         return (
 <React.Fragment>
 <Sidebar
+        children =''
         sidebar={<div>
         <p><Link to="/" className="nav-link " style={{ color: "black" }} >Home</Link> </p>
         <p> <Link to="/projects" className="nav-link " style={{ color: "black" }}>Projects </Link> </p>
@@ -59,7 +60,7 @@ class Intro extends Component {
                 <span className="navbar-toggler-icon"></span>
               </button>
    */}
-              <img id="log_img" src="https://dl.dropbox.com/s/2du08hmcfnaqv4p/logo.png?dl=0"  />
+              <img id="log_img" src="https://dl.dropbox.com/s/2du08hmcfnaqv4p/logo.png?dl=0" alt="Ahmad-Ali-ahmad-ali-logo-Uk" />
   
   
               <ul className="nav navbar-nav ml-auto hidden-xs d-none d-md-block">
@@ -87,7 +88,7 @@ class Intro extends Component {
                     <li className="nav-item dropdown no-arrow">
                       <a className="nav-link dropdown-toggle" href="tel:+447383164194" title="Call me">
                         <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                        <img className="img-profile rounded-circle" src="https://dl.dropbox.com/s/jq67lusuwgpwbme/phone.png?dl=0" /></a> </li>
+                        <img className="img-profile rounded-circle" src="https://dl.dropbox.com/s/jq67lusuwgpwbme/phone.png?dl=0" alt="ahmad-ali Ahmad-Ali" /></a> </li>
                   </div>
                 </div>
   
