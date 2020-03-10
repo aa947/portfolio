@@ -7,18 +7,18 @@ import React, { Component } from 'react';
 import './css/intro.css';
 
 class Edu_col extends Component {
-    constructor() {
-        super();
-        this.state = {
-            certs: []
-        };
-    }
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         certs: []
+    //     };
+    // }
 
-    componentDidMount() {
-        fetch('/api/certs').then(res => res.json())
-            .then(certs => this.setState({ certs }));
+    // componentDidMount() {
+    //     fetch('/api/certs').then(res => res.json())
+    //         .then(certs => this.setState({ certs }));
 
-    }
+    // }
 
     render() {
         return (
