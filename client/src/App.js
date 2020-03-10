@@ -1,3 +1,4 @@
+/* eslint-disable */
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import Container from 'react-bootstrap/Container';
 import React, { Component } from 'react';
@@ -27,6 +28,14 @@ import FirstAPI from './components/services/firstAPI';
 import Forecast from './components/services/Forecast';
 import CreditCard from './components/services/creditCard';
 import './App.css';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
+// Call it once in your app. At the root of your app is the best place
+toast.configure()
+
 class App extends Component {
 
  
@@ -39,9 +48,7 @@ class App extends Component {
 
         <React.Fragment>
           <Intro />
-          <br />
           <Services />
-          <br />
           <div className="row">
             <Project_col />
             <Edu_col />
