@@ -64,7 +64,7 @@ app.get('/api/newsLetter', (req, res) => {
     let coll = db.collection('newsLetter');
 
     db.collection('newsLetter').find({}).toArray((err, data) => {
-      console.log(data);
+      //console.log(data);
       res.json({data : data.length}) 
       });
 
@@ -233,7 +233,7 @@ app.get('/api/reviews', (req, res) => {
     if (err) console.log('Database error: ' + err);
     let db = dbo.db('portfolio');
 
-    db.collection('reviews').find({}).toArray((err, data) => { res.json(data) });
+    db.collection('reviews').find({}).sort({_id:-1 }).toArray((err, data) => { res.json(data) });
 
   })
 });
