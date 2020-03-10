@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './css/header.css';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import footer from './Footer';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import footer from './Footer';
 import Footer from './Footer';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import Parser from 'html-react-parser';
+// import Parser from 'html-react-parser';
 import './css/project_details_css.css';
+import { toast } from 'react-toastify';
 
 
 
@@ -36,11 +37,22 @@ class Project_details extends Component {
         fetch('http://localhost:5000/api/like/' + this.state.project._id)
             .then(res => res.json())
             .then((ress) => {
-
+                let temp = this.state.project.likes;
                 fetch('/api/p/' + this.state.project._id).then(res => res.json())
                     .then((project) => {
-                        console.log(project)
+                       // console.log(project)
                         this.setState({ project })
+                        if( temp == this.state.project.likes ){
+                           return  toast.error("You have liked this project before", {
+                                position: toast.POSITION.TOP_CENTER,
+                                autoClose: 10000
+                            })
+                        }else {
+                        toast.success("Thank You, your like Added !", {
+                            position: toast.POSITION.TOP_CENTER,
+                            autoClose: 10000
+                        })
+                    }
                     }
                     )
             });
@@ -48,12 +60,12 @@ class Project_details extends Component {
 
     addComment(event) {
          event.preventDefault();
-        console.log(this.state);
+      //  console.log(this.state);
         axios.post('/api/comment/' + this.state.project._id ,{inputComment: this.state.inputComment})
             .then((data) => {
                                 fetch('/api/p/' + this.state.project._id).then(res => res.json())
                     .then((project) => {
-                        console.log(project)
+                     //   console.log(project)
                         this.setState({ project })
                         this.setState({ inputComment: '' })
                     }
@@ -71,10 +83,10 @@ class Project_details extends Component {
     componentDidMount() {
         // params.project_id
         let project_id = this.props.match.params.project_id;
-        console.log(project_id)
+        //console.log(project_id)
         fetch('/api/p/' + project_id).then(res => res.json())
             .then((project) => {
-                console.log(project)
+               // console.log(project)
                 this.setState({ project })
             }
             );
@@ -139,7 +151,9 @@ class Project_details extends Component {
                             <h5 className="m-0 font-weight-bold text-primary">sample:</h5>
                         </div>
                         <div className="card-body">
-                        { this.state.project.photo && ( <img src={this.state.project.photo} width="100%" height="100%" /> )  }
+                        { this.state.project.photo && ( <img src={this.state.project.photo} width="100%" height="100%"
+                         alt={ this.state.project.name } 
+                         /> )  }
 
                         { this.state.project.video && (<div className="container" style={{width:"100%"}} dangerouslySetInnerHTML={{ __html: this.state.project.video }} />)}
                          
