@@ -4,7 +4,7 @@ const axios = require("axios");
 const siteUrl = "https://www.worldometers.info/coronavirus/";
 
 let siteName = "";
-const numbers = new Set();
+const numbers = [];
 
 const fetchData = async () => {
   const result = await axios.get(siteUrl);
@@ -13,20 +13,21 @@ const fetchData = async () => {
 
 const getResults = async () => {
   const $ = await fetchData();
-
+  numbers.length=0;
   siteName = $('div.navbar > div.container > div.navbar-header > div.logo > a.navbar-brand > img').attr('title');
 
   
+  
 
   $(" div.maincounter-number ").each((index, element) => {
-    numbers.add($(element).text());
+    numbers.push($(element).text());
   });
 
 
   
   return {
    
-    numbers: [...numbers],
+    numbers: numbers,
     siteName
   };
 };
