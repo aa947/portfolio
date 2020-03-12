@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const fetch = require('node-fetch');
 var convert = require('xml-js');
+const getResults = require("../src/CoronaScrapper");
 
 
 
@@ -81,6 +82,18 @@ fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1Rky
   .then(rees => { return rees.json()} )
    .then(data => { return res.json(data.results);});
   
+});
+
+
+router.get('/corona', async (req, res)=>{
+  const result = await getResults();
+  console.log('scrapping Result ....', result );
+    res.json({
+      source: result.siteName,
+      confirmed: result.numbers[0],
+      recovered: result.numbers[2],
+      deaths: result.numbers[1]
+    })
 });
 
 
