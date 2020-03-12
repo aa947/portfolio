@@ -30,7 +30,7 @@ import CreditCard from './components/services/creditCard';
 import './App.css';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import CoronaVirus from './components/services/coronaVirus';
 
 
 // Call it once in your app. At the root of your app is the best place
@@ -121,6 +121,7 @@ class App extends Component {
             </Route>
             <Route path="/api/p/:project_id" render={(props) => <Project_details {...props} {...this.props} />} />
             <Route exact path="/api/s/firstAPI" render={(props) => <FirstAPI {...props} {...this.props} />} />
+            <Route exact path="/api/s/corona" render={(props) => <CoronaVirus {...props} {...this.props} />} />
             <Route exact path="/api/s/creditCard" render={(props) => <CreditCard {...props} {...this.props} />} />
             <Route exact path="/api/s/forecast" render={(props) => <Forecast {...props} {...this.props} />} />
             <Route path="/api/e/:project_id" render={(props) => <Edit_project {...props} {...this.props} />} />
