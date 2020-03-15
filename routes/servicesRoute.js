@@ -3,6 +3,7 @@ var router = express.Router();
 const fetch = require('node-fetch');
 var convert = require('xml-js');
 const getResults = require("../src/CoronaScrapper");
+const getUKResult = require("../src/uk_corona_scrapper");
 
 
 
@@ -86,8 +87,38 @@ fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1Rky
 
 
 router.get('/corona', async (req, res)=>{
-  const result = await getResults();
-  console.log('scrapping Result ....', result );
+  const result = await getResults("https://www.worldometers.info/coronavirus/");
+    res.json({
+      source: result.siteName,
+      confirmed: result.numbers[0],
+      recovered: result.numbers[2],
+      deaths: result.numbers[1]
+    })
+});
+
+
+router.get('/corona/uk', async (req, res)=>{
+  const result = await getUKResult();
+    res.json({
+      source: result.siteName,
+      confirmed: result.numbers[0],
+      recovered: result.numbers[2],
+      deaths: result.numbers[1]
+    })
+});
+
+router.get('/corona/spain', async (req, res)=>{
+  const result = await getResults("https://www.worldometers.info/coronavirus/country/spain/");
+    res.json({
+      source: result.siteName,
+      confirmed: result.numbers[0],
+      recovered: result.numbers[2],
+      deaths: result.numbers[1]
+    })
+});
+
+router.get('/corona/italy', async (req, res)=>{
+  const result = await getResults("https://www.worldometers.info/coronavirus/country/italy/");
     res.json({
       source: result.siteName,
       confirmed: result.numbers[0],

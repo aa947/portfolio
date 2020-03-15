@@ -16,6 +16,12 @@ const nodemailer = require("nodemailer");
 const app = express();
 app.use(cors());
 app.use(bodyParser());
+
+
+
+app.use(express.static(path.join(__dirname,"client","public")));
+
+
 app.get('/api/customers', (req, res) => {
   const customers = [
     { id: 1, firstName: 'John', lastName: 'Doe' },
@@ -400,6 +406,12 @@ app.use('/api/s', ServicesRoute);
 
 
 /////////End of data Route\\\\\\\\\\\\\
+
+// if (process.env.NODE_ENV !== 'production'){
+  
+//   app.use(express.static(__dirname+'/client/public'));
+
+// }
 
 //uncomment this to deploy to heroku
 
