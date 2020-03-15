@@ -6,13 +6,13 @@ const siteUrl = "https://www.worldometers.info/coronavirus/";
 let siteName = "";
 const numbers = [];
 
-const fetchData = async () => {
+const fetchData = async (siteUrl) => {
   const result = await axios.get(siteUrl);
   return cheerio.load(result.data);
 };
 
-const getResults = async () => {
-  const $ = await fetchData();
+const getResults = async (siteUrl) => {
+  const $ = await fetchData(siteUrl);
   numbers.length=0;
   siteName = $('div.navbar > div.container > div.navbar-header > div.logo > a.navbar-brand > img').attr('title');
 
