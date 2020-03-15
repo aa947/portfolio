@@ -23,13 +23,15 @@ export default class Services extends Component {
                     </div>
                     <div className="card-body">
 
+                       
+                        
                         {/* <p style={{fontSize: "20px",  marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{pathname: '/api/s/firstAPI' }}> First APi </Link> </p> */}
                         <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{ pathname: '/api/s/forecast' }}>Weather Forecast </Link> </p>
 
                         <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{ pathname: '/api/s/creditCard' }}>Credit Card Animation </Link> </p>
 
                         <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{ pathname: '/api/s/corona' }}>Corona Virus Live Monitor </Link> </p>
-
+                      
 
                     </div>
 

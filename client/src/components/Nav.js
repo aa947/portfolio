@@ -68,27 +68,29 @@ class Intro extends Component {
                   <div className="navbar-nav">
                     <li className="nav-item dropdown no-arrow d-sm-none"></li>
   
-                    <li className="nav-item dropdown no-arrow mx-1" > <Link to="/" className="nav-link dropdown-toggle" style={{ color: "black" }} >Home</Link></li>
+                    <li className="nav-item dropdown no-arrow mx-1" > <Link to="/" className="nav-link " style={{ color: "black" }} >Home</Link></li>
   
-                    <li className="nav-item dropdown no-arrow mx-1"> <Link to="/projects" className="nav-link dropdown-toggle" style={{ color: "black" }}>Projects </Link> </li>
+                    <li className="nav-item dropdown no-arrow mx-1"> <Link to="/projects" className="nav-link " style={{ color: "black" }}>Projects </Link> </li>
   
-                    <li className="nav-item dropdown no-arrow mx-1"><Link to="/contact" className="nav-link dropdown-toggle" style={{ color: "black" }} > Contact </Link> </li>
+                    <li className="nav-item dropdown no-arrow mx-1"><Link to="/contact" className="nav-link " style={{ color: "black" }} > Contact </Link> </li>
   
-                    <li className="nav-item dropdown no-arrow mx-1"><Link to="/education" className="nav-link dropdown-toggle" style={{ color: "black" }} > Education </Link> </li>
+                    <li className="nav-item dropdown no-arrow mx-1"><Link to="/education" className="nav-link " style={{ color: "black" }} > Education </Link> </li>
 
                     {/* <li className="nav-item dropdown no-arrow">
                     <Link href="#" target="_blank" className=""><i className="fas fa-envelope fa-2x text-green-200"></i> </Link>
                     </li> */}
 
                     <li className="nav-item dropdown no-arrow">
-                      <a className="nav-link dropdown-toggle" target ="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
+                      <a className="nav-link " target ="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
                         <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                        <img className="img-profile rounded-circle" src="https://dl.dropbox.com/s/nyjbgdughrzq7br/email-circle-icon-62.png?dl=0" /></a> </li>
+                        <img className="img-profile rounded-circle" src="https://dl.dropbox.com/s/nyjbgdughrzq7br/email-circle-icon-62.png?dl=0"/></a> </li>
   
                     <li className="nav-item dropdown no-arrow">
-                      <a className="nav-link dropdown-toggle" href="tel:+447383164194" title="Call me">
+                      <a className="nav-link " href="tel:+447383164194" title="Call me">
                         <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                        <img className="img-profile rounded-circle" src="https://dl.dropbox.com/s/jq67lusuwgpwbme/phone.png?dl=0" alt="ahmad-ali Ahmad-Ali" /></a> </li>
+                        <img className="img-profile rounded-circle" src="https://dl.dropbox.com/s/jq67lusuwgpwbme/phone.png?dl=0"  alt="ahmad-ali Ahmad-Ali" /></a> </li>
+
+
                   </div>
                 </div>
   
