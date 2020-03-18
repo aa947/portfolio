@@ -405,6 +405,11 @@ let ServicesRoute = require('./routes/servicesRoute');
 app.use('/api/s', ServicesRoute);
 
 
+///////// CV Download Route\\\\\\\\\\\\\
+let cvRoute = require('./routes/download_cv');
+app.use('/pdf', cvRoute);
+
+
 /////////End of data Route\\\\\\\\\\\\\
 
 // if (process.env.NODE_ENV !== 'production'){
