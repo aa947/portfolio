@@ -5,7 +5,8 @@ import React, { Component } from 'react';
 //import Jumbotron from 'react-bootstrap/Jumbotron';
 import { SocialIcon } from 'react-social-icons';
 import Numbers from './numbers';
-
+import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 import './css/intro.css';
 
@@ -15,7 +16,33 @@ class Intro extends Component {
     this.state = {
 
     };
+    this.viewHandler = this.viewHandler.bind(this);
+
   }
+
+
+  viewHandler = async () => {
+    axios("/pdf", {
+      method: "GET",
+      responseType: "blob"
+      //Force to receive data in a Blob Format
+    })
+      .then(response => {
+        //Create a Blob from the PDF Stream
+        const file = new Blob([response.data], {
+          type: "application/pdf"
+        });
+        //Build a URL from the file
+        const fileURL = URL.createObjectURL(file);
+        //Open the URL on new Window
+        window.open(fileURL);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+
 
   componentDidMount() {
 
@@ -26,18 +53,21 @@ class Intro extends Component {
 
   render() {
     return (
-      <div display="table">
+      <>
+      {/* <div display="table"> */}
         {/* added dev up */}
         {/* <!-- Page Heading --> */}
         <div className="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 className="h3 mb-0 text-gray-800">Welcome ... How can I help ??</h1>
        
-                  <a href="mailto:aallii300300@gmail.com" target="_blank" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-envelope fa-sm text-white-50"></i> Drop A message </a>
-
+                  {/* <a href="mailto:aallii300300@gmail.com" target="_blank" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i className="fas fa-envelope fa-sm text-white-50"></i> Drop A message </a> */}
+                  <a href={ this.viewHandler}>
+                  <button onClick={(e)=>this.viewHandler()}> View Pdf </button>
+                  <Link onClick={(e)=>this.viewHandler} > pdf </Link>
+                  </a>
        
         
         </div>
-
         {/* <!-- Content Row for Numbers --> */}
         <div className="row" >
 
@@ -110,7 +140,8 @@ class Intro extends Component {
         </div>
 
         {/* added Div */}
-      </div>
+       {/* </div> */}
+      </>
     );
   }
 }

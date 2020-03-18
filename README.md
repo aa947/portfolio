@@ -1,4 +1,5 @@
-# Ahmad Ali official portfolio  [![Build Status](https://travis-ci.org/aa947/portfolio.svg?branch=master)](https://travis-ci.org/aa947/portfolio)   [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) 
+# Ahmad Ali official portfolio  [![Build Status](https://travis-ci.org/aa947/portfolio.svg?branch=master)](https://travis-ci.org/aa947/portfolio)   [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 
 > You are Welcome to explore it and give me your suggestions. 
 
