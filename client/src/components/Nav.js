@@ -6,6 +6,7 @@ import {
     Link
   } from "react-router-dom";
   import Sidebar from "react-sidebar";
+  import axios from 'axios'
 
 
 
@@ -23,6 +24,29 @@ class Intro extends Component {
       onSetSidebarOpen(open) {
         this.setState({ sidebarOpen: open });
       }
+
+      viewHandler = async () => {
+        axios("/pdf", {
+          method: "GET",
+          responseType: "blob"
+          //Force to receive data in a Blob Format
+        })
+          .then(response => {
+            //Create a Blob from the PDF Stream
+            const file = new Blob([response.data], {
+              type: "application/pdf"
+            });
+            //Build a URL from the file
+            const fileURL = URL.createObjectURL(file);
+            //Open the URL on new Window
+            window.open(fileURL);
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      };
+    
+    
 
     render() {
         const show = (this.state.menu) ? "show" : "";
@@ -69,12 +93,15 @@ class Intro extends Component {
                     <li className="nav-item dropdown no-arrow d-sm-none"></li>
   
                     <li className="nav-item dropdown no-arrow mx-1" > <Link to="/" className="nav-link " style={{ color: "black" }} >Home</Link></li>
+
+                    <li className="nav-item dropdown no-arrow mx-1"><Link onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > view CV  </Link> </li>
   
                     <li className="nav-item dropdown no-arrow mx-1"> <Link to="/projects" className="nav-link " style={{ color: "black" }}>Projects </Link> </li>
   
                     <li className="nav-item dropdown no-arrow mx-1"><Link to="/contact" className="nav-link " style={{ color: "black" }} > Contact </Link> </li>
   
                     <li className="nav-item dropdown no-arrow mx-1"><Link to="/education" className="nav-link " style={{ color: "black" }} > Education </Link> </li>
+                  
 
                     {/* <li className="nav-item dropdown no-arrow">
                     <Link href="#" target="_blank" className=""><i className="fas fa-envelope fa-2x text-green-200"></i> </Link>
