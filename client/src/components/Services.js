@@ -31,6 +31,8 @@ export default class Services extends Component {
                         <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{ pathname: '/api/s/creditCard' }}>Credit Card Animation </Link> </p>
 
                         <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{ pathname: '/api/s/corona' }}>Corona Virus Live Monitor </Link> </p>
+
+                        <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <Link to={{ pathname: '/api/s/dg-url' }}> dg-url </Link> </p>
                       
 
                     </div>
