@@ -8,6 +8,11 @@ import { FaEye } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { GoEye } from "react-icons/go";
 import { GoPerson  } from "react-icons/go";
+import 'react-tippy/dist/tippy.css'
+import {
+  Tooltip,
+} from 'react-tippy';
+
 
 
 
@@ -36,7 +41,13 @@ class Footer extends Component {
         <div >
           <div className="copyright text-center my-auto">
             <span>Copyright &copy; Ahmad Ali </span> {'\u00A0'}
-       <span>  <GoEye /> <i> { this.state.count } </i>  </span>{'\u00A0'}
+            <Tooltip
+  // options
+  title="Welcome to React"
+  position="bottom"
+  trigger="click"
+> 
+       <span> <GoEye /> <i> { this.state.count } </i>  </span> </Tooltip> {'\u00A0'}
    <span> <GoPerson /> <i>  { this.state.unique }</i> </span> {'\u00A0'}
           </div>
         </div>
