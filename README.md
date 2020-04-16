@@ -5,6 +5,12 @@
 
 > You are Welcome to explore it and give me your suggestions. 
 
+
+## Resopnsive 
+![](https://dl.dropbox.com/s/xgylqorusxlz30t/screenshot-ami.responsivedesign.is-2020.04.16-15_46_23.png?dl=0)
+
+## performance 
+
 ## live Version
 You can explore live version [here](http://ahmad-ali.co.uk) 
 
