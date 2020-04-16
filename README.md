@@ -10,7 +10,8 @@
 ![](https://dl.dropbox.com/s/xgylqorusxlz30t/screenshot-ami.responsivedesign.is-2020.04.16-15_46_23.png?dl=0)
 
 ## performance 
-1[](https://dl.dropbox.com/s/b7ejapt58wv0epe/chrome_iYqs0WCnpg.png?dl=0)
+![](https://dl.dropbox.com/s/b7ejapt58wv0epe/chrome_iYqs0WCnpg.png?dl=0)
+
 ## live Version
 You can explore live version [here](http://ahmad-ali.co.uk) 
 
