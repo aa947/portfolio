@@ -15,7 +15,7 @@
     position: relative;
     text-align: center;
     left: -10px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     font-size: 14px;
     margin: 0 auto;
     max-width: 750px;
@@ -80,5 +80,3 @@
 span{
     font-size: large;
 }
-
-
