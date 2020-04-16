@@ -20,8 +20,9 @@ class Project_row extends Component {
 
     componentDidMount() {
         fetch('/api/projects').then(res => res.json())
-            .then(projects => this.setState({ projects })
-            )}
+            .then(projects => this.setState({ projects }));
+
+    }
 
     render() {
 
@@ -40,29 +41,26 @@ class Project_row extends Component {
                             {/* <!-- start project row --> */}
 
 
-                            {this.state.projects.map((p) => { 
-                                return(<div className="col col-lg-6 col-sm-12 col-xs-12" >
+                            {this.state.projects.map((p) => {
+
+
+                                return(<div className="col col-12" >
                                 
-                                {/* <p style={{ marginBottom: "2%", display: "inline-block" }}> */}
-                                <div tyle={{ marginBottom: "2%", display: "inline-block" }}>
-                                 <i className="fas fa-chevron-right"></i> {p.name} - {p.date}  {'\u00A0'}  <i className={p.fontAwesome}></i> 
-                                    {'\u00A0'}
-                                    <a  href={p.live_demo} title="visit Live Demo" target="_blank">
-                                       <button className="btn btn-link text-muted"> visit <i className="fas fa-external-link-alt"></i> </button>
+                                <p style={{ marginBottom: "1%", marginTop: "1%", display: "inline-block" }}><i className="fas fa-chevron-right"></i> <i className={p.fontAwesome}></i>  {p.name} - {p.date} 
+                                 
+                                     <a  href={p.live_demo} title="visit Live Demo" target="_blank">
+                                       <button className="btn btn-link text-muted">  <i className="fas fa-external-link-alt"> visit</i> </button>
                                     </a>
 
 
                                     {/* {'\u00A0'} */}
-                                    <Link title="View more Details" to={{ pathname: "/api/p/" + p._id, project_id: p._id }}>  
-                                       <button className="btn btn-link text-muted" > details <i className="fas fa-info-circle"></i> </button>
+                                    <Link title="View more Details" to={{ pathname: "/p/" + p._id, project_id: p._id }}>  
+                                       <button className="btn btn-link text-muted" >  <i className="fas fa-info-circle"> details</i> </button>
                                     </Link>
-
-                                    <Link title="View more Details" to={{ pathname: "/api/e/" + p._id, project_id: p._id }}>  
-                                       <button className="btn btn-link text-muted" > Edit <i class="fas fa-edit"></i> </button>
-                                    </Link>
-                                {/* </p> */}
-                                </div>
+                                </p>
                                 </div>);
+
+
 
 
                             })}
@@ -70,7 +68,21 @@ class Project_row extends Component {
 
 
 
-                          
+                            {/* hey */}
+                            <div className="col-lg-6 mb-4">
+                            </div>
+                            <div className="col-lg-6 mb-4">
+                            </div>
+                            <div className="col-lg-6 mb-4">
+                            </div>
+                            <div className="col-lg-6 mb-4">
+                            </div>
+                            <div className="col-lg-6 mb-4">
+                            </div>
+                            <div className="col-lg-6 mb-4">
+                            </div>
+                            <div className="col-lg-6 mb-4">
+                            </div>
 
 
 

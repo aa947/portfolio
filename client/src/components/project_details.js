@@ -8,10 +8,8 @@ import './css/header.css';
 import Footer from './Footer';
 // import { useParams } from 'react-router-dom';
 import axios from 'axios';
-// import Parser from 'html-react-parser';
 import './css/project_details_css.css';
 import { toast } from 'react-toastify';
-
 
 
 
@@ -34,7 +32,7 @@ class Project_details extends Component {
     }
 
     thumsUp() {
-        fetch('http://localhost:5000/api/like/' + this.state.project._id)
+        fetch('/api/like/' + this.state.project._id)
             .then(res => res.json())
             .then((ress) => {
                 let temp = this.state.project.likes;
@@ -60,12 +58,21 @@ class Project_details extends Component {
 
     addComment(event) {
          event.preventDefault();
-      //  console.log(this.state);
+       // console.log(this.state);
+       if( this.state.inputComment == "" ){ 
+           
+        toast.error('please inter a comment',{
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: false
+        })
+        return false;
+    
+    }
         axios.post('/api/comment/' + this.state.project._id ,{inputComment: this.state.inputComment})
             .then((data) => {
                                 fetch('/api/p/' + this.state.project._id).then(res => res.json())
                     .then((project) => {
-                     //   console.log(project)
+                       // console.log(project)
                         this.setState({ project })
                         this.setState({ inputComment: '' })
                     }
@@ -86,7 +93,7 @@ class Project_details extends Component {
         //console.log(project_id)
         fetch('/api/p/' + project_id).then(res => res.json())
             .then((project) => {
-               // console.log(project)
+                //console.log(project)
                 this.setState({ project })
             }
             );
@@ -122,21 +129,10 @@ class Project_details extends Component {
                         </div>
 
                         <div className="card-body">
-                            <div> <p><span className="m-0 font-weight-bold text-primary"> details: </span> 
-                             {/* {this.state.project.intro} */}
-                            <div dangerouslySetInnerHTML={{ __html: this.state.project.intro }} /> </p> </div>
+                            <div> <p><span className="m-0 font-weight-bold text-primary"> details: </span>  <div dangerouslySetInnerHTML={{ __html: this.state.project.intro }} /> </p> </div>
 
-                            <div> <p> <span className="m-0 font-weight-bold text-primary">tasks: </span>
-                              {/* {this.state.project.tasks}  */}
-                              <div dangerouslySetInnerHTML={{ __html: this.state.project.tasks }} />
-                              {/* {Parser(this.state.project.)} */}
-                              </p> </div>
-                            <div> <p><span className="m-0 font-weight-bold text-primary">features: </span> 
-                             {/* {this.state.project.features} */}
-                            <div dangerouslySetInnerHTML={{ __html: this.state.project.features }} />
-                            {/* {Parser(this.state.project.features)} */}
-                            
-                             </p> </div>
+                            <div> <p> <span className="m-0 font-weight-bold text-primary">tasks: </span>  <div dangerouslySetInnerHTML={{ __html: this.state.project.tasks }} /> </p> </div>
+                            <div> <p><span className="m-0 font-weight-bold text-primary">features: </span>  <div dangerouslySetInnerHTML={{ __html: this.state.project.features }} /> </p> </div>
                             <div> <p> <span className="m-0 font-weight-bold text-primary">inspired_by: </span> {this.state.project.inspired_by} </p> </div>
                             <div> <p> <span className="m-0 font-weight-bold text-primary">date: </span>  {this.state.project.date} </p> </div>
                         </div>
@@ -151,11 +147,14 @@ class Project_details extends Component {
                             <h5 className="m-0 font-weight-bold text-primary">sample:</h5>
                         </div>
                         <div className="card-body">
-                        { this.state.project.photo && ( <img src={this.state.project.photo} width="100%" height="100%"
-                         alt={ this.state.project.name } 
-                         /> )  }
 
-                        { this.state.project.video && (<div className="container" style={{width:"100%"}} dangerouslySetInnerHTML={{ __html: this.state.project.video }} />)}
+                        { this.state.project.photo && ( 
+                            <img
+                             src={this.state.project.photo} width="100%" height="100%" 
+                            alt={ this.state.project.name } 
+                            /> )  }
+
+{ this.state.project.video && (<div className="container" style={{width:"100%"}} dangerouslySetInnerHTML={{ __html: this.state.project.video }} />)}
                          
                     
                            
@@ -178,7 +177,7 @@ class Project_details extends Component {
                                 );
 
 
-                            })};
+                            })}
                             
                             <form onSubmit={this.addComment}>
                             <div className="row">
