@@ -3,11 +3,12 @@ import axios from 'axios'
 import Skycons from 'react-skycons'
 import '../css/forecast.css';
 // import '../css/forecast_template.css';
-//import Dotenv from 'dot-env';
+// import Dotenv from 'dot-env';
 // import Geocode from "react-geocode";
 // import  convert from 'xml-js';
 import Footer from '../Footer';
 
+ 
 
 
 export default class Forecast extends Component {
@@ -18,7 +19,9 @@ export default class Forecast extends Component {
         this.state = {
             forecast: '',
             geo: {
-                lat: '',
+                //lat: '51.589772599999996',
+                //long: '-0.3458681'
+                lat : '',
                 long: ''
             },
             loading: true,
@@ -29,7 +32,6 @@ export default class Forecast extends Component {
         this.getGeo = this.getGeo.bind(this);
         this.handleChangeCity = this.handleChangeCity.bind(this);
         this.changeCity = this.changeCity.bind(this);
-
     }
 
 
@@ -37,7 +39,7 @@ export default class Forecast extends Component {
 
 
     //     // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-    //     Geocode.setApiKey('');
+    //     Geocode.setApiKey('AIzaSyArxJIXt3GBq2nO2opV2uQyJJtnyBOTxE0');
 
     //     // set response language. Defaults to english.
     //     Geocode.setLanguage("en");
@@ -78,7 +80,7 @@ export default class Forecast extends Component {
     // }
 
 
-
+    
     handleChangeCity(event){
         this.setState({ city: event.target.value })
     }
@@ -123,7 +125,10 @@ export default class Forecast extends Component {
     componentDidMount() {
 
 
-        this.getGeo(this);
+       this.getGeo(this);
+    //   axios.post('/api/s/forecast', { geo: { lat: this.state.geo.lat, long: this.state.geo.long } })
+    //                 .then((res) => { this.setState({ forecast: res.data }) })
+    //                 .then(this.setState({ loading: false }))
 
 
     }
@@ -141,10 +146,8 @@ export default class Forecast extends Component {
 
       
 
-        return ( <>
-
-            <div className="col-lg-12 mb-12">
-
+        return (
+            <>
             <div className="forecast">
 
 <div className="card shadow mb-4">
@@ -152,6 +155,7 @@ export default class Forecast extends Component {
                         <h6 className="m-0 font-weight-bold text-primary">Forecast</h6>
                     </div>
                     <div className="card-body">
+
 
 
 
@@ -174,6 +178,15 @@ export default class Forecast extends Component {
 </div></div>
 
 <br />
+
+
+
+
+
+
+
+
+
 
                     <div id="currentDetailsWrapper">
 
@@ -330,14 +343,14 @@ export default class Forecast extends Component {
                                 </div>
 
                                 <div className="dew_point">
-                                    <span className="label swip"> Temp. High:</span>
+                                    <span className="label swip"> Temp. Low:</span>
                                     <span className="val swap">
                                         <span className="num dew__point__value">{f.daily && <span>{ Math.floor( t.data[0].temperatureLow )}</span>}</span><span className="unit">˚</span>
                                     </span>
                                 </div>
 
                                 <div className="dew_point">
-                                    <span className="label swip">Temp. Low:</span>
+                                    <span className="label swip">Temp. High:</span>
                                     <span className="val swap">
                                         <span className="num dew__point__value">{f.daily && <span>{ Math.floor( t.data[0].temperatureHigh )}</span>}</span><span className="unit">˚</span>
                                     </span>
@@ -365,14 +378,14 @@ export default class Forecast extends Component {
                                 </div>
 
                                 <div className="dew_point">
-                                    <span className="label swip"> Temp. High:</span>
+                                    <span className="label swip"> Temp. Low:</span>
                                     <span className="val swap">
                                         <span className="num dew__point__value">{f.daily && <span>{ Math.floor( t.data[1].temperatureLow )}</span>}</span><span className="unit">˚</span>
                                     </span>
                                 </div>
 
                                 <div className="dew_point">
-                                    <span className="label swip">Temp. Low:</span>
+                                    <span className="label swip">Temp. High:</span>
                                     <span className="val swap">
                                         <span className="num dew__point__value">{f.daily && <span>{ Math.floor( t.data[1].temperatureHigh )}</span>}</span><span className="unit">˚</span>
                                     </span>
@@ -401,14 +414,14 @@ export default class Forecast extends Component {
                                 </div>
 
                                 <div className="dew_point">
-                                    <span className="label swip"> Temp. High:</span>
+                                    <span className="label swip"> Temp. Low:</span>
                                     <span className="val swap">
                                         <span className="num dew__point__value">{f.daily && <span>{ Math.floor( t.data[2].temperatureLow )}</span>}</span><span className="unit">˚</span>
                                     </span>
                                 </div>
 
                                 <div className="dew_point">
-                                    <span className="label swip">Temp. Low:</span>
+                                    <span className="label swip">Temp. High:</span>
                                     <span className="val swap">
                                         <span className="num dew__point__value">{f.daily && <span>{ Math.floor( t.data[2].temperatureHigh )}</span>}</span><span className="unit">˚</span>
                                     </span>
@@ -448,11 +461,11 @@ export default class Forecast extends Component {
 
 
 
-</div>
+
 
          
             </div>
-<Footer />
+                    <Footer />
             </>
         )
     }
