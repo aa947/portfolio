@@ -7,7 +7,8 @@ import './css/header.css';
 
 
 class Numbers extends Component {
- 
+  
+
     render() {
         return (
             <React.Fragment>
@@ -18,8 +19,8 @@ class Numbers extends Component {
               <div className="card-body">
                 <div className="row no-gutters align-items-center">
                   <div className="col mr-2">
-                    <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">Lines Coded</div>
-                    <div className="h5 mb-0 font-weight-bold text-gray-800">+50,000</div>
+                    <div className="text-sm font-weight-bold text-primary text-uppercase mb-1">Lines Coded</div>
+                    <div className="h5 mb-0 font-weight-bold text-gray-800">+100K</div>
                   </div>
                   <div className="col-auto">
                     <i className="fas fa-code fa-2x text-gray-300"></i>
@@ -35,7 +36,7 @@ class Numbers extends Component {
               <div className="card-body">
                 <div className="row no-gutters align-items-center">
                   <div className="col mr-2">
-                    <div className="text-xs font-weight-bold text-success text-uppercase mb-1">Courses Attended</div>
+                    <div className="text-sm font-weight-bold text-success text-uppercase mb-1">Courses Attended</div>
                     <div className="h5 mb-0 font-weight-bold text-gray-800">+40</div>
                   </div>
                   <div className="col-auto">
@@ -52,7 +53,7 @@ class Numbers extends Component {
               <div className="card-body">
                 <div className="row no-gutters align-items-center">
                   <div className="col mr-2">
-                    <div className="text-xs font-weight-bold text-info text-uppercase mb-1">Towards Goal</div>
+                    <div className="text-sm font-weight-bold text-info text-uppercase mb-1">Towards Goal</div>
                     <div className="row no-gutters align-items-center">
                       <div className="col-auto">
                         <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">40%</div>
@@ -78,7 +79,7 @@ class Numbers extends Component {
               <div className="card-body">
                 <div className="row no-gutters align-items-center">
                   <div className="col mr-2">
-                    <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Projects Done</div>
+                    <div className="text-sm font-weight-bold text-warning text-uppercase mb-1">Projects Done</div>
                     <div className="h5 mb-0 font-weight-bold text-gray-800">+50</div>
                   </div>
                   <div className="col-auto">
