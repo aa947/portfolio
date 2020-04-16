@@ -1,20 +1,9 @@
 import React, { Component } from 'react';
 import './css/header.css';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-import { FaEye } from "react-icons/fa";
-import { FaUserAlt } from "react-icons/fa";
-import { GoEye } from "react-icons/go";
-import { GoPerson  } from "react-icons/go";
-import 'react-tippy/dist/tippy.css'
-import {
-  Tooltip,
-} from 'react-tippy';
-
-
-
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 
 class Footer extends Component {
@@ -38,17 +27,11 @@ class Footer extends Component {
             <React.Fragment>
 
 <footer className="sticky-footer bg-white">
-        <div >
+        <div>
           <div className="copyright text-center my-auto">
             <span>Copyright &copy; Ahmad Ali </span> {'\u00A0'}
-            <Tooltip
-  // options
-  title="Welcome to React"
-  position="bottom"
-  trigger="click"
-> 
-       <span> <GoEye /> <i> { this.state.count } </i>  </span> </Tooltip> {'\u00A0'}
-   <span> <GoPerson /> <i>  { this.state.unique }</i> </span> {'\u00A0'}
+            <span title="visits number"><i className="fas fa-eye">  { this.state.count }</i>  </span> {'\u00A0'}
+            <span title="number of unique visitors"><i className="fas fa-fingerprint"> { this.state.unique }</i>  </span>{'\u00A0'}
           </div>
         </div>
       </footer>
