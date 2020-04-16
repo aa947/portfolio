@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import {  toast } from 'react-toastify';
-//import 'react-toastify/dist/ReactToastify.css';
+// import Container from 'react-bootstrap/Container';
+//import Row from 'react-bootstrap/Row';
+//import Col from 'react-bootstrap/Col';
+//import Jumbotron from 'react-bootstrap/Jumbotron';
 import axios from 'axios';
+import {  toast } from 'react-toastify';
+
 
 
 import './css/intro.css';
@@ -11,12 +15,8 @@ class Contact_form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
-            inputEmail: '', 
+            inputEmail: '',
             subscribers: ''
-
-            
-
 
         };
 
@@ -25,20 +25,20 @@ class Contact_form extends Component {
 
     }
 
-    
     subscribe(event) {
         event.preventDefault();
        // console.log(this.state);
-        axios.post('http://localhost:5000/api/sub', this.state)
+       if(this.state.inputEmail == ''){
+        toast.error('please inter an email to subscribe',{
+           position: toast.POSITION.TOP_CENTER,
+           autoClose: false
+       })
+       return false;
+            } else {
+        axios.post('/api/sub', this.state)
             .then((res) =>{
              //console.log(res)
-             if(this.state.inputEmail == ''){
-                  toast.error('please inter an email to subscribe',{
-                     position: toast.POSITION.TOP_CENTER,
-                     autoClose: false
-                 })
-                 return false;
-             }
+          
              this.setState({ inputEmail: '' });
              toast.success('Thank You for subscribing to my Newsletter!', {
                  position: toast.POSITION.TOP_CENTER,
@@ -46,9 +46,8 @@ class Contact_form extends Component {
              });
             })
             .catch(err => console.log(err))
-
-
     }
+}
 
     
 
@@ -58,11 +57,13 @@ class Contact_form extends Component {
 
    
    
-    componentDidMount() {
-        fetch('/api/newsLetter').then(res => res.json())
-            .then(num => this.setState({ subscribers: num.data }));
+        componentDidMount() {
+            fetch('/api/newsLetter').then(res => res.json())
+                .then(num => this.setState({ subscribers: num.data }));
+    
+        }
 
-    }
+    
 
     render() {
 
@@ -74,9 +75,8 @@ class Contact_form extends Component {
                     <h6 className="m-0 font-weight-bold text-primary">News letter</h6>
                 </div>
                 <div className="card-body">
-                <p>Join {this.state.subscribers} Subscribers to My News Update </p>
+                    <p>Join {this.state.subscribers} Subscribers to My News Update </p>
                     <p> Promise: No more than 1 mail/month. </p>
-                    
                     <form onSubmit={this.subscribe}>
 
 
@@ -96,11 +96,6 @@ class Contact_form extends Component {
                             </div>
                         </div>
                     </form>
-
-                   
-        
-          {/* <ToastContainer /> */}
-      
 
                 </div>
                 {/* <!-- end column --> */}
