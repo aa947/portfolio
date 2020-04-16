@@ -54,8 +54,8 @@ class Contact_form extends Component {
             })
             .catch(err => console.log(err))
 
-
     }
+    
 
     handleChangeName(event) {
         this.setState({ inputName: event.target.value })
@@ -91,7 +91,7 @@ class Contact_form extends Component {
                 <div className="col col-12">
                     <form onSubmit={this.sendMessage}>
                         <div className="row">
-                            <div className="col col-4">
+                            <div className="col-xs-12 col-sm-12 col-md-4">
 
                                 <div className="form-group row">
                                     <label htmlFor="inputEmail" className="col col-12" >Your Name</label>
@@ -119,19 +119,19 @@ class Contact_form extends Component {
                                 {/* col 4 */}
                             </div>
 
-                            <div className="col col-6" >
+                            <div className="col-md-4 col-xs-12 col-sm-12" >
                                 <div className="form-group row">
                                     <label htmlFor="inputMessage" className="col col-12 col-form-label">Review</label>
                                     <div className="col col-12">
-                                        <textarea type="text" className=" col col-12 form-control" id="inputMessage" value={this.state.inputMessage} placeholder="Tell everyone about me in 115 letters" maxLength="115" rows="5" cols="50" onChange={this.handleChangeMessage}  ></textarea>
+                                        <textarea type="text" className=" col col-12 form-control" id="inputMessage" value={this.state.inputMessage} placeholder="Tell everyone about me in 115 letters" maxlength="115" rows="5" cols="50" onChange={this.handleChangeMessage}  ></textarea>
                                     </div>
                                 </div>
 
-                            </div> <div className="col col-2">
+                            </div> <div className="col-xs-12 col-sm-12 col-md-4">
                                 <div className="form-group row">
-                                    <div className="col col-md-4" ></div>
+                                    <div className="col-xs-12 col-sm-12 col-md-4" ></div>
                                     <div className="col-sm-10 col-md-8 ">
-                                        <button type="submit" className="btn btn-secondary add_review" onSubmit={this.sendMessage} >Add Review</button>
+                                        <button type="submit" className="btn btn-secondary" onSubmit={this.sendMessage} >Add Review</button>
                                     </div>
                                 </div>
 

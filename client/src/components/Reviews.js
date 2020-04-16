@@ -43,11 +43,11 @@ export default class Reviews extends Component {
                 </div>
                 <br />
 
-                <div  className=" row tweets">
+                <div className="row tweets">
 
                     {reviews.map((r) => {
                         return (
-                            <div className="tweet" key={ r._id}>
+                            <div className="tweet" key={r._id}>
 
                                 <div className="content">
                                     <p className="reviewText"> {r.message}</p>
