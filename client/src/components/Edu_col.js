@@ -74,14 +74,14 @@ class Edu_col extends Component {
                     <div className="card-header py-3">
                         <h6 className="m-0 font-weight-bold text-primary">Main Skills</h6>
                     </div>
-                    <div className="card-body">
+                    <div className="card-body row">
 
 
-                        <div className="row">
+                        {/* <div className="row"> */}
                             {/*Skills Cards */}
                             <Main_skills />
 
-                        </div>
+                        {/* </div> */}
                     </div>
                 </div>
 
