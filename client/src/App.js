@@ -30,7 +30,25 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CoronaVirus from './components/services/coronaVirus';
 import DgUrl from './components/services/dg-url';
+import Meetings from './components/meetings';
+import Blog from './components/blog/Blog';
 
+import { TitleComponent } from './components/layout/Title';
+
+
+// withTitle function
+const withTitle = ({ component: Component, title }) => {
+  return class Title extends Component {
+      render() {
+          return (
+              <React.Fragment>
+                  <TitleComponent title={title} />
+                  <Component {...this.props} />
+              </React.Fragment>
+          );
+      }
+  };
+};
 
 
 
@@ -51,7 +69,7 @@ class App extends Component {
         <React.Fragment>
           <Intro />
           <Services />
-          <div className="row">
+          <div className="row" style={{width: "100%", display: "flex", flexWrap: "wrap"}}>
             <Project_col />
             <Edu_col />
             <br />
@@ -110,15 +128,23 @@ class App extends Component {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/contact">
-              <Contact />
+          <Route path="/blog">
+                <Blog />
             </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
+            <Route path="/contact"    
+            //  render ={props => (          <Contact {...props}  title="contact" />)}
+            component= {(props) => <Contact {...props}  title="contact" />}
+             
+        //   component={withTitle({ component: Contact, title: 'Contact' })}
+             />
+              {/* <Contact />
+            </Route> */}
             <Route path="/education">
               <Education />
             </Route>
+
+            <Route exact path="/meetings" render={(props) => <Meetings {...props} {...this.props} />} />
+
             <Route exact path="/services/corona" render={(props) => <CoronaVirus {...props} {...this.props} />} />
             <Route exact path="/services/creditCard" render={(props) => <CreditCard {...props} {...this.props} />} />
 
@@ -127,10 +153,13 @@ class App extends Component {
             <Route path="/services/forecast" render={(props) => <Forecast {...props} {...this.props} />} />
             <Route path="/projects/:project_id" render={(props) => <Project_details {...props} {...this.props} />} />
             <Route path="/certificates/:cert_id" render={(props) => <Cert_details {...props} {...this.props} />} />
-            {/* <Project_details /> */}
-            {/* </Route> */}
+
+            <Route path="/projects">
+                <Projects />
+            </Route>
+
             <Route path="/">
-              <Home />
+                <Home />
             </Route>
           </Switch>
         </div>
