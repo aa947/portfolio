@@ -34,7 +34,7 @@ export default class Reviews extends Component {
 
         var reviews = this.state.reviews;
         return (
-            <div className="col col-12 ">
+            <div className="col col-12 " id="reviews">
                 <hr className="testimonials" />
                 <p className="desc ">❤️</p>
 
