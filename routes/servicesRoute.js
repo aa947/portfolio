@@ -1,14 +1,23 @@
+/**
+ * Author:    Ahmad Ali
+ * Created:   Feb.2020
+ * File: Routes for https://ahmad-ali.co.uk/services
+ * 
+ * (c) Copyright by Ahmad Ali.
+ **/
+
 var express = require('express');
 var router = express.Router();
 const fetch = require('node-fetch');
-var convert = require('xml-js');
 const getResults = require("../src/CoronaScrapper");
 const getUKResult = require("../src/uk_corona_scrapper");
 
 
 
-/*
+/** 
 * sTocks. 
+* @deprecated
+* @needs a package: xml-js
 */
 router.get('/stocks', function (req, res, next) {
   var intrinioSDK = require('intrinio-sdk');
@@ -36,29 +45,18 @@ router.get('/stocks', function (req, res, next) {
 });
 
 
+/**
+ * forecast met-office API was here.
+ * url1: http://datapoint.metoffice.gov.uk/public/data/ + resource +"&key="+APIkey;
+ * @deprecated
+ *  
+ **/ 
 
 
-// /*
-// * Forecast met -Office
-// */
-// router.get('/forecast', function (req, res, next) { 
-//   let APIkey = 'f41970e1-c7a5-4110-9057-c0023ace4e16';
-//   let resource= 'val/wxfcs/all/xml/3840?res=3hourly'
-//   let url = "http://datapoint.metoffice.gov.uk/public/data/"+resource+"&key="+APIkey;
-
-//   let dataAsJson = {};
-//   // fetch('http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/xml/3840?res=3hourly&key=f41970e1-c7a5-4110-9057-c0023ace4e16')
-//   fetch(url)
-//   .then(response => response.text())
-//   .then(str => { console.log('str', str);  
-//                   dataAsJson = convert.xml2json(str, {compact: true, spaces: 4});
-//                  })
-//   .then(() => { res.send(dataAsJson)  });
-
-
-
-// });
-
+/**
+ * Dark Sky API 
+ * ForeCast for current city
+ */
 
 router.post('/forecast', (req, res)=>{
   console.log(req.body);
@@ -73,6 +71,11 @@ fetch(`https://api.darksky.net/forecast/32a9ba97f5b4e020604d55e29b3056e2/${lat},
 });
 
 
+/**
+ * Dark Sky API 
+ * ForeCast for choosen city
+ */
+
 router.post('/forecast_change', (req, res)=>{
   console.log(req.body);
   let city = req.body.city;
@@ -86,6 +89,12 @@ fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1Rky
 });
 
 
+/**
+ * WEb scraping, worldometes.info
+ * globall live coronaVirus cases
+ */
+
+
 router.get('/corona', async (req, res)=>{
   const result = await getResults("https://www.worldometers.info/coronavirus/");
     res.json({
@@ -95,6 +104,11 @@ router.get('/corona', async (req, res)=>{
       deaths: result.numbers[1]
     })
 });
+
+/**
+ * WEb scraping, worldometes.info
+ * UK live coronaVirus cases
+ */
 
 
 router.get('/corona/uk', async (req, res)=>{
@@ -107,6 +121,13 @@ router.get('/corona/uk', async (req, res)=>{
     })
 });
 
+
+/**
+ * WEb scraping, worldometes.info
+ * Spain live coronaVirus cases
+ */
+
+
 router.get('/corona/spain', async (req, res)=>{
   const result = await getResults("https://www.worldometers.info/coronavirus/country/spain/");
     res.json({
@@ -116,6 +137,13 @@ router.get('/corona/spain', async (req, res)=>{
       deaths: result.numbers[1]
     })
 });
+
+
+
+/**
+ * WEb scraping, worldometes.info
+ * Italy live coronaVirus cases
+ */
 
 router.get('/corona/italy', async (req, res)=>{
   const result = await getResults("https://www.worldometers.info/coronavirus/country/italy/");
