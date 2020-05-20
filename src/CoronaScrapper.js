@@ -1,3 +1,11 @@
+/**
+ * Author:    Ahmad Ali
+ * Created:   March.2020
+ * File: Scrapper for https://ahmad-ali.co.uk/services/corona
+ * 
+ * (c) Copyright by Ahmad Ali.
+ **/
+
 const cheerio = require("cheerio");
 const axios = require("axios");
 
