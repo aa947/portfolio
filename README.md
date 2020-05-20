@@ -1,24 +1,41 @@
-# Ahmad Ali official portfolio
+# Ahmad Ali portfolio
 
-  [![Build Status](https://travis-ci.org/aa947/portfolio.svg?branch=master)](https://travis-ci.org/aa947/portfolio)   [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) ![](https://david-dm.org/aa947/portfolio.svg)
+[![Build Status](https://travis-ci.org/aa947/portfolio.svg?branch=master)](https://travis-ci.org/aa947/portfolio) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) ![](https://david-dm.org/aa947/portfolio.svg)
 
+> You are Welcome to explore it and give me your suggestions.
 
-> You are Welcome to explore it and give me your suggestions. 
+## Resopnsive
 
+![responsivity for https://ahmad-ali.co.uk/](https://dl.dropbox.com/s/xgylqorusxlz30t/screenshot-ami.responsivedesign.is-2020.04.16-15_46_23.png?dl=0)
 
-## Resopnsive 
-![](https://dl.dropbox.com/s/xgylqorusxlz30t/screenshot-ami.responsivedesign.is-2020.04.16-15_46_23.png?dl=0)
+## performant
 
-## performance 
-![](https://dl.dropbox.com/s/b7ejapt58wv0epe/chrome_iYqs0WCnpg.png?dl=0)
+![performance for https://ahmad-ali.co.uk/](https://dl.dropbox.com/s/b7ejapt58wv0epe/chrome_iYqs0WCnpg.png?dl=0)
+
+## Structure
+
+- server: Node Express.
+- FrontEnd: React.
+- DB: MongoDB.
+- Deploy: Heroku.
+- Layout: Bootstrap.
+- Icons: FontAwesome.
+
+## DotEnv
+
+To run this program locally you need to provide `.env` file with the following variables:
+
+1. CONNECTION_STRING: string to connect your atlas DB to this App.
+2. USER: user Email used to recieve messages for contact form [ Gmail preferably].
+3. PASS: additonal password provided by Gmail. 
+4. GOOGLE_MAP_KEY: 
 
 ## live Version
-You can explore live version [here](http://ahmad-ali.co.uk) 
 
-
+You can explore live version [here](http://ahmad-ali.co.uk)
 
 ## contact
- https://www.ahmad-ali.co.uk/
- 
- ## licence 
- [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
+
+<https://www.ahmad-ali.co.uk/>
+
+<ahmad.ali14@zohomail.eu>
