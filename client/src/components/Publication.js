@@ -1,34 +1,10 @@
 import React, { Component } from 'react';
-// import Container from 'react-bootstrap/Container';
-//import Row from 'react-bootstrap/Row';
-//import Col from 'react-bootstrap/Col';
-//import Jumbotron from 'react-bootstrap/Jumbotron';
-import axios from 'axios';
 
+class Publication extends Component {
 
-import './css/intro.css';
-import { Link } from 'react-router-dom';
-
-class Contact_form extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-
-           
-
-
-        };
-
-       
-
-    }
-
- 
     render() {
 
-
         return (
-
 
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
@@ -56,4 +32,4 @@ class Contact_form extends Component {
     }
 }
 
-export default Contact_form;
+export default Publication;
