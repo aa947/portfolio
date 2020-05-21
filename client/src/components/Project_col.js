@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
-// import Container from 'react-bootstrap/Container';
-//import Row from 'react-bootstrap/Row';
-//import Col from 'react-bootstrap/Col';
-//import Jumbotron from 'react-bootstrap/Jumbotron';
 import Contact_form from './Contact_form';
 import Publication from './Publication';
-
-
-
-// import './css/intro.css';
 import { Link } from 'react-router-dom';
 
 class Project_col extends Component {
@@ -22,11 +14,10 @@ class Project_col extends Component {
     componentDidMount() {
         fetch('/api/projects').then(res => res.json())
             .then(projects => this.setState({ projects }));
-
     }
 
     render() {
-        
+
         return (
             <div className="col-lg-6 mb-4">
 
@@ -38,15 +29,11 @@ class Project_col extends Component {
                             <div style={{ float: "right", fontSize: "0.8rem" }}> All Projects >> </div>
                         </h6>
                     </div>
-                    <div className="card-body">
 
+                    <div className="card-body">
                         {/* <!-- start project row --> */}
 
-
                         {this.state.projects.map((p) => {
-
-
-
                             return (<div key={p._id}>
                                 <p style={{ marginBottom: "7%" }}><i className="fas fa-chevron-right"></i>{'\u00A0'}<i className={p.fontAwesome}></i> {p.name} - {p.date}
 
@@ -62,25 +49,15 @@ class Project_col extends Component {
                                     </Link>
                                 </p>
                             </div>);
-
-
                         })}
 
-
                         {/* <!-- end project row --> */}
-
                     </div>
                 </div>
 
                 <Publication />
-
                 <Contact_form />
-
-
             </div>
-
-
-
         );
     }
 }
