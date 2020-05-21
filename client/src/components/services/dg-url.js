@@ -85,18 +85,11 @@ export default class DgUrl extends Component {
                         </h6>
                     </div>
                     <div style={{ padding: "5%" }} className="card-body">
-
-
-
-
-
                         <ReactMarkdown style={{ padding: "5%" }} source={input} />
-                       
-
                     </div></div></div>
+                    
                     <Footer />
-                    </>
-
+            </>
         )
     }
 }
