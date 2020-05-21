@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import './css/header.css';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import footer from './Footer';
 import Footer from './Footer';
-// import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './css/project_details_css.css';
 import { toast } from 'react-toastify';
@@ -21,14 +15,11 @@ class Project_details extends Component {
                 comments: []
             },
             inputComment: ''
-
         };
+
         this.thumsUp = this.thumsUp.bind(this);
         this.handleChangeComment = this.handleChangeComment.bind(this);
         this.addComment = this.addComment.bind(this);
-
-
-
     }
 
     thumsUp() {
@@ -38,54 +29,51 @@ class Project_details extends Component {
                 let temp = this.state.project.likes;
                 fetch('/api/p/' + this.state.project._id).then(res => res.json())
                     .then((project) => {
-                       // console.log(project)
+                        // console.log(project)
                         this.setState({ project })
-                        if( temp == this.state.project.likes ){
-                           return  toast.error("You have liked this project before", {
+                        if (temp == this.state.project.likes) {
+                            return toast.error("You have liked this project before", {
                                 position: toast.POSITION.TOP_CENTER,
                                 autoClose: 10000
                             })
-                        }else {
-                        toast.success("Thank You, your like Added !", {
-                            position: toast.POSITION.TOP_CENTER,
-                            autoClose: 10000
-                        })
-                    }
+                        } else {
+                            toast.success("Thank You, your like Added !", {
+                                position: toast.POSITION.TOP_CENTER,
+                                autoClose: 10000
+                            })
+                        }
                     }
                     )
             });
     }
 
     addComment(event) {
-         event.preventDefault();
-       // console.log(this.state);
-       if( this.state.inputComment == "" ){ 
-           
-        toast.error('please inter a comment',{
-            position: toast.POSITION.TOP_CENTER,
-            autoClose: false
-        })
-        return false;
-    
-    }
-        axios.post('/api/comment/' + this.state.project._id ,{inputComment: this.state.inputComment})
-            .then((data) => {
-                                fetch('/api/p/' + this.state.project._id).then(res => res.json())
+        event.preventDefault();
+        // console.log(this.state);
+        if (this.state.inputComment == "") {
+            toast.error('please inter a comment', {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: false
+            })
+            return false;
+        }
+        axios.post('/api/comment/' + this.state.project._id, { inputComment: this.state.inputComment })
+        .then((data) => {
+                fetch('/api/p/' + this.state.project._id).then(res => res.json())
                     .then((project) => {
-                       // console.log(project)
+                        // console.log(project)
                         this.setState({ project })
                         this.setState({ inputComment: '' })
-                    }
-                   )
-                 } )
+                    })
+            })
             .catch(err => console.log(err))
-
-
     }
+
 
     handleChangeComment(event) {
         this.setState({ inputComment: event.target.value })
     }
+
 
     componentDidMount() {
         // params.project_id
@@ -102,14 +90,6 @@ class Project_details extends Component {
 
     render() {
 
-        // var comments_row  =  (this.state.project.comments || []).map((cc) => {
-        //     return (
-        //         <p><i class="fas fa-chevron-right"></i> {cc} </p>
-        //     );
-
-
-        // });
-
         return (
             <React.Fragment>
                 <div className="col-lg-12 mb-12">
@@ -119,12 +99,12 @@ class Project_details extends Component {
                             <div className="row">
                                 <div className="col md-8" > <br /> <p> project: {this.state.project.name} </p>
                                     <p> Languages used: {this.state.project.lang} </p>
-                                    <div className="row"><a href="#" onClick={this.thumsUp}  ><button className="btn btn-primary" style={{marginBottom:"5px"}} title="view on Github" >Like {'\u00A0'}<i class="fas fa-thumbs-up "></i> {'\u00A0'}<span>({this.state.project.likes}) </span> {'\u00A0'} </button> </a>{'\u00A0'}
-                                        <a href={this.state.project.github_url} target='_blank' >  <button className="btn btn-success" style={{marginBottom:"5px"}}> View on Github {'\u00A0'}<i class="fab fa-github"></i> </button> </a> {'\u00A0'}
-                                        <a href={this.state.project.live_demo} target='_blank' > <button className="btn btn-info" style={{marginBottom:"5px"}}> live demo {'\u00A0'} <i class="fas fa-desktop"></i> </button></a>
+                                    <div className="row"><a href="#" onClick={this.thumsUp}  ><button className="btn btn-primary" style={{ marginBottom: "5px" }} title="view on Github" >Like {'\u00A0'}<i class="fas fa-thumbs-up "></i> {'\u00A0'}<span>({this.state.project.likes}) </span> {'\u00A0'} </button> </a>{'\u00A0'}
+                                        <a href={this.state.project.github_url} target='_blank' >  <button className="btn btn-success" style={{ marginBottom: "5px" }}> View on Github {'\u00A0'}<i class="fab fa-github"></i> </button> </a> {'\u00A0'}
+                                        <a href={this.state.project.live_demo} target='_blank' > <button className="btn btn-info" style={{ marginBottom: "5px" }}> live demo {'\u00A0'} <i class="fas fa-desktop"></i> </button></a>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
 
@@ -148,16 +128,13 @@ class Project_details extends Component {
                         </div>
                         <div className="card-body">
 
-                        { this.state.project.photo && ( 
-                            <img
-                             src={this.state.project.photo} width="100%" height="100%" 
-                            alt={ this.state.project.name } 
-                            /> )  }
+                            {this.state.project.photo && (
+                                <img
+                                    src={this.state.project.photo} width="100%" height="100%"
+                                    alt={this.state.project.name}
+                                />)}
 
-{ this.state.project.video && (<div className="container" style={{width:"100%"}} dangerouslySetInnerHTML={{ __html: this.state.project.video }} />)}
-                         
-                    
-                           
+                            {this.state.project.video && (<div className="container" style={{ width: "100%" }} dangerouslySetInnerHTML={{ __html: this.state.project.video }} />)}
                         </div>
                     </div>
                 </div>
@@ -175,31 +152,21 @@ class Project_details extends Component {
                                 return (
                                     <div > <p> <i class="fas fa-chevron-right"></i> {cc} </p> </div>
                                 );
-
-
                             })}
-                            
+
                             <form onSubmit={this.addComment}>
-                            <div className="row">
-                         
-                                <input className="form-control form-control-lg col-md-9  lg-8" type="text" name="inputComment" value={this.state.inputComment} onChange={this.handleChangeComment} placeholder="add acomment or leave inspiration" /> {'\u00A0'}    <button type="submit"  onSubmit={this.addComment} className="btn btn-primary col-md-2 lg-2" > Add comment </button>
-                            </div>
+                                <div className="row">
+
+                                    <input className="form-control form-control-lg col-md-9  lg-8" type="text" name="inputComment" value={this.state.inputComment} onChange={this.handleChangeComment} placeholder="add acomment or leave inspiration" /> {'\u00A0'}    <button type="submit" onSubmit={this.addComment} className="btn btn-primary col-md-2 lg-2" > Add comment </button>
+                                </div>
                             </form>
 
                         </div>
                     </div>
-                </div>
-                {/* big row */}
-                {/* <div className="col-lg-12 mb-12">
-                    <div className="card shadow mb-12">
-                        
-                        <div className="card-body">
-                        </div>
-                    </div>
-                </div> */}
+                </div>    
                 <br />
                 <Footer />
-            </React.Fragment >
+            </React.Fragment>
         );
     }
 }
