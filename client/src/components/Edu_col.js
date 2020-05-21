@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-// import Container from 'react-bootstrap/Container';
-//import Row from 'react-bootstrap/Row';
-//import Col from 'react-bootstrap/Col';
-//import Jumbotron from 'react-bootstrap/Jumbotron';
 import Main_skills from './Main_skills';
 import './css/intro.css';
 import { Link } from 'react-router-dom';
@@ -26,7 +22,6 @@ class Edu_col extends Component {
         return (
             <div className="col-lg-6 mb-4">
 
-                {/* <!-- Illustrations --> */}
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
                         <h6 className="m-0 font-weight-bold text-primary">Education</h6>
@@ -39,7 +34,6 @@ class Edu_col extends Component {
                     </div>
                 </div>
 
-                {/* <!-- Approach --> */}
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
                         <h6 className="m-0 font-weight-bold text-primary"> Certificates ({this.state.certs.length})</h6>
@@ -78,8 +72,8 @@ class Edu_col extends Component {
 
 
                         {/* <div className="row"> */}
-                            {/*Skills Cards */}
-                            <Main_skills />
+                        {/*Skills Cards */}
+                        <Main_skills />
 
                         {/* </div> */}
                     </div>
