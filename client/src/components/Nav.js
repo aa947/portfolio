@@ -50,6 +50,7 @@ class Intro extends Component {
           children=""
           sidebar={<div>
             <p><Link to="/" className="nav-link " style={{ color: "black" }} >Home</Link> </p>
+            <p> <Link to="/blog" className="nav-link " style={{ color: "black" }}>Blog </Link> </p>
             <p> <Link to="/projects" className="nav-link " style={{ color: "black" }}>Projects </Link> </p>
             <p><Link to="/education" className="nav-link " style={{ color: "black" }} > Education </Link></p>
             <p><Link to="/contact" className="nav-link " style={{ color: "black" }} > Contact </Link> </p>
@@ -80,6 +81,8 @@ class Intro extends Component {
                 <li className="nav-item dropdown no-arrow d-sm-none"></li>
 
                 <li className="nav-item dropdown no-arrow mx-1" > <Link to="/" className="nav-link dropdown-toggle" style={{ color: "black" }} >Home</Link></li>
+
+                <li className="nav-item dropdown no-arrow mx-1"> <Link to="/blog" className="nav-link dropdown-toggle" style={{ color: "black" }}>Blog </Link> </li>
 
                 <li className="nav-item dropdown no-arrow mx-1"><Link onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > view CV  </Link> </li>
 
