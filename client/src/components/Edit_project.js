@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
 import './css/header.css';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import footer from './Footer';
-// import Footer from './Footer';
-// import { useParams } from 'react-router-dom';
 import axios from 'axios';
-// import Parser from 'html-react-parser';
 import './css/project_details_css.css';
-
-
 
 
 class Project_details extends Component {
@@ -31,7 +21,7 @@ class Project_details extends Component {
             inspired_by: " ",
             fontAwesome: " ",
             sorting: 0,
-            id : " "
+            id: " "
 
         };
         //this.thumsUp = this.thumsUp.bind(this);
@@ -41,13 +31,11 @@ class Project_details extends Component {
 
     }
 
-   
-
 
 
     EditProject(event) {
         event.preventDefault();
-        let submittedData ={
+        let submittedData = {
             name: this.state.name,
             lang: this.state.lang,
             photo: this.state.photo,
@@ -62,16 +50,15 @@ class Project_details extends Component {
             fontAwesome: this.state.fontAwesome,
             sorting: parseInt(this.state.sorting),
         }
-        
-     
-        console.log(this.state);
+
+
+        //console.log(this.state);
         axios.post('/api/e/' + this.state.id, { submittedData }
         )
             .then((data) => {
-               console.log(data.data);
+                console.log(data.data);
             })
             .catch(err => console.log(err))
-
 
     }
 
@@ -197,7 +184,6 @@ class Project_details extends Component {
                                 <button type="submit" className="btn btn-primary" onSubmit={this.EditProject} > Submit </button>
 
                             </form>
-
 
                         </div>
                     </div>
