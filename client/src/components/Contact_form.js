@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
-// import Container from 'react-bootstrap/Container';
-//import Row from 'react-bootstrap/Row';
-//import Col from 'react-bootstrap/Col';
-//import Jumbotron from 'react-bootstrap/Jumbotron';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-
-
 import './css/intro.css';
-// import { Link } from 'react-router-dom';
 
 class Contact_form extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
             inputEmail: '',
             inputName: '',
             inputMessage: ''
-
-
         };
 
         this.sendMessage = this.sendMessage.bind(this);
@@ -52,8 +42,6 @@ class Contact_form extends Component {
     }
 
 
-
-
     handleChangeName(event) {
         this.setState({ inputName: event.target.value })
     }
@@ -72,10 +60,7 @@ class Contact_form extends Component {
 
     render() {
 
-
         return (
-
-
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
                     <h6 className="m-0 font-weight-bold text-primary">Contact Me</h6>
