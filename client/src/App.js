@@ -27,6 +27,7 @@ import CoronaVirus from './components/services/coronaVirus';
 import DgUrl from './components/services/dg-url';
 import Meetings from './components/meetings';
 import Blog from './components/blog/Blog';
+import Connecting_to_Atlas from './components/blog/posts/connecting_your_app_to_mongodb_atlas';
 
 
 // Call it once in your app. At the root of your app is the best place
@@ -88,9 +89,8 @@ class App extends Component {
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/blog">
-              <Blog />
-            </Route>
+            <Route exact path="/blog"> <Blog /> </Route>
+            <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas"> <Connecting_to_Atlas /> </Route>
             <Route path="/contact"
               component={(props) => <Contact {...props} title="contact" />}
             />
