@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import Footer from '../Footer';
-
-import ReactDOM from 'react-dom';
 import ReactMarkdown from 'react-markdown';
 
 const input =`

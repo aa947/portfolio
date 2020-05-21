@@ -54,9 +54,6 @@ class Contact_form extends Component {
         this.setState({ inputMessage: event.target.value })
     }
 
-    componentDidMount() {
-
-    }
 
     render() {
 
