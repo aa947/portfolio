@@ -29,6 +29,8 @@ import Meetings from './components/meetings';
 import Blog from './components/blog/Blog';
 import Connecting_to_Atlas from './components/blog/posts/connecting_your_app_to_mongodb_atlas';
 import FreeService from './components/tasks/FreeService';
+import Report from './components/tasks/Report';
+
 
 
 // Call it once in your app. At the root of your app is the best place
@@ -114,6 +116,8 @@ class App extends Component {
             </Route>
 
             <Route exact path="/meetings" render={(props) => <Meetings {...props} {...this.props} />} />
+
+            <Route exact path="/report" render={(props) => <Report {...props} {...this.props} />} />
 
             <Route exact path="/services/corona" render={(props) => <CoronaVirus {...props} {...this.props} />} />
             <Route exact path="/services/creditCard" render={(props) => <CreditCard {...props} {...this.props} />} />
