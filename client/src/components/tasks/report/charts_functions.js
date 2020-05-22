@@ -76,3 +76,34 @@ export function languageChart(props){
             rootProps={{ 'data-testid': '1' }}
         />)
 }
+
+
+export function extractProjectsData(props){
+    let projectsData = {
+        meta : [],
+        data: [['ID', 'x', 'y', 'Languages', 'Interactions']]
+    }
+
+    props.map((p, i) => {
+        projectsData.data.push([p.name.slice(0,10), i, p.sorting ? p.sorting/10: 0 ,p.lang , p.likes+p.comments.length])
+    })
+
+    return projectsData;
+}
+
+export function projectsChart(props){
+    return(<Chart
+        width={'100%'}
+        height={'600px'}
+        chartType="BubbleChart"
+        loader={<div>Loading Chart</div>}
+        data={ props.data }
+        options={{
+          title: 'project details',
+          hAxis: { title: 'Index' },
+          vAxis: { title: 'Sorting' },
+          bubble: { textStyle: { fontSize: 8 } },
+        }}
+        rootProps={{ 'data-testid': '1' }}
+      />);
+}
