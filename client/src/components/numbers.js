@@ -32,7 +32,7 @@ class Numbers extends Component {
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
                   <div className="text-sm font-weight-bold text-success text-uppercase mb-1">
-                    <a href="#"> Claim A Free Service </a>
+                    <a href="/claim-your-free-service"> Claim A Free Service </a>
                   </div>
                   <div className="p mb-0 font-weight-bold text-gray-800">coming soon ..</div>
                 </div>
