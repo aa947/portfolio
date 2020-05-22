@@ -11,7 +11,9 @@ export function fetchUser(that){
         let { followers, following, public_repos, public_gists } = res.data;
         let total = followers + following + public_repos + public_gists + 2;
         that.setState({ github: { followers, following, public_repos, public_gists, total, member: 2 } })
-    }).catch(err => console.log(err))
+    })
+    //.then(() => console.log('user'))
+    .catch(err => console.log(err))
 }
 
 /**
