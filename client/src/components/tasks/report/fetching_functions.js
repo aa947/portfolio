@@ -29,3 +29,10 @@ export function fetchRepos(that){
     }).catch(err => console.log(err))
 }
 
+
+export function fetchProjects(that){
+    axios.get('/api/projects')
+    .then(res => that.setState({ projects: res.data }))
+      .then(() => console.log(that.state))
+      .catch(err => console.log(err));
+}
