@@ -12,6 +12,10 @@
 
 ![performance for https://ahmad-ali.co.uk/](https://dl.dropbox.com/s/b7ejapt58wv0epe/chrome_iYqs0WCnpg.png?dl=0)
 
+## Summary
+
+![report summary](https://dl.dropbox.com/s/2xeyn63690txsrk/myReprt.png?dl=0)
+
 ## Structure
 
 - server: Node Express.
