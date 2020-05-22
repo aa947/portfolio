@@ -327,8 +327,6 @@ app.post("/api/sendMessage", (req, res) => {
       });
 
 
-
-
   })
 });
 
@@ -405,6 +403,9 @@ app.use('/api/s', ServicesRoute);
 let cvRoute = require('./routes/download_cv');
 app.use('/pdf', cvRoute);
 
+///////// Claim Free Service Route \\\\\\\\\\\\\
+let FreeServiceRoute = require('./routes/claim_free_service');
+app.use('/api/claim-free-service', FreeServiceRoute);
 
 
 // if (process.env.NODE_ENV !== 'production'){
