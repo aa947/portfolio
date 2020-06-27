@@ -41,7 +41,6 @@ export default class FreeService extends Component {
         }
         axios.post('/api/claim-free-service', this.state)
             .then(res => {
-                //console.log(res)
                 toast.success("Thank You for contacting us, we will responde soon!", {
                     position: toast.POSITION.TOP_CENTER,
                     autoClose: false
