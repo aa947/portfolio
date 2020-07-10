@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import './css/header.css';
 import Footer from './Footer';
-import { Helmet } from 'react-helmet';
 import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
 
 
 class Cert_details extends Component {
@@ -11,8 +11,15 @@ class Cert_details extends Component {
         super(props);
         this.state = {
             cert: []
+
         };
+
+
+
+
     }
+
+   
 
     componentDidMount() {
         // params.project_id
@@ -23,30 +30,33 @@ class Cert_details extends Component {
                 this.setState({ cert })
             }
             );
+
     }
 
     render() {
 
 
         return (
-            <DocumentTitle title={`Ahmad - ${this.state.cert.cert_name}`}>
-            <>
-            {/* adding meta data using Helmet */}
-                <Helmet>
-                    <meta property="og:title" content="Ahmad Ali - Full Stack Developer" />
-                    <meta property="og:description" content="Full-stack developer, back-ended with the precision of chemistry and medical practise.  Educated to degree level with 1 years’ experience in web development. This has given me skills in JS: MERN, PHP: WP_API, DB: MONGO, SQL, HTML and CSS." />
-                    <meta property="og:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
-                        <meta property="og:url" content="https://www.ahmad-ali.co.uk/" />
-                        <meta name="author" content="Ahmad Ali" />
-                        <meta name="twitter:card" content="Ahmad Ali Full Stack Developer" />
-                        <meta name="twitter:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
-            </Helmet>
+            <DocumentTitle title={`Ahmad- ${this.state.cert.cert_name}`}>
 
+            <>
+                            <Helmet>
+                                <meta property="og:title"
+                                 content={`Ahmad Ali - Full Stack Developer certificate: ${this.state.cert.cert_name}`} />
+                                <meta property="og:description" content="Full-stack developer, back-ended with the precision of chemistry and medical practise.  Educated to degree level with 1 years’ experience in web development. This has given me skills in JS: MERN, PHP: WP_API, DB: MONGO, SQL, HTML and CSS." />
+                                <meta property="og:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                                    <meta property="og:url" content="https://www.ahmad-ali.co.uk/" />
+                                    <meta name="author" content="Ahmad Ali" />
+                                    <meta name="twitter:card" content="Ahmad Ali Full Stack Developer" />
+                                    <meta name="twitter:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                        </Helmet>
+            
             <React.Fragment>
                 <div className="col-lg-12 mb-12">
                     <div className="card shadow mb-12">
                         <div className="card-header py-3">
-                            <h5 className="m-0 font-weight-bold text-primary">{this.state.cert.cert_name}</h5>              
+                            <h5 className="m-0 font-weight-bold text-primary">{this.state.cert.cert_name}</h5>
+                          
                         </div>
 
                         <div className="card-body">
@@ -79,15 +89,27 @@ class Cert_details extends Component {
                             <h5 className="m-0 font-weight-bold text-primary">Certificate:</h5>
                         </div>
                         <div className="card-body">
-                          <img src={ this.state.cert.cert_photo } width="100%" height="100%" />                 
+
+
+                          <img src={ this.state.cert.cert_photo } width="100%" height="100%" />
+                    
+                           
                         </div>
                     </div>
                 </div>
+                {/* big row */}
+                {/* <div className="col-lg-12 mb-12">
+                    <div className="card shadow mb-12">
+                        
+                        <div className="card-body">
+                        </div>
+                    </div>
+                </div> */}
                 <br />
                 <Footer />
-            </React.Fragment>
+            </React.Fragment >
             </>
-</DocumentTitle>
+            </DocumentTitle>
         );
     }
 }

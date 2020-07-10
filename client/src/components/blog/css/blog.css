@@ -10,7 +10,7 @@
   }
 
   @media only screen and (max-width: 599px) {
-   div.blog  p{
+   div.blog p{
         font-size: medium;
     }
   }

@@ -3,6 +3,9 @@ import axios from 'axios'
 import Skycons from 'react-skycons'
 import '../css/forecast.css';
 import Footer from '../Footer';
+import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -22,12 +25,58 @@ export default class Forecast extends Component {
             },
             loading: true,
             city: ''
+
         }
 
         this.getGeo = this.getGeo.bind(this);
         this.handleChangeCity = this.handleChangeCity.bind(this);
         this.changeCity = this.changeCity.bind(this);
     }
+
+
+    // GetCurrentAddress = (lat, long) => {
+
+
+    //     // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
+    //     Geocode.setApiKey('AIzaSyArxJIXt3GBq2nO2opV2uQyJJtnyBOTxE0');
+
+    //     // set response language. Defaults to english.
+    //     Geocode.setLanguage("en");
+
+    //     // set response region. Its optional.
+    //     // A Geocoding request with region=es (Spain) will return the Spanish city.
+    //     //Geocode.setRegion("es");
+
+    //     // Enable or disable logs. Its optional.
+    //     Geocode.enableDebug();
+
+    //     // Get address from latidude & longitude.
+    //     Geocode.fromLatLng(long, lat, 'AIzaSyArxJIXt3GBq2nO2opV2uQyJJtnyBOTxE0').then(
+    //         response => {
+    //             const address = response.results[0].formatted_address;
+    //             console.log('Address', address);
+    //         },
+    //         error => {
+    //             console.error(error);
+    //         }
+    //     );
+
+    // Get latidude & longitude from address.
+    // Geocode.fromAddress("Eiffel Tower").then(
+    //   response => {
+    //     const { lat, lng } = response.results[0].geometry.location;
+    //     console.log(lat, lng);
+    //   },
+    //   error => {
+    //     console.error(error);
+    //   }
+    // );
+
+    // }
+
+    // Getaddress= (lat, long) =>{
+    //     fetch(`http://api.geonames.org/findNearestAddress?lat=${lat}&lng=${long}&username=ahmad.ali`)
+    // }
 
 
 
@@ -56,6 +105,12 @@ export default class Forecast extends Component {
                 //console.log('position..', position);
                 a.setState({ geo: { lat: position.coords.latitude, long: position.coords.longitude } });
 
+                //    let dataAsJson = {};
+                //     fetch(`http://api.geonames.org/findNearestAddress?lat=${position.coords.latitude}&lng=${position.coords.longitude}&username=ahmad.ali`)
+                //     .then(response => response.text())
+                //     .then(str => { console.log('str', str);  
+                //         dataAsJson = convert.xml2json(str, {compact: true, spaces: 4});
+                //                 })
 
                 axios.post('/api/s/forecast', { geo: { lat: position.coords.latitude, long: position.coords.longitude } })
                     .then((res) => { a.setState({ forecast: res.data }) })
@@ -67,11 +122,19 @@ export default class Forecast extends Component {
     }
 
     componentDidMount() {
+
+
         this.getGeo(this);
+        //   axios.post('/api/s/forecast', { geo: { lat: this.state.geo.lat, long: this.state.geo.long } })
+        //                 .then((res) => { this.setState({ forecast: res.data }) })
+        //                 .then(this.setState({ loading: false }))
+
+
     }
 
     componentDidUpdate() {
         console.log('component update ...')
+
     }
 
     render() {
@@ -83,6 +146,19 @@ export default class Forecast extends Component {
 
 
         return (
+            <DocumentTitle title='Weather Forecast | Ahmad Ali'>
+
+            <>
+                            <Helmet>
+                                <meta property="og:title" content="Weather Forecast | Ahmad Ali " />
+                                <meta property="og:description" content="Fully Working React Component with it's supportive server route code. This project uses darksky API to grap weather data, and MAPQUEST API for getting user geolocation data." />
+                                <meta property="og:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                                    <meta property="og:url" content="https://www.ahmad-ali.co.uk/" />
+                                    <meta name="author" content="Ahmad Ali" />
+                                    <meta name="twitter:card" content="Ahmad Ali Full Stack Developer" />
+                                    <meta name="twitter:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                        </Helmet>
+            
             <>
                 <div className="forecast">
 
@@ -91,6 +167,10 @@ export default class Forecast extends Component {
                             <h6 className="m-0 font-weight-bold text-primary">Forecast</h6>
                         </div>
                         <div className="card-body">
+
+
+
+
 
 
                             <div id="currentDetailsWrapper">
@@ -110,6 +190,14 @@ export default class Forecast extends Component {
                                 </div></div>
 
                             <br />
+
+
+
+
+
+
+
+
 
 
                             <div id="currentDetailsWrapper">
@@ -217,6 +305,10 @@ export default class Forecast extends Component {
                             </div>
 
 
+
+
+
+
                             <br /> <br />
 
                             <div id="currentDetailsWrapper">
@@ -235,8 +327,15 @@ export default class Forecast extends Component {
                                         </span>
                                     </div>
 
+
+
+
                                 </div>
                             </div>
+
+
+
+
 
 
                             <div id="currentDetailsWrapper">
@@ -309,6 +408,7 @@ export default class Forecast extends Component {
                             </div>
 
 
+
                             <div id="currentDetailsWrapper">
                                 <div id="currentDetails">
                                     <div className="uv_index uv0">
@@ -371,6 +471,8 @@ export default class Forecast extends Component {
                 </div>
                 <Footer />
             </>
+            </>
+            </DocumentTitle>
         )
     }
 }

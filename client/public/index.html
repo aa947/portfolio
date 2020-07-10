@@ -6,9 +6,15 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="shortcut icon" href="https://dl.dropbox.com/s/4loiea2ag4tpukw/mw1002.png?dl=0" />
+    <link
+      rel="shortcut icon"
+      href="https://dl.dropbox.com/s/4loiea2ag4tpukw/mw1002.png?dl=0"
+    />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -19,7 +25,16 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <!-- <title>Ahmad Ali</title> -->
-   
+    <style>
+      /* body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #999999;
+} */
+    </style>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -43,12 +58,12 @@
     <script
       src="https://unpkg.com/react/umd/react.production.min.js"
       crossorigin
-    ></script>
+    />
 
     <script
       src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
       crossorigin
-    ></script>
+    />
 
     <script
       src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
@@ -70,7 +85,7 @@
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
         <!-- Main Content -->
-        <div id="content" style="width: 100%; display: flex; flex-wrap: wrap;">
+        <div id="content">
           <div
             id="root"
             class="container-fluid"
@@ -87,6 +102,33 @@
       <i class="fas fa-angle-up"></i>
     </a>
 
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("worker.js")
+            .then(
+              function (registration) {
+                // Registration was successful
+                console.log(
+                  "ServiceWorker registration successful with scope: ",
+                  registration.scope
+                );
+              },
+              function (err) {
+                // registration failed :(
+                console.log("ServiceWorker registration failed: ", err);
+              }
+            )
+            .catch(function (err) {
+              console.log(err);
+            });
+        });
+      } else {
+        console.log("service worker is not supported");
+      }
+    </script>
+
     <script src="%PUBLIC_URL%/vendor/jquery/jquery.min.js"></script>
     <script src="%PUBLIC_URL%/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -96,5 +138,16 @@
     <!-- Custom scripts for all pages-->
     <script src="%PUBLIC_URL%/js/sb-admin-2.min.js"></script>
 
+    <!-- Page level plugins -->
+    <!--<script src="%PUBLIC_URL%/vendor/chart.js/Chart.min.js"></script>-->
+
+    <!-- Page level custom scripts -->
+    <!--   <script src="%PUBLIC_URL%/js/demo/chart-area-demo.js"></script> -->
+    <!--    <script src="%PUBLIC_URL%/js/demo/chart-pie-demo.js"></script>-->
+    <style>
+      body {
+        //background-color: aqua !important;
+      }
+    </style>
   </body>
 </html>

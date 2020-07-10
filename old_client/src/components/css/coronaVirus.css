@@ -1,0 +1,34 @@
+.currentDetailsWrapper {
+    width: 100%;
+    line-height: 40px;
+    padding: 0 20px;
+    background-color: rgba(238, 238, 238, 0.35);
+    overflow: hidden;
+  }
+
+  .currentDetails {
+    position: relative;
+    text-align: center;
+    left: -10px;
+    /* white-space: nowrap; */
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 750px;
+  }
+
+  .currentDetails > h1{
+    margin:auto;
+    line-height:51px;
+    vertical-align:middle;
+  }
+ 
+  .currentDetails > h6 {
+      margin:auto;
+  }
+
+.spinnerDiv{
+    margin: auto;
+    vertical-align:middle;
+
+  }
+ 

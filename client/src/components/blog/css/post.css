@@ -1,4 +1,4 @@
-div.post pre {
+div.post  pre {
     background: #f4f4f4;
     border: 1px solid #ddd;
     border-left: 3px solid #f36d33;
@@ -28,22 +28,6 @@ div.post pre {
 	background: url() repeat 0 0;
 }
 pre code {
-	padding: 10px;
-	color: #333;
-} */
-
-/* pre {
-	box-sizing: border-box;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	overflow: auto;
-	overflow-y: hidden;
-	font-size: 12px;
-	line-height: 20px;
-	background: #efefef;
-	border: 1px solid #777;
-	background: url() repeat 0 0;
 	padding: 10px;
 	color: #333;
 } */

@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
 import './css/header.css';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
 
 
 class Numbers extends Component {
+
 
   render() {
     return (
       <React.Fragment>
 
+        {/* <!-- Earnings (Monthly) Card Example --> */}
         <div className="col-xl-3 col-md-6 mb-4">
           <div className="card border-left-primary shadow h-100 py-2">
             <div className="card-body">
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
                   <div className="text-sm font-weight-bold text-primary text-uppercase mb-1">
-                    <a href="/meetings"> Schedule a Meeting </a>
+                    <a href="/meetings"> Book a Meeting </a>
                   </div>
                   <div className="p mb-0 font-weight-bold text-gray-800">Get a Free Quote</div>
                 </div>
@@ -26,15 +32,16 @@ class Numbers extends Component {
           </div>
         </div>
 
+        {/* <!-- Earnings (Monthly) Card Example --> */}
         <div className="col-xl-3 col-md-6 mb-4">
           <div className="card border-left-success shadow h-100 py-2">
             <div className="card-body">
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
                   <div className="text-sm font-weight-bold text-success text-uppercase mb-1">
-                    <a href="/claim-your-free-service"> Claim A Free Service </a>
+                    <a href="/claim-your-free-service"> Activity Docs </a>
                   </div>
-                  <div className="p mb-0 font-weight-bold text-gray-800">coming soon ..</div>
+                  <div className="p mb-0 font-weight-bold text-gray-800">coming soon .. </div>
                 </div>
                 <div className="col-auto">
                   <i className="fas fa-user-cog fa-2x text-gray-300"></i>
@@ -44,17 +51,18 @@ class Numbers extends Component {
           </div>
         </div>
 
+        {/* <!-- Earnings (Monthly) Card Example --> */}
         <div className="col-xl-3 col-md-6 mb-4">
           <div className="card border-left-info shadow h-100 py-2">
             <div className="card-body">
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
                   <div className="text-sm font-weight-bold text-info text-uppercase mb-1">
-                    <a href="/report"> My Growth Report </a>
+                    <a href="/report"> My Report </a>
                   </div>
                   <div className="row no-gutters align-items-center">
                     <div className="col-auto">
-                      <div className="p mb-0 mr-3 font-weight-bold text-gray-800">my growth on data</div>
+                      <div className="p mb-0 mr-3 font-weight-bold text-gray-800">work summary</div>
                     </div>
                     <div className="col">
                       {/* <div className="progress progress-sm mr-2">
@@ -71,6 +79,8 @@ class Numbers extends Component {
           </div>
         </div>
 
+
+        {/* <!-- Pending Requests Card Example --> */}
         <div className="col-xl-3 col-md-6 mb-4">
           <div className="card border-left-warning shadow h-100 py-2">
             <div className="card-body">
@@ -79,7 +89,7 @@ class Numbers extends Component {
                   <div className="text-sm font-weight-bold text-warning text-uppercase mb-1">
                     <a href="/#reviews"> Add a Review </a>
                   </div>
-                  <div className="p mb-0 font-weight-bold text-gray-800">help others to know me</div>
+                  <div className="p mb-0 font-weight-bold text-gray-800">Review My Work</div>
                 </div>
                 <div className="col-auto">
                   <i className="fas fas fa-bullhorn fa-2x text-gray-300"></i>

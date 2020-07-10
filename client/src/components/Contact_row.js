@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
 import Contact_form from './Contact_form';
 import NewsLetter_form from './NewsLetter_form';
-import { Helmet } from 'react-helmet';
 import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
+
+
+
+
+
 import './css/intro.css';
+// import { Link } from 'react-router-dom';
 
 class Contact_row extends Component {
+    constructor() {
+        super();
+        this.state = {
+
+        };
+    }
+
+    componentDidMount() {
+
+
+    }
 
     render() {
         return (
+            <DocumentTitle title='Contact | Ahmad Ali'>
 
-            <DocumentTitle title="Contact | Ahmad Ali ">
                 <>
-                    {/* adding meta data with Helmet */}
                     <Helmet>
                         <meta property="og:title" content="Ahmad Ali - Full Stack Developer" />
                         <meta property="og:description" content="Full-stack developer, back-ended with the precision of chemistry and medical practise.  Educated to degree level with 1 years’ experience in web development. This has given me skills in JS: MERN, PHP: WP_API, DB: MONGO, SQL, HTML and CSS." />
@@ -27,8 +43,11 @@ class Contact_row extends Component {
                         <Contact_form />
                         <NewsLetter_form />
                     </div>
+
                 </>
             </DocumentTitle>
+
+
         );
 
     }

@@ -1,22 +1,20 @@
 {
   "name": "ahmad-ali",
   "version": "1.0.0",
-  "description": "Ahmad Ali portfolio",
+  "description": "my portfoilio",
   "main": "server.js",
   "scripts": {
     "client-install": "cd client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
+    "client": "npm run local --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  "author": "Ahmad Ali",
+  "author": "Brad Traversy",
   "license": "MIT",
   "devDependencies": {
-    "install": "^0.13.0",
-    "nodemon": "^1.14.6",
-    "npm": "^6.14.4"
+    "nodemon": "^1.14.6"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -26,16 +24,9 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.16.2",
-    "fetch": "^1.1.0",
-    "html-react-parser": "^0.10.1",
-    "intrinio-sdk": "^5.1.0",
     "mongodb": "^3.5.2",
     "node-fetch": "^2.6.0",
     "nodemailer": "^6.4.2",
-    "react-geocode": "^0.2.1",
-    "react-markdown": "^4.3.1",
-    "react-router-sitemap": "^1.2.0",
-    "react-tippy": "^1.3.4",
     "request-ip": "^2.1.3",
     "xml-js": "^1.6.11"
   }

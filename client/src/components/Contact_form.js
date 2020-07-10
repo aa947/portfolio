@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
+// import Container from 'react-bootstrap/Container';
+//import Row from 'react-bootstrap/Row';
+//import Col from 'react-bootstrap/Col';
+//import Jumbotron from 'react-bootstrap/Jumbotron';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+
+
 import './css/intro.css';
+// import { Link } from 'react-router-dom';
 
 class Contact_form extends Component {
     constructor(props) {
         super(props);
         this.state = {
+
             inputEmail: '',
             inputName: '',
             inputMessage: ''
+
+
         };
 
         this.sendMessage = this.sendMessage.bind(this);
@@ -42,6 +52,8 @@ class Contact_form extends Component {
     }
 
 
+
+
     handleChangeName(event) {
         this.setState({ inputName: event.target.value })
     }
@@ -54,16 +66,22 @@ class Contact_form extends Component {
         this.setState({ inputMessage: event.target.value })
     }
 
+    componentDidMount() {
+
+    }
 
     render() {
 
+
         return (
+
+
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
                     <h6 className="m-0 font-weight-bold text-primary">Contact Me</h6>
                 </div>
                 <div className="card-body">
-                    <p> You Are Wecome to my space ..</p>
+                    <p> You Are Welcome to my space .. </p>
                     <p> Tell me about your project and I will give you a reflection, or Just say Hi! </p>
 
                     <br />
@@ -90,7 +108,7 @@ class Contact_form extends Component {
                         <div className="form-group row">
                             <div className="col col-md-4" ></div>
                             <div className="col-sm-10 col-md-8 ">
-                                <button type="submit" className="btn btn-primary" onSubmit={this.sendMessage} >Send Message</button>
+                                <button type="submit" className="btn btn-secondary" onSubmit={this.sendMessage} >Send Message</button>
                             </div>
                         </div>
                     </form>
