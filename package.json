@@ -2,6 +2,9 @@
   "name": "ahmad-ali",
   "version": "1.0.0",
   "description": "my portfoilio",
+  "engines": {
+    "node": "12.x"
+  },
   "main": "server.js",
   "scripts": {
     "client-install": "cd client && npm install",
@@ -11,7 +14,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  "author": "Brad Traversy",
+  "author": "Ahmad Ali",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^1.14.6"
