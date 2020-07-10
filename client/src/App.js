@@ -19,7 +19,7 @@ import Nav from './components/Nav';
 import './App.css';
 import Reviews from './components/Reviews';
 import Forecast from './components/services/Forecast';
-import Services from './components/services';
+import Services from './components/services_list';
 import CreditCard from './components/services/creditCard';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
