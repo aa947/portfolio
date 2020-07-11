@@ -138,7 +138,7 @@ class App extends Component {
               <Projects />
             </Route>
 
-            <Route exact path="/">
+            <Route path="/">
               <Home />
             </Route>
           </Switch>
