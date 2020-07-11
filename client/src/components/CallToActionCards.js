@@ -5,7 +5,7 @@ import TopTextCard from '../cards/TopTextCard';
 /***
  * This component Represent the 4 Call to Action Cards on the Top of the website
  */
-class Numbers extends Component {
+class CallToActionCards extends Component {
 
   render() {
     return (
@@ -48,4 +48,4 @@ class Numbers extends Component {
   }
 }
 
-export default Numbers;
+export default CallToActionCards;
