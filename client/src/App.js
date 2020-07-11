@@ -73,8 +73,8 @@ class App extends Component {
       return (
         <React.Fragment>
           <div style={{ height: '500px' }} >
-            <h1 className="text-center">Error: 404.</h1>
-            <h1 className="text-center"> The Page you're looking for is not existed, please try another page. </h1>
+            <h1 className="text-center mt-5 pt-5 text-white">Error: 404.</h1>
+            <h1 className="text-center text-white"> The Page you're looking for is not existed, please try another page. </h1>
           </div>
           <Footer />
         </React.Fragment>
