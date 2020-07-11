@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "react-sidebar";
-
+ 
 class SideNav extends React.Component {
   constructor(props) {
     super(props);
@@ -9,11 +9,11 @@ class SideNav extends React.Component {
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
-
+ 
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open });
   }
-
+ 
   render() {
     return (
       <Sidebar
@@ -29,5 +29,5 @@ class SideNav extends React.Component {
     );
   }
 }
-
+ 
 export default SideNav;

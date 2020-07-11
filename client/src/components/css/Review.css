@@ -1,20 +1,21 @@
 .desc {
-    top: -40px;
-   left: 50%; 
+   top: -40px;
+   left: 50%;
    width: 100%;
    position: relative;
    font-size: 48px;
    text-align: center;
    color: #706f6c;
-   text-shadow: 0 2px 4px rgba(0,0,0,.2);
+   text-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
 
 .testimonials {
-   margin-top: 105px;
+   margin-top: 2%;
+   margin-bottom: 2%;
    border-bottom: 1px solid #bbab86;
    background-color: #e7e1d4;
    position: relative;
-   margin: 0;
+   /* margin: 0; */
 }
 
 .tweets {
@@ -30,12 +31,12 @@
 }
 
 .tweet {
-   margin-left: 15px;
+   margin-right: 15px;
    padding: 15px;
    box-sizing: border-box;
    background-color: #fff;
    border-radius: 5px;
-   box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
    flex: 0 0 370px;
    position: relative;
    border: 1px solid #bfbfbf;
@@ -45,35 +46,40 @@
    max-height: 191px;
 }
 
-.tweetForm{
-   margin-left: 15px;
+.tweetForm {
+   /* margin-left: 15px; */
    padding: 15px;
    box-sizing: border-box;
    background-color: #fff;
    border-radius: 5px;
-   box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-   flex: 0 0 370px;
+   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+   /* flex: 0 0 370px; */
    position: relative;
    border: 1px solid #bfbfbf;
 }
 
-.reviewText{
+.reviewText {
    font-size: medium;
 }
-.reviewAuthor{
-font-size: x-large;    margin-bottom: 0%;
+
+.reviewAuthor {
+   font-size: x-large;
+   margin-bottom: 0%;
 
 }
-.relation{
-font-size: smaller;
-padding: 0%;
+
+.relation {
+   font-size: smaller;
+   padding: 0%;
 }
-.header_cnter{
+
+.header_cnter {
    text-align: center !important;
 }
-.add_review{
-position: relative;
-top:+180%;
-left:-40%;
-background-color: #706f6c;
+
+.add_review {
+   position: relative;
+   top: +180%;
+   left: -40%;
+   background-color: #706f6c;
 }

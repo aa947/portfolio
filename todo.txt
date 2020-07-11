@@ -1,0 +1,12 @@
+1-add stars to review form.
+4-back to home & back to projects in every project details page.
+5-add link to all project and all certs on the top right of their sections on the home page.
+6- limit the projects on the index page to 20.
+
+
+
+
+
+================= DONE =====================
+**2- prevent form from bieng submitted if it has empty fields.
+**3-render succuess or fail messages.

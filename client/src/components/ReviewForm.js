@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+
+
 import './css/intro.css';
+// import { Link } from 'react-router-dom';
 
 class Contact_form extends Component {
     constructor(props) {
         super(props);
         this.state = {
+
             inputName: '',
             rel: 'I worked directly for You',
             inputMessage: ''
+
+
         };
 
         this.sendMessage = this.sendMessage.bind(this);
@@ -21,11 +27,11 @@ class Contact_form extends Component {
 
     sendMessage(event) {
         event.preventDefault();
-        // console.log(this.state);
+       // console.log(this.state);
 
-        let { inputName, inputMessage } = this.state;
+       let { inputName, inputMessage } = this.state;
 
-        if (inputMessage == "" || inputName == "") {
+        if(inputMessage=="" || inputName == "" ){
             toast.error("Please fill in All Review form fields to send a message", {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: false
@@ -47,8 +53,9 @@ class Contact_form extends Component {
                 });
             })
             .catch(err => console.log(err))
-    }
 
+    }
+    
 
     handleChangeName(event) {
         this.setState({ inputName: event.target.value })
@@ -65,8 +72,16 @@ class Contact_form extends Component {
 
     render() {
 
+
         return (
             <>
+
+                {/* <div className="card shadow mb-4 col-12">
+ <div className="card-header py-3">
+     <h6 className="m-0 font-weight-bold text-primary">Contact Me</h6>
+ </div>
+ <div className="card-body"> */}
+
                 <div className="col col-12">
                     <h4 style={{ textAlign: 'center' }}>Add Review </h4>
                 </div>
@@ -130,6 +145,10 @@ class Contact_form extends Component {
 
                     {/* col12 */}
                 </div>
+
+                {/* </div>
+</div> */}
+
             </>
         );
     }

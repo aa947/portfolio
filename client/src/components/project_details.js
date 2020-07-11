@@ -4,6 +4,8 @@ import Footer from './Footer';
 import axios from 'axios';
 import './css/project_details_css.css';
 import { toast } from 'react-toastify';
+import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -15,11 +17,12 @@ class Project_details extends Component {
                 comments: []
             },
             inputComment: ''
-        };
 
+        };
         this.thumsUp = this.thumsUp.bind(this);
         this.handleChangeComment = this.handleChangeComment.bind(this);
         this.addComment = this.addComment.bind(this);
+
     }
 
     thumsUp() {
@@ -42,8 +45,7 @@ class Project_details extends Component {
                                 autoClose: 10000
                             })
                         }
-                    }
-                    )
+                    })
             });
     }
 
@@ -51,29 +53,32 @@ class Project_details extends Component {
         event.preventDefault();
         // console.log(this.state);
         if (this.state.inputComment == "") {
+
             toast.error('please inter a comment', {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: false
             })
             return false;
+
         }
         axios.post('/api/comment/' + this.state.project._id, { inputComment: this.state.inputComment })
-        .then((data) => {
+            .then((data) => {
                 fetch('/api/p/' + this.state.project._id).then(res => res.json())
                     .then((project) => {
                         // console.log(project)
                         this.setState({ project })
                         this.setState({ inputComment: '' })
-                    })
+                    }
+                    )
             })
             .catch(err => console.log(err))
-    }
 
+
+    }
 
     handleChangeComment(event) {
         this.setState({ inputComment: event.target.value })
     }
-
 
     componentDidMount() {
         // params.project_id
@@ -90,7 +95,28 @@ class Project_details extends Component {
 
     render() {
 
+        // var comments_row  =  (this.state.project.comments || []).map((cc) => {
+        //     return (
+        //         <p><i class="fas fa-chevron-right"></i> {cc} </p>
+        //     );
+
+
+        // });
+
         return (
+            <DocumentTitle title={`Ahmad - ${this.state.project.name}`}>
+
+            <>
+                            <Helmet>
+                                <meta property="og:title" content={`Ahmad Ali - Full Stack Developer project: ${this.state.project.name}`} />
+                                <meta property="og:description" content={`${this.state.project.intro}  ${this.state.project.tasks}`} />
+                                <meta property="og:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                                    <meta property="og:url" content="https://www.ahmad-ali.co.uk/" />
+                                    <meta name="author" content="Ahmad Ali" />
+                                    <meta name="twitter:card" content="Ahmad Ali Full Stack Developer" />
+                                    <meta name="twitter:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                        </Helmet>
+            
             <React.Fragment>
                 <div className="col-lg-12 mb-12">
                     <div className="card shadow mb-12">
@@ -135,6 +161,9 @@ class Project_details extends Component {
                                 />)}
 
                             {this.state.project.video && (<div className="container" style={{ width: "100%" }} dangerouslySetInnerHTML={{ __html: this.state.project.video }} />)}
+
+
+
                         </div>
                     </div>
                 </div>
@@ -152,21 +181,33 @@ class Project_details extends Component {
                                 return (
                                     <div > <p> <i class="fas fa-chevron-right"></i> {cc} </p> </div>
                                 );
+
+
                             })}
 
                             <form onSubmit={this.addComment}>
                                 <div className="row">
 
-                                    <input className="form-control form-control-lg col-md-9  lg-8" type="text" name="inputComment" value={this.state.inputComment} onChange={this.handleChangeComment} placeholder="add acomment or leave inspiration" /> {'\u00A0'}    <button type="submit" onSubmit={this.addComment} className="btn btn-primary col-md-2 lg-2" > Add comment </button>
+                                    <input className="form-control form-control-lg col-md-9  lg-8" type="text" name="inputComment" value={this.state.inputComment} onChange={this.handleChangeComment} placeholder="add acomment or leave inspiration" /> {'\u00A0'}    <button type="submit" onSubmit={this.addComment} className="btn btn-secondary col-md-2 lg-2" > Add comment </button>
                                 </div>
                             </form>
 
                         </div>
                     </div>
-                </div>    
+                </div>
+                {/* big row */}
+                {/* <div className="col-lg-12 mb-12">
+                    <div className="card shadow mb-12">
+                        
+                        <div className="card-body">
+                        </div>
+                    </div>
+                </div> */}
                 <br />
                 <Footer />
             </React.Fragment>
+            </>
+            </DocumentTitle>
         );
     }
 }

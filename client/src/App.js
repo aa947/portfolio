@@ -25,11 +25,12 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CoronaVirus from './components/services/coronaVirus';
 import DgUrl from './components/services/dg-url';
-import Meetings from './components/meetings';
+import Meetings from './components/tasks/meetings';
 import Blog from './components/blog/Blog';
 import Connecting_to_Atlas from './components/blog/posts/connecting_your_app_to_mongodb_atlas';
 import FreeService from './components/tasks/FreeService';
 import Report from './components/tasks/Report';
+
 
 
 
@@ -45,7 +46,9 @@ class App extends Component {
         <React.Fragment>
           <Intro />
           <Services />
-          <div className="row" style={{ width: "100%", display: "flex", flexWrap: "wrap" }}>
+          <div className="row"
+          //  style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
+          >
             <Project_col />
             <Edu_col />
             <br />
@@ -97,8 +100,8 @@ class App extends Component {
               * Blog Routes
               */}
             <Route exact path="/blog"> <Blog /> </Route>
-            <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">           
-                <Connecting_to_Atlas /> 
+            <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">
+              <Connecting_to_Atlas />
             </Route>
 
             {/* **
@@ -108,9 +111,11 @@ class App extends Component {
             <Route path="/contact"
               component={(props) => <Contact {...props} title="contact" />}
             />
-             <Route exact path="/claim-your-free-service"
+
+            <Route exact path="/claim-your-free-service"
               component={(props) => <FreeService {...props} />}
             />
+
             <Route path="/education">
               <Education />
             </Route>

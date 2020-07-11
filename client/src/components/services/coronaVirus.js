@@ -3,6 +3,12 @@ import axios from 'axios'
 import Footer from '../Footer';
 import '../css/coronaVirus.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
+
+
+
+
 
 
 export class CoronaVirus extends Component {
@@ -134,6 +140,7 @@ export class CoronaVirus extends Component {
     }
 
 
+
     render() {
         let { recovered, deaths, confirmed, source, loading, uk, italy, spain } = this.state;
 
@@ -150,27 +157,39 @@ export class CoronaVirus extends Component {
                         <div className="currentDetails">
                             {confirmed && <h2 style={{ color: "#555" }} > Confirmed  Cases Globally :    <span style={{ color: "blue", fontSize: "25px" }}> {confirmed} </span> </h2>
                             }
+
+
                         </div>
-                    </div>
+                    </div >
 
                     <div className="currentDetailsWrapper">
 
                         <div className="currentDetails">
+
                             {recovered && <h2 style={{ color: "#555" }} >  Recovered Cases :  <span style={{ color: "green", fontSize: "25px" }}> {recovered} </span> </h2>}
+
+
                         </div>
                     </div>
 
                     <div className="currentDetailsWrapper">
 
                         <div className="currentDetails">
+
                             {deaths && <h2 style={{ color: "#555" }} >  Deaths :  <span style={{ color: "red", fontSize: "25px" }}> {deaths}  </span> </h2>}
+
+
                         </div>
                     </div>
 
 
                     <div className="currentDetailsWrapper">
+
                         <div className="currentDetails" >
+
                             {source && <h6> Source:  {source} , counters are updated every minute. </h6>}
+
+
                         </div>
                     </div>
 
@@ -192,8 +211,9 @@ export class CoronaVirus extends Component {
                             {uk.confirmed && <h2 style={{ color: "#555" }} > Confirmed  Cases In the UK : <span style={{ color: "blue", fontSize: "25px" }}> {uk.confirmed} </span> </h2>
                             }
 
+
                         </div>
-                    </div>
+                    </div >
 
                     <div className="currentDetailsWrapper">
 
@@ -209,6 +229,8 @@ export class CoronaVirus extends Component {
                         <div className="currentDetails">
 
                             {uk.deaths && <h2 style={{ color: "#555" }} >  Deaths : <span style={{ color: 'red', fontSize: "25px" }}> {uk.deaths} </span> </h2>}
+
+
                         </div>
                     </div>
 
@@ -218,6 +240,7 @@ export class CoronaVirus extends Component {
                         <div className="currentDetails" >
 
                             {uk.source && <h6> Source:  {uk.source} , counters are updated every minute. </h6>}
+
 
                         </div>
                     </div>
@@ -241,8 +264,10 @@ export class CoronaVirus extends Component {
                         <div className="currentDetails">
                             {spain.confirmed && <h2 style={{ color: "#555" }} > Confirmed  Cases In the Spain : <span style={{ color: "blue", fontSize: "25px" }}> {spain.confirmed} </span> </h2>
                             }
+
+
                         </div>
-                    </div>
+                    </div >
 
                     <div className="currentDetailsWrapper">
 
@@ -256,14 +281,21 @@ export class CoronaVirus extends Component {
                     <div className="currentDetailsWrapper">
 
                         <div className="currentDetails">
+
                             {spain.deaths && <h2 style={{ color: "#555" }} >  Deaths : <span style={{ color: 'red', fontSize: "25px" }}> {spain.deaths} </span> </h2>}
+
+
                         </div>
                     </div>
 
 
                     <div className="currentDetailsWrapper">
+
                         <div className="currentDetails" >
+
                             {spain.source && <h6> Source:  {source} , counters are updated every minute. </h6>}
+
+
                         </div>
                     </div>
 
@@ -285,8 +317,10 @@ export class CoronaVirus extends Component {
                         <div className="currentDetails">
                             {italy.confirmed && <h2 style={{ color: "#555" }} > Confirmed  Cases In the Italy : <span style={{ color: "blue", fontSize: "25px" }}> {italy.confirmed} </span> </h2>
                             }
+
+
                         </div>
-                    </div>
+                    </div >
 
                     <div className="currentDetailsWrapper">
 
@@ -311,7 +345,10 @@ export class CoronaVirus extends Component {
                     <div className="currentDetailsWrapper">
 
                         <div className="currentDetails" >
+
                             {italy.source && <h6> Source:  {italy.source} , counters are updated every minute. </h6>}
+
+
                         </div>
                     </div>
 
@@ -324,56 +361,102 @@ export class CoronaVirus extends Component {
 
 
         return (
-            <>
+            <DocumentTitle title='CoronaVirus scrapper | Ahmad Ali'>
 
-                <div className="row">
-                    <div className="col-lg-12 mb-12">
+                <>
+                    <Helmet>
+                        <meta property="og:title" content="Ahmad Ali - CoronaVirus scrapper " />
+                        <meta property="og:description" content="this is a Live Monitor shows you rael-time number of coronavirus cases globally and in UK , Spain. this is a full React code with Node server that uses web scrapping with cheerio." />
+                        <meta property="og:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                        <meta property="og:url" content="https://www.ahmad-ali.co.uk/" />
+                        <meta name="author" content="Ahmad Ali" />
+                        <meta name="twitter:card" content="Ahmad Ali Full Stack Developer" />
+                        <meta name="twitter:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                    </Helmet>
 
-                        <div className="card shadow mb-4">
-                            <div className="card-header py-3">
-                                <h6 className="m-0 font-weight-bold text-primary">Corona Virus Numbers Update</h6>
-                            </div>
-                            <div className="card-body">
-                                {conetent}
+                    <>
+
+                        <div className="row">
+                            <div className="col-lg-12 mb-12">
+
+                                <div className="card shadow mb-4">
+                                    <div className="card-header py-3">
+                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus Numbers Update</h6>
+                                    </div>
+                                    <div className="card-body">
+
+
+
+
+                                        {conetent}
+
+
+
+                                    </div>
+                                </div>
+
+
+                                <div className="card shadow mb-4">
+                                    <div className="card-header py-3">
+                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus United Kingdom <img src="https://dl.dropbox.com/s/tah8h6kgt0q04f5/uk_flag.gif?dl=0" width="40px" /></h6>
+                                    </div>
+                                    <div className="card-body">
+
+
+
+
+                                        {ukconetent}
+
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <div className="card shadow mb-4">
+                                    <div className="card-header py-3">
+                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus Spain <img src="https://dl.dropbox.com/s/1dha7r6qrvd3ow7/spain.gif?dl=0" width="40px" /></h6>
+                                    </div>
+                                    <div className="card-body">
+
+
+
+
+                                        {spainConetent}
+
+
+
+                                    </div>
+                                </div>
+
+
+
+                                <div className="card shadow mb-4">
+                                    <div className="card-header py-3">
+                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus Italy <img src="https://dl.dropbox.com/s/pzcoeu6tfdlq3hy/italy.gif?dl=0" width="40px" /></h6>
+                                    </div>
+                                    <div className="card-body">
+
+
+
+
+                                        {italyconetent}
+
+
+
+                                    </div>
+                                </div>
+
+
+
+
                             </div>
                         </div>
-
-
-                        <div className="card shadow mb-4">
-                            <div className="card-header py-3">
-                                <h6 className="m-0 font-weight-bold text-primary">Corona Virus United Kingdom <img src="https://dl.dropbox.com/s/tah8h6kgt0q04f5/uk_flag.gif?dl=0" width="40px" /></h6>
-                            </div>
-                            <div className="card-body">
-                                {ukconetent}
-                            </div>
-                        </div>
-
-
-
-                        <div className="card shadow mb-4">
-                            <div className="card-header py-3">
-                                <h6 className="m-0 font-weight-bold text-primary">Corona Virus Spain <img src="https://dl.dropbox.com/s/1dha7r6qrvd3ow7/spain.gif?dl=0" width="40px" /></h6>
-                            </div>
-                            <div className="card-body">
-                                {spainConetent}
-                            </div>
-                        </div>
-
-
-
-                        <div className="card shadow mb-4">
-                            <div className="card-header py-3">
-                                <h6 className="m-0 font-weight-bold text-primary">Corona Virus Italy <img src="https://dl.dropbox.com/s/pzcoeu6tfdlq3hy/italy.gif?dl=0" width="40px" /></h6>
-                            </div>
-                            <div className="card-body">
-                                {italyconetent}
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <Footer />
-            </>
+                        <Footer />
+                    </>
+                </>
+            </DocumentTitle>
         )
     }
 }

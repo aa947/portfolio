@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import Footer from '../Footer';
+import ReactDOM from 'react-dom';
 import ReactMarkdown from 'react-markdown';
+import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
+
 
 const input =`
 
@@ -73,6 +77,19 @@ req.send( dg(url) ); //to the client
 export default class DgUrl extends Component {
     render() {
         return (
+            <DocumentTitle title='dg-url | Ahmad Ali'>
+
+            <>
+                            <Helmet>
+                                <meta property="og:title" content="Ahmad Ali - dg-url is a javascript library" />
+                                <meta property="og:description" content=" dg-url is a javascript library that gives you handy functionalities to work with urls.dg-url : handy functionalities to work with urls" />
+                                <meta property="og:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                                    <meta property="og:url" content="https://www.ahmad-ali.co.uk/" />
+                                    <meta name="author" content="Ahmad Ali" />
+                                    <meta name="twitter:card" content="Ahmad Ali Full Stack Developer" />
+                                    <meta name="twitter:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                        </Helmet>
+            
             <>
             <div>
                 <div className="card shadow mb-4">
@@ -83,11 +100,19 @@ export default class DgUrl extends Component {
                         </h6>
                     </div>
                     <div style={{ padding: "5%" }} className="card-body">
+
+
+
+
+
                         <ReactMarkdown style={{ padding: "5%" }} source={input} />
+                       
+
                     </div></div></div>
-                    
                     <Footer />
-            </>
+                    </>
+                </>
+            </DocumentTitle>
         )
     }
 }

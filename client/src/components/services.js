@@ -25,12 +25,21 @@ export default class Services extends Component {
                         </div>
 
                         <div className="col-12 col-md-6">
+                        <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <a href ="https://cyf-tv-show-react-hooks.netlify.app/" target="_blank"> Tv shows React challenge </a> </p>
+                        </div>
+
+                        <div className="col-12 col-md-6">
+                        <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <a href ="https://tfl-react-challenge.netlify.app/" target="blank"> TFL React challenge </a> </p>
+                        </div>
+
+                        <div className="col-12 col-md-6">
                         <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <a href="https://www.ahmad-ali.co.uk/projects/5ec6cf158c2df5825b4922a4">Prfl 20 </a> </p>
                         </div>
 
                         <div className="col-12 col-md-6">
                         <p style={{ fontSize: "20px", marginBottom: "1%" }}><i className="fas fa-chevron-right"></i> <a href="https://www.ahmad-ali.co.uk/projects/5ec6d37f8c2df5825b4922a6"> Video Subtitles Editor </a> </p>
                         </div>
+
 
 
 
