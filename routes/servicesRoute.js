@@ -61,44 +61,44 @@ router.get('/stocks', function (req, res, next) {
 // });
 
 
-router.post('/forecast', (req, res)=>{
+router.post('/forecast', (req, res) => {
   console.log(req.body);
   let long = req.body.geo.long;
   let lat = req.body.geo.lat;
 
 
-fetch(`https://api.darksky.net/forecast/32a9ba97f5b4e020604d55e29b3056e2/${lat},${long}?units=uk2`)
-// fetch('https://api.darksky.net/forecast/32a9ba97f5b4e020604d55e29b3056e2/51.589772599999996,-0.3458681?units=uk2')
-  .then(rees => rees.json())
-  .then(data => res.json(data));
-  
+  fetch(`https://api.darksky.net/forecast/32a9ba97f5b4e020604d55e29b3056e2/${lat},${long}?units=uk2`)
+    // fetch('https://api.darksky.net/forecast/32a9ba97f5b4e020604d55e29b3056e2/51.589772599999996,-0.3458681?units=uk2')
+    .then(rees => rees.json())
+    .then(data => res.json(data));
+
 });
 
 
 
 
-router.post('/forecast_change', (req, res)=>{
+router.post('/forecast_change', (req, res) => {
   console.log(req.body);
   let city = req.body.city;
 
 
-// fetch("https://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1RkyxVLjO41PT3D&inFormat=kvp&outFormat=json&location=london&thumbMaps=false")
-fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1RkyxVLjO41PT3D&location=${city}`)
-  .then(rees => { return rees.json()} )
-   .then(data => { return res.json(data.results);});
-  
+  // fetch("https://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1RkyxVLjO41PT3D&inFormat=kvp&outFormat=json&location=london&thumbMaps=false")
+  fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=4aHQ0ttL4o2eZAysY1RkyxVLjO41PT3D&location=${city}`)
+    .then(rees => { return rees.json() })
+    .then(data => { return res.json(data.results); });
+
 });
 
 
-router.get('/corona', async (req, res)=>{
+router.get('/corona', async (req, res) => {
   const result = await getResults("https://www.worldometers.info/coronavirus/");
   //console.log('scrapping Result ....', result );
-    res.json({
-      source: result.siteName,
-      confirmed: result.numbers[0],
-      recovered: result.numbers[2],
-      deaths: result.numbers[1]
-    })
+  res.json({
+    source: result.siteName,
+    confirmed: result.numbers[0],
+    recovered: result.numbers[2],
+    deaths: result.numbers[1]
+  })
 });
 
 
@@ -107,34 +107,34 @@ router.get('/corona', async (req, res)=>{
 
 
 
-router.get('/corona/uk', async (req, res)=>{
+router.get('/corona/uk', async (req, res) => {
   const result = await getUKResult();
-    res.json({
-      source: result.siteName,
-      confirmed: result.numbers[0],
-      recovered: result.numbers[2],
-      deaths: result.numbers[1]
-    })
+  res.json({
+    source: result.siteName,
+    confirmed: result.numbers[0],
+    recovered: result.numbers[2],
+    deaths: result.numbers[1]
+  })
 });
 
-router.get('/corona/spain', async (req, res)=>{
+router.get('/corona/spain', async (req, res) => {
   const result = await getResults("https://www.worldometers.info/coronavirus/country/spain/");
-    res.json({
-      source: result.siteName,
-      confirmed: result.numbers[0],
-      recovered: result.numbers[2],
-      deaths: result.numbers[1]
-    })
+  res.json({
+    source: result.siteName,
+    confirmed: result.numbers[0],
+    recovered: result.numbers[2],
+    deaths: result.numbers[1]
+  })
 });
 
-router.get('/corona/italy', async (req, res)=>{
+router.get('/corona/italy', async (req, res) => {
   const result = await getResults("https://www.worldometers.info/coronavirus/country/italy/");
-    res.json({
-      source: result.siteName,
-      confirmed: result.numbers[0],
-      recovered: result.numbers[2],
-      deaths: result.numbers[1]
-    })
+  res.json({
+    source: result.siteName,
+    confirmed: result.numbers[0],
+    recovered: result.numbers[2],
+    deaths: result.numbers[1]
+  })
 });
 
 
