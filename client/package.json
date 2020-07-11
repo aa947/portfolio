@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://staging-ahmad-ali.herokuapp.com/",
+  "homepage": ".",
   "dependencies": {
     "@material-ui/core": "^4.9.5",
     "axios": "^0.19.2",
