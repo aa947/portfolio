@@ -19,7 +19,7 @@ import Nav from './components/Nav';
 import './App.css';
 import Reviews from './components/Reviews';
 import Forecast from './components/services/Forecast';
-import Services from './components/services_list';
+import Services from './components/services';
 import CreditCard from './components/services/creditCard';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -69,19 +69,6 @@ class App extends Component {
       );
     }
 
-    function NotFound() {
-      return (
-        <React.Fragment>
-          <div style={{ height: '500px' }} >
-            <h1 className="text-center mt-5 pt-5 text-white">Error: 404.</h1>
-            <h1 className="text-center text-white"> The Page you're looking for is not existed, please try another page. </h1>
-          </div>
-          <Footer />
-        </React.Fragment>
-
-      );
-    }
-
     function Contact() {
       return (
         <React.Fragment>
@@ -112,7 +99,6 @@ class App extends Component {
               *
               * Blog Routes
               */}
-            <Route exact path="/"> <Home /> </Route>
             <Route exact path="/blog"> <Blog /> </Route>
             <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">
               <Connecting_to_Atlas />
@@ -130,8 +116,9 @@ class App extends Component {
               component={(props) => <FreeService {...props} />}
             />
 
-            <Route path="/education"> <Education /> </Route>
-            <Route exact path="/index"> <Home /> </Route>
+            <Route path="/education">
+              <Education />
+            </Route>
 
             <Route exact path="/meetings" render={(props) => <Meetings {...props} {...this.props} />} />
 
@@ -150,8 +137,8 @@ class App extends Component {
               <Projects />
             </Route>
 
-            <Route>
-              <NotFound />
+            <Route path="/">
+              <Home />
             </Route>
           </Switch>
         </div>
