@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './css/header.css';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
+import TopTextCard from '../cards/TopTextCard';
 
 
 class Numbers extends Component {
@@ -13,24 +10,38 @@ class Numbers extends Component {
     return (
       <React.Fragment>
 
-        {/* <!-- Earnings (Monthly) Card Example --> */}
-        <div className="col-xl-3 col-md-6 mb-4">
-          <div className="card border-left-primary shadow h-100 py-2">
-            <div className="card-body">
-              <div className="row no-gutters align-items-center">
-                <div className="col mr-2">
-                  <div className="text-sm font-weight-bold text-primary text-uppercase mb-1">
-                    <a href="/meetings"> Book a Meeting </a>
-                  </div>
-                  <div className="p mb-0 font-weight-bold text-gray-800">Get a Free Quote</div>
-                </div>
-                <div className="col-auto">
-                  <i className="fas fa-calendar-alt fa-2x text-gray-300"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <TopTextCard
+          cardLink="/meetings"
+          color="primary"
+          title="Book a Meeting"
+          text="Get a Free Quote"
+          iconClass="fas fa-calendar-alt"
+        />
+        <TopTextCard
+          cardLink="/meetings"
+          color="primary"
+          title="Book a Meeting"
+          text="Get a Free Quote"
+          iconClass="fas fa-calendar-alt"
+        />
+
+        <TopTextCard
+          cardLink="/meetings"
+          color="primary"
+          title="Book a Meeting"
+          text="Get a Free Quote"
+          iconClass="fas fa-calendar-alt"
+        />
+
+        <TopTextCard
+          cardLink="/meetings"
+          color="primary"
+          title="Book a Meeting"
+          text="Get a Free Quote"
+          iconClass="fas fa-calendar-alt"
+        />
+
+
 
         {/* <!-- Earnings (Monthly) Card Example --> */}
         <div className="col-xl-3 col-md-6 mb-4">
