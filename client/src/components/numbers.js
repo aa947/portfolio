@@ -39,9 +39,9 @@ class Numbers extends Component {
               <div className="row no-gutters align-items-center">
                 <div className="col mr-2">
                   <div className="text-sm font-weight-bold text-success text-uppercase mb-1">
-                    <a href="/claim-your-free-service"> Activity Docs </a>
+                    <a href="https://docs.ahmad-ali.co.uk/"> Activity Docs </a>
                   </div>
-                  <div className="p mb-0 font-weight-bold text-gray-800">coming soon .. </div>
+                  <div className="p mb-0 font-weight-bold text-gray-800">Quick CheatSheets </div>
                 </div>
                 <div className="col-auto">
                   <i className="fas fa-user-cog fa-2x text-gray-300"></i>
