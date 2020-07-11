@@ -103,30 +103,30 @@
     </a>
 
     <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker
-            .register("worker.js")
-            .then(
-              function (registration) {
-                // Registration was successful
-                console.log(
-                  "ServiceWorker registration successful with scope: ",
-                  registration.scope
-                );
-              },
-              function (err) {
-                // registration failed :(
-                console.log("ServiceWorker registration failed: ", err);
-              }
-            )
-            .catch(function (err) {
-              console.log(err);
-            });
-        });
-      } else {
-        console.log("service worker is not supported");
-      }
+      // if ("serviceWorker" in navigator) {
+      //   window.addEventListener("load", function () {
+      //     navigator.serviceWorker
+      //       .register("worker.js")
+      //       .then(
+      //         function (registration) {
+      //           // Registration was successful
+      //           console.log(
+      //             "ServiceWorker registration successful with scope: ",
+      //             registration.scope
+      //           );
+      //         },
+      //         function (err) {
+      //           // registration failed :(
+      //           console.log("ServiceWorker registration failed: ", err);
+      //         }
+      //       )
+      //       .catch(function (err) {
+      //         console.log(err);
+      //       });
+      //   });
+      // } else {
+      //   console.log("service worker is not supported");
+      // }
     </script>
 
     <script src="/vendor/jquery/jquery.min.js"></script>
