@@ -99,7 +99,7 @@ class App extends Component {
               *
               * Blog Routes
               */}
-            <Route path="/"> <Home /> </Route>
+            <Route exact path="/"> <Home /> </Route>
             <Route exact path="/blog"> <Blog /> </Route>
             <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">
               <Connecting_to_Atlas />
@@ -138,7 +138,7 @@ class App extends Component {
               <Projects />
             </Route>
 
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
           </Switch>
