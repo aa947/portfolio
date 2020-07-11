@@ -130,9 +130,8 @@ class App extends Component {
               component={(props) => <FreeService {...props} />}
             />
 
-            <Route path="/education">
-              <Education />
-            </Route>
+            <Route path="/education"> <Education /> </Route>
+            <Route exact path="/index"> <Home /> </Route>
 
             <Route exact path="/meetings" render={(props) => <Meetings {...props} {...this.props} />} />
 
