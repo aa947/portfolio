@@ -69,6 +69,19 @@ class App extends Component {
       );
     }
 
+    function NotFound() {
+      return (
+        <React.Fragment>
+          <div style={{ height: '500px' }} >
+            <h1 className="text-center">Error: 404.</h1>
+            <h1 className="text-center"> The Page you're looking for is not existed, please try another page. </h1>
+          </div>
+          <Footer />
+        </React.Fragment>
+
+      );
+    }
+
     function Contact() {
       return (
         <React.Fragment>
@@ -138,8 +151,8 @@ class App extends Component {
               <Projects />
             </Route>
 
-            <Route path="/">
-              <Home />
+            <Route>
+              <NotFound />
             </Route>
           </Switch>
         </div>
