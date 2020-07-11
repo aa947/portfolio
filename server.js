@@ -417,7 +417,7 @@ app.use('/api/claim-free-service', FreeServiceRoute);
 //uncomment this to deploy to heroku
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use('/static', express.static('client/build'));
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   })
