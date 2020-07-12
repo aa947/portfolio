@@ -30,15 +30,23 @@ app.get('/api/views', (req, res) => {
   const clientIp = requestIp.getClientIp(req);
 
 
-  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+  mongo.connect(process.env.CONNECTION_STRING, async (err, dbo) => {
     if (err) console.log('Database error: ' + err);
     let db = dbo.db('portfolio');
     let coll = db.collection('visitors');
 
-    ViewsUp.ViewsUp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'));
-    AddVisitorIp.addVisitorIp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'), clientIp);
+    await ViewsUp.ViewsUp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'));
+    await AddVisitorIp.addVisitorIp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'), clientIp);
 
-    res.json({ done: "a visitor Added" });
+    //res.json({ done: "a visitor Added" });
+
+    db.collection('visitors').findOne({ _id: ObjectId('5e28474c19b28f31d6657545') })
+      .then((data) => {
+        let count = data.counter;
+        let unique = data.unique_visitors;
+        res.json({ count: count, unique: unique })
+      });
+
 
 
   });
