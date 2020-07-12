@@ -2,6 +2,7 @@ import React from 'react';
 import ExperienceCard from '../cards/ExperienceCard';
 import codeYourFuture from './experiences/codeYourFuture';
 import MwLabs from './experiences/mwLabs';
+import Pharmacist from './experiences/pharmacist';
 
 const Experience = () => {
 
@@ -39,18 +40,19 @@ const Experience = () => {
                             place="London"
                         />
 
-                        {/*  <ExperienceCard
+                        <ExperienceCard
                             orienting="left"
-                            cardLink="/report"
+                            cardLink="https://www.google.com/maps/place/صيدلية+بيلسان%E2%80%AD/@33.4365065,36.1659669,15z/data=!4m12!1m6!3m5!1s0x0:0x61fac355961f6893!2z2LXZitiv2YTZitipINio2YrZhNiz2KfZhg!8m2!3d33.4365065!4d36.1659669!3m4!1s0x0:0x61fac355961f6893!8m2!3d33.4365065!4d36.1659669"
                             color="info"
-                            title="My Report"
-                            text="Work Summary"
-                            iconClass="fas fa-chart-line"
-                            TextComponent={codeYourFuture}
-                            imageUrl="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0"
+                            title="Baylacan Pharmacy"
+                            text="Pharmacist"
+                            TextComponent={Pharmacist}
+                            imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz73B1YugOyeau5mzDGysJNEOaRBlumPadhSWWNHdYPvXV-CQ&s"
+                            date="Sep 2016 - April 2018"
+                            place="Syria"
                         />
 
-                        <ExperienceCard
+                        {/*    <ExperienceCard
                             orienting="right"
                             cardLink="/reviews"
                             color="warning"
