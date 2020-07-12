@@ -35,10 +35,8 @@ app.get('/api/views', (req, res) => {
     let db = dbo.db('portfolio');
     let coll = db.collection('visitors');
 
-    await ViewsUp.ViewsUp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'));
-    await AddVisitorIp.addVisitorIp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'), clientIp);
-
-    //res.json({ done: "a visitor Added" });
+    ViewsUp.ViewsUp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'));
+    AddVisitorIp.addVisitorIp(db, 'visitors', ObjectId('5e28474c19b28f31d6657545'), clientIp);
 
     db.collection('visitors').findOne({ _id: ObjectId('5e28474c19b28f31d6657545') })
       .then((data) => {
@@ -92,22 +90,22 @@ app.get('/api/certs', (req, res) => {
 });
 
 
-app.get('/api/footer', (req, res) => {
+// app.get('/api/footer', (req, res) => {
 
-  mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
-    if (err) console.log('Database error: ' + err);
-    let db = dbo.db('portfolio');
-    let coll = db.collection('visitors');
+//   mongo.connect(process.env.CONNECTION_STRING, (err, dbo) => {
+//     if (err) console.log('Database error: ' + err);
+//     let db = dbo.db('portfolio');
+//     let coll = db.collection('visitors');
 
-    db.collection('visitors').findOne({ _id: ObjectId('5e28474c19b28f31d6657545') })
-      .then((data) => {
-        let count = data.counter;
-        let unique = data.unique_visitors;
-        res.json({ count: count, unique: unique })
-      });
+//     db.collection('visitors').findOne({ _id: ObjectId('5e28474c19b28f31d6657545') })
+//       .then((data) => {
+//         let count = data.counter;
+//         let unique = data.unique_visitors;
+//         res.json({ count: count, unique: unique })
+//       });
 
-  })
-});
+//   })
+// });
 
 app.get('/api/p/:project_id', (req, res) => {
 
