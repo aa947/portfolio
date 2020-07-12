@@ -32,7 +32,9 @@ import FreeService from './components/tasks/FreeService';
 import Report from './components/tasks/Report';
 import domain from './config';
 import { isLocalhost } from './helpers';
-import Experience from './components/Experience'
+import Experience from './components/Experience';
+import WhoAmI from './components/WhoImI';
+import CallToActionsCards from './components/CallToActionCards';
 
 
 
@@ -72,7 +74,11 @@ class App extends Component {
     const Home = () => {
       return (
         <React.Fragment>
-          <Intro />
+
+          <CallToActionsCards />
+
+          {/* <Intro /> */}
+          <WhoAmI />
           <Experience />
           <Services />
           <div className="row"
@@ -85,7 +91,7 @@ class App extends Component {
           <Reviews />
           <br />
           <Footer visitors={this.state.visitors} />
-        </React.Fragment>);
+        </React.Fragment >);
     }
 
     const Projects = () => {
@@ -171,7 +177,7 @@ class App extends Component {
             </Route>
           </Switch>
         </div>
-      </Router>
+      </Router >
     );
   }
 

@@ -17,7 +17,7 @@ const Experience = () => {
                     <div className="row">
                         <ExperienceCard
                             orienting="left"
-                            cardLink="/meetings"
+                            cardLink="https://codeyourfuture.io/"
                             color="primary"
                             title="code Your Future"
                             text="Full Stack Developer"
