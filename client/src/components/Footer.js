@@ -7,37 +7,37 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 class Footer extends Component {
-    constructor() {
-        super();
-        this.state = {
-            count: 0,
-            unique:0
-        };
-
-    }
-
-    componentDidMount() {
-      fetch('/api/footer').then(res => res.json())
-          .then(res => this.setState({ count: res.count, unique: res.unique }  ));
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: props.visitors.count,
+      unique: props.visitors.unique
+    };
 
   }
 
-    render() {
-        return (
-            <React.Fragment>
+  componentDidMount() {
+    // fetch('/api/footer').then(res => res.json())
+    //     .then(res => this.setState({ count: res.count, unique: res.unique }  ));
 
-<footer className="sticky-footer bg-white">
-        <div>
-          <div className="copyright text-center my-auto">
-            <span>Copyright &copy; Ahmad Ali </span> {'\u00A0'}
-            <span title="visits number"><i className="fas fa-eye">  { this.state.count }</i>  </span> {'\u00A0'}
-            <span title="number of unique visitors"><i className="fas fa-user"> { this.state.unique }</i>  </span>{'\u00A0'}
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+
+        <footer className="sticky-footer bg-white">
+          <div>
+            <div className="copyright text-center my-auto">
+              <span>Copyright &copy; Ahmad Ali </span> {'\u00A0'}
+              <span title="visits number"><i className="fas fa-eye">  {this.state.count}</i>  </span> {'\u00A0'}
+              <span title="number of unique visitors"><i className="fas fa-user"> {this.state.unique}</i>  </span>{'\u00A0'}
+            </div>
           </div>
-        </div>
-      </footer>
-            </React.Fragment>
-        );
-    }
+        </footer>
+      </React.Fragment>
+    );
+  }
 }
 
 export default Footer;
