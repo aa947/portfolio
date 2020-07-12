@@ -32,6 +32,7 @@ import FreeService from './components/tasks/FreeService';
 import Report from './components/tasks/Report';
 import domain from './config';
 import { isLocalhost } from './helpers';
+import Experience from './components/Experience'
 
 
 
@@ -72,6 +73,7 @@ class App extends Component {
       return (
         <React.Fragment>
           <Intro />
+          <Experience />
           <Services />
           <div className="row"
           //  style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
