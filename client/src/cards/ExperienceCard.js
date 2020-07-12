@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopTextCard = ({ title, text, color, cardLink, iconClass, orienting, TextComponent, imageUrl, image }) => {
+const TopTextCard = ({ title, text, color, cardLink, date, place, orienting, TextComponent, imageUrl, image }) => {
 
     const imageMarkup = image === 'rect' ? (
         <img src={imageUrl} width="200px" height="100px" />
@@ -22,7 +22,12 @@ const TopTextCard = ({ title, text, color, cardLink, iconClass, orienting, TextC
                                     </div>
 
                                     <div className="text-sm font-weight-bold text-secondary text-uppercase mb-1">
+                                        <i className="fas fa-briefcase mr-2"></i>
                                         {text}
+                                        <i className="far fa-calendar-alt ml-5 mr-2"></i>
+                                        {date}
+                                        <i className="fas fa-globe-europe ml-5 mr-2"></i>
+                                        {place}
                                     </div>
 
                                     <div className="p mb-0 font-weight-bold text-gray-800">
@@ -46,7 +51,12 @@ const TopTextCard = ({ title, text, color, cardLink, iconClass, orienting, TextC
                                         </div>
 
                                         <div className="text-sm font-weight-bold text-secondary text-uppercase mb-1">
+                                            <i className="fas fa-briefcase mr-2"></i>
                                             {text}
+                                            <i className="far fa-calendar-alt ml-5 mr-2"></i>
+                                            {date}
+                                            <i className="fas fa-globe-europe ml-5 mr-2"></i>
+                                            {place}
                                         </div>
 
                                         <div className="p mb-0 font-weight-bold text-gray-800">
