@@ -5,7 +5,9 @@ const TopTextCard = ({ title, text, color, cardLink, date, place, orienting, Tex
     const imageMarkup = image === 'rect' ? (
         <img src={imageUrl} width="200px" height="100px" />
     ) : (
-            <img src={imageUrl} width="100px" height="100px" />
+            <div style={{ width: '200px' }} className="text-center" >
+                <img style={{ padding: 'auto' }} src={imageUrl} width="100px" height="100px" />
+            </div>
         );
 
     return (
