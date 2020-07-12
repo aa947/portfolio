@@ -30,6 +30,8 @@ import Blog from './components/blog/Blog';
 import Connecting_to_Atlas from './components/blog/posts/connecting_your_app_to_mongodb_atlas';
 import FreeService from './components/tasks/FreeService';
 import Report from './components/tasks/Report';
+import domain from './config';
+import { isLocalhost } from './helpers';
 
 
 
@@ -39,9 +41,34 @@ toast.configure()
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      visitors: {
+        count: 0,
+        unique: 0
+      }
+    }
+  }
+
+
+  componentDidMount() {
+    let viewsUrl = isLocalhost ? `${domain}/api/views` : '/api/views';
+    fetch(viewsUrl)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          visitors: {
+            count: data.count,
+            unique: data.unique
+          }
+        })
+      })
+  }
+
   render() {
 
-    function Home() {
+    const Home = () => {
       return (
         <React.Fragment>
           <Intro />
@@ -55,34 +82,34 @@ class App extends Component {
           </div>
           <Reviews />
           <br />
-          <Footer />
+          <Footer visitors={this.state.visitors} />
         </React.Fragment>);
     }
 
-    function Projects() {
+    const Projects = () => {
       return (
         <React.Fragment>
           <Project_row />
-          <Footer />
+          <Footer visitors={this.state.visitors} />
         </React.Fragment>
 
       );
     }
 
-    function Contact() {
+    const Contact = () => {
       return (
         <React.Fragment>
           <Contact_row />
-          <Footer />
+          <Footer visitors={this.state.visitors} />
         </React.Fragment>
       );
     }
 
-    function Education() {
+    const Education = () => {
       return (
         <React.Fragment>
           <Education_row />
-          <Footer />
+          <Footer visitors={this.state.visitors} />
         </React.Fragment>
       )
     }
@@ -99,7 +126,7 @@ class App extends Component {
               *
               * Blog Routes
               */}
-            <Route exact path="/blog"> <Blog /> </Route>
+            <Route exact path="/blog"> <Blog visitors={this.state.visitors} /> </Route>
             <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">
               <Connecting_to_Atlas />
             </Route>

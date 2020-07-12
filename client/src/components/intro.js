@@ -7,18 +7,16 @@ import MetaTagsAndTitles from '../helpers_components/MetaTagsAndTitles';
 import './css/intro.css';
 
 class Intro extends Component {
-  componentDidMount() {
-
-    fetch('/api/views')
-      .then(res => res.json())
-  }
 
   render() {
+
     const metaDetails = {
       description: "Full-stack developer, back-ended with the precision of chemistry and medical practise.  Educated to degree level with 1 years’ experience in web development. This has given me skills in JS: MERN, PHP: WP_API, DB: MONGO, SQL, HTML and CSS.",
       title: "Ahmad Ali - Full Stack Developer",
       imageUrl: "ttps://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0"
-    }
+    };
+
+
     return (
       <>
         <MetaTagsAndTitles
@@ -29,9 +27,7 @@ class Intro extends Component {
           url="https://www.ahmad-ali.co.uk/"
           author="Ahmad Ali"
         />
-        <div
-        // display="table"
-        >
+        <div>
           {/* <!-- Page Heading --> */}
           <div className="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 className="h3 mb-0" style={{ color: 'white' }}>Welcome ... How can I help ??</h1>
@@ -44,8 +40,7 @@ class Intro extends Component {
 
 
 
-          <div className="row" //  display="table-row"
-          >
+          <div className="row">
             <div className="col-12">
               <div className="card shadow mb-4 p-4 ">
                 <div className="row">
