@@ -35,6 +35,7 @@ import { isLocalhost } from './helpers';
 import Experience from './components/Experience';
 import WhoAmI from './components/WhoImI';
 import CallToActionsCards from './components/CallToActionCards';
+import VolunteeringExperience from './components/VolunteeringExperience';
 
 
 
@@ -80,6 +81,7 @@ class App extends Component {
           {/* <Intro /> */}
           <WhoAmI />
           <Experience />
+          <VolunteeringExperience />
           <Services />
           <div className="row"
           //  style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
