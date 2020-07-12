@@ -29,9 +29,9 @@ class Intro extends Component {
         />
         <div>
           {/* <!-- Page Heading --> */}
-          <div className="d-sm-flex align-items-center justify-content-between mb-4">
+          {/* <div className="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 className="h3 mb-0" style={{ color: 'white' }}>Welcome ... How can I help ??</h1>
-          </div>
+          </div> */}
 
           {/* <!-- Content Row for call to action cards --> */}
           <div className="row" >
