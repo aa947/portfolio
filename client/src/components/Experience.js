@@ -1,6 +1,7 @@
 import React from 'react';
 import ExperienceCard from '../cards/ExperienceCard';
 import codeYourFuture from './experiences/codeYourFuture';
+import MwLabs from './experiences/mwLabs';
 
 const Experience = () => {
 
@@ -26,18 +27,19 @@ const Experience = () => {
                             place="London"
                         />
 
-                        {/* <ExperienceCard
-                            orienting="right"
-                            cardLink="https://docs.ahmad-ali.co.uk/"
+                        <ExperienceCard
+                            orienting="left"
+                            cardLink="https://ahmad-ali.co.uk/"
                             color="success"
-                            title="Activity Docs"
-                            text="Quick CheatSheets"
-                            iconClass="fas fa-user-cog"
-                            TextComponent={codeYourFuture}
-                            imageUrl="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0"
+                            title="MW Labs"
+                            text="Freelance Web Developer"
+                            TextComponent={MwLabs}
+                            imageUrl="https://dl.dropbox.com/s/4loiea2ag4tpukw/mw1002.png?dl=0"
+                            date="April 2019 - April 2020"
+                            place="London"
                         />
 
-                        <ExperienceCard
+                        {/*  <ExperienceCard
                             orienting="left"
                             cardLink="/report"
                             color="info"
