@@ -7,7 +7,7 @@ import Contact_form from './Contact_form';
 import Publication from './Publication';
 
 import domain from '../config';
-import { isLocalhost } from '../helpers'
+import { isLocalhost } from '../helpers';
 
 // import './css/intro.css';
 import { Link } from 'react-router-dom';

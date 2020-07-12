@@ -31,7 +31,7 @@ export default class Blog extends Component {
         // }, 
         {
             title: 'Connecting your App to MongoDB Atlas .. Important Notice.',
-            preview: `When you are using MongoClient to connect to MongoDB Atlas, it is important to know the three layers of connection. the cluster layer  the the database then the collection layer`  ,
+            preview: `When you are using MongoClient to connect to MongoDB Atlas, it is important to know the three layers of connection. the cluster layer  the the database then the collection layer`,
             link: "./blog/posts/connecting-your-app-to-mongodb-atlas"
         }
     ];
@@ -40,62 +40,62 @@ export default class Blog extends Component {
     render() {
         return (
             <DocumentTitle title="Blog | Ahmad Ali">
-            <div className="blog">
-             {/* adding meta data with Helmet */}
-             <Helmet>
-                <meta property="og:title" content="Blog posts by Ahmad Ali " />
-                <meta property="og:description" content="When you are using MongoClient to connect to MongoDB Atlas, it is important to know the three layers of connection. the cluster layer  the the database then the collection layer" />
-                <meta property="og:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
-                <meta property="og:url" content="https://www.ahmad-ali.co.uk/" />
-                <meta name="author" content="Ahmad Ali" />
-                <meta name="twitter:card" content="Ahmad Ali Full Stack Developer" />
-                <meta name="twitter:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
-            </Helmet>
-                <div className="row">
-                    <div className="col-lg-12 mb-12">
+                <div className="blog">
+                    {/* adding meta data with Helmet */}
+                    <Helmet>
+                        <meta property="og:title" content="Blog posts by Ahmad Ali " />
+                        <meta property="og:description" content="When you are using MongoClient to connect to MongoDB Atlas, it is important to know the three layers of connection. the cluster layer  the the database then the collection layer" />
+                        <meta property="og:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                        <meta property="og:url" content="https://www.ahmad-ali.co.uk/" />
+                        <meta name="author" content="Ahmad Ali" />
+                        <meta name="twitter:card" content="Ahmad Ali Full Stack Developer" />
+                        <meta name="twitter:image" content="https://dl.dropbox.com/s/2kqh712gqev9yhy/ahmad-ali-200-200.jpg?dl=0" />
+                    </Helmet>
+                    <div className="row">
+                        <div className="col-lg-12 mb-12">
 
 
-                        <div className="card-body" style={{ textAlign: "center" }} >
+                            <div className="card-body" style={{ textAlign: "center" }} >
 
-                            <h5 className="m-0 font-weight-bold text-primary">Blog Posts</h5>
+                                <h5 className="m-0 font-weight-bold text-primary">Blog Posts</h5>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
-{
-    this.posts.map((p) => {
-        return(
-            <div className="row">
-                    <div className="col-lg-12 mb-12">
+                    {
+                        this.posts.map((p) => {
+                            return (
+                                <div className="row">
+                                    <div className="col-lg-12 mb-12">
 
-                        <div className="card shadow mb-4">
-                            <div className="card-header py-3">
-                                <h5 className="m-0 font-weight-bold text-primary">{p.title}</h5>
-                            </div>
-                            <div className="card-body post-preview" style={{ textAlign: "center" }} >
+                                        <div className="card shadow mb-4">
+                                            <div className="card-header py-3">
+                                                <h5 className="m-0 font-weight-bold text-primary">{p.title}</h5>
+                                            </div>
+                                            <div className="card-body post-preview" style={{ textAlign: "center" }} >
 
 
-                                <p>
-                                  { p.preview }
-                                    <a href={p.link}> <button className="btn text-primary">
-                                        continut Reading ..
+                                                <p>
+                                                    {p.preview}
+                                                    <a href={p.link}> <button className="btn text-primary">
+                                                        continut Reading ..
                                         </button>
-                                    </a>
-                                </p>
+                                                    </a>
+                                                </p>
 
-                            </div>
-                        </div>
-                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            )
+                        })
+                    }
+                    <Footer visitors={this.props.visitors} />
+
                 </div>
-
-        )
-    })
-}
-                <Footer />
-
-            </div>
             </DocumentTitle>
         )
     }
