@@ -44,6 +44,8 @@ import FormalEducation from './components/FormalEducation';
 import OnlineEducation from './components/OnlineEducation';
 import EmbededBlog from './components/EmbededBlog'
 import YoutubeChannel from './components/YoutubeChannel';
+import Contact_form from './components/Contact_form';
+import ReviewForm from './components/ReviewForm';
 
 
 
@@ -100,6 +102,9 @@ class App extends Component {
           <EmbededBlog chooseSideColor={chooseSideColor} />
 
           <YoutubeChannel chooseSideColor={chooseSideColor} />
+
+          <Contact_form />
+          <ReviewForm />
 
           {/* {
             blog

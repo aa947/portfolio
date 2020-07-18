@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './css/Review.css';
 // import { SocialIcon } from 'react-social-icons';
-import ReviewForm from './ReviewForm';
-
+import domain from '../config';
+import { isLocalhost } from '../helpers';
 
 export default class Reviews extends Component {
 
@@ -19,8 +19,8 @@ export default class Reviews extends Component {
     }
 
     componentDidMount() {
-
-        fetch('/api/reviews').then(res => res.json())
+        let reviewsUrl = isLocalhost ? `${domain}/api/reviews` : '/api/reviews';
+        fetch(reviewsUrl).then(res => res.json())
             .then(reviews => this.setState({ reviews }, () => {
                 // console.log('Reviews fetched...', reviews)
                 // console.log(this.state.reviews, 'dtste reviews');
@@ -35,15 +35,15 @@ export default class Reviews extends Component {
         var reviews = this.state.reviews;
         return (
             <div className="col col-12 " id="reviews">
-                <hr className="testimonials" />
+                {/* <hr className="testimonials" /> */}
                 {/* <p className="desc ">❤️</p> */}
 
-                <div className="row">
+                {/* <div className="row">
                     <div className="tweetForm">
                         <ReviewForm />
                     </div>
                 </div>
-                <br />
+                <br /> */}
 
                 <div className="row ">
                     <div className="tweets">
