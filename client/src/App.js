@@ -36,6 +36,7 @@ import Experience from './components/Experience';
 import WhoAmI from './components/WhoImI';
 import CallToActionsCards from './components/CallToActionCards';
 import VolunteeringExperience from './components/VolunteeringExperience';
+import Skills from './components/Skills'
 
 
 
@@ -82,6 +83,10 @@ class App extends Component {
           <WhoAmI />
           <Experience />
           <VolunteeringExperience />
+          <Skills />
+
+
+
           <Services />
           <div className="row"
           //  style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
