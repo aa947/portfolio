@@ -1,0 +1,7 @@
+[
+  {
+    "title": "Connecting your App to MongoDB Atlas .. Important Notice.",
+    "preview": "When you are using MongoClient to connect to MongoDB Atlas, it is important to know the three layers of connection. the cluster layer  the the database then the collection layer",
+    "link": "./blog/posts/connecting-your-app-to-mongodb-atlas"
+  }
+]
