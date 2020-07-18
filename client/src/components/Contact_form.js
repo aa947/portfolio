@@ -81,8 +81,9 @@ class Contact_form extends Component {
                     <h6 className="m-0 font-weight-bold text-primary">Contact Me</h6>
                 </div>
                 <div className="card-body">
-                    <p> You Are Welcome to my space .. </p>
                     <p> Tell me about your project and I will give you a reflection, or Just say Hi! </p>
+
+                    <p>Phone: +(44) 7383 164 194</p>
 
                     <br />
                     <form onSubmit={this.sendMessage}>
