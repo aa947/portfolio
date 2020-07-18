@@ -1,0 +1,29 @@
+[
+  {
+    "skill": "Node js",
+    "image": "https://miro.medium.com/max/400/1*7xUxphx7WwttvlFu5gVvVw.png",
+    "fontAwesome": "fab fa-node-js",
+    "color": "primary"
+  },
+
+  {
+    "skill": "React Js",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6UXmAKwh5lYecdXqGSB_iNDXJIco7_UYhUU1GPfX899pnT_HQ&s",
+    "fontAwesome": "fab fa-react",
+    "color": "success"
+  },
+
+  {
+    "skill": "Mongo DB",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQufHaU8WVATNzGkG_50vmX1XIEq8Zfk0eYmQ&usqp=CAU",
+    "fontAwesome": "",
+    "color": "danger"
+  },
+
+  {
+    "skill": "",
+    "image": "",
+    "fontAwesome": "",
+    "color": ""
+  }
+]
