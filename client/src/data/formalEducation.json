@@ -1,0 +1,49 @@
+[
+  {
+    "university": "University of the People",
+    "uniLink": "https://www.uopeople.edu/",
+    "imageDirection": "rect",
+    "imageUrl": "https://www.uopeople.edu/wp-content/themes/uopeople/assets/img/layout/logo_uopeople.png",
+    "date": "2020 - 2024",
+    "place": "USA",
+    "color": "info",
+    "studyField": "Computer Science Degree",
+    "textHtml": "<ul><li>Online part-time</li><li>will not affect my ability to work full-time</li></ul>"
+  },
+
+  {
+    "university": "Free Code Camp",
+    "uniLink": "https://www.freecodecamp.org/",
+    "imageDirection": "rect",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/FreeCodeCamp_logo.png/250px-FreeCodeCamp_logo.png",
+    "date": "2019",
+    "place": "ONline",
+    "color": "success",
+    "studyField": "Full Stack Developer BootCamp ",
+    "textHtml": ""
+  },
+
+  {
+    "university": "Kiron Open Higher Education",
+    "uniLink": "https://kiron.ngo/en/",
+    "imageDirection": "rect",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIXk_vxwajoufApNbcpABg5uF5FN3KTMA2FoZd8inbFZOA12-W&s",
+    "date": "2018 - 2020",
+    "color": "warning",
+    "place": "Germany",
+    "studyField": "associate computer science",
+    "textHtml": ""
+  },
+
+  {
+    "university": "Damascus University",
+    "uniLink": "http://damascusuniversity.edu.sy/index.php?lang=2",
+    "imageDirection": "rect",
+    "imageUrl": "http://damascusuniversity.edu.sy/images/Logo_1en.png",
+    "date": "2011 - 2016",
+    "color": "primary",
+    "place": "Syria",
+    "studyField": "Bachelor degree in pharmacy and pharmaceutical chemistry",
+    "textHtml": ""
+  }
+]

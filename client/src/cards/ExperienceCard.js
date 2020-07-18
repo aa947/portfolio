@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TopTextCard = ({ title, text, color, cardLink, date, place, orienting, TextComponent, imageUrl, image }) => {
+const ExperienceCard = ({ title, text, color, cardLink, date, place, orienting, TextComponent, imageUrl, image }) => {
 
     const imageMarkup = image === 'rect' ? (
         <div className="text-center"><img src={imageUrl} width="200px" height="100px" /></div>
@@ -88,4 +88,4 @@ const TopTextCard = ({ title, text, color, cardLink, date, place, orienting, Tex
 }
 
 
-export default TopTextCard;
+export default ExperienceCard;

@@ -1,0 +1,527 @@
+[{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f352"
+  },
+  "name": "Iss-Track API - Issues Tracking API with Node and MongoDB.",
+  "lang": "Express, MongoDb",
+  "photo": "https://i.imgur.com/RDsgV6y.png",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/issueTracker",
+  "live_demo": "https://ahmad-ali-issuetracker.ahmadali5.repl.co/",
+  "intro": " Tracking Projects with Issues From the users of the Platform. ",
+  "tasks": " Creat Update Delete Open and Close Issues. ",
+  "features": " REST API ",
+  "inspired_by": "FCC",
+  "likes": 3,
+  "likes_ips": [
+    "90.217.35.87",
+    "::ffff:127.0.0.1",
+    "2a02:c7d:d81f:7f00:2ca5:c12:df7:b52a"
+  ],
+  "comments": [
+    "a good project, keep going. ",
+    "Testing"
+  ],
+  "fontAwesome": "fab fa-node-js text-green-300",
+  "sorting": 800,
+  "video": null
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f353"
+  },
+  "name": "Exer API - physical Exercise Tracking API",
+  "lang": "Node, MongoDB",
+  "photo": "",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/Exercise-Tracker",
+  "live_demo": "https://ahmad-ali-exercise-tracker-1.ahmadali5.repl.co/",
+  "intro": "an API tracks users and their physical activity corresponding to the date and the duration of the activity.",
+  "tasks": "this project is a RESTfull API, with a simple user registration system, then track user's documents using the user ID.",
+  "features": "<ol>\n<p> In this project:\n<li>create a new user by submitting a username. </li>\n<li>add activity documents to that particular user using his ID. </li>\n<li>Track all user activities saved in the database. </li>\n<li>Get all users data in the database by one click.</li>\n</p>\n</ol>",
+  "inspired_by": "FreeCodeCamp",
+  "likes": 6,
+  "likes_ips": [
+    "::1",
+    "90.217.35.87",
+    "90.214.219.140",
+    "90.217.34.104",
+    "2a02:c7d:d81f:7f00:d981:a23c:c0c:7c4a",
+    "2a02:c7d:d81f:7f00:2ca5:c12:df7:b52a"
+  ],
+  "comments": [
+    "good project"
+  ],
+  "fontAwesome": "fab fa-node-js  text-green-300",
+  "sorting": 101,
+  "video": "<iframe class='video' width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/s5eMXVA20pY\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f354"
+  },
+  "name": "ADPs - Anonymous Discussion Platform API",
+  "lang": "Node, Mongo, sockit.io",
+  "photo": "",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/messagingApp",
+  "live_demo": "https://boilerplate-project-messageboard.ahmadali5.repl.co/",
+  "intro": "<p> Create A topic, create discussions on different topics, add replies to discussions. </p>",
+  "tasks": "<p>This project is a RESTfull API, Where you can do CRUD operations on Topics, Discussions and Replies. Reporting system gives users the power to report discussions or replies and gives the power to Admins to decide whether to keep them or delete them. </p>\n",
+  "features": "<p> In this project:\n<ol>\n<li>\nOnly this site is allowed to load iFrames from its pages.\nDNS prefetching is not allowed. </li>\n<li>\nPOST a discussion to a specific topic by passing form data text and delete_password and _id, text, created_on(date&time), bumped_on(date&time, starts same as created_on), reported(boolean), delete_password, & replies(array). </li>\n <li> POST a reply to a discussion on a specific topic by passing form data text, delete_password, & thread_id and it will also update the bumped_on date to the reply date. In the discussion's 'replies' array will be saved _id, text, created_on, delete_password, & reported. </li>\n<li> GET an array of the most recent 10 bumped discussions on the topic with only the most recent 3 replies from. The reported and delete_passwords fields will not be sent. </li>\n<li> GET an entire discussion with all its replies from. Also hiding the same fields. </li>\n<li> delete a discussion completely if I send a DELETE request and pass along the discussion id & delete_password. (Text response will be 'incorrect password' or 'success'). </li>\n<li> delete a reply(just changing the text to '[deleted]') by sending a DELETE request and pass along the discussion id, reply_id, & delete_password. (Text response will be 'incorrect password' or 'success'). </li>\n<li> report a discussion and change it's reported value to true by sending a PUT request and pass along the discussion id. (Text response will be 'success'). </li>\n<li> report a reply and change it's reported value to true by sending a PUT request and pass along the discussion id & reply_id. (Text response will be 'success'). </li>\n</ol>\n</p>",
+  "inspired_by": "FCC",
+  "likes": 1,
+  "likes_ips": [
+    "90.214.219.140"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-node-js text-green-300",
+  "sorting": 106,
+  "video": "<iframe class=\"video\"  width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/NOMaLRIXXJM\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f355"
+  },
+  "name": "S-check API - Stock Checker API with Node and MongoDB",
+  "lang": "Node, MongoDB",
+  "photo": "",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/stockChecker",
+  "live_demo": "https://boilerplate-project-stockchecker.ahmadali5.repl.co/",
+  "intro": "<p> check out stocks information and compare different stocks prices. </p>",
+  "tasks": "<p>This project is an API, the client can get the data in a JSON format and do their logic on this data. users don't have the privileges to add or update or delete data. </p>",
+  "features": "<p> In this project:\n <ol>\n        <li>This is a basic mock stock checker</li>\n        <li><b>GET</b> request with form data containing a Nasdaq <i>stock</i> ticker and recieve back an object <i>stockData</i>.</li>\n        <li>In <i>stockData</i>, I can see the <i>stock</i>(string, the ticker), <i>price</i>(decimal in string format).</li>\n    \n        <li> pass along 2 stocks, the return object will be an array with both stock's info but instead of .</li>\n        <li>A good way to receive current price is the following external API(replacing 'GOOG' with your stock): <code>https://finance.google.com/finance/info?q=NASDAQ%3aGOOG</code></li>\n        \n      </ol>\n</p>",
+  "inspired_by": "FCC",
+  "likes": 1,
+  "likes_ips": [
+    "90.214.219.140"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-node-js  text-green-300",
+  "sorting": 107,
+  "video": "<iframe class=\"video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ad5Ztkf5Kd0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f356"
+  },
+  "name": "personal Library with Express and MongoDB",
+  "lang": "Node, Mongo, Express",
+  "photo": "",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/personalLibrary",
+  "live_demo": "https://boilerplate-project-library.ahmadali5.repl.co/",
+  "intro": "<p>in this personal library, you can add books, comment on them and delete them or retrieve their data. </p>",
+  "tasks": "<p> This project is a RESTfull API, where you can do CRUD operations on books and comments and save their information directly to the database. </p>",
+  "features": " <p>In this project:\n      <ol>\n        <li>Nothing from this website will be cached into your computer.</li>\n        <li>you will see that the site is powered by 'PHP 4.2.0' even though it isn't.</li>\n        <li><b>post</b> a <code>title</code> to /api/books to add a book and returned will be the object with the <code>title</code> and a unique <code>_id</code>.</li>\n        <li><b>get</b> /api/books to retrieve an aray of all books containing <code>title</code>, <code>_id</code>, & <code>commentcount</code>.</li>\n        <li><b>get</b> /api/books/{_id} to retrieve a single object of a book containing <code>title</code>, <code>_id</code>, & an array of <code>comments</code> (empty array if no comments present).</li>\n        <li><b>post</b> a <code>comment</code> to /api/books/{_id} to add a comment to a book and returned will be the books object similar to <b>get</b> /api/books/{_id}.</li>\n        <li><b>delete</b> /api/books/{_id} to delete a book from the collection. Returned will be 'delete successful' if successful.</li>\n        <li>try to request a book that doesn't exist I will get a 'no book exists' message.</li>\n        <li>send a <b>delete</b> request to /api/books to delete all books in the database. Returned will be 'complete delete successful' if successful.</li>\n       \n      </ol>\n</p>\n      <br>\n      <img src='https://cdn.gomix.com/d7932c52-287f-4dae-b175-631fef453000%2FScreen%20Shot%202016-12-16%20at%201.35.56%20AM.png' />\n   ",
+  "inspired_by": "FCC",
+  "likes": 2,
+  "likes_ips": [
+    "90.214.219.140",
+    "92.40.187.109"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-node-js  text-green-300",
+  "sorting": 108,
+  "video": "<iframe class=\"video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nGRKXt6OW4A\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f357"
+  },
+  "name": "U-CONVERT - simple Units Converter API with Node.js",
+  "lang": "Express, Mongo, Node.js",
+  "photo": "",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/UnitsConverter",
+  "live_demo": "https://boilerplate-project-metricimpconverter.ahmadali5.repl.co/",
+  "intro": "<p> convert distance, weight and volume units in one click. </p>",
+  "tasks": "<p> This project uses Express and javascript to read user's input and convert it to its correspondent number of the other unit and return it as JSON object. </p>  ",
+  "features": " <p>In this project:\n      <ol>\n        <li>the client is prevented from trying to guess(sniff) the MIME type.</li>\n        <li>cross-site scripting (XSS) attacks are prevented.</li>\n        <li><b>GET</b> to <code>/api/convert</code> with a single parameter containing an accepted number and unit and have it converted.</li>\n        <li>convert 'gal' to 'L' and vice versa. <b>(1 gal to 3.78541 L)</b></li>\n        <li>convert 'lbs' to 'kg' and vice versa. <b>(1 lbs to 0.453592 kg)</b></li> \n        <li>convert 'mi' to 'km' and vice versa. <b>(1 mi to 1.60934 km)</b></li>\n        <li>If unit of measurement is invalid, returned will be 'invalid unit'.</li>\n        <li>If  number is invalid, will be considered as 1.</li>\n        <li> use fractions, decimals or both in my parameter(ie. 5, 1/2, 2.5/6), but if nothing is provided it will default to 1.</li>\n        <li>return will consist of the initNum, initUnit, returnNum, returnUnit, and string spelling out units in format <code>{initNum} {initial_Units} ==> {returnNum} {return_Units}</code> with the result rounded to 5 decimals.</li>\n        \n      </ol>\n</p>\n      <p>Example Input:</p>\n      <code>input=4gal </code>, \n      <code>input=1/2km </code>, \n      <code>input=5.4/3lbs </code>, \n      <code>input=kg </code>\n      <p>Example return:</p>\n      <code>{initNum: 3.1, initUnit: 'mi', returnNum: 5.0000008, returnUnit: 'km', string: '3.1 miles converts to 5.00002 kilometers'}</code>\n    </div>",
+  "inspired_by": "FCC",
+  "likes": 1,
+  "likes_ips": [
+    "90.214.219.140"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-node-js  text-green-300",
+  "sorting": 110,
+  "video": "<iframe class=\"video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/f3vxdx8I_c0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f358"
+  },
+  "name": "File Data Extractor API with Express Node.js",
+  "lang": "Express, MongoDB, Node.js",
+  "photo": "",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/fileMetaData",
+  "live_demo": "https://ahmad-ali-filemetadata.ahmadali5.repl.co/",
+  "intro": "<p>upload a file and get its data in one click.</p>",
+  "tasks": "<p> This project uses express-fileUploade package to handle uploaded files and retrieve their data.",
+  "features": " <p>In this project:\n        <ol>\n          <li>submit a form object that includes a file upload.</li>\n         \n          <li>When I submit something, I will receive the file Data within the JSON response.</li>\n        </ol> </p>",
+  "inspired_by": "FCC",
+  "likes": 2,
+  "likes_ips": [
+    "90.214.219.140",
+    "2a02:c7d:d81f:7f00:d981:a23c:c0c:7c4a"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-node-js  text-green-300",
+  "sorting": 112,
+  "video": "<iframe class=\"video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zN4JcUqTyz0\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f359"
+  },
+  "name": "USHORT - URL Shortener API based on Node.js and MongoDB",
+  "lang": "Express, Node, Mongodb",
+  "photo": "",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/urlshortener",
+  "live_demo": "https://ahmad-ali-apit-urlshortener.ahmadali5.repl.co/",
+  "intro": "API tracks URLs and save their sha1 hash to a database, then uses that hashed URL concatenated to the APP URL to be redirected to the original URL.",
+  "tasks": "This project is a RESTfull API, with a simple URL registration system, sha1 hash function, DNS lookup to check if the URL is real.\n",
+  "features": "<p> In this project:\n<ol>\n<li> POST a URL to /api/shorturl/new and you will receive a shortened URL in the JSON response. Example : {\"original_url\":\"www.google.com\",\"short_url\":1} </li>\n\n<li>  If you pass an invalid URL that doesn't follow the http(s)://www.example.com(/more/routes) format, the JSON response will contain an error {\"error\":\"invalid URL\"} </li>.\n\n<li> The submitted URL will be checked if it points to a valid site or not. </li>\n\n<li> When you visit the shortened URL, it will redirect me to the original link. </li>",
+  "inspired_by": "FCC",
+  "likes": 4,
+  "likes_ips": [
+    "90.214.219.140",
+    "2a02:c7d:d81f:7f00:5d68:a3e0:4330:ca2",
+    "2a02:c7d:d81f:7f00:d156:3686:6e45:e4b6",
+    "2a02:c7d:d81f:7f00:8c0f:955b:c539:b068"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-node-js  text-green-300",
+  "sorting": 105,
+  "video": "<iframe class='video'  width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/YqwMeXG7BSU\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f35c"
+  },
+  "name": "Roye Interiors LTD - Interior Design company",
+  "lang": "PHP, HTML, CSS, JS",
+  "photo": "https://i.imgur.com/tZdJOHL.png",
+  "date": "Dec 2019",
+  "github_url": "https://github.com/ahmad-ali14/roye",
+  "live_demo": "https://royeinteriors.com/",
+  "intro": "<p>Roye Interiors is an Interior Design company based in London.</p><p>We took the responsibility of refreshing their website witch was built using Wordpress. </p>  ",
+  "tasks": "<p>In this project we've tried to express the Luxury of the company's clients by providing a clean and elegant design with a full collaboration with the company's management. </p>",
+  "features": "<p>In ths project: <ol>   <li> Clean and elegant Design represents our client's values.</li>  <li>Full working Contact Form sends queries direct to client's Inbox.</li>  <li>Instagram Loader garbs the latest posts from the Instagram page of our client and  elegantly put them in the page.</li>  <li>Full accessibility and SEO details for each part of the project.</li> <li>Monitoring the performance of the project and alter the code until we reach the best performance possible.</li> <li>staying in touch with our client and help them manage the maintenance process.</li>  </ol> </p>",
+  "inspired_by": "Our Client",
+  "likes": 3,
+  "likes_ips": [
+    "2a02:c7d:d81f:7f00:2ca5:c12:df7:b52a",
+    "2a02:c7d:d81f:7f00:e0f5:2825:1e1c:eee7",
+    "203.173.192.55"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-php  text-green-300",
+  "sorting": 10
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f361"
+  },
+  "name": "Mind & World - Social media Agency",
+  "lang": "HTML, CSS, JS",
+  "photo": "https://i.imgur.com/MrX1ebT.png",
+  "date": "Apr 2019",
+  "github_url": "http://mind-world.byethost7.com/",
+  "live_demo": "https://ahmad-ali14.github.io/mw/",
+  "intro": "<p> Mind & World is a virtual Digital designing and social media marketing agency Established in 2014. </p> <p> This project is a simple representation of agency's values. </p>",
+  "tasks": "<p> This projects uses simple HTML/Css combinations, Bootstrap for structuring layouts.",
+  "features": "<p>In this project: <ol><li>clean and elegant Design with Branding process.</li><li>FontAwesome icons & JS slider.</li><li>visitors counter</li> <li>Blog section.</li></ol></p>",
+  "inspired_by": "Client values",
+  "likes": 0,
+  "likes_ips": [],
+  "comments": [],
+  "fontAwesome": "fab fa-node-js text-green-300",
+  "sorting": 11
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f35e"
+  },
+  "name": "Simple Calculator with React and Javascript.",
+  "lang": "React, javascript.",
+  "photo": "https://i.imgur.com/kRG4mfs.png",
+  "date": "oct 2019",
+  "github_url": "https://github.com/ahmad-ali14/calculator",
+  "live_demo": "https://calculator--ahmadali5.repl.co/",
+  "intro": "<p> Yet another Calculator .</p>",
+  "tasks": "<p> the tasks of any normal calculator. </p>",
+  "features": "<p> \n**Note: press AC between every two separate operations, don't use extra zeros.\n</p>",
+  "inspired_by": "FCC",
+  "likes": 1,
+  "likes_ips": [
+    "90.214.219.140"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-react  text-green-300",
+  "sorting": 121,
+  "video": null
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f35f"
+  },
+  "name": "Drums - simple Drums machine Based on React and Javascript.",
+  "lang": "React",
+  "photo": "",
+  "date": "oct 2019",
+  "github_url": "https://github.com/ahmad-ali14/drums",
+  "live_demo": " https://drums--ahmadali5.repl.co/",
+  "intro": "<p> Drums is a mimic of music instrument, which has 2 banks of different sounds, volume control and power switch .. with the music buttons themselves.  </p>",
+  "tasks": "<p> This project uses React components to perform its tasks, react state to store information about the button pressed right now. </p>",
+  "features": "<p> In this project:\n<ol>\n<li> you got two different banks of notes, use the switch key to switch between them.</li>\n<li> you can use the power switch to turn the Drums device on or off. </li>\n<li>you get the name of the note after you press it. </li>\n<li> use volume bar to control device volume. </li>\n</ol>\n</p>",
+  "inspired_by": "FCC",
+  "likes": 1,
+  "likes_ips": [
+    "90.214.219.140"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-react  text-green-300",
+  "sorting": 130,
+  "video": "<iframe class=\"video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/fIznMBbmCAo\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f360"
+  },
+  "name": "MD Previewer -  Simple MarkDown to HTML converter based on React and Javascript",
+  "lang": "React, JavaScript",
+  "photo": "",
+  "date": "oct 2019",
+  "github_url": "https://github.com/ahmad-ali14/markdown_previewer",
+  "live_demo": "https://markdownpreviewer--ahmadali5.repl.co/",
+  "intro": "<p> Convert MarkDown code to HTML code in one click. </p>\n<p> Note: This project does not use the statndard mark down Rules, but it uses some special rules. <i> see instructions below. </i> </p> ",
+  "tasks": "<p> This project uses React to manage the state of the markDown input and then process it and return the HTML output . </p>",
+  "features": "<p> In this project:\n<ol>\n<li> type your text in the upper box . </li>\n\n<li> type each expression in a separate line . </li>\n<li> use '*' for main header ex: *Header will give you => <h1 style=\"display:inline;\"> Header</h1>. </li>\n\n<li> use ## for h4 ex: '##header' => <h4 style=\"display:inline;\"> header </h4>. </li>\n\n<li> use $$strong$$ for strong tag ex: $$strong$$ text => <strong>text </strong>. </li>\n\n<li> use $$italic$$ for strong tag ex: $$italic$$ text => <i>text</i>. </li>\n\n<li> use ` for code tag ex: ˋlet x; `  => <code> let x; </code> . </li> \n\n<li> use [] for link tag ex: [google]  =><a href=\"www.google.com\"> google</a>. </li>\n\n<li> use ![] for image tag ex: [img_url]  => <code>'<img src='img_url'/>'</code>. </li>\n\n</ol>\n</p>",
+  "inspired_by": "FCC",
+  "likes": 2,
+  "likes_ips": [
+    "::1",
+    "90.214.219.140"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-react  text-green-300",
+  "sorting": 128,
+  "video": "<iframe class=\"video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Qcp7A_6DleI\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2daeeaa8c12f9e0d60f362"
+  },
+  "name": "ECAS - English class Administration System with Django and SQL lite",
+  "lang": "python, Django, SQL lite, HTML, CSS.",
+  "photo": "https://i.imgur.com/B9KmKNv.png",
+  "date": "Mar 2019",
+  "github_url": "https://github.com/ahmad-ali14/Esol",
+  "live_demo": "https://www.youtube.com/watch?v=6uY-8zyg0jg&t=56s",
+  "intro": "<p>The idea of this project is to organise the   class groups in an English class in such a way   that there are not Two students with the same   mother language in one group, so the students   are obligated to speak in english to connect   with each other</p>",
+  "tasks": "<p>This project uses Django framework for doing the logic and rendering the views, SQL lite for storing data. ><p>**Note: This project meant to represent certain functionalities, it uses a simple design because no effort was put on the design process.</p> </p>",
+  "features": "<p>In this project:   <ol> <li>Fully working registration and authentication system uses SQL lite to store hashed passwords of users.</li> <li>Fully working Teacher Area, where the Teacher can do CRUD operation on students and classes and lessons.</li> <li>separate  views for students.</li>     <li> separate  views for visitors who are not students. </li> </ol> </p>",
+  "inspired_by": "My Teacher",
+  "likes": 0,
+  "likes_ips": [],
+  "comments": [],
+  "fontAwesome": "fab fa-python  text-green-300",
+  "sorting": 14
+},{
+  "_id": {
+    "$oid": "5e2dc6e02c8f829a991fdd85"
+  },
+  "name": "Quotes Generator - choosing a quote randomly using React and Javascript.",
+  "lang": "React, Javascript",
+  "photo": "",
+  "date": "Oct 2019",
+  "github_url": "https://github.com/ahmad-ali14/qoutes",
+  "live_demo": "https://code.sololearn.com/W23vk4gtI7f0/#html",
+  "intro": "Get inspired by an unexpected quote, share with your friends.",
+  "tasks": "<p> This project uses React to manage the state of the chosen quote and then returns its data. </p>",
+  "features": "<p> In this project:\n<ol>\n<li>a randomly chosen quote will appear on the screen each time you hit refresh.</li><li>\nuse tweet button to share the quote on your twitter account. </li>\n</ol>\n</p>",
+  "inspired_by": "FCC",
+  "likes": 4,
+  "likes_ips": [
+    "::1",
+    "90.214.219.140",
+    "90.217.34.104",
+    "2a02:c7d:d81f:7f00:4c1a:8fb6:9a94:3eb0"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-react  text-green-300",
+  "sorting": 126,
+  "video": "<iframe class=\"video\" width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/aVRMGY-xUSI\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+},{
+  "_id": {
+    "$oid": "5e2dc7862c8f829a991fdd86"
+  },
+  "name": "anchor Tag code Generator with javascript .",
+  "lang": "Javascript",
+  "photo": "https://i.imgur.com/muMHc4M.png",
+  "date": "jun 2019",
+  "github_url": "https://code.sololearn.com/WGxXJM3zwq7d/#html",
+  "live_demo": "https://code.sololearn.com/WGxXJM3zwq7d/#html",
+  "intro": "<p>save some key hits by using this app to generate anchor tags for you. </p>",
+  "tasks": "<p>this project uses regular expressions with javascript to analyze the input URL and then generate full anchor tag from it, with its default text.</p>",
+  "features": "<p> In this project: \n<ol>\n<li> Input http or https URL. </li>\n<li> you will get a full anchor tag with href attribute and default tetx. </li>\n<li> default text will be exetracted from the input itself. </li>\n<li> Example: <code>https://google.com</code> will give you <code> <a href=\"https://google.com\">google </a> </code>  .</li>\n</ol>\n</p>",
+  "inspired_by": "FCC",
+  "likes": 0,
+  "likes_ips": [],
+  "comments": [],
+  "fontAwesome": "fab fa-js  text-green-300",
+  "sorting": 122,
+  "video": null
+},{
+  "_id": {
+    "$oid": "5e2dc83c2c8f829a991fdd87"
+  },
+  "name": "Mutations - checking the containment of a text into another text or not.",
+  "lang": "Javascript",
+  "photo": "https://i.imgur.com/4azsFTK.png",
+  "date": "Aug 2019",
+  "github_url": "https://code.sololearn.com/WL3z4WS9uXRT/#html",
+  "live_demo": "https://code.sololearn.com/WL3z4WS9uXRT/#html",
+  "intro": "compare texts and check their similarity or containment of one into the other.",
+  "tasks": "This project uses plain Javascript to do its functionality.",
+  "features": "Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.\n\nFor example, [\"hello\", \"Hello\"], should return true because all of the letters in the second string are present in the first, ignoring case.\n\nThe arguments [\"hello\", \"hey\"]should return false because the string \"hello\" does not contain a \"y\".\n\nLastly, [\"Alien\", \"line\"], should return true because all of the letters in \"line\" are present in \"Alien\".",
+  "inspired_by": "Fcc",
+  "likes": 0,
+  "likes_ips": [],
+  "comments": [],
+  "fontAwesome": "fab fa-js  text-green-300",
+  "sorting": 801,
+  "video": null
+},{
+  "_id": {
+    "$oid": "5e466eda1c9d4400007718c3"
+  },
+  "name": " E-Cart - Ecommerce shop with session cart, stripe and MongoDB",
+  "lang": "Express.js, MongoDB, EJS as templating engine, Jquery, HTML, CSS.",
+  "photo": "https://i.imgur.com/gmQxqFu.png",
+  "date": "feb 2020",
+  "github_url": "https://github.com/ahmad-ali14/Eshop-ltd",
+  "live_demo": "https://eshop-ltd.herokuapp.com/",
+  "intro": " <p>This is an e-commerce shop where you can buy products, pay for them online then choose your delivery options.</p>",
+  "tasks": "<p>This project is a RESTfull API, with user registration and authentication system, fully function cart and payment handeleing and different views and functionality separating Admin from other users.</p><p>**Note: This project meant to represent certain functionalities, it uses a simple design because no effort was put on the design process.</p>",
+  "features": "<p>In this project:   <ol> <li>Fully working registration and authentication system uses MongoDB to store hashed passwords of users.</li> <li>Fully working session cart that stores projects to buy for a certain user in a certain session and then prepare them for the payment process.</li> <li>Full working payment handling system uses Stripe API for managing money transfer. <li>products can be grouped or searched by category, a certain category is a group of related products.</li> <li>Fully working Admin Area, where the admin can do CRUD operation on categories or products or pages.</li> <li>Fully working file system allows Admin to upload project photos and store them on the server using their IDs and then load these files when the product is being rendered. </li>     <li>Fully online Editor for the Admin to edit blog pages content and reorder them.</li> </ol> </p>",
+  "inspired_by": "client",
+  "likes": 0,
+  "likes_ips": [],
+  "comments": [],
+  "fontAwesome": "fab fa-node-js text-green-300",
+  "sorting": 13,
+  "video": null
+},{
+  "_id": {
+    "$oid": "5e4ff1711c9d44000032914e"
+  },
+  "name": "This portfolio - Full MERN App",
+  "lang": "Express, React, Node, MongoDB",
+  "photo": "https://camo.githubusercontent.com/39d2c7df63956a81365295bb15c69c741f946f7f/68747470733a2f2f646c2e64726f70626f782e636f6d2f732f7867796c716f727573786c7a3330742f73637265656e73686f742d616d692e726573706f6e7369766564657369676e2e69732d323032302e30342e31362d31355f34365f32332e706e673f646c3d30",
+  "date": "jan 2020",
+  "github_url": "https://github.com/ahmad-ali14/portfolio",
+  "live_demo": "http://www.ahmad-ali.co.uk/",
+  "intro": "<p>This is my official portfolio, this design represents my clean and tidy way of arranging ideas.</p> <p>I've used Express.js for supporting the back-end of my project, MongoDB for storing data, React.js for rendering views. </p>",
+  "tasks": "<p>This project is a RESTfull API, where the server is working as an API to fetch data and send it to React views to be rendered.</p>",
+  "features": "<p>In this project:   <ol> <li>Full working views counter and unique visitors counter uses client IP.</li> <li>Dynamic Routing to fetch, trim, sort data then render it.</li> <li>Favouring system allows you to like projects, you can like project only once from a specific IP. </li> <li>The ability to add unlimited number of comments anonymously.</li> <li>Fully working contact form sends queries directly to my inbox.</li>     <li>Fully working Newsletter subscription. </li> </ol> </p>",
+  "inspired_by": "ME",
+  "likes": 13,
+  "likes_ips": [
+    "90.213.244.127",
+    "90.214.219.140",
+    "::1",
+    "2a02:c7d:d81f:7f00:d981:a23c:c0c:7c4a",
+    "2a02:c7d:d81f:7f00:4c1a:8fb6:9a94:3eb0",
+    "2a02:c7d:d81f:7f00:a48a:b2e6:9a12:5532",
+    "2a02:c7d:d81f:7f00:a417:d352:e4ca:f486",
+    "2a02:c7d:d81f:7f00:2ca5:c12:df7:b52a",
+    "2a02:c7d:d81f:7f00:1080:cfc7:f14d:a489",
+    "2a02:c7d:d81f:7f00:bc96:84c1:f08:7326",
+    "2a02:c7d:d81f:7f00:e10d:2d91:f995:4c78",
+    "2a02:c7d:d81f:7f00:9571:1458:f4ad:2795",
+    "2a02:c7d:d81f:7f00:c023:e5:a0ed:f2c9"
+  ],
+  "comments": [
+    "Think of change colour balance a bit..",
+    ""
+  ],
+  "fontAwesome": "fab fa-react",
+  "sorting": -1
+},{
+  "_id": {
+    "$oid": "5e5688241c9d4400005efb6b"
+  },
+  "name": "SocailO - simple social media App built on React-redux and Firebase",
+  "lang": "Reack, Redux, Firebase",
+  "video": "<iframe class='video' width='560' height: '315'  src='https://www.youtube.com/embed/LSNEy-3Y48g' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+  "date": "Feb 2020",
+  "github_url": "https://github.com/ahmad-ali14/SocialO",
+  "live_demo": "https://socialapp-2bf83.firebaseapp.com/",
+  "intro": " Social media Apps contains some important and special features distinguish it from other sites, That's why I've implemented this project.",
+  "tasks": "<p>This project is a RESTfull API, with user registration and authentication system, fully function Notifications system and different views and functionality separating registered users from other users.</p>",
+  "features": "<p> In this project:\n<ol>\n<li>this is a serverless App that used Firebase cloud functions to perform operations. </li>\n<li> Authentication system that uses Email/password to register and authenticate users.</li>\n\n<li>Profile section where you can do CRUD operation on your data including photo uploads.</li>\n\n<li>Posts section where the latest posts are being rendered, each post contains the name of the user and his photo.</li>\n\n<li>when you change your photo, each one of your posts will change its photo.</li>\n\n<li>Notification system that informs you when someone likes or comments on your posts.</li>\n\n<li>you can add post or comment on posts.</li>\n\n<li>adding posts or comments is protected and only users can do this. </li>\n\n\n\n<ol>\n</p>",
+  "inspired_by": "Recuriment",
+  "likes": 6,
+  "likes_ips": [
+    "90.214.219.140",
+    "2a02:c7d:d81f:7f00:4c1a:8fb6:9a94:3eb0",
+    "2a02:c7d:d81f:7f00:a417:d352:e4ca:f486",
+    "2a02:c7d:d81f:7f00:2ca5:c12:df7:b52a",
+    "2a02:c7d:d81f:7f00:1080:cfc7:f14d:a489",
+    "2a02:c7d:d81f:7f00:e0f5:2825:1e1c:eee7"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-react text-green-300",
+  "sorting": 7,
+  "photo": null
+},{
+  "_id": {
+    "$oid": "5ebd91cd4ca526208ccdd56e"
+  },
+  "name": "Hex Luxury LTD",
+  "lang": "WordPress GoCardless API",
+  "photo": "https://i.imgur.com/YwOlkP9.png",
+  "date": "April 2020",
+  "github_url": "https://hexltd.co/",
+  "live_demo": "https://hexltd.co/",
+  "intro": "Ecommerce website selling timeless and beautiful accessories to add to your sophisticated home.",
+  "tasks": "Handling money transactions and delivery",
+  "features": "E-commerce",
+  "inspired_by": "client",
+  "likes": 2,
+  "likes_ips": [
+    "2a02:c7d:d81f:7f00:3d5a:673f:7eff:d95d",
+    "2a02:c7d:d81f:7f00:49cc:2429:f62f:98a0"
+  ],
+  "comments": [],
+  "fontAwesome": "fab fa-php text-green-300"
+},{
+  "_id": {
+    "$oid": "5ec6cf158c2df5825b4922a4"
+  },
+  "name": "prfl 20",
+  "lang": "php, mySQL, Wordpress API",
+  "photo": "https://camo.githubusercontent.com/77e34840e19e196107999227106dee0c3e953d7e/68747470733a2f2f646c2e64726f70626f782e636f6d2f732f67756733766f6475366861686477342f7373322e706e673f646c3d30",
+  "date": "April 2020",
+  "github_url": "https://github.com/ahmad-ali14/prfl20-theme",
+  "live_demo": "http://prfl20.byethost5.com/",
+  "intro": "Elegant WordPress Theme",
+  "tasks": "",
+  "features": "",
+  "inspired_by": "Me",
+  "likes": 0,
+  "likes_ips": [],
+  "comments": [],
+  "fontAwesome": "fab fa-php  text-green-300"
+},{
+  "_id": {
+    "$oid": "5ec6d37f8c2df5825b4922a6"
+  },
+  "name": "Online Video Subtitles Editor",
+  "lang": "React",
+  "photo": "https://raw.githubusercontent.com/ahmad-ali14/SubPlayer/master/images/screenshot2.png",
+  "date": "May 2020",
+  "github_url": "https://github.com/ahmad-ali14/SubPlayer",
+  "live_demo": "https://github.com/ahmad-ali14/SubPlayer",
+  "intro": "Online Video Subtitles Editor",
+  "tasks": "",
+  "features": "",
+  "inspired_by": "Me",
+  "likes": 0,
+  "likes_ips": [],
+  "comments": [],
+  "fontAwesome": "fab fa-react text-green-300"
+}]
