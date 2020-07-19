@@ -1,6 +1,8 @@
 import React from 'react';
 import ProjectCard from '../cards/ProjectCard';
-import CoursesProjectsData from '../data/coursesProjects.json'
+import CoursesProjectsData from '../data/coursesProjects.json';
+import { chooseSideColor } from '../helpers';
+
 
 const CoursesProjects = () => {
 
@@ -17,7 +19,7 @@ const CoursesProjects = () => {
                             CoursesProjectsData.map(pr =>
 
                                 <ProjectCard
-                                    color={pr.color}
+                                    color={chooseSideColor()}
                                     projectTitle={pr.projectTitle}
                                     iconClass={pr.fontAwesome}
                                     image={pr.image}
