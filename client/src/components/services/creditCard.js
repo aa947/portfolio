@@ -107,7 +107,7 @@ function CreditCard() {
 
                     </div>
 
-                    <Footer />
+                    {/* <Footer /> */}
                 </>
             </>
         </DocumentTitle>

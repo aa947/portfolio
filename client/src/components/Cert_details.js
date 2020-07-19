@@ -116,7 +116,7 @@ class Cert_details extends Component {
                     </div>
                 </div> */}
                         <br />
-                        <Footer />
+                        {/* <Footer /> */}
                     </React.Fragment >
                 </>
             </DocumentTitle>

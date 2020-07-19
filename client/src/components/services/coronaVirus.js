@@ -453,7 +453,7 @@ export class CoronaVirus extends Component {
 
                             </div>
                         </div>
-                        <Footer />
+                        {/* <Footer /> */}
                     </>
                 </>
             </DocumentTitle>

@@ -93,7 +93,7 @@ export default class Blog extends Component {
                             )
                         })
                     }
-                    <Footer visitors={this.props.visitors} />
+                    {/* <Footer visitors={this.props.visitors} /> */}
 
                 </div>
             </DocumentTitle>

@@ -68,7 +68,7 @@ export default class Report extends Component {
                     {renderCard('My Github Account Overview', githubData(githubUserData))}
                     {renderCard('My Programming Languages\' details', languageChart(languageData))}
                     {/* {renderCard('My Projects\' details', projectsChart(projectsData))} */}
-                    <Footer />
+                    {/* <Footer /> */}
                 </>
 
             </DocumentTitle>

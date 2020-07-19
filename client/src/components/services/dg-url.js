@@ -109,7 +109,7 @@ export default class DgUrl extends Component {
                        
 
                     </div></div></div>
-                    <Footer />
+                    {/* <Footer /> */}
                     </>
                 </>
             </DocumentTitle>
