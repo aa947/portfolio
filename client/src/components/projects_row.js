@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Contact_form from './Contact_form';
+import ContactForm from './Contact_form';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet';
 
@@ -60,7 +60,7 @@ class Project_row extends Component {
 
                                             <p style={{ marginBottom: "1%", marginTop: "1%", display: "inline-block" }}><i className="fas fa-chevron-right"></i> <i className={p.fontAwesome}></i>  {p.name} - {p.date}
 
-                                                <a href={p.live_demo} title="visit Live Demo" target="_blank">
+                                                <a href={p.live_demo} title="visit Live Demo" target="_blank" rel="noopener noreferrer">
                                                     <button className="btn btn-link text-muted">  <i className="fas fa-external-link-alt"> visit</i> </button>
                                                 </a>
 
@@ -104,7 +104,7 @@ class Project_row extends Component {
                             </div>
                         </div>
 
-                        <Contact_form />
+                        <ContactForm />
                     </div>
 
                 </>

@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import './css/intro.css';
 // import { Link } from 'react-router-dom';
 
-class Contact_form extends Component {
+class ReviewForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -27,11 +27,11 @@ class Contact_form extends Component {
 
     sendMessage(event) {
         event.preventDefault();
-       // console.log(this.state);
+        // console.log(this.state);
 
-       let { inputName, inputMessage } = this.state;
+        let { inputName, inputMessage } = this.state;
 
-        if(inputMessage=="" || inputName == "" ){
+        if (inputMessage === "" || inputName === "") {
             toast.error("Please fill in All Review form fields to send a message", {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: false
@@ -55,7 +55,7 @@ class Contact_form extends Component {
             .catch(err => console.log(err))
 
     }
-    
+
 
     handleChangeName(event) {
         this.setState({ inputName: event.target.value })
@@ -76,82 +76,82 @@ class Contact_form extends Component {
         return (
             <>
 
-                {/* <div className="card shadow mb-4 col-12">
- <div className="card-header py-3">
-     <h6 className="m-0 font-weight-bold text-primary">Contact Me</h6>
- </div>
- <div className="card-body"> */}
+                <div className="card shadow mb-4 col-12">
+                    <div className="card-header py-3">
+                        <h6 className="m-0 font-weight-bold text-primary">Add a Review</h6>
+                    </div>
+                    <div className="card-body">
 
-                <div className="col col-12">
-                    <h4 style={{ textAlign: 'center' }}>Add Review </h4>
-                </div>
+                        {/* <div className="col col-12">
+                            <h4 style={{ textAlign: 'center' }}>Add Review </h4>
+                        </div> */}
 
-                <br />
+                        <br />
 
-                <div className="col col-12">
-                    <form onSubmit={this.sendMessage}>
-                        <div className="row">
-                            <div className="col-xs-12 col-sm-12 col-md-4">
+                        <div className="col col-12">
+                            <form onSubmit={this.sendMessage}>
+                                <div className="row">
+                                    <div className="col-xs-12 col-sm-12 col-md-4">
 
-                                <div className="form-group row">
-                                    <label htmlFor="inputEmail" className="col col-12" >Your Name</label>
-                                    <div className="col col-12">
-                                        <input type="name" className="form-control" id="inputName" placeholder="Your name is visible" value={this.state.inputName} onChange={this.handleChangeName} />
+                                        <div className="form-group row">
+                                            <label htmlFor="inputEmail" className="col col-12" >Your Name</label>
+                                            <div className="col col-12">
+                                                <input type="name" className="form-control" id="inputName" placeholder="Your name is visible" value={this.state.inputName} onChange={this.handleChangeName} />
+                                            </div>
+                                        </div>
+                                        <div className="form-group row">
+                                            <label htmlFor="inputName" className="col col-12">How do you Know me </label>
+                                            <div className="col col-12">
+
+                                                {/* <input type="text" className="form-control col col-12" id="inputName" placeholder="Name" value={this.state.inputName} onChange={this.handleChangeName} /> */}
+
+                                                <select id="rel" className="form-control col col-12" name="rel" onChange={this.handleChangeRel} >
+                                                    <option value="I worked directly for You">I worked directly for You</option>
+                                                    <option value="You and me worked together">You and me worked together</option>
+                                                    <option value="inspiration">inspiration</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+
+
+                                            </div>
+                                        </div>
+
+                                        {/* col 4 */}
                                     </div>
-                                </div>
-                                <div className="form-group row">
-                                    <label htmlFor="inputName" className="col col-12">How do you Know me </label>
-                                    <div className="col col-12">
 
-                                        {/* <input type="text" className="form-control col col-12" id="inputName" placeholder="Name" value={this.state.inputName} onChange={this.handleChangeName} /> */}
+                                    <div className="col-md-4 col-xs-12 col-sm-12" >
+                                        <div className="form-group row">
+                                            <label htmlFor="inputMessage" className="col col-12 col-form-label">Review</label>
+                                            <div className="col col-12">
+                                                <textarea type="text" className=" col col-12 form-control" id="inputMessage" value={this.state.inputMessage} placeholder="Tell everyone about me in 115 letters" maxlength="115" rows="5" cols="50" onChange={this.handleChangeMessage}  ></textarea>
+                                            </div>
+                                        </div>
 
-                                        <select id="rel" className="form-control col col-12" name="rel" onChange={this.handleChangeRel} >
-                                            <option value="I worked directly for You">I worked directly for You</option>
-                                            <option value="You and me worked together">You and me worked together</option>
-                                            <option value="inspiration">inspiration</option>
-                                            <option value="Other">Other</option>
-                                        </select>
+                                    </div> <div className="col-xs-12 col-sm-12 col-md-4">
+                                        <div className="form-group row">
+                                            <div className="col-xs-12 col-sm-12 col-md-4" ></div>
+                                            <div className="col-sm-10 col-md-8 ">
+                                                <button type="submit" className="btn btn-secondary" onSubmit={this.sendMessage} >Add Review</button>
+                                            </div>
+                                        </div>
 
-
+                                        {/* col 2 */}
                                     </div>
+
+                                    {/* row */}
                                 </div>
 
-                                {/* col 4 */}
-                            </div>
+                            </form>
 
-                            <div className="col-md-4 col-xs-12 col-sm-12" >
-                                <div className="form-group row">
-                                    <label htmlFor="inputMessage" className="col col-12 col-form-label">Review</label>
-                                    <div className="col col-12">
-                                        <textarea type="text" className=" col col-12 form-control" id="inputMessage" value={this.state.inputMessage} placeholder="Tell everyone about me in 115 letters" maxlength="115" rows="5" cols="50" onChange={this.handleChangeMessage}  ></textarea>
-                                    </div>
-                                </div>
-
-                            </div> <div className="col-xs-12 col-sm-12 col-md-4">
-                                <div className="form-group row">
-                                    <div className="col-xs-12 col-sm-12 col-md-4" ></div>
-                                    <div className="col-sm-10 col-md-8 ">
-                                        <button type="submit" className="btn btn-secondary" onSubmit={this.sendMessage} >Add Review</button>
-                                    </div>
-                                </div>
-
-                                {/* col 2 */}
-                            </div>
-
-                            {/* row */}
+                            {/* col12 */}
                         </div>
 
-                    </form>
-
-                    {/* col12 */}
+                    </div>
                 </div>
-
-                {/* </div>
-</div> */}
 
             </>
         );
     }
 }
 
-export default Contact_form;
+export default ReviewForm;

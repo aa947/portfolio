@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './css/header.css';
+import domain from '../config';
+import { isLocalhost } from '../helpers';
 
 
 
@@ -7,10 +9,24 @@ class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: props.visitors.count,
-      unique: props.visitors.unique
+      count: 0,
+      unique: 0
     };
 
+  }
+
+  componentDidMount() {
+    let viewsUrl = isLocalhost ? `${domain}/api/views` : '/api/views';
+    fetch(viewsUrl)
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+
+          count: data.count,
+          unique: data.unique
+
+        })
+      })
   }
 
   render() {

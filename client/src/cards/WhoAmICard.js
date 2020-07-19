@@ -13,16 +13,22 @@ const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
 
-                        <div className="col mr-2">
+                        <div className="col-12 col-md-8">
                             <div className="text-xl font-weight-bold text-black text-uppercase mb-1">
                                 <h2> {title} </h2>
                             </div>
 
                             <div className="text-sm font-weight-bold text-secondary text-uppercase mb-1">
-                                <i className="fas fa-briefcase mr-2"></i>
-                                {text}
-                                <i className="fas fa-globe-europe ml-5 mr-2"></i>
-                                {place}
+                                <div class="row">
+                                    <div className="col-12 col-md-6 mb-1">
+                                        <i className="fas fa-briefcase mr-2 mb-2"></i>
+                                        {text}
+                                    </div>
+                                    <div className="col-12 col-md-4 mb-1">
+                                        <i className="fas fa-globe-europe mr-2 mb-2"></i>
+                                        {place}
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="p mb-0 font-weight-bold text-gray-800">
@@ -30,8 +36,9 @@ const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
                             </div>
                         </div>
 
-                        <div className="col-auto ml-5">
-                            <img src={imageUrl} width="200px" height="100%" />
+                        <div className="col-md-4 text-center">
+                            <img src={imageUrl} alt="Ahmad Ali Full Stack Developer" width="200px" height="100%" />
+
 
                         </div>
 

@@ -1,9 +1,6 @@
 /* eslint-disable */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
-import Intro from './components/intro';
-import Project_col from './components/Project_col';
-import Edu_col from './components/Edu_col';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +16,6 @@ import Nav from './components/Nav';
 import './App.css';
 import Reviews from './components/Reviews';
 import Forecast from './components/services/Forecast';
-import Services from './components/services';
 import CreditCard from './components/services/creditCard';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -31,11 +27,21 @@ import Connecting_to_Atlas from './components/blog/posts/connecting_your_app_to_
 import FreeService from './components/tasks/FreeService';
 import Report from './components/tasks/Report';
 import domain from './config';
-import { isLocalhost } from './helpers';
+import { isLocalhost, chooseSideColor } from './helpers';
 import Experience from './components/Experience';
 import WhoAmI from './components/WhoImI';
 import CallToActionsCards from './components/CallToActionCards';
 import VolunteeringExperience from './components/VolunteeringExperience';
+import Skills from './components/Skills';
+import FeauterdProjects from './components/FeaturedProjects';
+import OwnProjects from './components/OwnProjects';
+import CoursesProjects from './components/CoursesProjects';
+import FormalEducation from './components/FormalEducation';
+import OnlineEducation from './components/OnlineEducation';
+import EmbededBlog from './components/EmbededBlog'
+import YoutubeChannel from './components/YoutubeChannel';
+import Contact_form from './components/Contact_form';
+import ReviewForm from './components/ReviewForm';
 
 
 
@@ -82,17 +88,38 @@ class App extends Component {
           <WhoAmI />
           <Experience />
           <VolunteeringExperience />
-          <Services />
+          <Skills />
+          <FeauterdProjects />
+          <OwnProjects />
+          <CoursesProjects />
+          <FormalEducation />
+
+          <OnlineEducation chooseSideColor={chooseSideColor} />
+          <EmbededBlog chooseSideColor={chooseSideColor} />
+
+          <YoutubeChannel chooseSideColor={chooseSideColor} />
+
+          <Contact_form />
+          <ReviewForm />
+
+          {/* {
+            blog
+            youtube
+            Reviews
+            contact form
+          } */}
+
+          {/* <Services />
           <div className="row"
           //  style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
           >
             <Project_col />
             <Edu_col />
             <br />
-          </div>
+          </div> */}
           <Reviews />
           <br />
-          <Footer visitors={this.state.visitors} />
+          {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment >);
     }
 
@@ -100,7 +127,7 @@ class App extends Component {
       return (
         <React.Fragment>
           <Project_row />
-          <Footer visitors={this.state.visitors} />
+          {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment>
 
       );
@@ -110,7 +137,7 @@ class App extends Component {
       return (
         <React.Fragment>
           <Contact_row />
-          <Footer visitors={this.state.visitors} />
+          {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment>
       );
     }
@@ -119,7 +146,7 @@ class App extends Component {
       return (
         <React.Fragment>
           <Education_row />
-          <Footer visitors={this.state.visitors} />
+          {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment>
       )
     }
@@ -178,6 +205,8 @@ class App extends Component {
               <Home />
             </Route>
           </Switch>
+          <Footer />
+
         </div>
       </Router >
     );
