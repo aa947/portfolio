@@ -13,7 +13,7 @@ const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
 
-                        <div className="col-12 col-md-7 mr-5">
+                        <div className="col-12 col-md-8 mr-5">
                             <div className="text-xl font-weight-bold text-black text-uppercase mb-1">
                                 <h2> {title} </h2>
                             </div>
