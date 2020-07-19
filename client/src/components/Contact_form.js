@@ -33,7 +33,7 @@ class Contact_form extends Component {
         event.preventDefault();
         //console.log(this.state);
         let { inputEmail, inputName, inputMessage } = this.state;
-        if (inputEmail == "" || inputName == "" || inputMessage == "") {
+        if (inputEmail === "" || inputName === "" || inputMessage === "") {
             toast.error("Please fill in All form fields to send a message", {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: false

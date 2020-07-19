@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from '../Footer';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet';
 
@@ -52,7 +51,6 @@ export default class Meetings extends Component {
                             </div>
                         </div>
 
-                        {/* <Footer /> */}
 
                     </>
                 </>

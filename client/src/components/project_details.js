@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './css/header.css';
-import Footer from './Footer';
 import axios from 'axios';
 import './css/project_details_css.css';
 import { toast } from 'react-toastify';
@@ -34,7 +33,7 @@ class Project_details extends Component {
                     .then((project) => {
                         // console.log(project)
                         this.setState({ project })
-                        if (temp == this.state.project.likes) {
+                        if (temp === this.state.project.likes) {
                             return toast.error("You have liked this project before", {
                                 position: toast.POSITION.TOP_CENTER,
                                 autoClose: 10000
@@ -52,7 +51,7 @@ class Project_details extends Component {
     addComment(event) {
         event.preventDefault();
         // console.log(this.state);
-        if (this.state.inputComment == "") {
+        if (this.state.inputComment === "") {
 
             toast.error('please inter a comment', {
                 position: toast.POSITION.TOP_CENTER,
@@ -126,8 +125,8 @@ class Project_details extends Component {
                                         <div className="col md-8" > <br /> <p> project: {this.state.project.name} </p>
                                             <p> Languages used: {this.state.project.lang} </p>
                                             <div className="row"><a href="#" onClick={this.thumsUp}  ><button className="btn btn-primary" style={{ marginBottom: "5px" }} title="view on Github" >Like {'\u00A0'}<i class="fas fa-thumbs-up "></i> {'\u00A0'}<span>({this.state.project.likes}) </span> {'\u00A0'} </button> </a>{'\u00A0'}
-                                                <a href={this.state.project.github_url} target='_blank' >  <button className="btn btn-success" style={{ marginBottom: "5px" }}> View on Github {'\u00A0'}<i class="fab fa-github"></i> </button> </a> {'\u00A0'}
-                                                <a href={this.state.project.live_demo} target='_blank' > <button className="btn btn-info" style={{ marginBottom: "5px" }}> live demo {'\u00A0'} <i class="fas fa-desktop"></i> </button></a>
+                                                <a href={this.state.project.github_url} target='_blank' rel="noopener noreferrer" >  <button className="btn btn-success" style={{ marginBottom: "5px" }}> View on Github {'\u00A0'}<i class="fab fa-github"></i> </button> </a> {'\u00A0'}
+                                                <a href={this.state.project.live_demo} target='_blank' rel="noopener noreferrer" > <button className="btn btn-info" style={{ marginBottom: "5px" }}> live demo {'\u00A0'} <i class="fas fa-desktop"></i> </button></a>
                                             </div>
                                         </div>
 
@@ -204,7 +203,6 @@ class Project_details extends Component {
                     </div>
                 </div> */}
                         <br />
-                        {/* <Footer /> */}
                     </React.Fragment>
                 </>
             </DocumentTitle>

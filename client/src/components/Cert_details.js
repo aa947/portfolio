@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import './css/header.css';
-import Footer from './Footer';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet';
 import allCerts from '../data/certificates.json';
@@ -78,11 +77,11 @@ class Cert_details extends Component {
 
                                     <div className="row">
 
-                                        <div><a href={this.state.cert.provider_url} target='_blank'><button className="btn btn-primary" title="visit course provider" style={{ marginBottom: "5px" }} >visit course provider {'\u00A0'} {'\u00A0'} {'\u00A0'} </button> </a>
+                                        <div><a href={this.state.cert.provider_url} target='_blank' rel="noopener noreferrer" ><button className="btn btn-primary" title="visit course provider" style={{ marginBottom: "5px" }} >visit course provider {'\u00A0'} {'\u00A0'} {'\u00A0'} </button> </a>
                                             {'\u00A0'}
-                                            <a href={this.state.cert.course_host_url} target='_blank' >  <button className="btn btn-success" style={{ marginBottom: "5px" }}> Visit course host {'\u00A0'} </button> </a>
+                                            <a href={this.state.cert.course_host_url} target='_blank' rel="noopener noreferrer">  <button className="btn btn-success" style={{ marginBottom: "5px" }}> Visit course host {'\u00A0'} </button> </a>
                                             {'\u00A0'}
-                                            <a href={this.state.cert.course_url} target='_blank' > <button className="btn btn-info" style={{ marginBottom: "5px" }}>visit course page {'\u00A0'} </button></a>
+                                            <a href={this.state.cert.course_url} target='_blank' rel="noopener noreferrer"> <button className="btn btn-info" style={{ marginBottom: "5px" }}>visit course page {'\u00A0'} </button></a>
 
                                         </div>
                                     </div>
@@ -101,7 +100,7 @@ class Cert_details extends Component {
                                 <div className="card-body">
 
 
-                                    <img src={this.state.cert.cert_photo} width="100%" height="100%" />
+                                    <img src={this.state.cert.cert_photo} alt={this.state.cert.cert_name} width="100%" height="100%" />
 
 
                                 </div>
@@ -116,7 +115,6 @@ class Cert_details extends Component {
                     </div>
                 </div> */}
                         <br />
-                        {/* <Footer /> */}
                     </React.Fragment >
                 </>
             </DocumentTitle>

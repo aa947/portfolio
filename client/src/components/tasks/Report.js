@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import Chart from "react-google-charts";
-import axios from 'axios';
-import Footer from '../Footer';
-import { fetchUser, fetchRepos, fetchProjects } from './report/fetching_functions';
+// import Chart from "react-google-charts";
+// import axios from 'axios';
+// import Footer from '../Footer';
+// import { fetchUser, fetchRepos, fetchProjects } from './report/fetching_functions';
 import { renderCard, } from './report/rendering_functions';
-import { githubData, extractRepoLanguages, languageChart, extractProjectsData, projectsChart } from './report/charts_functions';
-import tempProjectsJson from './report/reportData/projects.json';
+import {
+    githubData,
+    // extractRepoLanguages,
+    languageChart,
+    // extractProjectsData,
+    //   projectsChart 
+} from './report/charts_functions';
+// import tempProjectsJson from './report/reportData/projects.json';
 import { Helmet } from 'react-helmet';
 import DocumentTitle from 'react-document-title';
-import { Logger } from 'mongodb';
+// import { Logger } from 'mongodb';
 
 export default class Report extends Component {
 
@@ -50,7 +56,7 @@ export default class Report extends Component {
 
         let githubUserData = { followers: 10, following: 135, public_repos: 67, public_gists: 1, total: 225, member: 2 };
 
-        let projectsData = this.state.projects.length > 0 ? extractProjectsData(this.state.projects) : extractProjectsData(tempProjectsJson);
+        // let projectsData = this.state.projects.length > 0 ? extractProjectsData(this.state.projects) : extractProjectsData(tempProjectsJson);
         return (
 
             <DocumentTitle title="My Report| Ahmad Ali">

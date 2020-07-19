@@ -24,7 +24,7 @@ class Edu_col extends Component {
         return (
             <React.Fragment>
 
-              {/*
+                {/*
 <div className="col-lg-4 mb-3 sm-6">
                     <div className="card border shadow h-100 py-2">
                         <div className="card-body">
@@ -61,7 +61,7 @@ class Edu_col extends Component {
 
                 <div className="col-6 col-sm-4 col-md-3 mb-3">
                     {/* <i className="fas fa-database fa-6x text-green-300"></i> */}
-                    <img src={process.env.PUBLIC_URL + "/imgs/mongodb.png"} width="100vw" />
+                    <img src={process.env.PUBLIC_URL + "/imgs/mongodb.png"} alt="mongodb" width="100vw" />
                 </div>
 
                 <div className="col-6 col-sm-4 col-md-3 mb-3">
@@ -94,7 +94,7 @@ class Edu_col extends Component {
 
                 <div className="col-6 col-sm-4 col-md-3 mb-3">
                     {/* <i className="fas fa-database fa-6x text-green-300"></i> */}
-                    <img src={process.env.PUBLIC_URL + "/imgs/redux.jpg"} width="100vw" />
+                    <img src={process.env.PUBLIC_URL + "/imgs/redux.jpg"} alt="redux" width="100vw" />
                 </div>
                 <div className="col-6 col-sm-4 col-md-3 mb-3">
                     <i className="fab fa-php fa-6x text-green-300"></i>

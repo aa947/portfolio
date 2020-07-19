@@ -2,7 +2,6 @@ import React from 'react';
 import YoutubeVideoCard from '../cards/YoutubeVideoCard';
 import youtubeVideosData from '../data/youtubevideos.json';
 
-import { isLocalhost } from '../helpers';
 
 
 const YoutubeChannel = ({ chooseSideColor }) => {

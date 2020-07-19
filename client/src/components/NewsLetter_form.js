@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 //import Col from 'react-bootstrap/Col';
 //import Jumbotron from 'react-bootstrap/Jumbotron';
 import axios from 'axios';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 
@@ -27,43 +27,43 @@ class Contact_form extends Component {
 
     subscribe(event) {
         event.preventDefault();
-       // console.log(this.state);
-       if(this.state.inputEmail == ''){
-        toast.error('please inter an email to subscribe',{
-           position: toast.POSITION.TOP_CENTER,
-           autoClose: false
-       })
-       return false;
-            } else {
-        axios.post('/api/sub', this.state)
-            .then((res) =>{
-             //console.log(res)
-          
-             this.setState({ inputEmail: '' });
-             toast.success('Thank You for subscribing to my Newsletter!', {
-                 position: toast.POSITION.TOP_CENTER,
-                 autoClose: false
-             });
+        // console.log(this.state);
+        if (this.state.inputEmail === '') {
+            toast.error('please inter an email to subscribe', {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: false
             })
-            .catch(err => console.log(err))
-    }
-}
+            return false;
+        } else {
+            axios.post('/api/sub', this.state)
+                .then((res) => {
+                    //console.log(res)
 
-    
+                    this.setState({ inputEmail: '' });
+                    toast.success('Thank You for subscribing to my Newsletter!', {
+                        position: toast.POSITION.TOP_CENTER,
+                        autoClose: false
+                    });
+                })
+                .catch(err => console.log(err))
+        }
+    }
+
+
 
     handleChangeEmail(event) {
         this.setState({ inputEmail: event.target.value })
     }
 
-   
-   
-        componentDidMount() {
-            fetch('/api/newsLetter').then(res => res.json())
-                .then(num => this.setState({ subscribers: num.data }));
-    
-        }
 
-    
+
+    componentDidMount() {
+        fetch('/api/newsLetter').then(res => res.json())
+            .then(num => this.setState({ subscribers: num.data }));
+
+    }
+
+
 
     render() {
 
@@ -80,7 +80,7 @@ class Contact_form extends Component {
                     <form onSubmit={this.subscribe}>
 
 
-                      
+
 
                         <div className="form-group row">
                             <label htmlFor="inputEmail" className="col-sm-2 col-md-2 col-form-label" >Email *</label>

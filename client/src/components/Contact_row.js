@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Contact_form from './Contact_form';
-import NewsLetter_form from './NewsLetter_form';
+import ContactForm from './Contact_form';
+import NewsLetterForm from './NewsLetter_form';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet';
 
@@ -40,8 +40,8 @@ class Contact_row extends Component {
                     </Helmet>
 
                     <div className="col-lg-12 mb-12">
-                        <Contact_form />
-                        <NewsLetter_form />
+                        <ContactForm />
+                        <NewsLetterForm />
                     </div>
 
                 </>

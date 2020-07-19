@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import Footer from '../Footer';
 import { Helmet } from 'react-helmet';
 import DocumentTitle from 'react-document-title';
 
@@ -131,7 +130,6 @@ export default class FreeService extends Component {
                         </div>
                     </div>
 
-                    {/* <Footer /> */}
 
                 </>
             </DocumentTitle>

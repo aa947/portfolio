@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Footer from '../../Footer';
 import ReactMarkdown from 'react-markdown';
 import '../css/post.css';
 import { Helmet } from 'react-helmet';

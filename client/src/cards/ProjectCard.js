@@ -19,7 +19,7 @@ const ProjectCard = ({ projectTitle, sourceCodeLink, color, projectLink, iconCla
 
                         <div className="col-auto">
                             {iconClass && <i className={`${iconClass} fa-2x text-gray-300`}></i>}
-                            {image && <img src={image} width="28px" />}
+                            {image && <img src={image} alt={projectTitle} width="28px" />}
                         </div>
                     </div>
                 </div>

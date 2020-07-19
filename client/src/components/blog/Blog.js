@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from '../Footer';
 import './css/blog.css';
 import { Helmet } from 'react-helmet';
 import DocumentTitle from 'react-document-title';
@@ -93,7 +92,6 @@ export default class Blog extends Component {
                             )
                         })
                     }
-                    {/* <Footer visitors={this.props.visitors} /> */}
 
                 </div>
             </DocumentTitle>

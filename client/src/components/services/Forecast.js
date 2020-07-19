@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import Skycons from 'react-skycons'
 import '../css/forecast.css';
-import Footer from '../Footer';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet';
 
@@ -469,7 +468,6 @@ export default class Forecast extends Component {
                             </div>
 
                         </div>
-                        {/* <Footer /> */}
                     </>
                 </>
             </DocumentTitle>
