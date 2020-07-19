@@ -24,7 +24,7 @@ const SkillCard = ({ title, image, color, cardLink, iconClass }) => {
         // </div>
 
         // <div className="row">
-        <div className="col-1.5 mb-2">
+        <div className="col-3 col-md-2 col-xl-1 mb-2 text-center">
             <div className="row text-center align-items-center">
                 <div className="col-12">
                     {iconClass !== "" && image === "" && <i className={`${iconClass} fa-3x text-gray-300`}></i>}
