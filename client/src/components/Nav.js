@@ -54,14 +54,14 @@ class Intro extends Component {
             <p> <Link to="/projects" className="nav-link " style={{ color: "black" }}>Projects </Link> </p>
             <p><Link to="/education" className="nav-link " style={{ color: "black" }} > Education </Link></p>
             <p><Link to="/contact" className="nav-link " style={{ color: "black" }} > Contact </Link> </p>
-            <p><Link  onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > View CV </Link> </p>
+            <p><Link onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > View CV </Link> </p>
             <p> <a className="nav-link" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message"> Send Me Email</a></p>
             <p> <a className="nav-link" href="tel:+447383164194" title="Call me">Call Me</a></p>
           </div>}
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
           styles={{ sidebar: { background: "white", paddingLeft: "5%", paddingRight: "5%" } }}
-        >  
+        >
         </Sidebar>
 
         <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow ">
@@ -103,7 +103,7 @@ class Intro extends Component {
                 <li className="nav-item dropdown no-arrow">
                   <a className="nav-link dropdown-toggle" href="tel:+447383164194" title="Call me">
                     <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                    <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/phone.png"} /></a> </li>
+                    <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/phone.png"} alt="call me" /></a> </li>
               </div>
             </div>
 

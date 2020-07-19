@@ -31,7 +31,7 @@ class ReviewForm extends Component {
 
         let { inputName, inputMessage } = this.state;
 
-        if (inputMessage == "" || inputName == "") {
+        if (inputMessage === "" || inputName === "") {
             toast.error("Please fill in All Review form fields to send a message", {
                 position: toast.POSITION.TOP_CENTER,
                 autoClose: false

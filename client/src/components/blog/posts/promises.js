@@ -19,14 +19,14 @@ export default class Blog extends Component {
     }
 
 
-     
+
 
 
 
     render() {
         return (
             <>
-              
+
 
                 <div className="row">
                     <div className="col-lg-12 mb-12">
@@ -41,12 +41,12 @@ export default class Blog extends Component {
                                 <p>
                                     MongoDB Error's first approach makes debugging more efficient.
                                     But with the heavy use of callback functions, we ended up in a situation called Callback Hell.
-                                    To avoid that we use promises, and here is a small notice you should take care of it before you start. 
-                                    <a href="./posts/promises"> <button  className="btn text-primary">
+                                    To avoid that we use promises, and here is a small notice you should take care of it before you start.
+                                    <a href="./posts/promises"> <button className="btn text-primary">
                                         continut Reading ..
                                         </button>
                                     </a>
-                            </p>
+                                </p>
 
                             </div>
                         </div>
@@ -66,7 +66,7 @@ export default class Blog extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                {/* <Footer /> */}
 
             </>
         )

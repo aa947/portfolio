@@ -3,10 +3,10 @@ import React from 'react';
 const FeaturedProjectCard = ({ university, textHtml, color, uniLink, date, place, imageUrl, imageDirection, studyField }) => {
 
     const imageMarkup = imageDirection === 'rect' ? (
-        <div className="text-center"><img src={imageUrl} width="60%" /></div>
+        <div className="text-center"><img src={imageUrl} alt={university} width="60%" /></div>
     ) : (
             <div className="text-center"> <div style={{ width: '100%' }} className="text-center" >
-                <img style={{ padding: 'auto' }} src={imageUrl} width="100px" height="100px" />
+                <img style={{ padding: 'auto' }} src={imageUrl} alt={university} width="100px" height="100px" />
             </div></div>
         );
 

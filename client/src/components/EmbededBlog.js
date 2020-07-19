@@ -2,11 +2,11 @@ import React from 'react';
 import BlogPostCard from '../cards/BlogPostCard';
 import blogPostsData from '../data/blogPosts.json';
 
-import { isLocalhost } from '../helpers';
+// import { isLocalhost } from '../helpers';
 
 
 const EmbededBlog = ({ chooseSideColor }) => {
-    const certUrl = isLocalhost ? "http://localhost:3000/blog/" : 'https://www.ahmad-ali.co.uk/blog/';
+    // const certUrl = isLocalhost ? "http://localhost:3000/blog/" : 'https://www.ahmad-ali.co.uk/blog/';
 
 
     return (

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Footer from '../Footer';
 import '../css/coronaVirus.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import DocumentTitle from 'react-document-title';
@@ -20,12 +19,10 @@ export class CoronaVirus extends Component {
             source: '',
             recovered: '',
             deaths: '',
-            deaths: '',
             loading: true,
             uk: {
                 source: '',
                 recovered: '',
-                deaths: '',
                 deaths: '',
                 ukLoading: true
             },
@@ -33,13 +30,11 @@ export class CoronaVirus extends Component {
                 source: '',
                 recovered: '',
                 deaths: '',
-                deaths: '',
                 spainLoading: true
             },
             italy: {
                 source: '',
                 recovered: '',
-                deaths: '',
                 deaths: '',
                 italyLoading: true
             }
@@ -398,7 +393,7 @@ export class CoronaVirus extends Component {
 
                                 <div className="card shadow mb-4">
                                     <div className="card-header py-3">
-                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus United Kingdom <img src="https://dl.dropbox.com/s/tah8h6kgt0q04f5/uk_flag.gif?dl=0" width="40px" /></h6>
+                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus United Kingdom <img src="https://dl.dropbox.com/s/tah8h6kgt0q04f5/uk_flag.gif?dl=0" alt="uk flag" width="40px" /></h6>
                                     </div>
                                     <div className="card-body">
 
@@ -416,7 +411,7 @@ export class CoronaVirus extends Component {
 
                                 <div className="card shadow mb-4">
                                     <div className="card-header py-3">
-                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus Spain <img src="https://dl.dropbox.com/s/1dha7r6qrvd3ow7/spain.gif?dl=0" width="40px" /></h6>
+                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus Spain <img src="https://dl.dropbox.com/s/1dha7r6qrvd3ow7/spain.gif?dl=0" alt="spain flag" width="40px" /></h6>
                                     </div>
                                     <div className="card-body">
 
@@ -434,7 +429,7 @@ export class CoronaVirus extends Component {
 
                                 <div className="card shadow mb-4">
                                     <div className="card-header py-3">
-                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus Italy <img src="https://dl.dropbox.com/s/pzcoeu6tfdlq3hy/italy.gif?dl=0" width="40px" /></h6>
+                                        <h6 className="m-0 font-weight-bold text-primary">Corona Virus Italy <img src="https://dl.dropbox.com/s/pzcoeu6tfdlq3hy/italy.gif?dl=0" alt="italy flag" width="40px" /></h6>
                                     </div>
                                     <div className="card-body">
 
@@ -453,7 +448,7 @@ export class CoronaVirus extends Component {
 
                             </div>
                         </div>
-                        <Footer />
+                        {/* <Footer /> */}
                     </>
                 </>
             </DocumentTitle>

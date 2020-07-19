@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 /**
  *@param cardTitle <String> : Title to be shown on as card Title

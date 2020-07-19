@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import Footer from '../Footer';
-import ReactDOM from 'react-dom';
 import ReactMarkdown from 'react-markdown';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet';
@@ -109,7 +107,7 @@ export default class DgUrl extends Component {
                        
 
                     </div></div></div>
-                    <Footer />
+                   
                     </>
                 </>
             </DocumentTitle>

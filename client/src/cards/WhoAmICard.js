@@ -36,10 +36,9 @@ const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
                             </div>
                         </div>
 
+                        <div className="col-auto ml-5">
+                            <img src={imageUrl} alt="Ahmad Ali Full Stack Developer" width="200px" height="100%" />
 
-
-                        <div className="col-12 col-md-2 text-center">
-                            <img src={imageUrl} width="200px" height="100%" />
 
                         </div>
 

@@ -1,9 +1,6 @@
 /* eslint-disable */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
-import Intro from './components/intro';
-import Project_col from './components/Project_col';
-import Edu_col from './components/Edu_col';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +16,6 @@ import Nav from './components/Nav';
 import './App.css';
 import Reviews from './components/Reviews';
 import Forecast from './components/services/Forecast';
-import Services from './components/services';
 import CreditCard from './components/services/creditCard';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -123,7 +119,7 @@ class App extends Component {
           </div> */}
           <Reviews />
           <br />
-          <Footer visitors={this.state.visitors} />
+          {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment >);
     }
 
@@ -131,7 +127,7 @@ class App extends Component {
       return (
         <React.Fragment>
           <Project_row />
-          <Footer visitors={this.state.visitors} />
+          {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment>
 
       );
@@ -141,7 +137,7 @@ class App extends Component {
       return (
         <React.Fragment>
           <Contact_row />
-          <Footer visitors={this.state.visitors} />
+          {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment>
       );
     }
@@ -150,7 +146,7 @@ class App extends Component {
       return (
         <React.Fragment>
           <Education_row />
-          <Footer visitors={this.state.visitors} />
+          {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment>
       )
     }
@@ -209,6 +205,8 @@ class App extends Component {
               <Home />
             </Route>
           </Switch>
+          <Footer />
+
         </div>
       </Router >
     );

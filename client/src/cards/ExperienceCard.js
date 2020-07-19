@@ -3,11 +3,11 @@ import React from 'react';
 const ExperienceCard = ({ title, text, color, cardLink, date, place, orienting, TextComponent, imageUrl, image }) => {
 
     const imageMarkup = image === 'rect' ? (
-        <div className="text-center"><img src={imageUrl} width="200px" height="100px" /></div>
+        <img src={imageUrl} alt={title} width="200px" height="100px" />
     ) : (
-            <div className="text-center"> <div style={{ width: '200px' }} className="text-center" >
-                <img style={{ padding: 'auto' }} src={imageUrl} width="100px" height="100px" />
-            </div></div>
+            <div style={{ width: '200px' }} className="text-center" >
+                <img style={{ padding: 'auto' }} src={imageUrl} alt={title} width="100px" height="100px" />
+            </div>
         );
 
     return (

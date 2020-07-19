@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css'
-import Footer from '../Footer';
 import '../css/services/creditCard.css';
 import DocumentTitle from 'react-document-title';
 import { Helmet } from 'react-helmet';
@@ -107,7 +106,7 @@ function CreditCard() {
 
                     </div>
 
-                    <Footer />
+
                 </>
             </>
         </DocumentTitle>
