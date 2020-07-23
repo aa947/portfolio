@@ -80,18 +80,38 @@ class Intro extends Component {
               <div className="navbar-nav">
                 <li className="nav-item dropdown no-arrow d-sm-none"></li>
 
-                <li className="nav-item dropdown no-arrow mx-1" > <Link to="/" className="nav-link dropdown-toggle" style={{ color: "black" }} >Home</Link></li>
+                <li className="nav-item dropdown no-arrow mx-1" >
+                  <Link to="/" className="nav-link dropdown-toggle" style={{ color: "black" }} >
+                    Home
+                </Link>
+                </li>
 
-                <li className="nav-item dropdown no-arrow mx-1"> <Link to="/blog" className="nav-link dropdown-toggle" style={{ color: "black" }}>Blog </Link> </li>
+                <li className="nav-item dropdown no-arrow mx-1">
+                  <a href="#blog" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                    Blog
+                </a>
+                </li>
 
                 <li className="nav-item dropdown no-arrow mx-1"><Link onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > view CV  </Link> </li>
 
 
-                <li className="nav-item dropdown no-arrow mx-1"> <Link to="/projects" className="nav-link dropdown-toggle" style={{ color: "black" }}>Projects </Link> </li>
+                <li className="nav-item dropdown no-arrow mx-1">
+                  <a href="#projects" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                    Projects
+                </a>
+                </li>
 
-                <li className="nav-item dropdown no-arrow mx-1"><Link to="/contact" className="nav-link dropdown-toggle" style={{ color: "black" }} > Contact </Link> </li>
+                <li className="nav-item dropdown no-arrow mx-1">
+                  <a href="#contact" className="nav-link dropdown-toggle" style={{ color: "black" }} >
+                    Contact
+                 </a>
+                </li>
 
-                <li className="nav-item dropdown no-arrow mx-1"><Link to="/education" className="nav-link dropdown-toggle" style={{ color: "black" }} > Education </Link> </li>
+                <li className="nav-item dropdown no-arrow mx-1">
+                  <a href="#education" className="nav-link dropdown-toggle" style={{ color: "black" }} >
+                    Education
+                 </a>
+                </li>
 
                 <li className="nav-item dropdown no-arrow">
                   <a className="nav-link dropdown-toggle" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
