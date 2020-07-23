@@ -30,10 +30,10 @@ class CallToActionCards extends Component {
             />
 
             <TopTextCard
-              cardLink="/report"
+              cardLink="#skills"
               color="info"
-              title="My Report"
-              text="Work Summary"
+              title="My Skills"
+              text="skills Summary"
               iconClass="fas fa-chart-line"
             />
 
