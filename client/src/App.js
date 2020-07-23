@@ -42,6 +42,7 @@ import EmbededBlog from './components/EmbededBlog'
 import YoutubeChannel from './components/YoutubeChannel';
 import Contact_form from './components/Contact_form';
 import ReviewForm from './components/ReviewForm';
+import QuickSiteMap from './components/QuiuclSiteMap';
 
 
 
@@ -84,39 +85,49 @@ class App extends Component {
 
           <CallToActionsCards />
 
-          {/* <Intro /> */}
+          <div id="who-am-i" />
           <WhoAmI />
+
+          <div id="quick-site-map" />
+          <QuickSiteMap />
+
+          <div id="experience" />
           <Experience />
+
+          <div id="vlounteering" />
           <VolunteeringExperience />
+
+          <div id="skills" />
           <Skills />
+
+          <div id="featured-projects" />
           <FeauterdProjects />
+
+          <div id="own-projects" />
           <OwnProjects />
+
+          <div id="courses-project" />
           <CoursesProjects />
+
+          <div id="formal-education" />
           <FormalEducation />
 
+          <div id="online-education" />
           <OnlineEducation chooseSideColor={chooseSideColor} />
+
+          <div id="blog" />
           <EmbededBlog chooseSideColor={chooseSideColor} />
 
+          <div id="youtube" />
           <YoutubeChannel chooseSideColor={chooseSideColor} />
 
+          <div id="contact" />
           <Contact_form />
+
+          <div id="add-review" />
           <ReviewForm />
 
-          {/* {
-            blog
-            youtube
-            Reviews
-            contact form
-          } */}
-
-          {/* <Services />
-          <div className="row"
-          //  style={{ width: "100%", display: "flex", flexWrap: "wrap" }}
-          >
-            <Project_col />
-            <Edu_col />
-            <br />
-          </div> */}
+          <div id="" />
           <Reviews />
           <br />
           {/* <Footer visitors={this.state.visitors} /> */}
