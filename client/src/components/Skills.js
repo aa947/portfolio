@@ -20,7 +20,7 @@ const Skills = () => {
                                     color={skill.color}
                                     title={skill.skill}
                                     iconClass={skill.fontAwesome}
-                                    image={skill.image}
+                                    image={process.env.PUBLIC_URL + skill.image}
                                 />
                             )
                         }

@@ -1,20 +1,19 @@
 # Ahmad Ali portfolio
 
-[![Build Status](https://travis-ci.org/ahmad-ali14/portfolio.svg?branch=master)](https://travis-ci.org/ahmad-ali14/portfolio) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) ![](https://david-dm.org/ahmad-ali14/portfolio.svg)
+[![Build Status](https://travis-ci.org/ahmad-ali14/portfolio.svg?branch=master)](https://travis-ci.org/ahmad-ali14/portfolio) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) ![](https://david-dm.org/ahmad-ali14/portfolio.svg)
 
-> You are Welcome to explore it and give me your suggestions.
+## Test it
 
-## Resopnsive
+### Stagigng
 
-![responsivity for https://ahmad-ali.co.uk/](https://dl.dropbox.com/s/xgylqorusxlz30t/screenshot-ami.responsivedesign.is-2020.04.16-15_46_23.png?dl=0)
+https://staging-ahmad-ali.herokuapp.com/
 
-## Performant
 
-![performance for https://ahmad-ali.co.uk/](https://dl.dropbox.com/s/b7ejapt58wv0epe/chrome_iYqs0WCnpg.png?dl=0)
+### Production
 
-## Summary
 
-![report summary](https://dl.dropbox.com/s/2xeyn63690txsrk/myReprt.png?dl=0)
+- http://ahmad-ali.herokuapp.com/
+- https://www.ahmad-ali.co.uk/
 
 ## Structure
 
@@ -40,6 +39,16 @@ To run this program locally you need to provide `.env` file with the following v
 ## live Version
 
 You can explore live version [here](http://ahmad-ali.co.uk)
+
+
+## Resopnsive
+
+![responsivity for https://ahmad-ali.co.uk/](https://dl.dropbox.com/s/xgylqorusxlz30t/screenshot-ami.responsivedesign.is-2020.04.16-15_46_23.png?dl=0)
+
+## Performant
+
+![performance for https://ahmad-ali.co.uk/](https://dl.dropbox.com/s/b7ejapt58wv0epe/chrome_iYqs0WCnpg.png?dl=0)
+
 
 ## contact
 

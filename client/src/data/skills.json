@@ -1,140 +1,140 @@
 [
   {
     "skill": "Node js",
-    "image": "https://miro.medium.com/max/400/1*7xUxphx7WwttvlFu5gVvVw.png",
+    "image": "/imgs/skills/node.png",
     "fontAwesome": "fab fa-node-js",
     "color": "primary"
   },
 
   {
     "skill": "React Js",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6UXmAKwh5lYecdXqGSB_iNDXJIco7_UYhUU1GPfX899pnT_HQ&s",
+    "image": "imgs/skills/react.png",
     "fontAwesome": "fab fa-react",
     "color": "success"
   },
 
   {
     "skill": "Mongo DB",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQufHaU8WVATNzGkG_50vmX1XIEq8Zfk0eYmQ&usqp=CAU",
+    "image": "imgs/skills/mongo.jpg",
     "fontAwesome": "",
     "color": "danger"
   },
 
   {
     "skill": "CSS3",
-    "image": "https://lh3.googleusercontent.com/proxy/ds2P3dFCC9h1fPIafLpiLg_rxGiOQLPjalknCShNCRNwEr4ax3FaaQGk1fHTY2i9RLy7BLvpQ0O6ifehoITVymriGTpXyGUy8Afpeb0bJ9KYoBj-LP1LNk9Ivp4h3Skx2OpDgO_5KzpIqr1aVMBU9OA",
+    "image": "imgs/skills/css.webp",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "MySQL",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTCx2D971aY9AQdgeFLI1RpToKig8zfpBpTcA&usqp=CAU",
+    "image": "imgs/skills/sql.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "Javascript",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfIUW6jL5iS-tXortU06QohXtvuEXd0EvVPw&usqp=CAU",
+    "image": "imgs/skills/js.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "HTML5",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTCuKqaz5Hzr3_m7TeYUpADS_MhyCspiBLCMA&usqp=CAU",
+    "image": "imgs/skills/html.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "BootStrap",
-    "image": "https://cdn-images-1.medium.com/max/1024/1*9HanDsRU11ZMsgDGJwN96w.png",
+    "image": "imgs/skills/bootstrap.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "Git",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQyRF-QQ-71G6Tqe3WpgncUFEeppIfWctTEFA&usqp=CAU",
+    "image": "imgs/skills/git.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "Redux",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSHYiSZ7pgNHIi4X9la9Z1_oHsBpntPBeY6fA&usqp=CAU",
+    "image": "imgs/skills/redux.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "PHP",
-    "image": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/062015/php_0.png?itok=W6WL-Rbh",
+    "image": "imgs/skills/php.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "Jquery",
-    "image": "https://i.dlpng.com/static/png/348405_preview.png",
+    "image": "imgs/skills/jquery.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "REST API",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSLMZ8h-65JvL4JNCyyhi-vPdLQrxZHrFiU_g&usqp=CAU",
+    "image": "imgs/skills/rest_api.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "NPM",
-    "image": "https://authy.com/wp-content/uploads/npm-logo.png",
+    "image": "imgs/skills/npm.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "DOCKER",
-    "image": "https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png",
+    "image": "imgs/skills/docker.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "WORDPRESS",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/768px-WordPress_blue_logo.svg.png",
+    "image": "imgs/skills/wp.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "WP API",
-    "image": "https://wpscholar.com/wp-content/uploads/2018/03/wp-rest-api-logo.png",
+    "image": "imgs/skills/wp_api.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "Responsive web design",
-    "image": "https://website-design-liverpool.co.uk/cyber/wp-content/uploads/2015/05/web-logo.fw_.png",
+    "image": "imgs/skills/responsive_web.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "money-handlers integration",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlJTZ42dP6HOuTj_2Ts-qIVguilVe-YliVAQ&usqp=CAU",
+    "image": "imgs/skills/money_handlers.png",
     "fontAwesome": "",
     "color": ""
   },
 
   {
     "skill": "eCommerce",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRFmfbD6sQJK9voNucCp4HYTU_7LfZd72LffQ&usqp=CAU",
+    "image": "imgs/skills/ecommerce.png",
     "fontAwesome": "",
     "color": ""
   },
