@@ -22,7 +22,7 @@ const FeauturedProjects = () => {
                                     projectLink={pr.projectLink}
                                     date={pr.date}
                                     place={pr.place}
-                                    imageUrl={pr.imageUrl}
+                                    imageUrl={process.env.PUBLIC_URL + pr.imageUrl}
                                     color={pr.color}
                                 />
                             )
