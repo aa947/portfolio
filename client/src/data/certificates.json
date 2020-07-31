@@ -1,133 +1,303 @@
-[{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f93184"
+[
+  {
+    "_id": {
+      "$oid": "computer-sceince-101"
+    },
+    "cert_name": "Computer Science 101",
+    "cert_photo": "https://i.imgur.com/0CEylXv.png",
+    "provider": "Stanford University, USA",
+    "provider_url": "https://www.stanford.edu/",
+    "course_url": "https://lagunita.stanford.edu/courses/engineering/cs101/summer2014/about",
+    "course_host": "Stanford",
+    "course_host_url": "https://lagunita.stanford.edu/courses"
   },
-  "cert_name": "Computer Science 101",
-  "cert_photo": "https://i.imgur.com/0CEylXv.png",
-  "provider": "Stanford University, USA",
-  "provider_url": "https://www.stanford.edu/",
-  "course_url": "https://lagunita.stanford.edu/courses/engineering/cs101/summer2014/about",
-  "course_host": "Stanford",
-  "course_host_url": "https://lagunita.stanford.edu/courses"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f93185"
+  {
+    "_id": {
+      "$oid": "cs50-harvard-introduction-to-computer-science"
+    },
+    "cert_name": "CS50's Introduction to Computer Science",
+    "cert_photo": "https://i.imgur.com/K5JHbZS.png",
+    "provider": "Harvard University, USA",
+    "provider_url": "https://www.harvard.edu/",
+    "course_url": "https://www.edx.org/course/cs50s-introduction-to-computer-science",
+    "course_host": "EDX",
+    "course_host_url": "https://www.edx.org/"
   },
-  "cert_name": "CS50's Introduction to Computer Science",
-  "cert_photo": "https://i.imgur.com/K5JHbZS.png",
-  "provider": "Harvard University, USA",
-  "provider_url": "https://www.harvard.edu/",
-  "course_url": "https://www.edx.org/course/cs50s-introduction-to-computer-science",
-  "course_host": "EDX",
-  "course_host_url": "https://www.edx.org/"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f93186"
+  {
+    "_id": {
+      "$oid": "introduction-to-java-programming"
+    },
+    "cert_name": "Introduction to Java Programming: Starting to code in Java",
+    "cert_photo": "https://i.imgur.com/KTnNZso.png",
+    "provider": "Universidad Carlos III de Madrid",
+    "provider_url": "https://www.uc3m.es/home",
+    "course_url": "https://www.edx.org/course/introduction-to-java-programming-starting-to-code",
+    "course_host": "EDX",
+    "course_host_url": "https://www.edx.org/school/uc3mx"
   },
-  "cert_name": "Introduction to Java Programming: Starting to code in Java",
-  "cert_photo": "https://i.imgur.com/KTnNZso.png",
-  "provider": "Universidad Carlos III de Madrid",
-  "provider_url": "https://www.uc3m.es/home",
-  "course_url": "https://www.edx.org/course/introduction-to-java-programming-starting-to-code",
-  "course_host": "EDX",
-  "course_host_url": "https://www.edx.org/school/uc3mx"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f93187"
+  {
+    "_id": {
+      "$oid": "mathematical-thinking-in-computer-science"
+    },
+    "cert_name": "Mathematical Thinking in Computer Science",
+    "cert_photo": "https://i.imgur.com/dx65jQq.png",
+    "provider": "UNIVERSITY OF CALIFORNIA SAN DIEGO, NATIONAL RESEARCH UNIVERSITY HIGHER SCHOOL OF ECONOMICS",
+    "provider_url": "https://ucsd.edu/",
+    "course_url": "https://www.coursera.org/learn/what-is-a-proof",
+    "course_host": "Coursera",
+    "course_host_url": "https://www.coursera.org/"
   },
-  "cert_name": "Mathematical Thinking in Computer Science",
-  "cert_photo": "https://i.imgur.com/dx65jQq.png",
-  "provider": "UNIVERSITY OF CALIFORNIA SAN DIEGO, NATIONAL RESEARCH UNIVERSITY HIGHER SCHOOL OF ECONOMICS",
-  "provider_url": "https://ucsd.edu/",
-  "course_url": "https://www.coursera.org/learn/what-is-a-proof",
-  "course_host": "Coursera",
-  "course_host_url": "https://www.coursera.org/"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f93188"
+  {
+    "_id": {
+      "$oid": "html-css-javascript-for-web-developers"
+    },
+    "cert_name": "HTML, CSS, and Javascript for Web Developers",
+    "cert_photo": "https://i.imgur.com/lDstpVx.png",
+    "provider": "johns hopkins university",
+    "provider_url": "https://www.jhu.edu/",
+    "course_url": "https://www.coursera.org/learn/html-css-javascript-for-web-developers",
+    "course_host": "Coursera",
+    "course_host_url": "https://www.coursera.org/"
   },
-  "cert_name": "HTML, CSS, and Javascript for Web Developers",
-  "cert_photo": "https://i.imgur.com/lDstpVx.png",
-  "provider": "johns hopkins university",
-  "provider_url": "https://www.jhu.edu/",
-  "course_url": "https://www.coursera.org/learn/html-css-javascript-for-web-developers",
-  "course_host": "Coursera",
-  "course_host_url": "https://www.coursera.org/"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f93189"
+  {
+    "_id": {
+      "$oid": "server-side-development-with-nodejs-express-mongodb"
+    },
+    "cert_name": "Server-side Development with NodeJS, Express and MongoDB",
+    "cert_photo": "https://i.imgur.com/iurOxZO.png",
+    "provider": "The Hong Kong University of Science and Technology",
+    "provider_url": "https://www.ust.hk/",
+    "course_url": "https://www.coursera.org/learn/server-side-nodejs/home/welcome",
+    "course_host": "Coursera",
+    "course_host_url": "https://www.coursera.org/"
   },
-  "cert_name": "Server-side Development with NodeJS, Express and MongoDB",
-  "cert_photo": "https://i.imgur.com/iurOxZO.png",
-  "provider": "The Hong Kong University of Science and Technology",
-  "provider_url": "https://www.ust.hk/",
-  "course_url": "https://www.coursera.org/learn/server-side-nodejs/home/welcome",
-  "course_host": "Coursera",
-  "course_host_url": "https://www.coursera.org/"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f9318a"
+  {
+    "_id": {
+      "$oid": "responsive-web-design"
+    },
+    "cert_name": "Responsive Web Design",
+    "cert_photo": "https://i.imgur.com/Ax9P7dK.png",
+    "provider": "University of London & Goldsmiths, University of London",
+    "provider_url": "https://london.ac.uk/",
+    "course_url": "https://www.coursera.org/learn/responsive-web-design/home/welcome",
+    "course_host": "Coursera",
+    "course_host_url": "https://www.coursera.org/"
   },
-  "cert_name": "Responsive Web Design",
-  "cert_photo": "https://i.imgur.com/Ax9P7dK.png",
-  "provider": "University of London & Goldsmiths, University of London",
-  "provider_url": "https://london.ac.uk/",
-  "course_url": "https://www.coursera.org/learn/responsive-web-design/home/welcome",
-  "course_host": "Coursera",
-  "course_host_url": "https://www.coursera.org/"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f9318b"
+  {
+    "_id": {
+      "$oid": "web-application-for-everybody-specialization"
+    },
+    "cert_name": "Web Applications for Everybody Specialization",
+    "cert_photo": "https://i.imgur.com/mGuXuUb.png",
+    "provider": "University of Michigan",
+    "provider_url": "https://umich.edu/",
+    "course_url": "https://www.coursera.org/specializations/web-applications",
+    "course_host": "Coursera",
+    "course_host_url": "https://www.coursera.org/"
   },
-  "cert_name": "Web Applications for Everybody Specialization",
-  "cert_photo": "https://i.imgur.com/mGuXuUb.png",
-  "provider": "University of Michigan",
-  "provider_url": "https://umich.edu/",
-  "course_url": "https://www.coursera.org/specializations/web-applications",
-  "course_host": "Coursera",
-  "course_host_url": "https://www.coursera.org/"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f9318c"
+  {
+    "_id": {
+      "$oid": "web-design-for-everybody"
+    },
+    "cert_name": "Web Design for Everybody: Basics of Web Development & Coding",
+    "cert_photo": "https://i.imgur.com/e4kANYg.png",
+    "provider": "University of Michigan",
+    "provider_url": "https://umich.edu/",
+    "course_url": "https://www.coursera.org/specializations/web-design",
+    "course_host": "Coursera",
+    "course_host_url": "https://www.coursera.org/"
   },
-  "cert_name": "Web Design for Everybody: Basics of Web Development & Coding",
-  "cert_photo": "https://i.imgur.com/e4kANYg.png",
-  "provider": "University of Michigan",
-  "provider_url": "https://umich.edu/",
-  "course_url": "https://www.coursera.org/specializations/web-design",
-  "course_host": "Coursera",
-  "course_host_url": "https://www.coursera.org/"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f9318d"
+  {
+    "_id": {
+      "$oid": "web-application-development"
+    },
+    "cert_name": "Web Application Development: Basic Concepts",
+    "cert_photo": "https://i.imgur.com/YvOjSx7.png",
+    "provider": "University of New Mexico ",
+    "provider_url": "http://www.unm.edu/",
+    "course_url": "https://www.coursera.org/learn/web-app/home/welcome",
+    "course_host": "Coursera",
+    "course_host_url": "https://www.coursera.org/"
   },
-  "cert_name": "Web Application Development: Basic Concepts",
-  "cert_photo": "https://i.imgur.com/YvOjSx7.png",
-  "provider": "University of New Mexico ",
-  "provider_url": "http://www.unm.edu/",
-  "course_url": "https://www.coursera.org/learn/web-app/home/welcome",
-  "course_host": "Coursera",
-  "course_host_url": "https://www.coursera.org/"
-},{
-  "_id": {
-    "$oid": "5e2dc13af72181d945f9318e"
+  {
+    "_id": {
+      "$oid": "full-stack-developer"
+    },
+    "cert_name": "Full Stack Developer",
+    "cert_photo": "https://i.imgur.com/gsNozFh.png",
+    "provider": "Free Code Camp",
+    "provider_url": "https://www.freecodecamp.org/",
+    "course_url": "https://www.freecodecamp.org/learn",
+    "course_host": "FCC",
+    "course_host_url": "https://www.freecodecamp.org/news/"
   },
-  "cert_name": "Full Stack",
-  "cert_photo": "https://i.imgur.com/gsNozFh.png",
-  "provider": "Free Code Camp",
-  "provider_url": "https://www.freecodecamp.org/",
-  "course_url": "https://www.freecodecamp.org/learn",
-  "course_host": "FCC",
-  "course_host_url": "https://www.freecodecamp.org/news/"
-},{
-  "_id": {
-    "$oid": "5e4557c11c9d440000343a8e"
+  {
+    "_id": {
+      "$oid": "xml-data"
+    },
+    "cert_name": "XML Data",
+    "cert_photo": "https://i.imgur.com/Zsp2EpZ.png",
+    "provider": "Stanford University, USA",
+    "provider_url": "https://www.stanford.edu/",
+    "course_url": "https://lagunita.stanford.edu/courses/DB/XML/SelfPaced/course/",
+    "course_host": "Stanford",
+    "course_host_url": "https://lagunita.stanford.edu/courses"
   },
-  "cert_name": "XML Data",
-  "cert_photo": "https://i.imgur.com/Zsp2EpZ.png",
-  "provider": "Stanford University, USA",
-  "provider_url": "https://www.stanford.edu/",
-  "course_url": "https://lagunita.stanford.edu/courses/DB/XML/SelfPaced/course/",
-  "course_host": "Stanford",
-  "course_host_url": "https://lagunita.stanford.edu/courses"
-}]
+  {
+    "_id": {
+      "$oid": "introduction-to-software-product-managment"
+    },
+
+    "cert_name": "Introduction to Software Product Management",
+    "cert_photo": "https://i.imgur.com/pEME1Br.png",
+    "provider": "University of Alberta",
+    "provider_url": "https://www.ualberta.ca/index.html",
+    "course_url": "https://www.coursera.org/learn/introduction-to-software-product-management",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": "data-structures"
+    },
+
+    "cert_name": "Data Structures",
+    "cert_photo": "https://i.imgur.com/lkbCbgd.png",
+    "provider": "University of California San Diego",
+    "provider_url": "https://ucsd.edu/",
+    "course_url": "https://www.coursera.org/learn/data-structures",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+
+  {
+    "_id": {
+      "$oid": "algorithmic-toolbox"
+    },
+
+    "cert_name": "Algorithmic Toolbox",
+    "cert_photo": "https://i.imgur.com/W33AlRq.png",
+    "provider": "University of California San Diego",
+    "provider_url": "https://ucsd.edu/",
+    "course_url": "https://www.coursera.org/learn/algorithmic-toolbox/home/welcome",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": "front-end-web-ui-frameworks-bootstrap-4"
+    },
+
+    "cert_name": "Front-End Web UI Frameworks and Tools: Bootstrap 4",
+    "cert_photo": "https://i.imgur.com/ZcgnSsF.png",
+    "provider": "The Hong Kong University of Science and Technology",
+    "provider_url": "https://www.ust.hk/home",
+    "course_url": "https://www.coursera.org/learn/bootstrap-4/home/welcome",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": "introduction-to-genomic-technologies"
+    },
+
+    "cert_name": "Introduction to Genomic Technologies",
+    "cert_photo": "https://i.imgur.com/tqBIvj5.png",
+    "provider": "johns hopkins university",
+    "provider_url": "https://www.jhu.edu/",
+    "course_url": "https://www.coursera.org/learn/introduction-genomics/home/welcome",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": "python-for-genomic-data-science"
+    },
+
+    "cert_name": "Python for Genomic Data Science",
+    "cert_photo": "https://i.imgur.com/WnGKKHq.png",
+    "provider": "johns hopkins university",
+    "provider_url": "https://www.jhu.edu/",
+    "course_url": "https://www.coursera.org/learn/python-genomics",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": "genomic-science-with-galaxy"
+    },
+
+    "cert_name": "Genomic Data Science with Galaxy",
+    "cert_photo": "https://i.imgur.com/CtR4rAg.png",
+    "provider": "johns hopkins university",
+    "provider_url": "https://www.jhu.edu/",
+    "course_url": "https://www.coursera.org/learn/galaxy-project/home/welcome",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": "fundamentals-of-graphic-design"
+    },
+
+    "cert_name": "Fundamentals of Graphic Design",
+    "cert_photo": "https://i.imgur.com/Fwomjuv.png",
+    "provider": "California Institute of the Arts",
+    "provider_url": "https://calarts.edu/",
+    "course_url": "https://www.coursera.org/learn/fundamentals-of-graphic-design/home/welcome",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": ""
+    },
+
+    "cert_name": "",
+    "cert_photo": "",
+    "provider": "",
+    "provider_url": "",
+    "course_url": "",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": ""
+    },
+
+    "cert_name": "",
+    "cert_photo": "",
+    "provider": "",
+    "provider_url": "",
+    "course_url": "",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": ""
+    },
+
+    "cert_name": "",
+    "cert_photo": "",
+    "provider": "",
+    "provider_url": "",
+    "course_url": "",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  },
+  {
+    "_id": {
+      "$oid": ""
+    },
+
+    "cert_name": "",
+    "cert_photo": "",
+    "provider": "",
+    "provider_url": "",
+    "course_url": "",
+    "course_host": "Corsera",
+    "course_host_url": "https://coursera.org"
+  }
+]
