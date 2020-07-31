@@ -22,7 +22,7 @@ const FormalEducation = () => {
                                     uniLink={pr.uniLink}
                                     date={pr.date}
                                     place={pr.place}
-                                    imageUrl={pr.imageUrl}
+                                    imageUrl={process.env.PUBLIC_URL + pr.imageUrl}
                                     color={pr.color}
                                     studyField={pr.studyField}
                                     imageDirection={pr.imageDirection}
