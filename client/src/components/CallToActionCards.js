@@ -25,7 +25,7 @@ class CallToActionCards extends Component {
               cardLink="https://docs.ahmad-ali.co.uk/"
               color="success"
               title="Activity Docs"
-              text="Quick CheatSheets"
+              text="coding ref"
               iconClass="fas fa-user-cog"
             />
 
