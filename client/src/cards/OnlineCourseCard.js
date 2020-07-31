@@ -4,7 +4,7 @@ const OnlineCourseCard = ({ courseTitle, detailsLink, color, courseLink }) => {
 
     return (
         <div className="col-xl-4 col-md-4 col-sm-6 col-12 mb-4">
-            <div className={`card border-left-${color} shadow h-100 py-2`}>
+            {courseTitle && <div className={`card border-left-${color} shadow h-100 py-2`}>
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
                         {courseTitle && <div className="col mr-2">
@@ -18,7 +18,7 @@ const OnlineCourseCard = ({ courseTitle, detailsLink, color, courseLink }) => {
                         }
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     );
 }
