@@ -87,6 +87,12 @@ class Intro extends Component {
                 </li>
 
                 <li className="nav-item dropdown no-arrow mx-1">
+                  <a href="https://docs.ahmad-ali.co.uk/" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                    Docs
+                </a>
+                </li>
+
+                <li className="nav-item dropdown no-arrow mx-1">
                   <a href="#blog" className="nav-link dropdown-toggle" style={{ color: "black" }}>
                     Blog
                 </a>
@@ -107,11 +113,11 @@ class Intro extends Component {
                  </a>
                 </li>
 
-                <li className="nav-item dropdown no-arrow mx-1">
+                {/* <li className="nav-item dropdown no-arrow mx-1">
                   <a href="#education" className="nav-link dropdown-toggle" style={{ color: "black" }} >
                     Education
                  </a>
-                </li>
+                </li> */}
 
                 <li className="nav-item dropdown no-arrow">
                   <a className="nav-link dropdown-toggle" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
