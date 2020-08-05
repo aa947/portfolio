@@ -91,6 +91,13 @@
   },
 
   {
+    "skill": "OOP",
+    "image": "imgs/skills/oop.png",
+    "fontAwesome": "",
+    "color": ""
+  },
+
+  {
     "skill": "NPM",
     "image": "imgs/skills/npm.png",
     "fontAwesome": "",
