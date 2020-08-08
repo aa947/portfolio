@@ -14,3 +14,9 @@ export const chooseSideColor = () => {
     const randInt = Math.floor(Math.random() * Math.floor(colorsArray.length));
     return colorsArray[randInt];
 }
+
+
+
+export const generateKey = () => {
+    return Math.floor(Math.random() * Math.floor(44444444));
+}
