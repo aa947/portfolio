@@ -54,7 +54,7 @@ class Intro extends Component {
             <p> <Link to="/projects" className="nav-link " style={{ color: "black" }}>Projects </Link> </p>
             <p><Link to="/education" className="nav-link " style={{ color: "black" }} > Education </Link></p>
             <p><Link to="/contact" className="nav-link " style={{ color: "black" }} > Contact </Link> </p>
-            <p><Link onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > View CV </Link> </p>
+            <p><a onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > View CV </a> </p>
             <p> <a className="nav-link" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message"> Send Me Email</a></p>
             <p> <a className="nav-link" href="tel:+447383164194" title="Call me">Call Me</a></p>
           </div>}
@@ -98,7 +98,7 @@ class Intro extends Component {
                 </a>
                 </li>
 
-                <li className="nav-item dropdown no-arrow mx-1"><Link onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > view CV  </Link> </li>
+                <li className="nav-item dropdown no-arrow mx-1"><a onClick={this.viewHandler} className="nav-link " style={{ color: "black" }} > view CV  </a> </li>
 
 
                 <li className="nav-item dropdown no-arrow mx-1">

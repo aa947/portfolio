@@ -1,4 +1,5 @@
 import React from 'react';
+import { generateKey } from '../helpers';
 
 
 const QuickSiteMap = () => {
@@ -34,13 +35,15 @@ const QuickSiteMap = () => {
                             {
                                 data.map(e => {
                                     return (
-                                        <>
-                                            <li className="col-12 col-md-4 col-xl-4 mb-1">
-                                                <div className="text-sm font-weight-bold text-primary text-uppercase ">
-                                                    <a href={e[1]}> {e[0]} </a>
-                                                </div>
-                                            </li>
-                                        </>
+
+                                        <li
+                                            className="col-12 col-md-4 col-xl-4 mb-1"
+                                            key={"quickmap" + generateKey()}
+                                        >
+                                            <div className="text-sm font-weight-bold text-primary text-uppercase ">
+                                                <a href={e[1]}> {e[0]} </a>
+                                            </div>
+                                        </li>
                                     );
                                 })
                             }

@@ -12,12 +12,12 @@ const Summary = () => {
             university. And I used to be a pharmacist.
         </p>
 
-            <p>
-                <SocialIcon url="https://www.linkedin.com/in/ahmad-ali-07383164194/" /> {'\u00A0'}
-                <SocialIcon url="https://twitter.com/AhmadAl43872454" /> {'\u00A0'}
-                <SocialIcon url="https://github.com/ahmad-ali14" /> {'\u00A0'}
-                <SocialIcon url="https://www.facebook.com/ahmad623" /> {'\u00A0'}
-            </p>
+            <p></p>
+            <SocialIcon url="https://www.linkedin.com/in/ahmad-ali-07383164194/" /> {'\u00A0'}
+            <SocialIcon url="https://twitter.com/AhmadAl43872454" /> {'\u00A0'}
+            <SocialIcon url="https://github.com/ahmad-ali14" /> {'\u00A0'}
+            <SocialIcon url="https://www.facebook.com/ahmad623" /> {'\u00A0'}
+
         </>
     )
 }

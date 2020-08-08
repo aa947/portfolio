@@ -3,12 +3,12 @@ const currentChacheName = 'v1';
 
 // install event
 self.addEventListener('install', (e) => {
-    console.log('worker installed')
+    // console.log('worker installed')
 })
 
 // activate event
 self.addEventListener('activate', (e) => {
-    console.log('worker activated')
+    // console.log('worker activated')
 
     // remove unwanted caches
     e.waitUntil(caches.keys().then((cachNames) => {
@@ -25,7 +25,13 @@ self.addEventListener('activate', (e) => {
 
 // fetch event
 self.addEventListener('fetch', (e) => {
-    console.log('fetching ....................');
+    // console.log('fetching ....................');
+    if (!(e.request.url.indexOf('http') === 0)) {
+        //skip request if its not made by the page
+        // console.log('extention: ', e.request.url);
+
+        return;
+    }
     e.respondWith(
         fetch(e.request)
             .then(res => {

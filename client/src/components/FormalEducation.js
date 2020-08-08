@@ -1,6 +1,7 @@
 import React from 'react';
 import FormalEducationCard from '../cards/FormalEducationCard';
 import FormalEducationData from '../data/formalEducation.json';
+import { generateKey, chooseSideColor } from '../helpers'
 
 const FormalEducation = () => {
 
@@ -23,9 +24,10 @@ const FormalEducation = () => {
                                     date={pr.date}
                                     place={pr.place}
                                     imageUrl={process.env.PUBLIC_URL + pr.imageUrl}
-                                    color={pr.color}
+                                    color={chooseSideColor()}
                                     studyField={pr.studyField}
                                     imageDirection={pr.imageDirection}
+                                    key={"formalCourse" + generateKey()}
                                 />
                             )
                         }
