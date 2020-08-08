@@ -2,10 +2,10 @@ import React from 'react';
 import OnlineEducationCard from '../cards/OnlineCourseCard';
 import OnlineEducationData from '../data/certificates.json';
 
-import { isLocalhost } from '../helpers';
+import { isLocalhost, generateKey, chooseSideColor } from '../helpers';
 
 
-const OnlineEducation = ({ chooseSideColor }) => {
+const OnlineEducation = () => {
     const certUrl = isLocalhost ? "http://localhost:3000/certificates/" : 'https://www.ahmad-ali.co.uk/certificates/';
 
 
@@ -26,6 +26,7 @@ const OnlineEducation = ({ chooseSideColor }) => {
                                     detailsLink={certUrl + pr._id.$oid}
                                     color={chooseSideColor()}
                                     courseLink={pr.course_url}
+                                    key={"onlineCourse" + generateKey()}
 
                                 />
                             )

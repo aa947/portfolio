@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../cards/ProjectCard';
 import OwnProjectsData from '../data/ownProjects.json';
-import { chooseSideColor } from '../helpers';
+import { chooseSideColor, generateKey } from '../helpers';
 
 const OwnProjects = () => {
 
@@ -24,6 +24,7 @@ const OwnProjects = () => {
                                     image={pr.image}
                                     sourceCodeLink={pr.sourceCodeLink}
                                     projectLink={pr.projectLink}
+                                    key={"ownProject" + generateKey()}
                                 />
                             )
                         }

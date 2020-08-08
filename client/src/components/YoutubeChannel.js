@@ -1,10 +1,12 @@
 import React from 'react';
 import YoutubeVideoCard from '../cards/YoutubeVideoCard';
 import youtubeVideosData from '../data/youtubevideos.json';
+import { generateKey, chooseSideColor } from '../helpers';
 
 
 
-const YoutubeChannel = ({ chooseSideColor }) => {
+
+const YoutubeChannel = () => {
 
 
 
@@ -24,6 +26,7 @@ const YoutubeChannel = ({ chooseSideColor }) => {
                                     title={pr.title}
                                     color={chooseSideColor()}
                                     videoLink={pr.link}
+                                    key={"video" + generateKey()}
 
                                 />
                             )

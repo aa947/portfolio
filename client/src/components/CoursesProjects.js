@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '../cards/ProjectCard';
 import CoursesProjectsData from '../data/coursesProjects.json';
-import { chooseSideColor } from '../helpers';
+import { chooseSideColor, generateKey } from '../helpers';
 
 
 const CoursesProjects = () => {
@@ -25,6 +25,7 @@ const CoursesProjects = () => {
                                     image={pr.image}
                                     sourceCodeLink={pr.sourceCodeLink}
                                     projectLink={pr.projectLink}
+                                    key={"courseProject" + generateKey()}
                                 />
                             )
                         }
