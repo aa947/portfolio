@@ -52,31 +52,6 @@ toast.configure()
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      visitors: {
-        count: 0,
-        unique: 0
-      }
-    }
-  }
-
-
-  componentDidMount() {
-    let viewsUrl = isLocalhost ? `${domain}/api/views` : '/api/views';
-    fetch(viewsUrl)
-      .then(res => res.json())
-      .then(data => {
-        this.setState({
-          visitors: {
-            count: data.count,
-            unique: data.unique
-          }
-        })
-      })
-  }
-
   render() {
 
     const Home = () => {
@@ -98,7 +73,9 @@ class App extends Component {
           <VolunteeringExperience />
 
           <div id="skills" />
-          <Skills />
+          <Skills
+            change={true}
+          />
 
           <div id="featured-projects" />
           <FeauterdProjects />
@@ -113,13 +90,13 @@ class App extends Component {
           <FormalEducation />
 
           <div id="online-education" />
-          <OnlineEducation chooseSideColor={chooseSideColor} />
+          <OnlineEducation />
 
           <div id="blog" />
-          <EmbededBlog chooseSideColor={chooseSideColor} />
+          <EmbededBlog />
 
           <div id="youtube" />
-          <YoutubeChannel chooseSideColor={chooseSideColor} />
+          <YoutubeChannel />
 
           <div id="contact" />
           <Contact_form />
@@ -131,7 +108,9 @@ class App extends Component {
           <Reviews />
           <br />
           {/* <Footer visitors={this.state.visitors} /> */}
-        </React.Fragment >);
+
+        </React.Fragment>
+      );
     }
 
     const Projects = () => {
@@ -174,7 +153,7 @@ class App extends Component {
               *
               * Blog Routes
               */}
-            <Route exact path="/blog"> <Blog visitors={this.state.visitors} /> </Route>
+            <Route exact path="/blog"> <Blog /> </Route>
             <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">
               <Connecting_to_Atlas />
             </Route>
@@ -219,7 +198,7 @@ class App extends Component {
           <Footer />
 
         </div>
-      </Router >
+      </Router>
     );
   }
 

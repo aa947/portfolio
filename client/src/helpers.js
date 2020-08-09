@@ -20,3 +20,7 @@ export const chooseSideColor = () => {
 export const generateKey = () => {
     return Math.floor(Math.random() * Math.floor(44444444));
 }
+
+export const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
