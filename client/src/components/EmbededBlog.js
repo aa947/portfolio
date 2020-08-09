@@ -1,11 +1,10 @@
 import React from 'react';
 import BlogPostCard from '../cards/BlogPostCard';
 import blogPostsData from '../data/blogPosts.json';
+import { generateKey, chooseSideColor } from '../helpers';
 
-// import { isLocalhost } from '../helpers';
 
-
-const EmbededBlog = ({ chooseSideColor }) => {
+const EmbededBlog = () => {
     // const certUrl = isLocalhost ? "http://localhost:3000/blog/" : 'https://www.ahmad-ali.co.uk/blog/';
 
 
@@ -26,6 +25,7 @@ const EmbededBlog = ({ chooseSideColor }) => {
                                     color={chooseSideColor()}
                                     courseLink={pr.link}
                                     preview={pr.preview}
+                                    key={"blogPost" + generateKey()}
 
                                 />
                             )

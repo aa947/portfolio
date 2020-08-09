@@ -14,9 +14,9 @@ const OnlineCourseCard = ({ title, videoLink, color }) => {
                             <div className="text-sm font-weight-bold text-primary text-uppercase mb-1">
                                 {/* <a href={courseLink}> {title} </a> */}
                                 <iframe src={videoLink}
-                                    frameborder='0'
+                                    frameBorder='0'
                                     allow='autoplay; encrypted-media'
-                                    allowfullscreen
+                                    allowFullScreen
                                     title='video'
                                     width="100%"
                                 />

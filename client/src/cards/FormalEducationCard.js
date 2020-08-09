@@ -25,14 +25,14 @@ const FeaturedProjectCard = ({ university, textHtml, color, uniLink, date, place
 
 
                             <div className="text-sm font-weight-bold text-secondary text-uppercase mb-1">
-                                <div class="row">
+                                <div className="row">
                                     <div className="col-12 mb-1">
                                         <i className="fas fa-briefcase mr-2"></i>
                                         {studyField}
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <div className="row">
 
 
                                     <div className="col-12 col-md-4 mb-1">

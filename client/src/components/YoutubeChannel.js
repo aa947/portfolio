@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import YoutubeVideoCard from '../cards/YoutubeVideoCard';
 import youtubeVideosData from '../data/youtubevideos.json';
+import { generateKey, chooseSideColor, sleep } from '../helpers';
+import Loading from '../helpers_components/Loading';
 
 
 
-const YoutubeChannel = ({ chooseSideColor }) => {
 
+const YoutubeChannel = () => {
+
+    const [waiting, setWaiting] = useState(true);
+
+    const changeWaiting = async () => {
+        await sleep(6000);
+        return setWaiting(false)
+    }
+
+    useEffect(() => {
+        changeWaiting()
+    }, [])
 
 
     return (
@@ -18,15 +31,16 @@ const YoutubeChannel = ({ chooseSideColor }) => {
                     <div className="row">
 
                         {
-                            youtubeVideosData.map(pr =>
+                            !waiting ? youtubeVideosData.map(pr =>
 
                                 <YoutubeVideoCard
                                     title={pr.title}
                                     color={chooseSideColor()}
                                     videoLink={pr.link}
+                                    key={"video" + generateKey()}
 
                                 />
-                            )
+                            ) : <Loading />
                         }
 
 

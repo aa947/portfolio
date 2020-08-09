@@ -1,6 +1,7 @@
 import React from 'react';
 import FeatueredProjectCard from '../cards/FeauturedProjectCard';
-import featuredProjectsData from '../data/featuredProjects.json'
+import featuredProjectsData from '../data/featuredProjects.json';
+import { generateKey, chooseSideColor } from '../helpers';
 
 const FeauturedProjects = () => {
 
@@ -23,7 +24,8 @@ const FeauturedProjects = () => {
                                     date={pr.date}
                                     place={pr.place}
                                     imageUrl={process.env.PUBLIC_URL + pr.imageUrl}
-                                    color={pr.color}
+                                    color={chooseSideColor()}
+                                    key={"featuredProject" + generateKey()}
                                 />
                             )
                         }

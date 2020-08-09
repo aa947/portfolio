@@ -123,7 +123,7 @@ class ReviewForm extends Component {
                                         <div className="form-group row">
                                             <label htmlFor="inputMessage" className="col col-12 col-form-label">Review</label>
                                             <div className="col col-12">
-                                                <textarea type="text" className=" col col-12 form-control" id="inputMessage" value={this.state.inputMessage} placeholder="Tell everyone about me in 115 letters" maxlength="115" rows="5" cols="50" onChange={this.handleChangeMessage}  ></textarea>
+                                                <textarea type="text" className=" col col-12 form-control" id="inputMessage" value={this.state.inputMessage} placeholder="Tell everyone about me in 115 letters" maxLength="115" rows="5" cols="50" onChange={this.handleChangeMessage}  ></textarea>
                                             </div>
                                         </div>
 

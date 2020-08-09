@@ -24,7 +24,7 @@ const ExperienceCard = ({ title, text, color, cardLink, date, place, orienting, 
                                     </div>
 
                                     <div className="text-sm font-weight-bold text-secondary text-uppercase mb-1">
-                                        <div class="row">
+                                        <div className="row">
                                             <div className="col-12 col-md-4 mb-1">
                                                 <i className="fas fa-briefcase mr-2"></i>
                                                 {text}
