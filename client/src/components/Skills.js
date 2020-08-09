@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import SkillCard from '../cards/SkillCard';
-import skillsData from '../data/skills.json'
+import skillsData from '../data/skills.json';
+import { generateKey, sleep } from '../helpers';
+import Loading from '../helpers_components/Loading';
 
 const Skills = () => {
+
+
+    const [waiting, setWaiting] = useState(true);
+
+    const changeWaiting = async () => {
+        await sleep(5000);
+        return setWaiting(false)
+    }
+
+    useEffect(() => {
+        changeWaiting()
+    }, [])
+
 
     return (
         <div>
@@ -14,15 +29,16 @@ const Skills = () => {
                     <div className="row">
 
                         {
-                            skillsData.map(skill =>
+                            !waiting ? skillsData.map(skill =>
 
                                 <SkillCard
                                     color={skill.color}
                                     title={skill.skill}
                                     iconClass={skill.fontAwesome}
                                     image={process.env.PUBLIC_URL + skill.image}
+                                    key={'skill' + generateKey()}
                                 />
-                            )
+                            ) : <Loading />
                         }
 
 
