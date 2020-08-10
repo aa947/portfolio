@@ -117,5 +117,32 @@
     "_id": {
       "$oid": "5e2daeeaa8c12f9e0d60f35f"
     }
+  },
+
+  {
+    "projectTitle": "Restaurante Website",
+    "projectLink": "https://confusion-restaurante.netlify.app/index.html",
+    "sourceCodeLink": "https://github.com/ahmad-ali14/restaurante",
+    "color": "",
+    "fontAwesome": "fab fa-html5",
+    "image": ""
+  },
+
+  {
+    "projectTitle": "simple Slider",
+    "projectLink": "https://peaceful-wozniak-036720.netlify.app/",
+    "sourceCodeLink": "https://github.com/ahmad-ali14/Ahmad-Ali",
+    "color": "",
+    "fontAwesome": "fab fa-js-square",
+    "image": ""
+  },
+
+  {
+    "projectTitle": "Schecker-cli",
+    "projectLink": "https://github.com/ahmad-ali14/sChecker-cli",
+    "sourceCodeLink": "https://github.com/ahmad-ali14/sChecker-cli",
+    "color": "",
+    "fontAwesome": "fab fa-js-square",
+    "image": ""
   }
 ]
