@@ -103,7 +103,25 @@
     "projectLink": "https://socialapp-2bf83.firebaseapp.com/",
     "sourceCodeLink": "https://github.com/ahmad-ali14/SocialO",
     "color": "",
-    "fontAwesome": "fab fa-python",
+    "fontAwesome": "fab fa-node-js",
+    "image": ""
+  },
+
+  {
+    "projectTitle": "Tv show vanilla js",
+    "projectLink": "https://loving-benz-169884.netlify.app/",
+    "sourceCodeLink": "https://github.com/ahmad-ali14/tv-show",
+    "color": "",
+    "fontAwesome": "fab fa-js-square",
+    "image": ""
+  },
+
+  {
+    "projectTitle": "Form Handling",
+    "projectLink": "https://www.youtube.com/watch?v=4_pd7SAfWnM",
+    "sourceCodeLink": "https://github.com/ahmad-ali14/Form-handling",
+    "color": "",
+    "fontAwesome": "fab fa-react",
     "image": ""
   }
 ]
