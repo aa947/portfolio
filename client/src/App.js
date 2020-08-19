@@ -115,32 +115,51 @@ class App extends Component {
 
     const Projects = () => {
       return (
-        <React.Fragment>
-          <Project_row />
-          {/* <Footer visitors={this.state.visitors} /> */}
-        </React.Fragment>
+        <>
+          <div id="featured-projects" />
+          <FeauterdProjects />
+
+          <div id="own-projects" />
+          <OwnProjects />
+
+          <div id="courses-project" />
+          <CoursesProjects />
+        </>
 
       );
     }
 
     const Contact = () => {
       return (
-        <React.Fragment>
-          <Contact_row />
-          {/* <Footer visitors={this.state.visitors} /> */}
-        </React.Fragment>
+        <>
+          <div id="contact" />
+          <Contact_form />
+        </>
       );
     }
 
     const Education = () => {
       return (
-        <React.Fragment>
-          <Education_row />
-          {/* <Footer visitors={this.state.visitors} /> */}
-        </React.Fragment>
+        <>
+          <div id="formal-education" />
+          <FormalEducation />
+
+          <div id="online-education" />
+          <OnlineEducation />
+        </>
       )
     }
 
+    const NewBlog = () => {
+      return (
+        <div>
+          <div id="blog" />
+          <EmbededBlog />
+          <div id="youtube" />
+          <YoutubeChannel />
+        </div>
+      );
+    }
 
     return (
       <Router>
@@ -153,7 +172,7 @@ class App extends Component {
               *
               * Blog Routes
               */}
-            <Route exact path="/blog"> <Blog /> </Route>
+            <Route exact path="/blog"> <NewBlog /> </Route>
             <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">
               <Connecting_to_Atlas />
             </Route>

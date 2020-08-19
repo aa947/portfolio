@@ -8,13 +8,40 @@ class Intro extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: false
+      sidebarOpen: false,
+      screeWidth: 0,
+      route: "",
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
   }
 
+  // responding to screen width
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open });
+  }
+
+  updateDimensions = () => {
+    this.setState({ screeWidth: window.innerWidth });
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+  };
+
+  componentWillMount() {
+    this.updateDimensions();
+    this.updatePath();
+
+  }
+
+  // responding to url pathname
+  updatePath = () => {
+    this.setState({ route: window.location.pathname });
   }
 
 
@@ -80,11 +107,12 @@ class Intro extends Component {
               <div className="navbar-nav">
                 <li className="nav-item dropdown no-arrow d-sm-none"></li>
 
-                <li className="nav-item dropdown no-arrow mx-1" >
-                  <Link to="/" className="nav-link dropdown-toggle" style={{ color: "black" }} >
-                    Home
-                </Link>
-                </li>
+                {
+                  this.state.route != "/" && <li className="nav-item dropdown no-arrow mx-1" >
+                    <a href="/" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                      Home </a>
+                  </li>
+                }
 
                 <li className="nav-item dropdown no-arrow mx-1">
                   <a href="https://docs.ahmad-ali.co.uk/" className="nav-link dropdown-toggle" style={{ color: "black" }}>
@@ -93,7 +121,7 @@ class Intro extends Component {
                 </li>
 
                 <li className="nav-item dropdown no-arrow mx-1">
-                  <a href="#blog" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                  <a href={window.location.pathname == "/" ? "#blog" : "/#blog"} className="nav-link dropdown-toggle" style={{ color: "black" }}>
                     Blog
                 </a>
                 </li>
@@ -102,13 +130,13 @@ class Intro extends Component {
 
 
                 <li className="nav-item dropdown no-arrow mx-1">
-                  <a href="#projects" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                  <a href={window.location.pathname == "/" ? "#featured-projects" : "/#featured-projects"} className="nav-link dropdown-toggle" style={{ color: "black" }}>
                     Projects
                 </a>
                 </li>
 
                 <li className="nav-item dropdown no-arrow mx-1">
-                  <a href="#contact" className="nav-link dropdown-toggle" style={{ color: "black" }} >
+                  <a href={window.location.pathname == "/" ? "#contact" : "/#contact"} className="nav-link dropdown-toggle" style={{ color: "black" }} >
                     Contact
                  </a>
                 </li>
@@ -119,24 +147,29 @@ class Intro extends Component {
                  </a>
                 </li> */}
 
-                <li className="nav-item dropdown no-arrow">
-                  <a className="nav-link dropdown-toggle" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
-                    <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                    <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/email.png"}
-                      alt="Ahmad-Ali-ahmad-ali-logo-Uk"
-                    /></a> </li>
+                {this.state.screeWidth > 1000 && <>
 
-                <li className="nav-item dropdown no-arrow">
-                  <a className="nav-link dropdown-toggle" href="tel:+447383164194" title="Call me">
-                    <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                    <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/phone.png"} alt="call me" /></a> </li>
+                  <li className="nav-item dropdown no-arrow">
+                    <a className="nav-link dropdown-toggle" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
+                      <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                      <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/email.png"}
+                        alt="Ahmad-Ali-ahmad-ali-logo-Uk"
+                      /></a> </li>
+
+                  <li className="nav-item dropdown no-arrow">
+                    <a className="nav-link dropdown-toggle" href="tel:+447383164194" title="Call me">
+                      <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                      <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/phone.png"} alt="call me" /></a>
+                  </li>
+                </>}
+
               </div>
             </div>
 
           </ul>
 
         </nav>
-      </React.Fragment>
+      </React.Fragment >
 
     );
   }
