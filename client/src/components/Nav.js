@@ -8,13 +8,21 @@ class Intro extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: false
+      sidebarOpen: false,
+      route: ""
+
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
 
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open });
+  }
+
+  componentDidMount() {
+
+    console.log(window.screen.width);
+
   }
 
 
@@ -80,11 +88,12 @@ class Intro extends Component {
               <div className="navbar-nav">
                 <li className="nav-item dropdown no-arrow d-sm-none"></li>
 
-                <li className="nav-item dropdown no-arrow mx-1" >
-                  <Link to="/" className="nav-link dropdown-toggle" style={{ color: "black" }} >
-                    Home
-                </Link>
-                </li>
+                {
+                  window.location.pathname != "/" && <li className="nav-item dropdown no-arrow mx-1" >
+                    <Link to="/" className="nav-link dropdown-toggle" style={{ color: "black" }} >
+                      Home </Link>
+                  </li>
+                }
 
                 <li className="nav-item dropdown no-arrow mx-1">
                   <a href="https://docs.ahmad-ali.co.uk/" className="nav-link dropdown-toggle" style={{ color: "black" }}>
@@ -93,7 +102,7 @@ class Intro extends Component {
                 </li>
 
                 <li className="nav-item dropdown no-arrow mx-1">
-                  <a href="#blog" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                  <a href={window.location.pathname == "/" ? "#blog" : "/#blog"} className="nav-link dropdown-toggle" style={{ color: "black" }}>
                     Blog
                 </a>
                 </li>
@@ -102,13 +111,13 @@ class Intro extends Component {
 
 
                 <li className="nav-item dropdown no-arrow mx-1">
-                  <a href="#featured-projects" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                  <a href={window.location.pathname == "/" ? "#featured-projects" : "/#featured-projects"} className="nav-link dropdown-toggle" style={{ color: "black" }}>
                     Projects
                 </a>
                 </li>
 
                 <li className="nav-item dropdown no-arrow mx-1">
-                  <a href="#contact" className="nav-link dropdown-toggle" style={{ color: "black" }} >
+                  <a href={window.location.pathname == "/" ? "#contact" : "/#contact"} className="nav-link dropdown-toggle" style={{ color: "black" }} >
                     Contact
                  </a>
                 </li>
