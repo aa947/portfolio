@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import Sidebar from "react-sidebar";
 import axios from 'axios'
 import './css/nav.css';
+// import windowSize from '../helpers_components/WindowResize'
 
 class Intro extends Component {
   constructor(props) {
     super(props);
     this.state = {
       sidebarOpen: false,
-      route: ""
+      screeWidth: 0,
 
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
@@ -19,11 +20,18 @@ class Intro extends Component {
     this.setState({ sidebarOpen: open });
   }
 
+  updateDimensions = () => {
+    this.setState({ screeWidth: window.innerWidth });
+  };
+
   componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
+  };
 
-    console.log(window.screen.width);
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+  };
 
-  }
 
 
   viewHandler = async () => {
@@ -128,17 +136,22 @@ class Intro extends Component {
                  </a>
                 </li> */}
 
-                <li className="nav-item dropdown no-arrow">
-                  <a className="nav-link dropdown-toggle" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
-                    <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                    <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/email.png"}
-                      alt="Ahmad-Ali-ahmad-ali-logo-Uk"
-                    /></a> </li>
+                {this.state.screeWidth > 1100 && <>
 
-                <li className="nav-item dropdown no-arrow">
-                  <a className="nav-link dropdown-toggle" href="tel:+447383164194" title="Call me">
-                    <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                    <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/phone.png"} alt="call me" /></a> </li>
+                  <li className="nav-item dropdown no-arrow">
+                    <a className="nav-link dropdown-toggle" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
+                      <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                      <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/email.png"}
+                        alt="Ahmad-Ali-ahmad-ali-logo-Uk"
+                      /></a> </li>
+
+                  <li className="nav-item dropdown no-arrow">
+                    <a className="nav-link dropdown-toggle" href="tel:+447383164194" title="Call me">
+                      <span className="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                      <img className="img-profile rounded-circle" src={process.env.PUBLIC_URL + "/imgs/phone.png"} alt="call me" /></a>
+                  </li>
+                </>}
+
               </div>
             </div>
 
