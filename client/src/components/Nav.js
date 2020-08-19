@@ -136,7 +136,7 @@ class Intro extends Component {
                  </a>
                 </li> */}
 
-                {this.state.screeWidth > 1100 && <>
+                {this.state.screeWidth > 1000 && <>
 
                   <li className="nav-item dropdown no-arrow">
                     <a className="nav-link dropdown-toggle" target="_blank " href="mailto:aallii300300@gmail.com" title="Send Me a message">
