@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Sidebar from "react-sidebar";
 import axios from 'axios'
 import './css/nav.css';
-// import windowSize from '../helpers_components/WindowResize'
 
 class Intro extends Component {
   constructor(props) {
@@ -11,11 +10,13 @@ class Intro extends Component {
     this.state = {
       sidebarOpen: false,
       screeWidth: 0,
-
+      route: "",
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
+    this.updateDimensions = this.updateDimensions.bind(this);
   }
 
+  // responding to screen width
   onSetSidebarOpen(open) {
     this.setState({ sidebarOpen: open });
   }
@@ -32,6 +33,16 @@ class Intro extends Component {
     window.removeEventListener('resize', this.updateDimensions);
   };
 
+  componentWillMount() {
+    this.updateDimensions();
+    this.updatePath();
+
+  }
+
+  // responding to url pathname
+  updatePath = () => {
+    this.setState({ route: window.location.pathname });
+  }
 
 
   viewHandler = async () => {
@@ -97,9 +108,9 @@ class Intro extends Component {
                 <li className="nav-item dropdown no-arrow d-sm-none"></li>
 
                 {
-                  window.location.pathname != "/" && <li className="nav-item dropdown no-arrow mx-1" >
-                    <Link to="/" className="nav-link dropdown-toggle" style={{ color: "black" }} >
-                      Home </Link>
+                  this.state.route != "/" && <li className="nav-item dropdown no-arrow mx-1" >
+                    <a href="/" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                      Home </a>
                   </li>
                 }
 
@@ -158,7 +169,7 @@ class Intro extends Component {
           </ul>
 
         </nav>
-      </React.Fragment>
+      </React.Fragment >
 
     );
   }

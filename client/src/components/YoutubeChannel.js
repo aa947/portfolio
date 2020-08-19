@@ -17,7 +17,10 @@ const YoutubeChannel = () => {
     }
 
     useEffect(() => {
-        changeWaiting()
+        changeWaiting();
+        return () => {
+            clearTimeout(changeWaiting);
+        }
     }, [])
 
 
