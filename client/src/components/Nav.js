@@ -102,7 +102,7 @@ class Intro extends Component {
 
 
                 <li className="nav-item dropdown no-arrow mx-1">
-                  <a href="#projects" className="nav-link dropdown-toggle" style={{ color: "black" }}>
+                  <a href="#featured-projects" className="nav-link dropdown-toggle" style={{ color: "black" }}>
                     Projects
                 </a>
                 </li>
