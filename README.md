@@ -54,4 +54,4 @@ You can explore live version [here](http://ahmad-ali.co.uk)
 
 <https://www.ahmad-ali.co.uk/>
 
-<ahmad.ali14@zohomail.eu>
+<ahmad.ali.uk14@gmail.com>
