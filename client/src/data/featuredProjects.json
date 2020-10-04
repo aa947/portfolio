@@ -1,7 +1,19 @@
 [
+ {
+
+   "projectTitile": "Bike Change Guru",
+    "projectLink": "https://www.bikechange.guru/",
+    "imageDirection": "",
+    "imageUrl": "https://www.bikechange.guru/wp-content/uploads/2020/08/logo-bikechangev4.png",
+    "date": "Aug 2020",
+    "place": "London",
+    "color": "info",
+    "textHtml": ""
+
+  },
   {
     "projectTitile": "Hex Luxury LTD",
-    "projectLink": "hexltd.co",
+    "projectLink": "https://hexltd.co/",
     "imageDirection": "",
     "imageUrl": "/imgs/logos/hex.png",
     "date": "April 2020",
