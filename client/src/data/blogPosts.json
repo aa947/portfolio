@@ -3,5 +3,10 @@
     "title": "Connecting your App to MongoDB Atlas .. Important Notice.",
     "preview": "When you are using MongoClient to connect to MongoDB Atlas, it is important to know the three layers of connection. the cluster layer  the the database then the collection layer",
     "link": "./blog/posts/connecting-your-app-to-mongodb-atlas"
+  },
+  {
+    "title": "My Learnig Journey, How I moved from pharmacy to web development",
+    "preview": "Quickly I learned that the motivation you don’t will be a burden, so I have invented my own motivation which was that I don’t start a project and leave it uncompleted. This has helped me to continue my studies and graduate with an 80% GPA.",
+    "link": "./blog/posts/my-learning-journey"
   }
 ]

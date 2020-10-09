@@ -22,8 +22,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import CoronaVirus from './components/services/coronaVirus';
 import DgUrl from './components/services/dg-url';
 import Meetings from './components/tasks/meetings';
-import Blog from './components/blog/Blog';
-import Connecting_to_Atlas from './components/blog/posts/connecting_your_app_to_mongodb_atlas';
+import Blog from "./components/blog/Blog";
 import FreeService from './components/tasks/FreeService';
 import Report from './components/tasks/Report';
 import domain from './config';
@@ -37,13 +36,16 @@ import FeauterdProjects from './components/FeaturedProjects';
 import OwnProjects from './components/OwnProjects';
 import CoursesProjects from './components/CoursesProjects';
 import FormalEducation from './components/FormalEducation';
-import OnlineEducation from './components/OnlineEducation';
-import EmbededBlog from './components/EmbededBlog'
+import OnlineEducation from "./components/OnlineEducation";
 import YoutubeChannel from './components/YoutubeChannel';
 import Contact_form from './components/Contact_form';
 import ReviewForm from './components/ReviewForm';
 import QuickSiteMap from './components/QuiuclSiteMap';
 
+// blog post
+import EmbededBlog from "./components/EmbededBlog";
+import Connecting_to_Atlas from './components/blog/posts/connecting_your_app_to_mongodb_atlas';
+import MyLearningJourney from "./components/blog/posts/my-learning-journey";
 
 
 
@@ -169,23 +171,35 @@ class App extends Component {
             renders the first one that matches the current URL. */}
           <Switch>
             {/* **
-              *
-              * Blog Routes
-              */}
-            <Route exact path="/blog"> <NewBlog /> </Route>
-            <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">
+             *
+             * Blog Routes
+             */}
+            <Route exact path="/blog">
+              {" "}
+              <NewBlog />{" "}
+            </Route>
+            <Route
+              exact
+              path="/blog/posts/connecting-your-app-to-mongodb-atlas"
+            >
               <Connecting_to_Atlas />
+            </Route>
+            <Route exact path="/blog/posts/my-learning-journey">
+              <MyLearningJourney />
             </Route>
 
             {/* **
-              *
-              * Other Routes
-              */}
-            <Route path="/contact"
+             *
+             * Other Routes
+             */}
+            <Route
+              path="/contact"
               component={(props) => <Contact {...props} title="contact" />}
             />
 
-            <Route exact path="/claim-your-free-service"
+            <Route
+              exact
+              path="/claim-your-free-service"
               component={(props) => <FreeService {...props} />}
             />
 
@@ -193,18 +207,47 @@ class App extends Component {
               <Education />
             </Route>
 
-            <Route exact path="/meetings" render={(props) => <Meetings {...props} {...this.props} />} />
+            <Route
+              exact
+              path="/meetings"
+              render={(props) => <Meetings {...props} {...this.props} />}
+            />
 
-            <Route exact path="/report" render={(props) => <Report {...props} {...this.props} />} />
+            <Route
+              exact
+              path="/report"
+              render={(props) => <Report {...props} {...this.props} />}
+            />
 
-            <Route exact path="/services/corona" render={(props) => <CoronaVirus {...props} {...this.props} />} />
-            <Route exact path="/services/creditCard" render={(props) => <CreditCard {...props} {...this.props} />} />
+            <Route
+              exact
+              path="/services/corona"
+              render={(props) => <CoronaVirus {...props} {...this.props} />}
+            />
+            <Route
+              exact
+              path="/services/creditCard"
+              render={(props) => <CreditCard {...props} {...this.props} />}
+            />
 
-            <Route exact path="/services/dg-url" render={(props) => <DgUrl {...props} {...this.props} />} />
+            <Route
+              exact
+              path="/services/dg-url"
+              render={(props) => <DgUrl {...props} {...this.props} />}
+            />
 
-            <Route path="/services/forecast" render={(props) => <Forecast {...props} {...this.props} />} />
-            <Route path="/projects/:project_id" render={(props) => <Project_details {...props} {...this.props} />} />
-            <Route path="/certificates/:cert_id" render={(props) => <Cert_details {...props} {...this.props} />} />
+            <Route
+              path="/services/forecast"
+              render={(props) => <Forecast {...props} {...this.props} />}
+            />
+            <Route
+              path="/projects/:project_id"
+              render={(props) => <Project_details {...props} {...this.props} />}
+            />
+            <Route
+              path="/certificates/:cert_id"
+              render={(props) => <Cert_details {...props} {...this.props} />}
+            />
 
             <Route path="/projects">
               <Projects />
@@ -215,7 +258,6 @@ class App extends Component {
             </Route>
           </Switch>
           <Footer />
-
         </div>
       </Router>
     );
