@@ -1,11 +1,50 @@
 [
- {
-
-   "projectTitile": "Bike Change Guru",
+  {
+    "projectTitile": "SportsBookHUD",
+    "projectLink": "#",
+    "imageDirection": "",
+    "imageUrl": "/imgs/logos/mw.png",
+    "date": "November 2020",
+    "place": "London",
+    "color": "info",
+    "textHtml": "<ul><li>Chrome extension that automate some tasks for tasks for Illinois sports betting community.</li></ul>"
+  },
+  {
+    "projectTitile": "Generate Search",
+    "projectLink": "https://generatesearch.com/",
+    "imageDirection": "",
+    "imageUrl": "https://028.201.myftpupload.com/wp-content/uploads/2019/11/cropped-Copy-of-Generate-Search1-1.png?time=1606049218",
+    "date": "November 2020",
+    "place": "London",
+    "color": "info",
+    "textHtml": "<ul><li>A West Midlands Advertising Agency With Expertise In High Impact Advertising.</li></ul>"
+  },
+  {
+    "projectTitile": "Tek4kidz",
+    "projectLink": "https://tek4kidz.com/",
+    "imageDirection": "",
+    "imageUrl": "https://tek4kidz.com/wp-content/uploads/2020/08/tek4kidz-white-border-WP-website-LOGOv11.png",
+    "date": "October 2020",
+    "place": "London",
+    "color": "info",
+    "textHtml": "<ul><li>if you can copy paste, you can code age(7-16)</li></ul>"
+  },
+  {
+    "projectTitile": "Villa Bissiniga",
+    "projectLink": "https://www.villabissiniga.com/",
+    "imageDirection": "",
+    "imageUrl": "https://www.villabissiniga.com/wp-content/uploads/2020/01/logo-villabissiniga-mobile-2.png",
+    "date": "October 2020",
+    "place": "London",
+    "color": "info",
+    "textHtml": "<ul><li>a unique experience in the heart of Lake Garda</li></ul>"
+  },
+  {
+    "projectTitile": "Bike Change Guru",
     "projectLink": "https://www.bikechange.guru/",
     "imageDirection": "",
     "imageUrl": "https://www.bikechange.guru/wp-content/uploads/2020/08/logo-bikechangev4.png",
-    "date": "Aug 2020",
+    "date": "Augest 2020",
     "place": "London",
     "color": "info",
     "textHtml": "<ul><li>Online Shop</li></ul>"
