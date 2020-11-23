@@ -2,7 +2,7 @@
   {
     "projectTitile": "SportsBookHUD",
     "projectLink": "#",
-    "imageDirection": "",
+    "imageDirection": "rect",
     "imageUrl": "/imgs/logos/mw.png",
     "date": "November 2020",
     "place": "London",
@@ -12,7 +12,7 @@
   {
     "projectTitile": "Generate Search",
     "projectLink": "https://generatesearch.com/",
-    "imageDirection": "",
+    "imageDirection": "rect",
     "imageUrl": "https://028.201.myftpupload.com/wp-content/uploads/2019/11/cropped-Copy-of-Generate-Search1-1.png?time=1606049218",
     "date": "November 2020",
     "place": "London",
@@ -22,7 +22,7 @@
   {
     "projectTitile": "Tek4kidz",
     "projectLink": "https://tek4kidz.com/",
-    "imageDirection": "",
+    "imageDirection": "rect",
     "imageUrl": "https://tek4kidz.com/wp-content/uploads/2020/08/tek4kidz-white-border-WP-website-LOGOv11.png",
     "date": "October 2020",
     "place": "London",
@@ -32,7 +32,7 @@
   {
     "projectTitile": "Villa Bissiniga",
     "projectLink": "https://www.villabissiniga.com/",
-    "imageDirection": "",
+    "imageDirection": "rect",
     "imageUrl": "https://www.villabissiniga.com/wp-content/uploads/2020/01/logo-villabissiniga-mobile-2.png",
     "date": "October 2020",
     "place": "London",
@@ -42,7 +42,7 @@
   {
     "projectTitile": "Bike Change Guru",
     "projectLink": "https://www.bikechange.guru/",
-    "imageDirection": "",
+    "imageDirection": "rect",
     "imageUrl": "https://www.bikechange.guru/wp-content/uploads/2020/08/logo-bikechangev4.png",
     "date": "Augest 2020",
     "place": "London",
