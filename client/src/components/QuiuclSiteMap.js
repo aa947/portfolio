@@ -5,10 +5,10 @@ import { generateKey } from '../helpers';
 const QuickSiteMap = () => {
 
     const data = [['Who Am I', '#who-am-i'],
-    ['Expereince', '#experience'],
-    ['Volunteering Expereince', '#vlounteering'],
+    ['Experience', '#experience'],
+    ['Volunteering Experience', '#vlounteering'],
     ['skills', '#skills'],
-    ['Feautured Projects', '#featured-projects'],
+    ['Featured Projects', '#featured-projects'],
     ['Own Projects', '#own-projects'],
     ['Courses Projects', '#courses-projects'],
     ['Formal Education', '#formal-education'],
