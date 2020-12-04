@@ -38,7 +38,7 @@ const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
 
                         <div className="col-md-4 text-center">
                             <img src={imageUrl}
- alt="Ahmad Ahmed ahmad Ali ali ahmed I’m a Full-Stack Developer with 2 years of experience. I assist in teaching a full-stack javascript course at CodeYourFuture. I’m educated up to degree level and I’ve finished more than 35 online courses. I’m currently studying computer science at UoPeople university. And I used to be a pharmacist.""
+ alt="Ahmad Ahmed ahmad Ali ali ahmed I’m a Full-Stack Developer with 2 years of experience. I assist in teaching a full-stack javascript course at CodeYourFuture. I’m educated up to degree level and I’ve finished more than 35 online courses. I’m currently studying computer science at UoPeople university. And I used to be a pharmacist."
  width="200px" 
 height="100%"
  />
