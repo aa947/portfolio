@@ -13,7 +13,7 @@ const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
                 <div className="card-body">
                     <div className="row no-gutters align-items-center">
 
-                        <div className="col-12 col-md-8">
+                        <div className="col-12 col-md-9">
                             <div className="text-xl font-weight-bold text-black text-uppercase mb-1">
                                 <h2> {title} </h2>
                             </div>
@@ -36,8 +36,8 @@ const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
                             </div>
                         </div>
 
-                        <div className="col-md-4 text-center">
-                            <img src={imageUrl} alt="Ahmad Ali Full Stack Developer" width="200px" height="100%" />
+                        <div className="col-md-3 text-right">
+                            <img src={imageUrl} alt="Ahmad Ali Full Stack Developer" width="230px" height="100%" />
 
 
                         </div>
