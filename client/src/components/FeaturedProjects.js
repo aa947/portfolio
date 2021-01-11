@@ -16,7 +16,7 @@ const FeauturedProjects = () => {
           <div className="row">
             {featuredProjectsData.map((pr) => (
               <FeatueredProjectCard
-                projectTitle={pr.projectTitile}
+                projectTitle={pr.projectTitle}
                 textHtml={pr.textHtml}
                 projectLink={pr.projectLink}
                 date={pr.date}
@@ -24,7 +24,11 @@ const FeauturedProjects = () => {
                 imageUrl={process.env.PUBLIC_URL + pr.imageUrl}
                 color={chooseSideColor()}
                 key={"featuredProject" + generateKey()}
-                imageDirection={pr.imageDirection}
+                imgBgColor={pr.imgBgColor}
+                imgHeight ={pr.imgHeight}
+                imgWidth ={pr.imgWidth}
+                imgPadding={pr.imgPadding}
+                imageCode={pr.imageCode}
               />
             ))}
           </div>
