@@ -59,7 +59,6 @@ class App extends Component {
     const Home = () => {
       return (
         <React.Fragment>
-
           <CallToActionsCards />
 
           <div id="who-am-i" />
@@ -67,17 +66,6 @@ class App extends Component {
 
           <div id="quick-site-map" />
           <QuickSiteMap />
-
-          <div id="experience" />
-          <Experience />
-
-          <div id="vlounteering" />
-          <VolunteeringExperience />
-
-          <div id="skills" />
-          <Skills
-            change={true}
-          />
 
           <div id="featured-projects" />
           <FeauterdProjects />
@@ -87,6 +75,15 @@ class App extends Component {
 
           <div id="courses-project" />
           <CoursesProjects />
+
+          <div id="experience" />
+          <Experience />
+
+          <div id="vlounteering" />
+          <VolunteeringExperience />
+
+          <div id="skills" />
+          <Skills change={true} />
 
           <div id="formal-education" />
           <FormalEducation />
@@ -110,7 +107,6 @@ class App extends Component {
           <Reviews />
           <br />
           {/* <Footer visitors={this.state.visitors} /> */}
-
         </React.Fragment>
       );
     }
