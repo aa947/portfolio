@@ -1,6 +1,6 @@
 import React from "react";
 
-const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
+const WhoAmICard = ({ title, text, place, TextComponent, imageUrl }) => {
   return (
     <div className="col-12 mb-4">
       <div className={`card  h-100 py-2`}>
@@ -45,4 +45,4 @@ const TopTextCard = ({ title, text, place, TextComponent, imageUrl }) => {
   );
 };
 
-export default TopTextCard;
+export default WhoAmICard;
