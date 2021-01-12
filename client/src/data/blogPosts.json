@@ -1,4 +1,9 @@
-[
+[ {
+     "title": "Chrome-extension anatomy and how its parts communicate",
+     "preview": "There are lots of resources out there talking about extensions. here is one chart that contains every single layer and the relationships between them.",
+     "link": "https://ahmad-ali14.medium.com/chrome-extension-anatomy-and-how-its-parts-communicate-27d01d31599d",
+     "target": "_blank"
+   },
   {
     "title": "Connecting your App to MongoDB Atlas .. Important Notice.",
     "preview": "When you are using MongoClient to connect to MongoDB Atlas, it is important to know the three layers of connection. the cluster layer  the the database then the collection layer",

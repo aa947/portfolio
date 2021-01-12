@@ -24,8 +24,8 @@ class CallToActionCards extends Component {
             <TopTextCard
               cardLink="https://docs.ahmad-ali.co.uk/"
               color="success"
-              title="Activity Docs"
-              text="coding ref"
+              title="Hire Me"
+              text="create a project"
               iconClass="fas fa-user-cog"
             />
 

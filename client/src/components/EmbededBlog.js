@@ -21,10 +21,11 @@ const EmbededBlog = () => {
                             blogPostsData.map(pr =>
 
                                 <BlogPostCard
-                                    courseTitle={pr.title}
+                                    title={pr.title}
                                     color={chooseSideColor()}
-                                    courseLink={pr.link}
+                                    link={pr.link}
                                     preview={pr.preview}
+                                    target={pr.target}
                                     key={"blogPost" + generateKey()}
 
                                 />
