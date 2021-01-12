@@ -1,6 +1,6 @@
 import React from "react";
 import FeatueredProjectCard from "../cards/FeauturedProjectCard";
-import featuredProjectsData from "../data/featuredProjects.json";
+import featuredProjectsData from "../data/featuredProjects";
 import { generateKey, chooseSideColor } from "../helpers";
 
 const FeauturedProjects = () => {

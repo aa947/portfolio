@@ -52,7 +52,7 @@ const FeaturedProjectCard = ({
 
               <div className="text-sm font-weight-bold text-secondary  mb-1">
                 <div className="row text-uppercase">
-                  <div className="col-12 col-md-4 mb-1">
+                  <div className="col-12 col-md-6 mb-3">
                     <i className="far fa-calendar-alt mr-2"></i>
                     {date} , {place}
                   </div>
