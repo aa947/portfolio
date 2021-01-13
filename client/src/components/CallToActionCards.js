@@ -11,8 +11,7 @@ class CallToActionCards extends Component {
     return (
       <React.Fragment>
         <div>
-          <div className="row" >
-
+          <div className="row">
             <TopTextCard
               cardLink="/meetings"
               color="primary"
@@ -22,7 +21,7 @@ class CallToActionCards extends Component {
             />
 
             <TopTextCard
-              cardLink="https://docs.ahmad-ali.co.uk/"
+              cardLink="https://www.upwork.com/fl/ahmad14"
               color="success"
               title="Hire Me"
               text="create a project"
