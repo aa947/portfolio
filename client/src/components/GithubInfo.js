@@ -10,18 +10,20 @@ function GithubInfo() {
 
         <div className="card-body">
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-12">
               <img
-              //  align="left"
+                //  align="left"
                 width="100%"
+                // height="300px"
                 alt="Ahmad Ali's Github Stats"
                 src="https://github-readme-stats.vercel.app/api?username=ahmad-ali14&count_private=true&show_icons=true&hide_border=true&theme=tokyonight"
               />
             </div>
-            <div className="col-lg-6">
+            <div className="col-12">
               <img
-              //  align="right"
+                //  align="right"
                 width="100%"
+                // height="300px"
                 alt=""
                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmad-ali14&layout=compact&theme=tokyonight&hide_border=true"
               />
