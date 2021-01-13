@@ -9,9 +9,6 @@ import {
 import Footer from './components/Footer';
 import Project_details from './components/project_details';
 import Cert_details from './components/Cert_details';
-import Project_row from './components/projects_row';
-import Contact_row from './components/Contact_row';
-import Education_row from './components/Education_row';
 import Nav from './components/Nav';
 import './App.css';
 import Reviews from './components/Reviews';
@@ -22,7 +19,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import CoronaVirus from './components/services/coronaVirus';
 import DgUrl from './components/services/dg-url';
 import Meetings from './components/tasks/meetings';
-import Blog from "./components/blog/Blog";
 import FreeService from './components/tasks/FreeService';
 import Report from './components/tasks/Report';
 import domain from './config';
@@ -41,6 +37,7 @@ import YoutubeChannel from './components/YoutubeChannel';
 import Contact_form from './components/Contact_form';
 import ReviewForm from './components/ReviewForm';
 import QuickSiteMap from './components/QuiuclSiteMap';
+import GithubInfo from './components/GithubInfo';
 
 // blog post
 import EmbededBlog from "./components/EmbededBlog";
@@ -84,6 +81,9 @@ class App extends Component {
 
           <div id="skills" />
           <Skills change={true} />
+
+          <div id="github-info" />
+          <GithubInfo />
 
           <div id="formal-education" />
           <FormalEducation />

@@ -8,6 +8,7 @@ const QuickSiteMap = () => {
     ['Experience', '#experience'],
     ['Volunteering Experience', '#vlounteering'],
     ['skills', '#skills'],
+    ['Github Status', '#github-info'],
     ['Featured Projects', '#featured-projects'],
     ['Own Projects', '#own-projects'],
     ['Courses Projects', '#courses-projects'],
