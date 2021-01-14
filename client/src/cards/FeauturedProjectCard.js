@@ -21,7 +21,7 @@ const FeaturedProjectCard = ({
     >
       {imageCode ? (
         <div
-          className="p mb-0 font-weight-bold text-gray-800"
+          className="p mb-0 font-weight-bold text-gray-800 text-center"
           dangerouslySetInnerHTML={{ __html: imageCode }}
         />
       ) : (

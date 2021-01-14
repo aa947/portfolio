@@ -49,8 +49,8 @@ export default [
     projectTitle: "Lesvos project",
     projectLink: "",
     imageCode:
-      "<i class='material-icons' style='font-size:1.6rem;' >Lesvos Forms</i>",
-    date: "December 2020",
+      "<i class='material-icons' style='font-size:1.7rem;' >Lesvos Forms</i>",
+    date: "Aug 2020",
     place: "London",
     textHtml: `<ul>
       <li>A client in Greece wanted to collect data about people who are using their services. a server that collects all the data, and client forms where the employees can use them to grab data even offline.</li>
@@ -58,8 +58,8 @@ export default [
         <li> project logic flow: \n
           <img src="https://i.imgur.com/L9vABZD.png" width="100%" class="p-3" /> 
         </li>
-        <li> and I got a Feedback From the Client: \n
-          <img src="/imgs/misc/lesvos_german.png" width="100%" class="p-3" /> 
+        <li>Feedback From the Client: \n
+          <img src="/imgs/feedbacks/lesvos_german.png" width="100%" class="p-3" /> 
         </li>
     </ul>`,
   },
@@ -107,6 +107,9 @@ export default [
           </li>
           <li>Stack: PHP, Wordpress, Javascript, CSS.</li>
           <li>${generateVisitLiveLink("https://braun.webinit.de/")} </li>
+          <li>Feedback From the Client: <br />
+          <img src="/imgs/feedbacks/braun.jfif" width="100%" style="max-width:80%;" class="p-3" /> 
+        </li>
       </ul>`,
   },
   {
