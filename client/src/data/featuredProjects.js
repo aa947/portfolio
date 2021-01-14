@@ -202,6 +202,10 @@ export default [
         </ol>
       </li>
       <li>Stack: Javascript, OOP. </li>
+       <li> project logic flow: \n
+          <img src="https://i.imgur.com/pC8IFMI.png" width="100%" class="p-3" /> 
+            <p> check it out on miro here: <a href="https://miro.com/app/board/o9J_lcUDbm0=/" > https://miro.com/app/board/o9J_lcUDbm0=/ </a></p>
+        </li>
     </ul>`,
   },
 
