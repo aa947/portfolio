@@ -9,6 +9,61 @@ function generateVisitLiveLink(link) {
 
 export default [
   {
+    projectTitle: "Sports Book HUD",
+    projectLink: "#",
+    imageDirection: "rect",
+    imageUrl: "/imgs/logos/sportsBookHUD.png",
+    date: "November 2020",
+    place: "London",
+    imgWidth: "128px",
+    imgHeight: "128px",
+    color: "info",
+    textHtml: `<ul>
+        <li>Chrome extension that automate some tasks for tasks for Illinois sports betting community.</li>
+        <li>The Extension works with the top 5 betting websites in the state of Illinois. </li>
+        <li>This is a very sophisticated extension, created from scratch. </li>
+        <li> What The Extension do: \n
+          <ol>
+            <li>Scraps websites: Bovada, BetRivers, PointsBet, Fanduel, DraftKings.</li>
+            <li>These websites have a very short session, they will log you out within 15mins of inactivity.</li>
+            <li>I applied a combination of techniques, and I was able to extend the session time to few hours.</li>
+            <li>on one click, you can open the 5 websites together.</li>
+            <li>if an instance of a website is already open, it will not open a new one.</li>
+            <li>you can safely store your credentials to those websites, and get automatically logged in with one click.</li>
+            <li>you can always monitor the instances that are open at the moment.</li>
+            <li>you have an options page that allows you to configure every aspect of the extension work.</li>
+            <li>the extension also allows you to watch specific odds from a specific APIs, or you can download a file containing your own odds.</li>
+            <li>Then it scraps each one of theses websites looking for that odd, then it overlays the values form these sources.</li>
+            <li>The idea is to compare the odds from different resources instantly without the need to open these resources manually.</li>
+            <li>The option page also allows user to configure overlaying and comparing process.</li>
+          </ol>
+        </li>
+         <li>Stack: Javascript, OOP. </li>
+         <li> project logic flow: \n
+                <img src="https://i.imgur.com/nmbR2gW.png" width="100%" class="p-3" /> 
+                <p> check it out on miro here: <a href="https://miro.com/app/board/o9J_lYvevbc=/" > https://miro.com/app/board/o9J_lYvevbc=/ </a></p>
+         </li>
+      </ul>`,
+  },
+  {
+    projectTitle: "Lesvos project",
+    projectLink: "",
+    imageCode:
+      "<i class='material-icons' style='font-size:1.6rem;' >Lesvos Forms</i>",
+    date: "December 2020",
+    place: "London",
+    textHtml: `<ul>
+      <li>A client in Greece wanted to collect data about people who are using their services. a server that collects all the data, and client forms where the employees can use them to grab data even offline.</li>
+      <li> stack: Devops, Java, XlsForms. </li>
+        <li> project logic flow: \n
+          <img src="https://i.imgur.com/L9vABZD.png" width="100%" class="p-3" /> 
+        </li>
+        <li> and I got a Feedback From the Client: \n
+          <img src="/imgs/misc/lesvos_german.png" width="100%" class="p-3" /> 
+        </li>
+    </ul>`,
+  },
+  {
     projectTitle: "MinerGo",
     projectLink: "http://minergo.herokuapp.com/",
     imageUrl: "/imgs/logos/minergo.png",
@@ -146,39 +201,7 @@ export default [
       <li>Stack: Javascript, OOP. </li>
     </ul>`,
   },
-  {
-    projectTitle: "Sports Book HUD",
-    projectLink: "#",
-    imageDirection: "rect",
-    imageUrl: "/imgs/logos/sportsBookHUD.png",
-    date: "November 2020",
-    place: "London",
-    imgWidth: "128px",
-    imgHeight: "128px",
-    color: "info",
-    textHtml: `<ul>
-        <li>Chrome extension that automate some tasks for tasks for Illinois sports betting community.</li>
-        <li>The Extension works with the top 5 betting websites in the state of Illinois. </li>
-        <li>This is a very sophisticated extension, created from scratch. </li>
-        <li> What The Extension do: \n
-          <ol>
-            <li>Scraps websites: Bovada, BetRivers, PointsBet, Fanduel, DraftKings.</li>
-            <li>These websites have a very short session, they will log you out within 15mins of inactivity.</li>
-            <li>I applied a combination of techniques, and I was able to extend the session time to few hours.</li>
-            <li>on one click, you can open the 5 websites together.</li>
-            <li>if an instance of a website is already open, it will not open a new one.</li>
-            <li>you can safely store your credentials to those websites, and get automatically logged in with one click.</li>
-            <li>you can always monitor the instances that are open at the moment.</li>
-            <li>you have an options page that allows you to configure every aspect of the extension work.</li>
-            <li>the extension also allows you to watch specific odds from a specific APIs, or you can download a file containing your own odds.</li>
-            <li>Then it scraps each one of theses websites looking for that odd, then it overlays the values form these sources.</li>
-            <li>The idea is to compare the odds from different resources instantly without the need to open these resources manually.</li>
-            <li>The option page also allows user to configure overlaying and comparing process.</li>
-          </ol>
-        </li>
-         <li>Stack: Javascript, OOP. </li>
-      </ul>`,
-  },
+
   {
     projectTitle: "Generate Search",
     projectLink: "https://generatesearch.com/",
