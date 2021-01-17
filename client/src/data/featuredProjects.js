@@ -41,9 +41,13 @@ export default [
          <li>Stack: Javascript, OOP. </li>
          <li> project logic flow: \n
                 <img src="https://i.imgur.com/nmbR2gW.png" width="100%" class="p-3" /> 
-                <p> check it out on miro here: <a href="https://miro.com/app/board/o9J_lYvevbc=/" > https://miro.com/app/board/o9J_lYvevbc=/ </a></p>
+                
          </li>
+        <li>Feedback From the Client: <br />
+          <img src="/imgs/feedbacks/sportsBookHUD.jfif" width="100%" style="max-width:80%;" class="p-3" /> 
+        </li>
       </ul>`,
+      // <p> check it out on miro here: <a href="https://miro.com/app/board/o9J_lYvevbc=/" > https://miro.com/app/board/o9J_lYvevbc=/ </a></p>
   },
   {
     projectTitle: "Lesvos project",
@@ -204,9 +208,10 @@ export default [
       <li>Stack: Javascript, OOP. </li>
        <li> project logic flow: \n
           <img src="https://i.imgur.com/pC8IFMI.png" width="100%" class="p-3" /> 
-            <p> check it out on miro here: <a href="https://miro.com/app/board/o9J_lcUDbm0=/" > https://miro.com/app/board/o9J_lcUDbm0=/ </a></p>
         </li>
     </ul>`,
+    // <p> check it out on miro here: <a href="https://miro.com/app/board/o9J_lcUDbm0=/" > https://miro.com/app/board/o9J_lcUDbm0=/ </a></p>
+
   },
 
   {
