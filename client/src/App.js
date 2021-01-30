@@ -1,58 +1,50 @@
 /* eslint-disable */
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import Footer from './components/Footer';
-import Project_details from './components/project_details';
-import Cert_details from './components/Cert_details';
-import Nav from './components/Nav';
-import './App.css';
-import Reviews from './components/Reviews';
-import Forecast from './components/services/Forecast';
-import CreditCard from './components/services/creditCard';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import CoronaVirus from './components/services/coronaVirus';
-import DgUrl from './components/services/dg-url';
-import Meetings from './components/tasks/meetings';
-import FreeService from './components/tasks/FreeService';
-import Report from './components/tasks/Report';
-import domain from './config';
-import { isLocalhost, chooseSideColor } from './helpers';
-import Experience from './components/Experience';
-import WhoAmI from './components/WhoImI';
-import CallToActionsCards from './components/CallToActionCards';
-import VolunteeringExperience from './components/VolunteeringExperience';
-import Skills from './components/Skills';
-import FeauterdProjects from './components/FeaturedProjects';
-import OwnProjects from './components/OwnProjects';
-import CoursesProjects from './components/CoursesProjects';
-import FormalEducation from './components/FormalEducation';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Footer from "./components/Footer";
+import Project_details from "./components/project_details";
+import Cert_details from "./components/Cert_details";
+import Nav from "./components/Nav";
+import "./App.css";
+import Reviews from "./components/Reviews";
+import Forecast from "./components/services/Forecast";
+import CreditCard from "./components/services/creditCard";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import CoronaVirus from "./components/services/coronaVirus";
+import DgUrl from "./components/services/dg-url";
+import Meetings from "./components/tasks/meetings";
+import FreeService from "./components/tasks/FreeService";
+import Report from "./components/tasks/Report";
+import domain from "./config";
+import { isLocalhost, chooseSideColor } from "./helpers";
+import Experience from "./components/Experience";
+import WhoAmI from "./components/WhoImI";
+import CallToActionsCards from "./components/CallToActionCards";
+import VolunteeringExperience from "./components/VolunteeringExperience";
+import Skills from "./components/Skills";
+import FeauterdProjects from "./components/FeaturedProjects";
+import OwnProjects from "./components/OwnProjects";
+import CoursesProjects from "./components/CoursesProjects";
+import FormalEducation from "./components/FormalEducation";
 import OnlineEducation from "./components/OnlineEducation";
-import YoutubeChannel from './components/YoutubeChannel';
-import Contact_form from './components/Contact_form';
-import ReviewForm from './components/ReviewForm';
-import QuickSiteMap from './components/QuiuclSiteMap';
-import GithubInfo from './components/GithubInfo';
+import YoutubeChannel from "./components/YoutubeChannel";
+import Contact_form from "./components/Contact_form";
+import ReviewForm from "./components/ReviewForm";
+import QuickSiteMap from "./components/QuiuclSiteMap";
+import GithubInfo from "./components/GithubInfo";
 
 // blog post
 import EmbededBlog from "./components/EmbededBlog";
-import Connecting_to_Atlas from './components/blog/posts/connecting_your_app_to_mongodb_atlas';
+import Connecting_to_Atlas from "./components/blog/posts/connecting_your_app_to_mongodb_atlas";
 import MyLearningJourney from "./components/blog/posts/my-learning-journey";
 
-
-
 // Call it once in your app. At the root of your app is the best place
-toast.configure()
+toast.configure();
 
 class App extends Component {
-
   render() {
-
     const Home = () => {
       return (
         <React.Fragment>
@@ -109,7 +101,7 @@ class App extends Component {
           {/* <Footer visitors={this.state.visitors} /> */}
         </React.Fragment>
       );
-    }
+    };
 
     const Projects = () => {
       return (
@@ -123,9 +115,8 @@ class App extends Component {
           <div id="courses-project" />
           <CoursesProjects />
         </>
-
       );
-    }
+    };
 
     const Contact = () => {
       return (
@@ -134,7 +125,7 @@ class App extends Component {
           <Contact_form />
         </>
       );
-    }
+    };
 
     const Education = () => {
       return (
@@ -145,8 +136,8 @@ class App extends Component {
           <div id="online-education" />
           <OnlineEducation />
         </>
-      )
-    }
+      );
+    };
 
     const NewBlog = () => {
       return (
@@ -157,7 +148,7 @@ class App extends Component {
           <YoutubeChannel />
         </div>
       );
-    }
+    };
 
     return (
       <Router>
@@ -236,10 +227,10 @@ class App extends Component {
               path="/services/forecast"
               render={(props) => <Forecast {...props} {...this.props} />}
             />
-            <Route
+            {/* <Route
               path="/projects/:project_id"
               render={(props) => <Project_details {...props} {...this.props} />}
-            />
+            /> */}
             <Route
               path="/certificates/:cert_id"
               render={(props) => <Cert_details {...props} {...this.props} />}
@@ -258,7 +249,6 @@ class App extends Component {
       </Router>
     );
   }
-
 }
 
 export default App;
