@@ -43,9 +43,6 @@ import { withRouter } from "react-router-dom";
 toast.configure();
 
 class App extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
 
   componentWillMount() {
     ReactGA.initialize("UA-187752393-1");
