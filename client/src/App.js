@@ -1,9 +1,8 @@
 /* eslint-disable */
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Component, useEffect } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
-import Project_details from "./components/project_details";
 import Cert_details from "./components/Cert_details";
 import Nav from "./components/Nav";
 import "./App.css";
@@ -17,8 +16,6 @@ import DgUrl from "./components/services/dg-url";
 import Meetings from "./components/tasks/meetings";
 import FreeService from "./components/tasks/FreeService";
 import Report from "./components/tasks/Report";
-import domain from "./config";
-import { isLocalhost, chooseSideColor } from "./helpers";
 import Experience from "./components/Experience";
 import WhoAmI from "./components/WhoImI";
 import CallToActionsCards from "./components/CallToActionCards";
@@ -39,216 +36,217 @@ import GithubInfo from "./components/GithubInfo";
 import EmbededBlog from "./components/EmbededBlog";
 import Connecting_to_Atlas from "./components/blog/posts/connecting_your_app_to_mongodb_atlas";
 import MyLearningJourney from "./components/blog/posts/my-learning-journey";
+import ReactGA from "react-ga";
 
 // Call it once in your app. At the root of your app is the best place
 toast.configure();
 
-class App extends Component {
-  render() {
-    const Home = () => {
-      return (
-        <React.Fragment>
-          <CallToActionsCards />
+function App() {
+  const location = useLocation();
+  ReactGA.initialize("UA-187752393-1");
 
-          <div id="who-am-i" />
-          <WhoAmI />
+  useEffect(() => {
+    ReactGA.pageview(location.pathname + location.hash);
+  }, [location]);
 
-          <div id="quick-site-map" />
-          <QuickSiteMap />
-
-          <div id="featured-projects" />
-          <FeauterdProjects />
-
-          <div id="own-projects" />
-          <OwnProjects />
-
-          <div id="courses-project" />
-          <CoursesProjects />
-
-          <div id="experience" />
-          <Experience />
-
-          <div id="vlounteering" />
-          <VolunteeringExperience />
-
-          <div id="skills" />
-          <Skills change={true} />
-
-          <div id="github-info" />
-          <GithubInfo />
-
-          <div id="formal-education" />
-          <FormalEducation />
-
-          <div id="online-education" />
-          <OnlineEducation />
-
-          <div id="blog" />
-          <EmbededBlog />
-
-          <div id="youtube" />
-          <YoutubeChannel />
-
-          <div id="contact" />
-          <Contact_form />
-
-          <div id="add-review" />
-          <ReviewForm />
-
-          <div id="" />
-          <Reviews />
-          <br />
-          {/* <Footer visitors={this.state.visitors} /> */}
-        </React.Fragment>
-      );
-    };
-
-    const Projects = () => {
-      return (
-        <>
-          <div id="featured-projects" />
-          <FeauterdProjects />
-
-          <div id="own-projects" />
-          <OwnProjects />
-
-          <div id="courses-project" />
-          <CoursesProjects />
-        </>
-      );
-    };
-
-    const Contact = () => {
-      return (
-        <>
-          <div id="contact" />
-          <Contact_form />
-        </>
-      );
-    };
-
-    const Education = () => {
-      return (
-        <>
-          <div id="formal-education" />
-          <FormalEducation />
-
-          <div id="online-education" />
-          <OnlineEducation />
-        </>
-      );
-    };
-
-    const NewBlog = () => {
-      return (
-        <div>
-          <div id="blog" />
-          <EmbededBlog />
-          <div id="youtube" />
-          <YoutubeChannel />
-        </div>
-      );
-    };
-
+  const Home = () => {
     return (
-      <Router>
-        <div>
-          <Nav />
-          {/* A <Switch> looks through its children <Route>s and
+      <React.Fragment>
+        <CallToActionsCards />
+
+        <div id="who-am-i" />
+        <WhoAmI />
+
+        <div id="quick-site-map" />
+        <QuickSiteMap />
+
+        <div id="featured-projects" />
+        <FeauterdProjects />
+
+        <div id="own-projects" />
+        <OwnProjects />
+
+        <div id="courses-project" />
+        <CoursesProjects />
+
+        <div id="experience" />
+        <Experience />
+
+        <div id="vlounteering" />
+        <VolunteeringExperience />
+
+        <div id="skills" />
+        <Skills change={true} />
+
+        <div id="github-info" />
+        <GithubInfo />
+
+        <div id="formal-education" />
+        <FormalEducation />
+
+        <div id="online-education" />
+        <OnlineEducation />
+
+        <div id="blog" />
+        <EmbededBlog />
+
+        <div id="youtube" />
+        <YoutubeChannel />
+
+        <div id="contact" />
+        <Contact_form />
+
+        <div id="add-review" />
+        <ReviewForm />
+
+        <div id="" />
+        <Reviews />
+        <br />
+        {/* <Footer visitors={this.state.visitors} /> */}
+      </React.Fragment>
+    );
+  };
+
+  const Projects = () => {
+    return (
+      <>
+        <div id="featured-projects" />
+        <FeauterdProjects />
+
+        <div id="own-projects" />
+        <OwnProjects />
+
+        <div id="courses-project" />
+        <CoursesProjects />
+      </>
+    );
+  };
+
+  const Contact = () => {
+    return (
+      <>
+        <div id="contact" />
+        <Contact_form />
+      </>
+    );
+  };
+
+  const Education = () => {
+    return (
+      <>
+        <div id="formal-education" />
+        <FormalEducation />
+
+        <div id="online-education" />
+        <OnlineEducation />
+      </>
+    );
+  };
+
+  const NewBlog = () => {
+    return (
+      <div>
+        <div id="blog" />
+        <EmbededBlog />
+        <div id="youtube" />
+        <YoutubeChannel />
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <Nav />
+      {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-          <Switch>
-            {/* **
-             *
-             * Blog Routes
-             */}
-            <Route exact path="/blog">
-              {" "}
-              <NewBlog />{" "}
-            </Route>
-            <Route
-              exact
-              path="/blog/posts/connecting-your-app-to-mongodb-atlas"
-            >
-              <Connecting_to_Atlas />
-            </Route>
-            <Route exact path="/blog/posts/my-learning-journey">
-              <MyLearningJourney />
-            </Route>
+      <Switch>
+        {/* **
+         *
+         * Blog Routes
+         */}
+        <Route exact path="/blog">
+          {" "}
+          <NewBlog />{" "}
+        </Route>
+        <Route exact path="/blog/posts/connecting-your-app-to-mongodb-atlas">
+          <Connecting_to_Atlas />
+        </Route>
+        <Route exact path="/blog/posts/my-learning-journey">
+          <MyLearningJourney />
+        </Route>
 
-            {/* **
-             *
-             * Other Routes
-             */}
-            <Route
-              path="/contact"
-              component={(props) => <Contact {...props} title="contact" />}
-            />
+        {/* **
+         *
+         * Other Routes
+         */}
+        <Route
+          path="/contact"
+          component={(props) => <Contact {...props} title="contact" />}
+        />
 
-            <Route
-              exact
-              path="/claim-your-free-service"
-              component={(props) => <FreeService {...props} />}
-            />
+        <Route
+          exact
+          path="/claim-your-free-service"
+          component={(props) => <FreeService {...props} />}
+        />
 
-            <Route path="/education">
-              <Education />
-            </Route>
+        <Route path="/education">
+          <Education />
+        </Route>
 
-            <Route
-              exact
-              path="/meetings"
-              render={(props) => <Meetings {...props} {...this.props} />}
-            />
+        <Route
+          exact
+          path="/meetings"
+          render={(props) => <Meetings {...props} {...this.props} />}
+        />
 
-            <Route
-              exact
-              path="/report"
-              render={(props) => <Report {...props} {...this.props} />}
-            />
+        <Route
+          exact
+          path="/report"
+          render={(props) => <Report {...props} {...this.props} />}
+        />
 
-            <Route
-              exact
-              path="/services/corona"
-              render={(props) => <CoronaVirus {...props} {...this.props} />}
-            />
-            <Route
-              exact
-              path="/services/creditCard"
-              render={(props) => <CreditCard {...props} {...this.props} />}
-            />
+        <Route
+          exact
+          path="/services/corona"
+          render={(props) => <CoronaVirus {...props} {...this.props} />}
+        />
+        <Route
+          exact
+          path="/services/creditCard"
+          render={(props) => <CreditCard {...props} {...this.props} />}
+        />
 
-            <Route
-              exact
-              path="/services/dg-url"
-              render={(props) => <DgUrl {...props} {...this.props} />}
-            />
+        <Route
+          exact
+          path="/services/dg-url"
+          render={(props) => <DgUrl {...props} {...this.props} />}
+        />
 
-            <Route
-              path="/services/forecast"
-              render={(props) => <Forecast {...props} {...this.props} />}
-            />
-            {/* <Route
+        <Route
+          path="/services/forecast"
+          render={(props) => <Forecast {...props} {...this.props} />}
+        />
+        {/* <Route
               path="/projects/:project_id"
               render={(props) => <Project_details {...props} {...this.props} />}
             /> */}
-            <Route
-              path="/certificates/:cert_id"
-              render={(props) => <Cert_details {...props} {...this.props} />}
-            />
+        <Route
+          path="/certificates/:cert_id"
+          render={(props) => <Cert_details {...props} {...this.props} />}
+        />
 
-            <Route path="/projects">
-              <Projects />
-            </Route>
+        <Route path="/projects">
+          <Projects />
+        </Route>
 
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
-    );
-  }
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
